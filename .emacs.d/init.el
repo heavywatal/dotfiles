@@ -1,4 +1,15 @@
 ;;;;;;;;;1;;;;;;;;;2;;;;;;;;;3;;;;;;;;;4;;;;;;;;;5;;;;;;;;;6;;;;;;;;;7;;;;;;;;;
+;;; package management
+(add-to-list 'load-path "~/.cask")
+(require 'cask)
+(cask-initialize)
+
+;(add-to-list 'auto-mode-alist '("\\.Rmd$" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.R$" . R-mode))
+(autoload 'R-mode "ess-site" "Emacs Speaks Statistics mode" t)
+
+;;;;;;;;;1;;;;;;;;;2;;;;;;;;;3;;;;;;;;;4;;;;;;;;;5;;;;;;;;;6;;;;;;;;;7;;;;;;;;;
 ;;; customize-face/variable
 
 (custom-set-variables
@@ -90,14 +101,3 @@
   (global-set-key [mouse-5] '(lambda ()
                                (interactive)
                                (scroll-up 1))))
-
-;;;;;;;;;1;;;;;;;;;2;;;;;;;;;3;;;;;;;;;4;;;;;;;;;5;;;;;;;;;6;;;;;;;;;7;;;;;;;;;
-;;; package management
-(add-to-list 'load-path "~/.cask")
-(require 'cask)
-(cask-initialize)
-
-;(add-to-list 'auto-mode-alist '("\\.Rmd$" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
-(add-to-list 'auto-mode-alist '("\\.R$" . R-mode))
-(autoload 'R-mode "ess-site" "Emacs Speaks Statistics mode" t)
