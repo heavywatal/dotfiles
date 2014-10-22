@@ -1,0 +1,4 @@
+.emacs.d/.cask/
+.emacs.d/elpa/
+.emacs.d/url/
+.emacs.d/ac-comphist.dat
