@@ -30,6 +30,7 @@
  '(show-trailing-whitespace t)
  '(truncate-lines t)
  '(truncate-partial-width-windows nil)
+ '(vc-follow-symlinks t)
  '(whitespace-display-mappings
    (quote
     ((newline-mark 10
