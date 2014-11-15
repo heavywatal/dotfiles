@@ -1,18 +1,15 @@
-'editor':
-  'invisibles':
-    'space': ' '
-  'fontFamily': 'Ubuntu Mono'
-  'showInvisibles': true
-  'lineHeight': 1.2
-  'fontSize': 14
-'core':
-  'themes': [
-    'atom-dark-ui'
-    'atom-dark-syntax'
-  ]
-'exception-reporting':
-  'userId': 'f0d28512-acf7-2fb1-594b-afb76e3c99ba'
-'welcome':
-  'showOnStartup': false
-'metrics':
-  'userId': 'd41006fb557ba1ecaf77a96d564817b4f1b41194'
+'global':
+  'editor':
+    'invisibles':
+      'space': ' '
+    'fontFamily': 'Ubuntu Mono'
+    'showInvisibles': true
+    'lineHeight': 1.2
+    'fontSize': 14
+  'exception-reporting':
+    'userId': 'f0d28512-acf7-2fb1-594b-afb76e3c99ba'
+  'welcome':
+    'showOnStartup': false
+  'metrics':
+    'userId': 'd41006fb557ba1ecaf77a96d564817b4f1b41194'
+  'core': {}
