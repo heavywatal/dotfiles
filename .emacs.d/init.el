@@ -9,6 +9,11 @@
 (add-to-list 'auto-mode-alist '("\\.R$" . R-mode))
 (autoload 'R-mode "ess-site" "Emacs Speaks Statistics mode" t)
 
+(setq markdown-enable-math t)
+(setq markdown-command "hoedown --math --math-explicit")
+(setq markdown-xhtml-header-content "<script type=\"text/javascript\" src=\"http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML\"> </script>")
+(setq markdown-open-command "open")
+
 ;;;;;;;;;1;;;;;;;;;2;;;;;;;;;3;;;;;;;;;4;;;;;;;;;5;;;;;;;;;6;;;;;;;;;7;;;;;;;;;
 ;;; customize-face/variable
 
