@@ -32,6 +32,7 @@
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
  '(make-backup-files nil)
+ '(scroll-conservatively 42)
  '(show-trailing-whitespace t)
  '(truncate-lines t)
  '(truncate-partial-width-windows nil)
@@ -88,13 +89,12 @@
 ;; tmux compatibility
 (global-unset-key "\C-t")
 
-;; shift-command-fn arrow on Mac
 ;; page up/down
-(global-set-key "\033[6~" 'scroll-up)
-(global-set-key "\033[5~" 'scroll-down)
+(global-set-key [next] (lambda () (interactive) (scroll-up 2)))
+(global-set-key [prior] (lambda () (interactive) (scroll-down 2)))
 ;; home/end
-(global-set-key "\033[H" 'beginning-of-buffer)
-(global-set-key "\033[F" 'end-of-buffer)
+(global-set-key [home] 'beginning-of-buffer)
+(global-set-key [end] 'beginning-of-buffer)
 
 ;; enable scrolling in Terminal.app on Mac
 ;; https://bitheap.org/mouseterm/
