@@ -2,3 +2,5 @@
 .emacs.d/elpa/
 .emacs.d/url/
 .emacs.d/ac-comphist.dat
+.pip/cache/
+.pip/pip.log
