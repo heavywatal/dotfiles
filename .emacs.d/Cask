@@ -29,4 +29,5 @@
 (depends-on "auto-complete")
 (depends-on "markdown-mode")
 (depends-on "js2-mode")
+(depends-on "tss")
 (depends-on "ess")
