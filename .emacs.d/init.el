@@ -5,6 +5,7 @@
 (cask-initialize)
 
 ;(add-to-list 'auto-mode-alist '("\\.Rmd$" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md$" . gfm-mode))
 (add-to-list 'auto-mode-alist '("\\.ts$" . typescript-mode))
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.R$" . R-mode))
