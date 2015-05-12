@@ -19,3 +19,7 @@
 # You can find more information about keymaps in these guides:
 # * https://atom.io/docs/latest/customizing-atom#customizing-key-bindings
 # * https://atom.io/docs/latest/advanced/keymaps
+
+'body':
+  'ctrl-tab': 'pane:show-next-item'
+  'ctrl-shift-tab': 'pane:show-previous-item'
