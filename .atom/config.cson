@@ -15,6 +15,6 @@
     userId: "d41006fb557ba1ecaf77a96d564817b4f1b41194"
   core:
     themes: [
-      "atom-dark-ui"
-      "atom-dark-syntax"
+      "solarized-dark-ui"
+      "solarized-dark-syntax"
     ]
