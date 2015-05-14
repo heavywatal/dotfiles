@@ -18,3 +18,5 @@
       "solarized-dark-ui"
       "solarized-dark-syntax"
     ]
+  linter: {}
+  "atom-typescript": {}
