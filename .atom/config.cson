@@ -25,3 +25,5 @@
   "bracket-matcher":
     autocompleteBrackets: false
     autocompleteSmartQuotes: false
+  "tree-view":
+    hideIgnoredNames: true
