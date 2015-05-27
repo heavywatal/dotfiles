@@ -23,3 +23,7 @@
 'body':
   'ctrl-tab': 'pane:show-next-item'
   'ctrl-shift-tab': 'pane:show-previous-item'
+
+'.editor':
+  'ctrl-a': 'editor:move-to-beginning-of-screen-line'
+  'ctrl-m': 'editor:newline'
