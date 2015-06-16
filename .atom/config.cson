@@ -18,10 +18,8 @@
       "solarized-dark-ui"
       "solarized-dark-syntax"
     ]
-  linter:
-    {}
-  "atom-typescript":
-    {}
+  linter: {}
+  "atom-typescript": {}
   "bracket-matcher":
     autocompleteBrackets: false
     autocompleteSmartQuotes: false
