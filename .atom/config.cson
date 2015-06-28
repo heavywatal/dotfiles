@@ -1,7 +1,6 @@
 "*":
   editor:
     fontFamily: "Ubuntu Mono"
-    fontSize: 14
     lineHeight: 1.2
     invisibles:
       space: " "
