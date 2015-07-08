@@ -88,12 +88,15 @@
 ;;;;;;;;;1;;;;;;;;;2;;;;;;;;;3;;;;;;;;;4;;;;;;;;;5;;;;;;;;;6;;;;;;;;;7;;;;;;;;;
 ;;; keybind
 
-;; Backspace and help
+;; backspace and help
 (global-set-key "\C-h" 'delete-backward-char)
 (global-set-key "\M-?" 'help-for-help)
 
 ;; tmux compatibility
 (global-unset-key "\C-t")
+
+;; suppress indentation (mainly for pasting)
+(electric-indent-mode 0)
 
 ;; page up/down
 (global-set-key [next] (lambda () (interactive) (scroll-up 2)))
