@@ -24,3 +24,5 @@
     autocompleteSmartQuotes: false
   "tree-view":
     hideIgnoredNames: true
+  "markdown-preview":
+    useGitHubStyle: true
