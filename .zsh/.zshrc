@@ -34,8 +34,6 @@ export LESS='-RSj4'
 export LESSHISTFILE=-
 eval $(lesspipe.sh 2>/dev/null || lesspipe)
 
-export GREP_OPTIONS='--binary-files=without-match --color=auto'
-
 export HOMEBREW_CC=clang
 
 export TEXMFHOME=${HOME}/.texmf
@@ -273,6 +271,7 @@ alias mv='nocorrect mv -i'
 alias cp='nocorrect cp -i'
 alias mkdir='nocorrect mkdir'
 alias touch='nocorrect touch'
+alias grep='grep --binary-files=without-match --color=auto'
 alias gd='dirs -v; read newdir; cd +"${newdir}"' #選択的popd
 alias R='R --quiet --no-save --no-restore-data'
 alias em='emacs -nw'
