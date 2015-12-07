@@ -1,7 +1,6 @@
 ;;;;;;;;;1;;;;;;;;;2;;;;;;;;;3;;;;;;;;;4;;;;;;;;;5;;;;;;;;;6;;;;;;;;;7;;;;;;;;;
 ;;; package management
-(add-to-list 'load-path "~/.cask")
-(require 'cask)
+(require 'cask "~/.cask/cask.el")
 (cask-initialize)
 
 ;(add-to-list 'auto-mode-alist '("\\.Rmd$" . markdown-mode))
