@@ -115,3 +115,11 @@
   (global-set-key [mouse-5] '(lambda ()
                                (interactive)
                                (scroll-up 1))))
+
+
+
+;;;;;;;;;1;;;;;;;;;2;;;;;;;;;3;;;;;;;;;4;;;;;;;;;5;;;;;;;;;6;;;;;;;;;7;;;;;;;;;
+;;; Mac Emacs.app
+
+(setq default-frame-alist
+    '((width . 163) (height . 60)))

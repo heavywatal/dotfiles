@@ -284,6 +284,7 @@ if [ $(uname) = Darwin ]; then
     alias ldd="otool -L"
     alias wine=/Applications/Wine.app/Contents/Resources/bin/wine
     alias mi="open -a mi"
+    alias memacs='open -a emacs'
     alias pbsnodes="ssh charles pbsnodes"
 fi
 
