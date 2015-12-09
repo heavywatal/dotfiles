@@ -14,7 +14,11 @@ if [ $(uname) = Darwin ]; then
     fi
     if [ -d ${HOME}/.homebrew ]; then
         PATH=${HOME}/.homebrew/bin:${PATH}
-        PATH=$(brew --prefix)/opt/qt5/bin:${PATH}
+        brew_prefix=$(brew --prefix)
+        PATH=${brew_prefix}/opt/coreutils/libexec/gnubin:${PATH}
+        PATH=${brew_prefix}/opt/gnu-sed/libexec/gnubin:${PATH}
+        PATH=${brew_prefix}/opt/gnu-tar/libexec/gnubin:${PATH}
+        PATH=${brew_prefix}/opt/qt5/bin:${PATH}
     fi
 elif [ $(uname) = Linux ]; then
     source /etc/environment

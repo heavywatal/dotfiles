@@ -251,18 +251,11 @@ unset PCOL
 #########1#########2#########3#########4#########5#########6#########7#########
 ## Alias
 
-if [ -n "$(whence gls)" ]; then
-    LS="gls"
+if ls --color=auto >/dev/null 2>&1; then
+    alias ls="ls -vF --show-control-chars --color=auto"
 else
-    LS="ls"
+    alias ls="ls -FG"
 fi
-
-if [ $(uname) = Darwin -a ${LS} = "ls" ]; then
-    alias ls="${LS} -FG"
-else
-    alias ls="${LS} -vF --show-control-chars --color=auto"
-fi
-unset LS
 
 alias ll="ls -l"
 alias lal="ls -al"
@@ -277,8 +270,6 @@ alias R='R --quiet --no-save --no-restore-data'
 alias em='emacs -nw'
 alias rsync='rsync --exclude-from=${HOME}/.rsync/exclude'
 alias ta="tmux -2u attach"
-alias clang++11='clang++ -std=c++11 -stdlib=libc++'
-alias g++11='g++-4.9 -std=c++11'
 
 if [ $(uname) = Darwin ]; then
     alias ldd="otool -L"
