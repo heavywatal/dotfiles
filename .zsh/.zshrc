@@ -23,9 +23,13 @@ export PAGER=less
 export EDITOR=emacs
 export EDOTDIR=${HOME}/.emacs.d
 
-MANPATH=${HOME}/.homebrew/share/man\
-:/usr/local/man:/usr/local/share/man\
-:/opt/local/man:/opt/local/share/man
+MANPATH=/usr/local/man:/usr/local/share/man:${MANPATH}
+MANPATH=/opt/local/man:/opt/local/share/man:${MANPATH}
+if [ -d ${HOME}/.homebrew ]; then
+    MANPATH=${HOME}/.homebrew/share/man:${MANPATH}
+    MANPATH=${HOME}/.homebrew/opt/coreutils/libexec/gnuman:${MANPATH}
+fi
+export MANPATH
 
 # C-w, M-b, M-f; default: *?_-.[]~=/&;!#$%^(){}<>
 WORDCHARS='*?[]~&!#$%^(){}<>'
