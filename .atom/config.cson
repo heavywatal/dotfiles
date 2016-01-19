@@ -4,6 +4,11 @@
     autocompleteBrackets: false
     autocompleteSmartQuotes: false
   core:
+    disabledPackages: [
+      "atom-typescript"
+      "nuclide-hg-repository"
+      "minimap"
+    ]
     themes: [
       "atom-dark-ui"
       "atom-dark-syntax"
@@ -19,7 +24,10 @@
     tabType: "soft"
   "exception-reporting":
     userId: "f0d28512-acf7-2fb1-594b-afb76e3c99ba"
+  "file-icons":
+    onChanges: true
   "git-diff": {}
+  "git-plus": {}
   linter: {}
   "markdown-preview":
     useGitHubStyle: true
@@ -28,10 +36,12 @@
   minimap:
     devicePixelRatioRounding: false
     displayMinimapOnLeft: true
+  pigments: {}
   tabs:
     enableVcsColoring: true
     usePreviewTabs: true
   "tree-view":
     hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
