@@ -1,5 +1,15 @@
-cancer:
+tumopp:
   title: "tumopp"
   paths: [
     "/Users/watal/git/tumopp"
+  ]
+sphinx:
+  title: "sphinx"
+  paths: [
+    "/Users/watal/hg/sphinx"
+  ]
+notebook:
+  title: "notebook"
+  paths: [
+    "/Users/watal/hg/notebook"
   ]
