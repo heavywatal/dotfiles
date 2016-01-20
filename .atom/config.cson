@@ -1,5 +1,6 @@
 "*":
   "atom-typescript": {}
+  "autocomplete-plus": {}
   "bracket-matcher":
     autocompleteBrackets: false
     autocompleteSmartQuotes: false
@@ -37,11 +38,14 @@
     devicePixelRatioRounding: false
     displayMinimapOnLeft: true
   pigments: {}
+  "spell-check": {}
+  "status-bar": {}
   tabs:
     enableVcsColoring: true
-    usePreviewTabs: true
   "tree-view":
     hideIgnoredNames: true
     hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
+  whitespace:
+    ensureSingleTrailingNewline: false
