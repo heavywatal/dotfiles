@@ -1,9 +1,14 @@
 "*":
   "atom-typescript": {}
+  "autocomplete-plus": {}
   "bracket-matcher":
     autocompleteBrackets: false
     autocompleteSmartQuotes: false
   core:
+    disabledPackages: [
+      "atom-typescript"
+      "minimap"
+    ]
     themes: [
       "atom-dark-ui"
       "atom-dark-syntax"
@@ -28,10 +33,13 @@
   minimap:
     devicePixelRatioRounding: false
     displayMinimapOnLeft: true
+  "spell-check": {}
+  "status-bar": {}
   tabs:
     enableVcsColoring: true
-    usePreviewTabs: true
   "tree-view":
     hideIgnoredNames: true
   welcome:
     showOnStartup: false
+  whitespace:
+    ensureSingleTrailingNewline: false
