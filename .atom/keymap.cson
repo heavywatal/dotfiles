@@ -26,3 +26,9 @@
 
 'atom-text-editor':
   'ctrl-m': 'editor:newline'
+  'ctrl-i': 'autocomplete-plus:activate'
+
+'body atom-text-editor.autocomplete-active':
+  'ctrl-j': 'autocomplete-plus:move-up'
+  'ctrl-i': 'autocomplete-plus:move-down'
+  'ctrl-m': 'autocomplete-plus:confirm'
