@@ -13,3 +13,8 @@ notebook:
   paths: [
     "/Users/watal/hg/notebook"
   ]
+cxxwtils:
+  title: "cxxwtils"
+  paths: [
+    "/Users/watal/git/cxxwtils"
+  ]
