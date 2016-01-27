@@ -9,6 +9,7 @@
     autocompleteBrackets: false
     autocompleteSmartQuotes: false
   core:
+    automaticallyUpdate: false
     disabledPackages: [
       "atom-typescript"
       "nuclide-hg-repository"
