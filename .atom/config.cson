@@ -53,6 +53,12 @@
   tablr: {}
   tabs:
     enableVcsColoring: true
+  "terminal-plus":
+    core: {}
+    style:
+      theme: "homebrew"
+    toggles:
+      autoClose: true
   "tree-view":
     hideIgnoredNames: true
     hideVcsIgnoredFiles: true
