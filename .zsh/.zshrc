@@ -86,7 +86,7 @@ zstyle ':completion:*:default' menu select=1
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*:descriptions' format '%B%U%d%u%b'
 zstyle ':completion:*' group-name ''
-# 
+#
 #zstyle ':completion:*' verbose yes
 #zstyle ':completion:*:messages' format 'messages: %d'
 #zstyle ':completion:*:warnings' format 'No matches for: %d'
@@ -335,6 +335,4 @@ preexec(){
 
 export PYTHONSTARTUP=${HOME}/local/lib/python/pythonstartup.py
 
-alias workon_home="source ${HOME}/.virtualenv/home/bin/activate"
-
-workon_home 2>/dev/null && MANPATH=${MANPATH}:${VIRTUAL_ENV}/man:${VIRTUAL_ENV}/share/man
+source ${HOME}/.virtualenv/py3/bin/activate 2>/dev/null && MANPATH=${MANPATH}:${VIRTUAL_ENV}/man:${VIRTUAL_ENV}/share/man
