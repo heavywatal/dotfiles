@@ -11,8 +11,8 @@ tmux has-session >/dev/null 2>&1 && if [ -z "${TMUX}" ]; then
     else
         echo '% tmux list-sessions'
         tmux list-sessions
-        echo '% tmux list-windows'
-        tmux list-windows
+        echo '% tmux list-windows -a'
+        tmux list-windows -a
     fi
 fi
 
