@@ -8,8 +8,7 @@ import subprocess
 
 ignore = ['.DS_Store', '.git', '.gitignore', '.hg', '.hgignore']
 home = os.path.expanduser('~')
-here = os.path.abspath(os.path.dirname(__file__))
-here_from_home = os.path.dirname(os.path.relpath(__file__, home))
+here = os.path.dirname(__file__)
 
 for x in os.listdir(here):
     if x in ignore or not x.startswith('.'):
@@ -21,6 +20,6 @@ for x in os.listdir(here):
     if os.path.lexists(os.path.join(home, x)):
         print(x + ": Broken link")
         continue
-    cmd = ["ln", "-s", os.path.join(here_from_home, x), os.path.join(home, x)]
+    cmd = ["ln", "-s", os.path.join(here, x), os.path.join(home, x)]
     print(' '.join(cmd))
     subprocess.call(cmd)
