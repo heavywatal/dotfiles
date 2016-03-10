@@ -18,3 +18,8 @@ cxxwtils:
   paths: [
     "/Users/watal/git/cxxwtils"
   ]
+hugobook:
+  title: "hugobook"
+  paths: [
+    "/Users/watal/git/hugobook"
+  ]
