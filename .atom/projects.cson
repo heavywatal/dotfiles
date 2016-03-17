@@ -23,3 +23,8 @@ hugobook:
   paths: [
     "/Users/watal/git/hugobook"
   ]
+edal:
+  title: "edal"
+  paths: [
+    "/Users/watal/git/edal"
+  ]
