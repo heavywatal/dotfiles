@@ -28,3 +28,8 @@ edal:
   paths: [
     "/Users/watal/git/edal"
   ]
+sphinx2hugo:
+  title: "sphinx2hugo"
+  paths: [
+    "/Users/watal/git/sphinx2hugo"
+  ]
