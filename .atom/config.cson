@@ -14,6 +14,7 @@
       "atom-typescript"
       "nuclide-hg-repository"
       "minimap"
+      "language-gfm"
     ]
     themes: [
       "atom-dark-ui"
@@ -45,6 +46,7 @@
   linter: {}
   "markdown-preview":
     useGitHubStyle: true
+  "markdown-writer": {}
   metrics:
     userId: "d41006fb557ba1ecaf77a96d564817b4f1b41194"
   minimap:

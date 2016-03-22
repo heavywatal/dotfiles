@@ -25,10 +25,61 @@
     'prefix': 'hr-'
     'body': '-------------------------------------------------------------------------------'
 
+'.text.md':
+  '<div>$$\\begin{split}':
+    'prefix': 'equation'
+    'body': '<div>$$\\\\begin{split}\n\n\\\\end{split}$$</div>'
+  '<div class="note">':
+    'prefix': 'note'
+    'body': '<div class="note">\n\n\n\n</div>'
+  '<div class="warning">':
+    'prefix': 'warning'
+    'body': '<div class="warning">\n\n\n\n</div>'
+
 '.text.tex.latex':
   '%%%%':
     'prefix': 'hr'
     'body': '%%%%%%%%%1%%%%%%%%%2%%%%%%%%%3%%%%%%%%%4%%%%%%%%%5%%%%%%%%%6%%%%%%%%%7%%%%%%%%%'
+  '\\begin{equation}':
+    'prefix': 'equation'
+    'body': '''\\\\begin{equation}
+               \\\\begin{split}\n
+               \\\\end{split}
+               \\\\label{eq:}
+               \\\\end{equation}'''
+  '\\begin{align}':
+    'prefix': 'align'
+    'body': '\\\\begin{align}\n\\\\end{align}'
+  '\\begin{itemize}':
+    'prefix': 'itemize'
+    'body': '''\\\\begin{itemize}
+               \\\\item
+               \\\\end{itemize}'''
+  '\\begin{enumerate}':
+    'prefix': 'enumerate'
+    'body': '''\\\\begin{enumerate}
+               \\\\item
+               \\\\end{enumerate}'''
+  '\\begin{description}':
+    'prefix': 'description'
+    'body': '''\\\\begin{description}
+               \\\\item[key] value
+               \\\\end{description}'''
+  '\\begin{figure}':
+    'prefix': 'figure'
+    'body': '''\\\\begin{figure}[h]
+               \\\\includegraphics[width=100mm]{.pdf}
+               \\\\caption{}
+               \\\\label{fig:}
+               \\\\end{figure}'''
+  '\\begin{table}':
+    'prefix': 'table'
+    'body': '''\\\\begin{table}[h]
+               \\\\caption{}
+               \\\\label{table:}
+               \\\\begin{tabular}{lll}\n
+               \\\\end{tabular}
+               \\\\end{table}'''
 
 '.source.cpp':
   '////':

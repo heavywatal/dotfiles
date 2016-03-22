@@ -32,3 +32,16 @@
   'ctrl-j': 'autocomplete-plus:move-up'
   'ctrl-i': 'autocomplete-plus:move-down'
   'ctrl-m': 'autocomplete-plus:confirm'
+
+# for Markdown Writer
+# https://atom.io/packages/markdown-writer
+'.platform-darwin atom-text-editor:not([mini])':
+  'shift-cmd-K': 'markdown-writer:insert-link'
+  'shift-cmd-I': 'markdown-writer:insert-image'
+  'cmd-i':       'markdown-writer:toggle-italic-text'
+  'cmd-b':       'markdown-writer:toggle-bold-text'
+  'cmd-k':       'markdown-writer:toggle-keystroke-text'
+  "cmd-'":       'markdown-writer:toggle-codeblock-text'
+  'cmd-"':       'markdown-writer:toggle-blockquote'
+  'shift-cmd-O': 'markdown-writer:toggle-ol'
+  'shift-cmd-U': 'markdown-writer:toggle-ul'
