@@ -33,3 +33,8 @@ sphinx2hugo:
   paths: [
     "/Users/watal/git/sphinx2hugo"
   ]
+tumorr:
+  title: "tumorr"
+  paths: [
+    "/Users/watal/git/tumorr"
+  ]
