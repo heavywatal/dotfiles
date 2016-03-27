@@ -38,3 +38,8 @@ tumorr:
   paths: [
     "/Users/watal/git/tumorr"
   ]
+dotfiles:
+  title: "dotfiles"
+  paths: [
+    "/Users/watal/git/dotfiles"
+  ]
