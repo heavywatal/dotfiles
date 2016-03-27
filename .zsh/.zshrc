@@ -274,6 +274,7 @@ alias R='R --quiet --no-save --no-restore-data'
 alias em='emacs -nw'
 alias rsync='rsync --exclude-from=${HOME}/.rsync/exclude'
 alias ta="tmux -2u attach"
+alias ciff='colordiff -u'
 
 if [ $(uname) = Darwin ]; then
     alias ldd="otool -L"
