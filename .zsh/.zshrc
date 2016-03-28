@@ -246,7 +246,7 @@ case $(echo ${SSH_CONNECTION} | awk '{print $3}') in
         ;;
 esac
 
-PROMPT="%{$fg_bold[${PCOL}]%}--%n@%m:%/
+PROMPT="%{$fg_bold[${PCOL}]%}%D{%m-%d} %T %n@%m:%~
 %{$reset_color%}%# "
 #PROMPT="%{$fg_bold[${PCOL}]%}[%m]%{$reset_color%}%# "
 #RPROMPT="%{$fg_bold[${PCOL}]%}[%~]%{$reset_color%}"
