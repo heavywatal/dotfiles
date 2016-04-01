@@ -16,6 +16,7 @@
       "minimap"
       "language-gfm"
     ]
+    openEmptyEditorOnStart: false
     themes: [
       "atom-dark-ui"
       "atom-dark-syntax"
