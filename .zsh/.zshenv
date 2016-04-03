@@ -27,6 +27,7 @@ if [ -d ${HOME}/.homebrew ]; then
 fi
 
 # Path
+PATH=${HOME}/.nodebrew/current/bin:${PATH}
 PATH=/opt/local/bin:/opt/local/sbin:${PATH}
 PATH=${HOME}/local/bin:${HOME}/local/scripts:${PATH}
 export PATH
