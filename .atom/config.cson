@@ -45,6 +45,10 @@
   "file-icons": {}
   "git-diff": {}
   "git-plus": {}
+  latex:
+    alwaysOpenResultInAtom: true
+    moveResultToSourceDirectory: false
+    outputDirectory: "build"
   linter: {}
   "markdown-preview":
     useGitHubStyle: true
@@ -54,6 +58,9 @@
   minimap:
     devicePixelRatioRounding: false
     displayMinimapOnLeft: true
+  "pdf-view":
+    fitToWidthOnOpen: true
+    reverseSyncBehaviour: "Double click"
   pigments: {}
   "spell-check":
     grammars: [
@@ -80,3 +87,6 @@
     showOnStartup: false
   whitespace:
     ensureSingleTrailingNewline: false
+".latex.tex.text":
+  editor:
+    softWrap: true
