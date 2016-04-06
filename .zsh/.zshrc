@@ -5,15 +5,10 @@
 [ ${TERM} = xterm ] && export TERM=xterm-256color
 
 tmux has-session >/dev/null 2>&1 && if [ -z "${TMUX}" ]; then
-    if [ -n "${SSH_CONNECTION}" ]; then
-        tmux -2u attach
-        exit
-    else
-        echo '% tmux list-sessions'
-        tmux list-sessions
-        echo '% tmux list-windows -a'
-        tmux list-windows -a
-    fi
+    echo '% tmux list-sessions'
+    tmux list-sessions
+    echo '% tmux list-windows -a'
+    tmux list-windows -a
 fi
 
 #########1#########2#########3#########4#########5#########6#########7#########
