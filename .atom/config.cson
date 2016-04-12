@@ -8,6 +8,9 @@
   "bracket-matcher":
     autocompleteBrackets: false
     autocompleteSmartQuotes: false
+  "color-picker":
+    preferredFormat: "HEX"
+    randomColor: false
   core:
     automaticallyUpdate: false
     disabledPackages: [
@@ -45,6 +48,9 @@
   "file-icons": {}
   "git-diff": {}
   "git-plus": {}
+  "language-markdown":
+    addListItems: false
+    removeEmptyListItems: false
   latex:
     alwaysOpenResultInAtom: true
     moveResultToSourceDirectory: false
