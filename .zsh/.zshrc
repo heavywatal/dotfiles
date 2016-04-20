@@ -332,3 +332,5 @@ preexec(){
 export PYTHONSTARTUP=${HOME}/local/lib/python/pythonstartup.py
 
 source ${HOME}/.virtualenv/py3/bin/activate 2>/dev/null && MANPATH=${MANPATH}:${VIRTUAL_ENV}/man:${VIRTUAL_ENV}/share/man
+
+export GOPATH=${HOME}/.go
