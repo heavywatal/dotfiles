@@ -79,6 +79,7 @@
   "status-bar": {}
   tablr: {}
   tabs:
+    addNewTabsAtEnd: true
     enableVcsColoring: true
   "terminal-plus":
     core: {}
