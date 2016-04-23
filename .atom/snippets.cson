@@ -31,10 +31,10 @@
     'body': '<div>$$\\\\begin{split}\n\n\\\\end{split}$$</div>'
   '<div class="note">':
     'prefix': 'note'
-    'body': '<div class="note">\n\n\n\n</div>'
+    'body': '{{div class="note"}}\n\n{{/div}}'
   '<div class="warning">':
     'prefix': 'warning'
-    'body': '<div class="warning">\n\n\n\n</div>'
+    'body': '{{div class="warning"}}\n\n{{/div}}'
 
 '.text.tex.latex':
   '%%%%':
