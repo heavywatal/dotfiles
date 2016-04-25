@@ -1,45 +1,40 @@
-tumopp:
-  title: "tumopp"
+dotfiles:
+  title: "dotfiles"
   paths: [
-    "/Users/watal/git/tumopp"
-  ]
-sphinx:
-  title: "sphinx"
-  paths: [
-    "/Users/watal/hg/sphinx"
-  ]
-notebook:
-  title: "notebook"
-  paths: [
-    "/Users/watal/hg/notebook"
-  ]
-cxxwtils:
-  title: "cxxwtils"
-  paths: [
-    "/Users/watal/git/cxxwtils"
+    "/Users/watal/git/dotfiles"
   ]
 hugobook:
   title: "hugobook"
   paths: [
     "/Users/watal/git/hugobook"
   ]
+"github.io":
+  title: "github.io"
+  paths: [
+    "/Users/watal/git/heavywatal.github.io"
+  ]
+manuscripts:
+  title: "manuscripts"
+  paths: [
+    "/Users/watal/hg/manuscripts/cancer"
+  ]
+cxxwtils:
+  title: "cxxwtils"
+  paths: [
+    "/Users/watal/git/cxxwtils"
+  ]
 edal:
   title: "edal"
   paths: [
     "/Users/watal/git/edal"
   ]
-sphinx2hugo:
-  title: "sphinx2hugo"
+tumopp:
+  title: "tumopp"
   paths: [
-    "/Users/watal/git/sphinx2hugo"
+    "/Users/watal/git/tumopp"
   ]
 tumorr:
   title: "tumorr"
   paths: [
     "/Users/watal/git/tumorr"
-  ]
-dotfiles:
-  title: "dotfiles"
-  paths: [
-    "/Users/watal/git/dotfiles"
   ]

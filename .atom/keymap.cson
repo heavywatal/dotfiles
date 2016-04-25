@@ -1,43 +1,18 @@
-# Your keymap
-#
-# Atom keymaps work similarly to stylesheets. Just as stylesheets use selectors
-# to apply styles to elements, Atom keymaps use selectors to associate
-# keystrokes with events in specific contexts.
-#
-# You can create a new keybinding in this file by typing "key" and then hitting
-# tab.
-#
-# Here's an example taken from Atom's built-in keymap:
-#
-# '.editor':
-#   'enter': 'editor:newline'
-#
-# '.workspace':
-#   'ctrl-shift-p': 'core:move-up'
-#   'ctrl-p': 'core:move-down'
-#
-# You can find more information about keymaps in these guides:
-# * https://atom.io/docs/latest/customizing-atom#customizing-key-bindings
-# * https://atom.io/docs/latest/advanced/keymaps
-
-'body':
-  'ctrl-tab ^ctrl': 'unset!'
-  'ctrl-tab': 'pane:show-next-item'
-  'ctrl-shift-tab ^ctrl': 'unset!'
-  'ctrl-shift-tab': 'pane:show-previous-item'
-
-'atom-text-editor':
+'atom-text-editor:not([mini])':
   'ctrl-m': 'editor:newline'
   'ctrl-i': 'autocomplete-plus:activate'
 
-'body atom-text-editor.autocomplete-active':
-  'ctrl-j': 'autocomplete-plus:move-up'
+'atom-text-editor.autocomplete-active':
+  'down': 'autocomplete-plus:move-down'
+  'up': 'autocomplete-plus:move-up'
   'ctrl-i': 'autocomplete-plus:move-down'
+  'ctrl-u': 'autocomplete-plus:move-up'
+  'ctrl-j': 'autocomplete-plus:confirm'
   'ctrl-m': 'autocomplete-plus:confirm'
 
 # for Markdown Writer
 # https://atom.io/packages/markdown-writer
-'.platform-darwin atom-text-editor:not([mini])':
+'.platform-darwin atom-text-editor[data-grammar~="md"]':
   'shift-cmd-K': 'markdown-writer:insert-link'
   'shift-cmd-I': 'markdown-writer:insert-image'
   'cmd-i':       'markdown-writer:toggle-italic-text'
@@ -47,3 +22,12 @@
   'cmd-"':       'markdown-writer:toggle-blockquote'
   'shift-cmd-O': 'markdown-writer:toggle-ol'
   'shift-cmd-U': 'markdown-writer:toggle-ul'
+
+# to disable insane default MRU tabs introduced in v1.7
+# https://github.com/atom/atom/issues/5344
+# https://github.com/atom/atom/issues/11035
+'body':
+  'ctrl-tab ^ctrl': 'unset!'
+  'ctrl-tab': 'pane:show-next-item'
+  'ctrl-shift-tab ^ctrl': 'unset!'
+  'ctrl-shift-tab': 'pane:show-previous-item'
