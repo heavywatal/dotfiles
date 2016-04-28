@@ -38,3 +38,8 @@ tumorr:
   paths: [
     "/Users/watal/git/tumorr"
   ]
+innanlab:
+  title: "InnanLab"
+  paths: [
+    "/Users/watal/git/innanlab"
+  ]
