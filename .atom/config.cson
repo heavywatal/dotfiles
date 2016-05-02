@@ -18,6 +18,7 @@
       "nuclide-hg-repository"
       "minimap"
       "language-gfm"
+      "linter-lintr"
     ]
     openEmptyEditorOnStart: false
     themes: [
@@ -54,7 +55,6 @@
   latex:
     alwaysOpenResultInAtom: true
     moveResultToSourceDirectory: false
-    outputDirectory: "build"
   linter: {}
   "markdown-preview":
     useGitHubStyle: true
