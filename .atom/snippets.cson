@@ -19,6 +19,9 @@
   '<div class="warning">':
     'prefix': 'warning'
     'body': '{{%div class="warning"%}}\n\n{{%/div%}}'
+  '{{< relref >}}':
+    'prefix': 'relref'
+    'body': '[]({{< relref ".md" >}})'
 
 '.text.tex.latex':
   '%%%%':
