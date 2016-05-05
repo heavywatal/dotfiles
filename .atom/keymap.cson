@@ -2,6 +2,10 @@
   'ctrl-m': 'editor:newline'
   'ctrl-i': 'autocomplete-plus:activate'
 
+'atom-workspace atom-text-editor:not([mini])':
+  'cmd-enter': 'r-exec:send-command'
+  'ctrl-enter': 'r-exec:send-command'
+
 'atom-text-editor.autocomplete-active':
   'down': 'autocomplete-plus:move-down'
   'up': 'autocomplete-plus:move-up'
@@ -24,6 +28,7 @@
   'shift-cmd-U': 'markdown-writer:toggle-ul'
 
 # to disable insane default MRU tabs introduced in v1.7
+# http://blog.atom.io/2016/04/12/atom-1-7-and-1-8-beta.html
 # https://github.com/atom/atom/issues/5344
 # https://github.com/atom/atom/issues/11035
 'body':
