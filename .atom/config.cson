@@ -68,6 +68,9 @@
     fitToWidthOnOpen: true
     reverseSyncBehaviour: "Double click"
   pigments: {}
+  "r-exec":
+    focusWindow: false
+    whichApp: "iTerm"
   "spell-check":
     grammars: [
       "text.plain"
