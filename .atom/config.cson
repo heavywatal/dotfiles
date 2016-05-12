@@ -56,6 +56,11 @@
     alwaysOpenResultInAtom: true
     moveResultToSourceDirectory: false
   linter: {}
+  "linter-clang":
+    clangDefaultCppFlags: "-Wall -Wextra -Wno-pragma-once-outside-header -std=c++14"
+    clangIncludePaths: [
+      "/Users/watal/local/include"
+    ]
   "markdown-preview":
     useGitHubStyle: true
   "markdown-writer": {}
