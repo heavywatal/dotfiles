@@ -13,10 +13,10 @@ hugobook:
   paths: [
     "/Users/watal/git/heavywatal.github.io"
   ]
-manuscripts:
-  title: "manuscripts"
+manuscript:
+  title: "manuscript"
   paths: [
-    "/Users/watal/hg/manuscripts/cancer"
+    "/Users/watal/git/manuscript/cancer"
   ]
 cxxwtils:
   title: "cxxwtils"
