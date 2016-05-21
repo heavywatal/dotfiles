@@ -21,6 +21,7 @@
       "linter-lintr"
     ]
     openEmptyEditorOnStart: false
+    projectHome: "/Users/watal/git"
     themes: [
       "atom-dark-ui"
       "atom-dark-syntax"
