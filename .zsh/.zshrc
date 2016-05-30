@@ -23,6 +23,9 @@ MANPATH=/opt/local/man:/opt/local/share/man:${MANPATH}
 if [ -d ${HOME}/.homebrew ]; then
     MANPATH=${HOME}/.homebrew/share/man:${MANPATH}
     MANPATH=${HOME}/.homebrew/opt/coreutils/libexec/gnuman:${MANPATH}
+    if [ $(uname) = Darwin ]; then
+        export HOMEBREW_CC=clang
+    fi
 fi
 export MANPATH
 
@@ -32,8 +35,6 @@ WORDCHARS='*?[]~&!#$%^(){}<>'
 export LESS='-RSj4'
 export LESSHISTFILE=-
 eval $(lesspipe.sh 2>/dev/null || lesspipe)
-
-export HOMEBREW_CC=clang
 
 export TEXMFHOME=${HOME}/.texmf
 
