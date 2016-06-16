@@ -323,9 +323,11 @@ bindkey "^U" backward-kill-line
 precmd(){
     print -Pn "\e]0;%m:%~\a"
 }
-preexec(){
-    print -Pn "\e]0;%m%# $1 [%~]\a"
-}
+
+# This breaks lesspipe
+# preexec(){
+#     print -Pn "\e]0;%m%# $1 [%~]\a"
+# }
 
 #########1#########2#########3#########4#########5#########6#########7#########
 ## Python
