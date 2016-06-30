@@ -17,13 +17,15 @@
 # for Markdown Writer
 # https://atom.io/packages/markdown-writer
 '.platform-darwin atom-text-editor[data-grammar~="md"]':
-  'shift-cmd-K': 'markdown-writer:insert-link'
-  'shift-cmd-I': 'markdown-writer:insert-image'
+  'shift-cmd-k': 'markdown-writer:insert-link'
+  'shift-cmd-i': 'markdown-writer:insert-image'
   'cmd-i':       'markdown-writer:toggle-italic-text'
   'cmd-b':       'markdown-writer:toggle-bold-text'
-  'cmd-k':       'markdown-writer:toggle-keystroke-text'
-  "cmd-'":       'markdown-writer:toggle-codeblock-text'
-  'cmd-"':       'markdown-writer:toggle-blockquote'
+  "cmd-'":       'markdown-writer:toggle-code-text'
+  'cmd-k cmd-k': 'markdown-writer:toggle-keystroke-text'
+  'cmd-k cmd-s': 'markdown-writer:toggle-strikethrough-text'
+  'cmd->':       'markdown-writer:toggle-blockquote'
+  'cmd-"':       'markdown-writer:toggle-codeblock-text'
   'shift-cmd-O': 'markdown-writer:toggle-ol'
   'shift-cmd-U': 'markdown-writer:toggle-ul'
 
