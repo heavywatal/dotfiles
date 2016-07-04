@@ -17,9 +17,9 @@ elif [ $(uname) = Linux ]; then
 fi
 
 # Homebrew/Linuxbrew
-if [ -d ${HOME}/.homebrew ]; then
-    PATH=${HOME}/.homebrew/bin:${PATH}
-    brew_prefix=$(brew --prefix)
+PATH=${HOME}/.homebrew/bin:${PATH}
+brew_prefix=$(brew --prefix 2>/dev/null)
+if [ -n "${brew_prefix}" ]; then
     PATH=${brew_prefix}/opt/coreutils/libexec/gnubin:${PATH}
     PATH=${brew_prefix}/opt/gnu-sed/libexec/gnubin:${PATH}
     PATH=${brew_prefix}/opt/gnu-tar/libexec/gnubin:${PATH}

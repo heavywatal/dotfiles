@@ -20,9 +20,9 @@ export EDOTDIR=${HOME}/.emacs.d
 
 MANPATH=/usr/local/man:/usr/local/share/man:${MANPATH}
 MANPATH=/opt/local/man:/opt/local/share/man:${MANPATH}
-if [ -d ${HOME}/.homebrew ]; then
-    MANPATH=${HOME}/.homebrew/share/man:${MANPATH}
-    MANPATH=${HOME}/.homebrew/opt/coreutils/libexec/gnuman:${MANPATH}
+if [ -n "${brew_prefix}" ]; then
+    MANPATH=${brew_prefix}/share/man:${MANPATH}
+    MANPATH=${brew_prefix}/opt/coreutils/libexec/gnuman:${MANPATH}
     if [ $(uname) = Darwin ]; then
         export HOMEBREW_CC=clang
     fi
@@ -66,9 +66,10 @@ setopt PUSHD_TO_HOME
 ZFUNCDIR=${ZDOTDIR}/functions
 autoload ${ZFUNCDIR}/*(:t)
 fpath=(${ZFUNCDIR} ${fpath})
-if [ -d ${HOME}/.homebrew/share/zsh-completions ]; then
-    fpath=(${HOME}/.homebrew/share/zsh-completions $fpath)
+if [ -d ${brew_prefix}/share/zsh-completions ]; then
+    fpath=(${brew_prefix}/share/zsh-completions ${fpath})
 fi
+unset brew_prefix
 
 autoload -U compinit
 compinit -u
