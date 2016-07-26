@@ -86,7 +86,7 @@
       "text.plain"
       "text.git-commit"
       "source.gfm"
-      "text.restructuredtext source.gfm.restructuredtext"
+      "text.md"
       "text.tex.latex"
     ]
   "status-bar": {}
