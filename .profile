@@ -15,4 +15,4 @@ export PATH
 
 # Language
 export LANG=C
-export LC_ALL=C
+export LC_CTYPE=en_US.UTF-8
