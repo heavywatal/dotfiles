@@ -177,7 +177,7 @@ setopt SHARE_HISTORY
 
 #unsetopt ALL_EXPORT
 #unsetopt GLOBAL_EXPORT
-unsetopt GLOBAL_RCS
+#setopt GLOBAL_RCS
 #setopt RCS
 
 #########1#########2#########3#########4#########5#########6#########7#########

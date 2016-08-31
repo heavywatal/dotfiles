@@ -1,5 +1,5 @@
-# privent compinit from being called in /etc/zsh/zshrc
-skip_global_compinit=1
+# ignore /etc/z* (especially /etc/zprofile on Mac)
+unsetopt GLOBAL_RCS
 
 # Zsh DOTfile DIRectory
 export ZDOTDIR=${HOME}/.zsh
