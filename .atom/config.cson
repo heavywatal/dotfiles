@@ -31,13 +31,14 @@
       "atom-dark-syntax"
     ]
   editor:
+    atomicSoftTabs: false
     autoIndentOnPaste: false
     fontFamily: "Ubuntu Mono"
     invisibles:
       space: " "
     lineHeight: 1.2
     showInvisibles: true
-    tabLength: 1
+    tabLength: 4
     tabType: "soft"
   "ever-notedown":
     checkbox: false
