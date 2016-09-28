@@ -1,7 +1,26 @@
 ;;;;;;;;;1;;;;;;;;;2;;;;;;;;;3;;;;;;;;;4;;;;;;;;;5;;;;;;;;;6;;;;;;;;;7;;;;;;;;;
 ;;; package management
-(require 'cask "~/.cask/cask.el")
-(cask-initialize)
+
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
+;; Too slow
+;(package-refresh-contents)
+
+(package-install 'flycheck)
+(package-install 'auto-complete)
+(package-install 'markdown-mode)
+(package-install 'js2-mode)
+(package-install 'tss)
+(package-install 'ess)
+(package-install 'polymode)
 
 ;(add-to-list 'auto-mode-alist '("\\.Rmd$" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md$" . gfm-mode))
@@ -37,6 +56,9 @@
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
  '(make-backup-files nil)
+ '(package-selected-packages
+   (quote
+    (polymode ess tss js2-mode markdown-mode auto-complete)))
  '(scroll-conservatively 42)
  '(show-trailing-whitespace t)
  '(truncate-lines t)
