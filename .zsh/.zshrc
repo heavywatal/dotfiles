@@ -34,7 +34,7 @@ WORDCHARS='*?[]~&!#$%^(){}<>'
 
 export LESS='-RSj4'
 export LESSHISTFILE=-
-eval $(lesspipe.sh 2>/dev/null || lesspipe)
+eval $(lesspipe.sh 2>/dev/null || lesspipe 2>/dev/null)
 
 export TEXMFHOME=${HOME}/.texmf
 
