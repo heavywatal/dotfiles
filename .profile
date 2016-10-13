@@ -1,4 +1,17 @@
+if [ $(uname) = Darwin ]; then
+    # Resource Fork reduction for 'tar'
+    export COPYFILE_DISABLE=true
+    export COPY_EXTENDED_ATTRIBUTES_DISABLE=true
+    if [ -x /usr/libexec/path_helper ]; then
+        PATH=''
+        eval $(/usr/libexec/path_helper -s)
+    fi
+elif [ $(uname) = Linux ]; then
+    . /etc/environment
+fi
+
 # PATH
+PATH=/usr/local/bin:/usr/local/sbin:${PATH/:\/usr\/local\/bin/}
 PATH=${HOME}/.homebrew/bin:${PATH}
 brew_prefix=$(brew --prefix 2>/dev/null)
 if [ -n "${brew_prefix}" ]; then
