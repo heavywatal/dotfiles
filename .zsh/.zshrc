@@ -269,9 +269,9 @@ alias grep='grep --binary-files=without-match --color=auto'
 alias gd='dirs -v; read newdir; cd +"${newdir}"' #選択的popd
 alias R='R --quiet --no-save --no-restore-data'
 alias em='emacs -nw'
-alias rsync='rsync --exclude-from=${HOME}/.rsync/exclude'
+alias rsync='rsync --exclude-from=${HOME}/.config/rsync-exclude'
 alias ta="tmux -2u attach"
-alias ciff='colordiff -u'
+alias diffu='colordiff -u'
 
 if [ $(uname) = Darwin ]; then
     alias ldd="otool -L"

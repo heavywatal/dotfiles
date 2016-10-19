@@ -1,0 +1,14 @@
+._*
+.DS_Store
+.Trash
+.Trashes
+.Spotlight-*
+.hidden
+.vol
+.localized
+*~
+__pycache__
+*.pyc
+*.zhistory
+.zcompdump
+.dropbox
