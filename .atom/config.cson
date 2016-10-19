@@ -26,6 +26,7 @@
       "markdown-writer"
     ]
     projectHome: "/Users/watal/git"
+    telemetryConsent: "no"
     themes: [
       "atom-dark-ui"
       "atom-dark-syntax"
