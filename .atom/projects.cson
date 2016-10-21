@@ -1,124 +1,75 @@
 [
   {
     title: "dotfiles"
-    group: ""
     paths: [
       "/Users/watal/git/dotfiles"
     ]
-    icon: "icon-chevron-right"
-    settings: {}
-    devMode: false
-    template: null
   }
   {
     title: "hugobook"
-    group: ""
     paths: [
       "/Users/watal/git/hugobook"
     ]
-    icon: "icon-chevron-right"
-    settings: {}
-    devMode: false
-    template: null
   }
   {
     title: "github.io"
-    group: ""
     paths: [
       "/Users/watal/git/heavywatal.github.io"
     ]
-    icon: "icon-chevron-right"
-    settings: {}
-    devMode: false
-    template: null
   }
   {
     title: "manuscript"
-    group: ""
     paths: [
       "/Users/watal/git/manuscript/cancer"
     ]
-    icon: "icon-chevron-right"
-    settings: {}
-    devMode: false
-    template: null
   }
   {
     title: "cxxwtils"
-    group: ""
     paths: [
       "/Users/watal/git/cxxwtils"
     ]
-    icon: "icon-chevron-right"
-    settings: {}
-    devMode: false
-    template: null
   }
   {
     title: "edal"
-    group: ""
     paths: [
       "/Users/watal/git/edal"
     ]
-    icon: "icon-chevron-right"
-    settings: {}
-    devMode: false
-    template: null
   }
   {
     title: "tumopp"
-    group: ""
     paths: [
       "/Users/watal/git/tumopp"
     ]
-    icon: "icon-chevron-right"
-    settings: {}
-    devMode: false
-    template: null
   }
   {
     title: "tumorr"
-    group: ""
     paths: [
       "/Users/watal/git/tumorr"
     ]
-    icon: "icon-chevron-right"
-    settings: {}
-    devMode: false
-    template: null
   }
   {
     title: "InnanLab"
-    group: ""
     paths: [
       "/Users/watal/git/innanlab"
     ]
-    icon: "icon-chevron-right"
-    settings: {}
-    devMode: false
-    template: null
   }
   {
     title: "rwtl"
-    group: ""
     paths: [
       "/Users/watal/git/rwtl"
       "/Users/watal/hg/rstats/wtl"
     ]
-    icon: "icon-chevron-right"
-    settings: {}
-    devMode: false
-    template: null
   }
   {
     title: "lmpp"
-    group: ""
     paths: [
       "/Users/watal/git/lmpp"
     ]
-    icon: "icon-chevron-right"
-    settings: {}
-    devMode: false
-    template: null
+  }
+  {
+    title: "likeligrid"
+    paths: [
+      "/Users/watal/git/likeligrid"
+    ]
   }
 ]
