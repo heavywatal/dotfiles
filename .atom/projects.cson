@@ -4,54 +4,7 @@
     paths: [
       "/Users/watal/git/dotfiles"
     ]
-  }
-  {
-    title: "hugobook"
-    paths: [
-      "/Users/watal/git/hugobook"
-    ]
-  }
-  {
-    title: "github.io"
-    paths: [
-      "/Users/watal/git/heavywatal.github.io"
-    ]
-  }
-  {
-    title: "manuscript"
-    paths: [
-      "/Users/watal/git/manuscript/cancer"
-    ]
-  }
-  {
-    title: "cxxwtils"
-    paths: [
-      "/Users/watal/git/cxxwtils"
-    ]
-  }
-  {
-    title: "edal"
-    paths: [
-      "/Users/watal/git/edal"
-    ]
-  }
-  {
-    title: "tumopp"
-    paths: [
-      "/Users/watal/git/tumopp"
-    ]
-  }
-  {
-    title: "tumorr"
-    paths: [
-      "/Users/watal/git/tumorr"
-    ]
-  }
-  {
-    title: "InnanLab"
-    paths: [
-      "/Users/watal/git/innanlab"
-    ]
+    icon: "icon-gear"
   }
   {
     title: "rwtl"
@@ -59,17 +12,69 @@
       "/Users/watal/git/rwtl"
       "/Users/watal/hg/rstats/wtl"
     ]
+    icon: "icon-package"
   }
   {
-    title: "lmpp"
+    title: "cxxwtils"
     paths: [
-      "/Users/watal/git/lmpp"
+      "/Users/watal/git/cxxwtils"
     ]
+    icon: "icon-plus"
+  }
+  {
+    title: "github.io"
+    paths: [
+      "/Users/watal/git/heavywatal.github.io"
+    ]
+    icon: "icon-mark-github"
+  }
+  {
+    title: "hugobook"
+    paths: [
+      "/Users/watal/git/hugobook"
+    ]
+    icon: "icon-markdown"
+  }
+  {
+    title: "tumopp"
+    paths: [
+      "/Users/watal/git/tumopp"
+    ]
+    icon: "icon-plus"
+  }
+  {
+    title: "tumorr"
+    paths: [
+      "/Users/watal/git/tumorr"
+    ]
+    icon: "icon-package"
   }
   {
     title: "likeligrid"
     paths: [
       "/Users/watal/git/likeligrid"
     ]
+    icon: "icon-plus"
+  }
+  {
+    title: "InnanLab"
+    paths: [
+      "/Users/watal/git/innanlab"
+    ]
+    icon: "icon-organization"
+  }
+  {
+    title: "manuscript"
+    paths: [
+      "/Users/watal/git/manuscript/cancer"
+    ]
+    icon: "icon-file-text"
+  }
+  {
+    title: "edal"
+    paths: [
+      "/Users/watal/git/edal"
+    ]
+    icon: "icon-plus"
   }
 ]
