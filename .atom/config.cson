@@ -110,6 +110,9 @@
     showOnStartup: false
   whitespace:
     ensureSingleTrailingNewline: false
+".css.source":
+  editor:
+    tabLength: 1
 ".latex.tex.text":
   editor:
     softWrap: true
