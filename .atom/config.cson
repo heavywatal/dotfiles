@@ -39,18 +39,7 @@
       space: " "
     lineHeight: 1.2
     showInvisibles: true
-    tabLength: 4
     tabType: "soft"
-  "ever-notedown":
-    checkbox: false
-    footnote: false
-    liveUpdate: false
-    mathjaxCustomMacros: "None"
-    openPreviewInSplitPane: false
-    syncScroll: false
-    syntaxTheme: "Github"
-    theme: "Atom"
-    toc: false
   "exception-reporting":
     userId: "f0d28512-acf7-2fb1-594b-afb76e3c99ba"
   "file-icons": {}
@@ -60,8 +49,8 @@
     addListItems: false
     removeEmptyListItems: false
   latex:
-    alwaysOpenResultInAtom: true
     moveResultToSourceDirectory: false
+    opener: "pdf-view"
   linter: {}
   "linter-clang":
     clangDefaultCppFlags: "-Wall -Wextra -Wno-pragma-once-outside-header -std=c++14"
@@ -74,9 +63,6 @@
   "markdown-writer": {}
   metrics:
     userId: "d41006fb557ba1ecaf77a96d564817b4f1b41194"
-  minimap:
-    devicePixelRatioRounding: false
-    displayMinimapOnLeft: true
   "pdf-view":
     fitToWidthOnOpen: true
     reverseSyncBehaviour: "Double click"
@@ -110,9 +96,6 @@
     showOnStartup: false
   whitespace:
     ensureSingleTrailingNewline: false
-".css.source":
-  editor:
-    tabLength: 1
 ".latex.tex.text":
   editor:
     softWrap: true
