@@ -21,6 +21,7 @@ if [ -n "${brew_prefix}" ]; then
     PATH=${brew_prefix}/opt/qt5/bin:${PATH}
 fi
 
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 PATH=${HOME}/.nodebrew/current/bin:${PATH}
 PATH=/opt/local/bin:/opt/local/sbin:${PATH}
 PATH=${HOME}/local/bin:${HOME}/local/scripts:${PATH}
