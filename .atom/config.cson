@@ -5,6 +5,8 @@
     enableAutoActivation: false
     minimumWordLength: 1
     useCoreMovementCommands: false
+  "autocomplete-python":
+    useKite: false
   "bracket-matcher":
     autocompleteBrackets: false
     autocompleteSmartQuotes: false
@@ -16,10 +18,10 @@
     destroyEmptyPanes: false
     disabledPackages: [
       "atom-typescript"
-      "nuclide-hg-repository"
       "minimap"
       "language-gfm"
       "linter-lintr"
+      "terminal-plus"
     ]
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
