@@ -127,6 +127,7 @@ setopt BRACE_CCL
 setopt EXTENDED_GLOB
 #unsetopt GLOB_ASSIGN
 setopt GLOB_DOTS
+setopt GLOB_STAR_SHORT
 #unsetopt GLOB_SUBST
 #unsetopt HIST_SUBST_PATTERN
 #unsetopt IGNORE_BRACES
