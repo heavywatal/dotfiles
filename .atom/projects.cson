@@ -63,6 +63,13 @@
     icon: "icon-organization"
   }
   {
+    title: "Ildl"
+    paths: [
+      "/Users/watal/git/ildl"
+    ]
+    icon: "icon-organization"
+  }
+  {
     title: "manuscript"
     paths: [
       "/Users/watal/git/manuscript/cancer"
