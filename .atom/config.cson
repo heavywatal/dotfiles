@@ -46,7 +46,9 @@
     userId: "f0d28512-acf7-2fb1-594b-afb76e3c99ba"
   "file-icons": {}
   "git-diff": {}
-  "git-plus": {}
+  "git-plus":
+    general:
+      _analyticsUserId: "1a836dcd-fe18-4700-a1de-5d36ec0d9d99"
   "language-markdown":
     addListItems: false
     removeEmptyListItems: false
