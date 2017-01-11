@@ -1,13 +1,11 @@
 [user]
 	name = Watal M. Iwasaki
 	email = heavy.watal@gmail.com
-[push]
-	default = simple
-[core]
-	excludesfile = ~/.gitignore_global
-[color]
-	ui = true
 [github]
 	user = heavywatal
+[color]
+	ui = auto
+[push]
+	default = simple
 [url "git@github.com:"]
 	pushinsteadof = https://github.com/

@@ -1,0 +1,12 @@
+*~
+.DS_Store
+.hg*
+.*#
+
+# c++
+*.o
+*.lo
+
+# autotools
+.deps/
+.dirstamp
