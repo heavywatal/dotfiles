@@ -2,37 +2,24 @@
  * Your Stylesheet
  *
  * This stylesheet is loaded when Atom starts up and is reloaded automatically
- * when it is changed.
+ * when it is changed.`
  *
  * If you are unfamiliar with LESS, you can read more about it here:
  * http://www.lesscss.org
  */
 
-.tree-view {
-
-}
-
-.atom-text-editor {
-
-}
-
-.atom-text-editor .cursor {
-
-}
-
-atom-text-editor::shadow {
-  .raw, .comment {
-    font-style: normal;
+atom-text-editor {
+  .syntax--raw {
     opacity: 0.8;
   }
-  .heading.markup {
+  .syntax--heading {
     font-weight: bold;
     color: #ffffff;
   }
-  .bold.markup {
+  .syntax--bold {
     font-weight: bold;
   }
-  .italic.markup {
+  .syntax--italic {
     font-style: italic;
   }
 }
