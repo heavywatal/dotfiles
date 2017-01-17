@@ -103,3 +103,4 @@
 ".latex.tex.text":
   editor:
     softWrap: true
+    softWrapAtPreferredLineLength: true
