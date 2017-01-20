@@ -135,7 +135,7 @@ setopt GLOB_STAR_SHORT
 #unsetopt MAGIC_EQUAL_SUBST
 #unsetopt MARK_DIRS
 #setopt MULTIBYTE
-#setopt NOMATCH
+unsetopt NOMATCH
 #unsetopt NULL_GLOB
 setopt NUMERIC_GLOB_SORT
 #unsetopt RC_EXPAND_PARAM
