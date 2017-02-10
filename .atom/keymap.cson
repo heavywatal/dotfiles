@@ -28,13 +28,3 @@
   'cmd-"':       'markdown-writer:toggle-codeblock-text'
   'shift-cmd-O': 'markdown-writer:toggle-ol'
   'shift-cmd-U': 'markdown-writer:toggle-ul'
-
-# to disable insane default MRU tabs introduced in v1.7
-# http://blog.atom.io/2016/04/12/atom-1-7-and-1-8-beta.html
-# https://github.com/atom/atom/issues/5344
-# https://github.com/atom/atom/issues/11035
-'body':
-  'ctrl-tab ^ctrl': 'unset!'
-  'ctrl-tab': 'pane:show-next-item'
-  'ctrl-shift-tab ^ctrl': 'unset!'
-  'ctrl-shift-tab': 'pane:show-previous-item'

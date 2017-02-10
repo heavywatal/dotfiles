@@ -22,10 +22,12 @@
       "language-gfm"
       "linter-lintr"
       "terminal-plus"
+      "linter-write-good"
     ]
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
       "markdown-writer"
+      "git-plus"
     ]
     projectHome: "/Users/watal/git"
     telemetryConsent: "no"
@@ -47,8 +49,12 @@
   "file-icons": {}
   "git-diff": {}
   "git-plus":
+    diffs:
+      syntaxHighlighting: false
     general:
       _analyticsUserId: "1a836dcd-fe18-4700-a1de-5d36ec0d9d99"
+      enableStatusBarIcon: false
+      openInPane: false
   "language-markdown":
     addListItems: false
     removeEmptyListItems: false
@@ -86,6 +92,7 @@
   tablr: {}
   tabs:
     addNewTabsAtEnd: true
+    enableMruTabSwitching: false
     enableVcsColoring: true
   "terminal-plus":
     core: {}
