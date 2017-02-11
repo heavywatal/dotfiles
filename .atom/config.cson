@@ -28,6 +28,7 @@
     packagesWithKeymapsDisabled: [
       "markdown-writer"
       "git-plus"
+      "r-exec"
     ]
     projectHome: "/Users/watal/git"
     telemetryConsent: "no"

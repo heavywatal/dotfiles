@@ -1,10 +1,7 @@
 'atom-text-editor:not([mini])':
   'ctrl-m': 'editor:newline'
   'ctrl-i': 'autocomplete-plus:activate'
-
-'atom-workspace atom-text-editor:not([mini])':
   'cmd-enter': 'r-exec:send-command'
-  'ctrl-enter': 'r-exec:send-command'
 
 'atom-text-editor.autocomplete-active':
   'down': 'autocomplete-plus:move-down'
