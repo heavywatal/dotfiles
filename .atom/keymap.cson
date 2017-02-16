@@ -7,7 +7,8 @@
   'down': 'autocomplete-plus:move-down'
   'up': 'autocomplete-plus:move-up'
   'ctrl-i': 'autocomplete-plus:move-down'
-  'ctrl-u': 'autocomplete-plus:move-up'
+  'ctrl-n': 'autocomplete-plus:move-down'
+  'ctrl-p': 'autocomplete-plus:move-up'
   'ctrl-j': 'autocomplete-plus:confirm'
   'ctrl-m': 'autocomplete-plus:confirm'
 
