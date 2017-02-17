@@ -23,6 +23,13 @@
       "linter-lintr"
       "terminal-plus"
       "linter-write-good"
+      "welcome"
+      "archive-view"
+      "autosave"
+      "background-tips"
+      "bookmarks"
+      "update-package-dependencies"
+      "package-generator"
     ]
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
