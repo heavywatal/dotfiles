@@ -14,6 +14,13 @@
     icon: "icon-package"
   }
   {
+    title: "pywtl"
+    paths: [
+      "/Users/watal/git/pywtl"
+    ]
+    icon: "icon-package"
+  }
+  {
     title: "cxxwtils"
     paths: [
       "/Users/watal/git/cxxwtils"
