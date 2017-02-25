@@ -269,7 +269,6 @@ alias touch='nocorrect touch'
 alias grep='grep --binary-files=without-match --color=auto'
 alias gd='dirs -v; read newdir; cd +"${newdir}"' #選択的popd
 alias R='R --quiet --no-save --no-restore-data'
-alias em='emacs -nw'
 alias rsync='rsync --exclude-from=${HOME}/.config/rsync-exclude'
 alias ta="tmux -2u attach"
 alias diffu='colordiff -u'
@@ -277,9 +276,6 @@ alias diffu='colordiff -u'
 if [ $(uname) = Darwin ]; then
     alias ldd="otool -L"
     alias wine=/Applications/Wine.app/Contents/Resources/bin/wine
-    alias mi="open -a mi"
-    alias memacs='open -a emacs'
-    alias pbsnodes="ssh charles pbsnodes"
 fi
 
 alias mrsh="python -m remote"
