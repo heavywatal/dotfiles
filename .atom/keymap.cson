@@ -28,6 +28,7 @@
   'shift-cmd-U': 'markdown-writer:toggle-ul'
 
 'atom-text-editor':
+  'ctrl-w': 'editor:delete-to-beginning-of-word'
   'alt-.': 'unset!'
   'alt-/': 'unset!'
   'alt-;': 'unset!'

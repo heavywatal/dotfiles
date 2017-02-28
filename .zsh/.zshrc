@@ -294,26 +294,13 @@ alias -g G='| grep'
 
 # emacs-like
 bindkey -e
-# delete
+# fn-delete
 bindkey "^[[3~" delete-char
-# home/end
-bindkey "^[[1~" beginning-of-line
-bindkey "^[[4~" end-of-line
-bindkey "^[[7~" beginning-of-line
-bindkey "^[[8~" end-of-line
-bindkey "^[OH" beginning-of-line
-bindkey "^[OF" end-of-line
-# PageUp/PageDown
-bindkey "^[[5~" history-beginning-search-backward
-bindkey "^[[6~" history-beginning-search-forward
-# History
-autoload -U history-search-end
-zle -N history-beginning-search-backward-end history-search-end
-zle -N history-beginning-search-forward-end history-search-end
-bindkey "^P" history-beginning-search-backward-end
-bindkey "^N" history-beginning-search-forward-end
 # override kill-whole-line
 bindkey "^U" backward-kill-line
+# history
+bindkey "^P" history-beginning-search-backward
+bindkey "^N" history-beginning-search-forward
 
 #########1#########2#########3#########4#########5#########6#########7#########
 ## Window title
