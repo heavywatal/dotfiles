@@ -271,7 +271,8 @@ alias gd='dirs -v; read newdir; cd +"${newdir}"' #選択的popd
 alias R='R --quiet --no-save --no-restore-data'
 alias rsync='rsync --exclude-from=${HOME}/.config/rsync-exclude'
 alias ta="tmux -2u attach"
-alias diffu='colordiff -u'
+alias diffu='diff --color=always -u'
+alias giff='git diff --no-index'
 
 if [ $(uname) = Darwin ]; then
     alias ldd="otool -L"

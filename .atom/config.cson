@@ -30,6 +30,7 @@
       "bookmarks"
       "update-package-dependencies"
       "package-generator"
+      "spell-check"
     ]
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
