@@ -59,22 +59,20 @@ else
     alias ls="ls -FG"
 fi
 
-alias rm='nocorrect rm -i'
-alias mv='nocorrect mv -i'
-alias cp='nocorrect cp -i'
-alias mkdir='nocorrect mkdir'
-alias touch='nocorrect touch'
-alias grep='grep --binary-files=without-match --color=auto'
 alias rsync='rsync --exclude-from=${HOME}/.config/rsync-exclude'
-alias R='R --quiet --no-save --no-restore-data'
 
+alias rmi='rm -i'
+alias mvi='mv -i'
+alias cpi='cp -i'
 alias ll="ls -l"
 alias lal="ls -al"
 alias gd='dirs -v; read newdir; cd +"${newdir}"'  # interactive popd
+alias cgrep='grep --color=always'
 alias diffu='diff --color=always -u'
 alias giff='git diff --no-index'
 alias ta="tmux -2u attach"
 alias zmux='SHELL=$(which zsh) exec tmux'
+alias r='R --quiet --no-save --no-restore-data'
 
 if [ $(uname) = Darwin ]; then
     alias ldd="otool -L"

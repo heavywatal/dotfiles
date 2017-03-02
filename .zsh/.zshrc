@@ -206,7 +206,7 @@ PROMPT="%{$fg_bold[${PCOL}]%}%D{%m-%d} %T %n@%m:%~
 unset PCOL
 
 #########1#########2#########3#########4#########5#########6#########7#########
-# Global alias
+# Alias
 
 alias -g L='| less'
 alias -g H='| head'
