@@ -1,5 +1,8 @@
-# ignore /etc/z* (especially /etc/zprofile on Mac)
+# Ignore /etc/z* (especially /etc/zprofile on Mac)
 unsetopt GLOBAL_RCS
+
+# Leave unmatched patterns unchanged
+unsetopt NOMATCH
 
 # Zsh DOTfile DIRectory
 export ZDOTDIR=${HOME}/.zsh
@@ -8,8 +11,6 @@ export ZDOTDIR=${HOME}/.zsh
 if [ -f ~/.profile ]; then
     . ~/.profile
 fi
-
-export PYTHONPATH=${HOME}/local/lib/python:${PYTHONPATH}
 
 # Permission
 [[ ${UID} > 0 && ${UID} = ${GID} ]] && umask 002 || umask 022
