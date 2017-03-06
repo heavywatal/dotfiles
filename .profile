@@ -1,4 +1,6 @@
 if [ $(uname) = Darwin ]; then
+    export CC=clang
+    export CXX=clang++
     # Resource Fork reduction for 'tar'
     export COPYFILE_DISABLE=true
     export COPY_EXTENDED_ATTRIBUTES_DISABLE=true
@@ -22,6 +24,8 @@ if [ -n "${brew_prefix}" ]; then
 fi
 
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+export PYTHONPATH=${HOME}/local/lib/python/site-packages
+
 PATH=${HOME}/.nodebrew/current/bin:${PATH}
 PATH=/opt/local/bin:/opt/local/sbin:${PATH}
 PATH=${HOME}/local/bin:${HOME}/local/scripts:${PATH}
