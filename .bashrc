@@ -40,7 +40,7 @@ export LS_COLORS
 
 export TEXMFHOME=${HOME}/.texmf
 export GOPATH=${HOME}/.go
-export PYTHONSTARTUP=${HOME}/local/lib/python/pythonstartup.py
+export PYTHONSTARTUP=${HOME}/.pythonstartup.py
 
 tmux has-session >/dev/null 2>&1 && if [ -z "${TMUX}" ]; then
     echo '% tmux list-sessions'
