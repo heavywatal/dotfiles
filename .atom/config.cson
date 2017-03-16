@@ -75,6 +75,7 @@
     clangDefaultCppFlags: "-Wall -Wextra -Wno-pragma-once-outside-header -std=c++14"
     clangIncludePaths: [
       "/Users/watal/local/include"
+      "/usr/local/include"
       "/Users/watal/.R/library/Rcpp/include"
     ]
   "markdown-preview":
