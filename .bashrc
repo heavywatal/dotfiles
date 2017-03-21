@@ -72,6 +72,8 @@ alias giff='git diff --no-index'
 alias ta="tmux -2u attach"
 alias zmux='SHELL=$(which zsh) exec tmux'
 alias r='R --quiet --no-save --no-restore-data'
+alias clang++14='clang++ -std=c++14 -Wall -Wextra'
+alias with-homelib='CPATH=${HOME}/local/include LIBRARY_PATH=${HOME}/local/lib LD_LIBRARY_PATH=${HOME}/local/lib'
 
 if [ $(uname) = Darwin ]; then
     alias ldd="otool -L"
