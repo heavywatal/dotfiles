@@ -21,11 +21,11 @@
     icon: "icon-package"
   }
   {
-    title: "cxxwtils"
+    title: "cxxwtl"
     paths: [
-      "/Users/watal/git/cxxwtils"
+      "/Users/watal/local/include/wtl"
     ]
-    icon: "icon-plus"
+    icon: "icon-package"
   }
   {
     title: "github.io"
@@ -70,7 +70,7 @@
     icon: "icon-organization"
   }
   {
-    title: "Ildl"
+    title: "ildl"
     paths: [
       "/Users/watal/git/ildl"
     ]
