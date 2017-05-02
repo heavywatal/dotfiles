@@ -63,6 +63,13 @@
     icon: "icon-plus"
   }
   {
+    title: "tek-evolution"
+    paths: [
+      "/Users/watal/git/tek-evolution"
+    ]
+    icon: "icon-plus"
+  }
+  {
     title: "InnanLab"
     paths: [
       "/Users/watal/git/innanlab"
