@@ -44,6 +44,7 @@
       "atom-dark-ui"
       "atom-dark-syntax"
     ]
+    useProxySettingsWhenCallingApm: false
   editor:
     atomicSoftTabs: false
     autoIndentOnPaste: false
@@ -78,6 +79,8 @@
       "/usr/local/include"
       "/Users/watal/.R/library/Rcpp/include"
     ]
+  "linter-ui-default":
+    useBusySignal: false
   "markdown-preview":
     useGitHubStyle: true
   "markdown-writer": {}
