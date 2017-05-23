@@ -2,6 +2,8 @@ if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
 
+autoload -Uz is-at-least
+
 #########1#########2#########3#########4#########5#########6#########7#########
 ## Changing Directories
 
@@ -82,7 +84,9 @@ setopt BRACE_CCL
 setopt EXTENDED_GLOB
 #unsetopt GLOB_ASSIGN
 setopt GLOB_DOTS
-setopt GLOB_STAR_SHORT
+if is-at-least 5.2; then
+  setopt GLOB_STAR_SHORT
+fi
 #unsetopt GLOB_SUBST
 #unsetopt HIST_SUBST_PATTERN
 #unsetopt IGNORE_BRACES
@@ -182,8 +186,6 @@ unsetopt PROMPT_CR
 setopt PROMPT_SUBST
 setopt TRANSIENT_RPROMPT
 
-autoload -U colors; colors
-
 case $(echo ${SSH_CONNECTION} | awk '{print $3}') in
     '')
         PCOL=white
@@ -199,10 +201,20 @@ case $(echo ${SSH_CONNECTION} | awk '{print $3}') in
         ;;
 esac
 
-PROMPT="%{$fg_bold[${PCOL}]%}%D{%m-%d} %T %n@%m:%~
-%{$reset_color%}%# "
-#PROMPT="%{$fg_bold[${PCOL}]%}[%m]%{$reset_color%}%# "
-#RPROMPT="%{$fg_bold[${PCOL}]%}[%~]%{$reset_color%}"
+if is-at-least 4.3.10; then
+  autoload -Uz vcs_info
+  autoload -Uz add-zsh-hook
+  add-zsh-hook precmd vcs_info
+  zstyle ':vcs_info:*' enable git hg
+  zstyle ':vcs_info:*' check-for-changes true
+  zstyle ':vcs_info:*' unstagedstr "%F{red}*"
+  zstyle ':vcs_info:*' stagedstr "%F{green}*"
+  zstyle ':vcs_info:*' formats '%u%c[%b]'
+  zstyle ':vcs_info:*' actionformats '%u%c[%b|%a]'
+fi
+
+PROMPT="%B%F{${PCOL}}%D{%m-%d} %T %n@%m:%~%b \${vcs_info_msg_0_}%f
+%# "
 unset PCOL
 
 #########1#########2#########3#########4#########5#########6#########7#########
