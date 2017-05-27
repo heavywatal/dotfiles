@@ -76,6 +76,7 @@ alias clang++14='clang++ -std=c++14 -Wall -Wextra'
 alias with-homelib='CPATH=${HOME}/local/include LIBRARY_PATH=${HOME}/local/lib LD_LIBRARY_PATH=${HOME}/local/lib'
 
 if [ $(uname) = Darwin ]; then
+    alias ql="qlmanage -p $@ >/dev/null 2>&1"
     alias ldd="otool -L"
     alias wine=/Applications/Wine.app/Contents/Resources/bin/wine
 else
