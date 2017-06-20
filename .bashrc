@@ -83,4 +83,5 @@ else
     alias apt-upgradable="apt-get -s upgrade | grep Inst | cut -f2 -d' '"
 fi
 
-alias mrsh="python -m remote"
+ILP_HOSTS=($(echo ilp{14,15,16,17,19,20,21,22,23,25,26,27}.local))
+ILL_HOSTS=($(echo ill{01..04}.local))
