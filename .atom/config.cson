@@ -35,7 +35,6 @@
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
       "markdown-writer"
-      "git-plus"
       "r-exec"
     ]
     projectHome: "/Users/watal/git"
@@ -58,13 +57,6 @@
     userId: "f0d28512-acf7-2fb1-594b-afb76e3c99ba"
   "file-icons": {}
   "git-diff": {}
-  "git-plus":
-    diffs:
-      syntaxHighlighting: false
-    general:
-      _analyticsUserId: "1a836dcd-fe18-4700-a1de-5d36ec0d9d99"
-      enableStatusBarIcon: false
-      openInPane: false
   "language-markdown":
     addListItems: false
     removeEmptyListItems: false
@@ -79,8 +71,7 @@
       "/usr/local/include"
       "/Users/watal/.R/library/Rcpp/include"
     ]
-  "linter-ui-default":
-    useBusySignal: false
+  "linter-ui-default": {}
   "markdown-preview":
     useGitHubStyle: true
   "markdown-writer": {}
