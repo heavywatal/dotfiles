@@ -15,7 +15,7 @@ fi
 
 # PATH
 PATH=/usr/local/bin:/usr/local/sbin:${PATH/:\/usr\/local\/bin/}
-PATH=${HOME}/.homebrew/bin:${HOME}/.linuxbrew/bin:${PATH}
+PATH=${HOME}/.linuxbrew/bin:${HOME}/.homebrew/bin:${PATH}
 brew_prefix=$(brew --prefix 2>/dev/null)
 if [ -n "${brew_prefix}" ]; then
     PATH=${brew_prefix}/opt/coreutils/libexec/gnubin:${PATH}
