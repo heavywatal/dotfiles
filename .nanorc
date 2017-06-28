@@ -231,7 +231,7 @@ set suspend
 ##
 ## To include all existing syntax definitions, you can do:
 # include "/usr/share/nano/*.nanorc"
-include "~/.nano/*.nanorc"
+include "~/.nano/syntax/ALL.nanorc"
 
 ## Key bindings.
 ## See nanorc(5) (section REBINDING KEYS) for more details on this.
