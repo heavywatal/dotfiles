@@ -25,10 +25,7 @@ if [ -n "${brew_prefix}" ]; then
 fi
 
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-export PYTHONUSERBASE=${HOME}/local
-export PYTHONPATH=${HOME}/hg/local/lib/python
 
-PATH=${HOME}/.nodebrew/current/bin:${PATH}
 PATH=/opt/local/bin:/opt/local/sbin:${PATH}
 PATH=${HOME}/local/bin:${HOME}/local/scripts:${PATH}
 export PATH

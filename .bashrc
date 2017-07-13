@@ -42,6 +42,9 @@ export TEXMFHOME=${HOME}/.texmf
 export GOPATH=${HOME}/.go
 export PYTHONSTARTUP=${HOME}/.pythonstartup.py
 
+PATH=${GOPATH}/bin:${PATH}
+PATH=${HOME}/.nodebrew/current/bin:${PATH}
+
 tmux has-session >/dev/null 2>&1 && if [ -z "${TMUX}" ]; then
     echo '% tmux list-sessions'
     tmux list-sessions
