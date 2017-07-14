@@ -41,6 +41,7 @@ export LS_COLORS
 export TEXMFHOME=${HOME}/.texmf
 export GOPATH=${HOME}/.go
 export PYTHONSTARTUP=${HOME}/.pythonstartup.py
+export PIP_CONFIG_FILE=${HOME}/.config/pip/pip.conf
 
 PATH=${GOPATH}/bin:${PATH}
 PATH=${HOME}/.nodebrew/current/bin:${PATH}
