@@ -64,6 +64,13 @@
     moveResultToSourceDirectory: false
     opener: "pdf-view"
   linter: {}
+  "linter-chktex":
+    chktexArgs: [
+      "-wall"
+      "-n22"
+      "-n30"
+      "-n46"
+    ]
   "linter-clang":
     clangDefaultCppFlags: "-Wall -Wextra -Wno-pragma-once-outside-header -std=c++14"
     clangIncludePaths: [
@@ -71,7 +78,8 @@
       "/usr/local/include"
       "/Users/watal/.R/library/Rcpp/include"
     ]
-  "linter-ui-default": {}
+  "linter-ui-default":
+    showPanel: true
   "markdown-preview":
     useGitHubStyle: true
   "markdown-writer": {}
