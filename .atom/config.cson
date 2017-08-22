@@ -78,6 +78,9 @@
       "/usr/local/include"
       "/Users/watal/.R/library/Rcpp/include"
     ]
+  "linter-stylelint":
+    disableWhenNoConfig: false
+    useStandard: true
   "linter-ui-default":
     showPanel: true
   "markdown-preview":
