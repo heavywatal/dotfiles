@@ -1,9 +1,8 @@
-blob-store
-compile-cache
-dev
-packages
-storage
-.apm
-.npm
-.node-gyp
-evnd
+/blob-store/
+/compile-cache/
+/package-deps-state.json
+/packages/
+/recovery/
+/storage/
+/.apm/
+/.node-gyp/

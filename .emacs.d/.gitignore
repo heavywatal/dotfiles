@@ -1,5 +1,3 @@
-.cask/
-elpa/
-url/
-ac-comphist.dat
-abbrev_defs
+/auto-save-list/
+/elpa/
+/ac-comphist.dat
