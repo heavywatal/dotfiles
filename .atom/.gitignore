@@ -1,5 +1,6 @@
 /blob-store/
 /compile-cache/
+/dev/
 /package-deps-state.json
 /packages/
 /recovery/
