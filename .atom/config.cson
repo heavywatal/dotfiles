@@ -61,8 +61,7 @@
     addListItems: false
     removeEmptyListItems: false
   latex:
-    moveResultToSourceDirectory: false
-    opener: "pdf-view"
+    enableExtendedBuildMode: false
   linter: {}
   "linter-chktex":
     chktexArgs: [
