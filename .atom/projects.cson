@@ -28,7 +28,7 @@
     icon: "icon-package"
   }
   {
-    title: "github.io"
+    title: "heavywatal.github.io"
     paths: [
       "/Users/watal/git/heavywatal.github.io"
     ]
@@ -40,6 +40,13 @@
       "/Users/watal/git/hugobook"
     ]
     icon: "icon-markdown"
+  }
+  {
+    title: "manuscript"
+    paths: [
+      "/Users/watal/git/manuscript"
+    ]
+    icon: "icon-file-text"
   }
   {
     title: "tumopp"
@@ -75,26 +82,5 @@
       "/Users/watal/git/innanlab"
     ]
     icon: "icon-organization"
-  }
-  {
-    title: "ildl"
-    paths: [
-      "/Users/watal/git/ildl"
-    ]
-    icon: "icon-organization"
-  }
-  {
-    title: "manuscript"
-    paths: [
-      "/Users/watal/git/manuscript"
-    ]
-    icon: "icon-file-text"
-  }
-  {
-    title: "edal"
-    paths: [
-      "/Users/watal/git/edal"
-    ]
-    icon: "icon-plus"
   }
 ]
