@@ -14,7 +14,8 @@ elif [ $(uname) = Linux ]; then
 fi
 
 # PATH
-PATH=/usr/local/bin:/usr/local/sbin:${PATH/:\/usr\/local\/bin/}
+if [ ! $PATH =~ /usr/local/sbin ]; then PATH=/usr/local/sbin:${PATH} fi
+if [ ! $PATH =~ /usr/local/bin ]; then PATH=/usr/local/bin:${PATH} fi
 PATH=${HOME}/.linuxbrew/bin:${HOME}/.homebrew/bin:${PATH}
 brew_prefix=$(brew --prefix 2>/dev/null)
 if [ -n "${brew_prefix}" ]; then
