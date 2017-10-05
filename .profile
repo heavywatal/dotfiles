@@ -10,25 +10,27 @@ if [ $(uname) = Darwin ]; then
         eval $(/usr/libexec/path_helper -s)
     fi
 elif [ $(uname) = Linux ]; then
+    PATH=/usr/bin:/bin
     . /etc/environment
+    . /etc/profile
 fi
 
 # PATH
-if [ ! $PATH =~ /usr/local/sbin ]; then PATH=/usr/local/sbin:${PATH} fi
-if [ ! $PATH =~ /usr/local/bin ]; then PATH=/usr/local/bin:${PATH} fi
-PATH=${HOME}/.linuxbrew/bin:${HOME}/.homebrew/bin:${PATH}
+[[ $PATH =~ /usr/local/sbin ]] || PATH=/usr/local/sbin:$PATH
+[[ $PATH =~ /usr/local/bin ]] || PATH=/usr/local/bin:$PATH
+PATH=${HOME}/.linuxbrew/bin:${HOME}/.homebrew/bin:$PATH
 brew_prefix=$(brew --prefix 2>/dev/null)
 if [ -n "${brew_prefix}" ]; then
-    PATH=${brew_prefix}/opt/coreutils/libexec/gnubin:${PATH}
-    PATH=${brew_prefix}/opt/gnu-sed/libexec/gnubin:${PATH}
-    PATH=${brew_prefix}/opt/gnu-tar/libexec/gnubin:${PATH}
-    PATH=${brew_prefix}/opt/qt5/bin:${PATH}
+    PATH=${brew_prefix}/opt/coreutils/libexec/gnubin:$PATH
+    PATH=${brew_prefix}/opt/gnu-sed/libexec/gnubin:$PATH
+    PATH=${brew_prefix}/opt/gnu-tar/libexec/gnubin:$PATH
+    PATH=${brew_prefix}/opt/qt5/bin:$PATH
 fi
 
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
-PATH=/opt/local/bin:/opt/local/sbin:${PATH}
-PATH=${HOME}/local/bin:${HOME}/local/scripts:${PATH}
+PATH=/opt/local/bin:/opt/local/sbin:$PATH
+PATH=${HOME}/local/bin:${HOME}/local/scripts:$PATH
 export PATH
 
 # Language
