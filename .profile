@@ -28,6 +28,7 @@ if [ -n "${brew_prefix}" ]; then
 fi
 
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+PATH=$(python -m site --user-base)/bin:$PATH
 
 PATH=/opt/local/bin:/opt/local/sbin:$PATH
 PATH=${HOME}/local/bin:${HOME}/local/scripts:$PATH
