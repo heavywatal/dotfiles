@@ -77,6 +77,13 @@
     icon: "icon-plus"
   }
   {
+    title: "blackthunnus"
+    paths: [
+      "/Users/watal/git/blackthunnus"
+    ]
+    icon: "icon-plus"
+  }
+  {
     title: "InnanLab"
     paths: [
       "/Users/watal/git/innanlab"
