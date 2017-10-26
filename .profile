@@ -2,6 +2,7 @@ if [ $(uname) = Darwin ]; then
     export CC=clang
     export CXX=clang++
     export MACOSX_DEPLOYMENT_TARGET=$(sw_vers -productVersion | cut -d. -f-2)
+    export PYTHON_CONFIGURE_OPTS="--enable-framework"
     # Resource Fork reduction for 'tar'
     export COPYFILE_DISABLE=true
     export COPY_EXTENDED_ATTRIBUTES_DISABLE=true
