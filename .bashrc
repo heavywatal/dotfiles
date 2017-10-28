@@ -40,7 +40,7 @@ export LS_COLORS
 
 export TEXMFHOME=${HOME}/.texmf
 export GOPATH=${HOME}/.go
-export PYTHONSTARTUP=${HOME}/.pythonstartup.py
+export PYTHONSTARTUP=${HOME}/.config/python/startup.py
 export PIP_CONFIG_FILE=${HOME}/.config/pip/pip.conf
 
 PATH=${GOPATH}/bin:${PATH}
