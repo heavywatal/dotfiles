@@ -1,34 +1,4 @@
-'atom-text-editor:not([mini])':
-  'ctrl-m': 'editor:newline'
-  'ctrl-i': 'autocomplete-plus:activate'
-  'cmd-enter': 'r-exec:send-command'
-
-'atom-text-editor.autocomplete-active':
-  'down': 'autocomplete-plus:move-down'
-  'up': 'autocomplete-plus:move-up'
-  'ctrl-i': 'autocomplete-plus:move-down'
-  'ctrl-n': 'autocomplete-plus:move-down'
-  'ctrl-p': 'autocomplete-plus:move-up'
-  'ctrl-j': 'autocomplete-plus:confirm'
-  'ctrl-m': 'autocomplete-plus:confirm'
-
-# for Markdown Writer
-# https://atom.io/packages/markdown-writer
-'.platform-darwin atom-text-editor[data-grammar~="md"]':
-  'shift-cmd-k': 'markdown-writer:insert-link'
-  'shift-cmd-i': 'markdown-writer:insert-image'
-  'cmd-i':       'markdown-writer:toggle-italic-text'
-  'cmd-b':       'markdown-writer:toggle-bold-text'
-  "cmd-'":       'markdown-writer:toggle-code-text'
-  'cmd-k cmd-k': 'markdown-writer:toggle-keystroke-text'
-  'cmd-k cmd-s': 'markdown-writer:toggle-strikethrough-text'
-  'cmd->':       'markdown-writer:toggle-blockquote'
-  'cmd-"':       'markdown-writer:toggle-codeblock-text'
-  'shift-cmd-O': 'markdown-writer:toggle-ol'
-  'shift-cmd-U': 'markdown-writer:toggle-ul'
-
 'atom-text-editor':
-  'ctrl-w': 'editor:delete-to-beginning-of-word'
   'alt-.': 'unset!'
   'alt-/': 'unset!'
   'alt-;': 'unset!'
@@ -62,3 +32,34 @@
   'alt-x': 'abort!'
   'alt-y': 'unset!'
   'alt-z': 'unset!'
+  'ctrl-w': 'editor:delete-to-beginning-of-word'
+
+'atom-text-editor:not([mini])':
+  'ctrl-m': 'editor:newline'
+  'ctrl-i': 'autocomplete-plus:activate'
+  'cmd-enter': 'r-exec:send-command'
+  'ctrl-enter': 'hydrogen:run'
+
+'atom-text-editor.autocomplete-active':
+  'down': 'autocomplete-plus:move-down'
+  'up': 'autocomplete-plus:move-up'
+  'ctrl-i': 'autocomplete-plus:move-down'
+  'ctrl-n': 'autocomplete-plus:move-down'
+  'ctrl-p': 'autocomplete-plus:move-up'
+  'ctrl-j': 'autocomplete-plus:confirm'
+  'ctrl-m': 'autocomplete-plus:confirm'
+
+# for Markdown Writer
+# https://atom.io/packages/markdown-writer
+'.platform-darwin atom-text-editor:not([mini])':
+  'shift-cmd-k': 'markdown-writer:insert-link'
+  'shift-cmd-i': 'markdown-writer:insert-image'
+  'cmd-i':       'markdown-writer:toggle-italic-text'
+  'cmd-b':       'markdown-writer:toggle-bold-text'
+  "cmd-'":       'markdown-writer:toggle-code-text'
+  'cmd-k cmd-k': 'markdown-writer:toggle-keystroke-text'
+  'cmd-k cmd-s': 'markdown-writer:toggle-strikethrough-text'
+  'cmd->':       'markdown-writer:toggle-blockquote'
+  'cmd-"':       'markdown-writer:toggle-codeblock-text'
+  'shift-cmd-O': 'markdown-writer:toggle-ol'
+  'shift-cmd-U': 'markdown-writer:toggle-ul'
