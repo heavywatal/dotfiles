@@ -1,4 +1,6 @@
 "*":
+  Hydrogen:
+    startupCode: "{\"Python 3\": \"%matplotlib inline\"}"
   "atom-typescript": {}
   "autocomplete-plus":
     confirmCompletion: "enter"
