@@ -9,5 +9,6 @@ if sys.version_info < (3, 4):
     else:
         readline.parse_and_bind("tab: complete")
     del readline, rlcompleter
-
-print([x for x in dir() if not x.startswith("__")])
+    print([x for x in dir() if not x.startswith("__")])
+else:
+    del sys
