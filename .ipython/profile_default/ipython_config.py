@@ -6,3 +6,5 @@ c.InteractiveShellApp.exec_lines = [
 ]
 
 c.InteractiveShellApp.matplotlib = 'auto'
+
+c.InteractiveShell.automagic = False
