@@ -84,6 +84,13 @@
     icon: "icon-plus"
   }
   {
+    title: "gerene"
+    paths: [
+      "/Users/watal/git/gerene"
+    ]
+    icon: "icon-plus"
+  }
+  {
     title: "InnanLab"
     paths: [
       "/Users/watal/git/innanlab"
