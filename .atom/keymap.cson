@@ -35,6 +35,8 @@
   'ctrl-w': 'editor:delete-to-beginning-of-word'
 
 'atom-text-editor:not([mini])':
+  'ctrl-a': 'editor:move-to-beginning-of-line'
+  'cmd-left': 'editor:move-to-beginning-of-line'
   'ctrl-m': 'editor:newline'
   'ctrl-i': 'autocomplete-plus:activate'
   'cmd-enter': 'r-exec:send-command'
