@@ -73,7 +73,7 @@
       "-n46"
     ]
   "linter-clang":
-    clangDefaultCppFlags: "-Weverything -std=c++17"
+    clangDefaultCppFlags: "-Wall -Wextra -Wpedantic -std=c++14"
     clangIncludePaths: [
       "/Users/watal/local/include"
       "/usr/local/include"
