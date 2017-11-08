@@ -12,6 +12,8 @@
   "bracket-matcher":
     autocompleteBrackets: false
     autocompleteSmartQuotes: false
+    highlightMatchingLineNumber: true
+    wrapSelectionsInBrackets: false
   "color-picker":
     preferredFormat: "HEX"
     randomColor: false
