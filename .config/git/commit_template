@@ -1,0 +1,14 @@
+
+# Use [ci skip] to skip CI
+# 🎨 :art: Improve structure/format of the code
+# ⚡️ :zap: Improve performance
+# ✨ :sparkles: Introduce new features
+# 💥 :boom: Introduce breaking changes
+# 🔥 :fire: Remove code or files
+# 🐛 :bug: Fix a bug
+# 💄 :lipstick: Update the UI and style files
+# ⬆️ :arrow_up: Upgrade dependencies
+# 📝 :memo: Write docs
+# ✅ :white_check_mark: Add tests
+# 💚 :green_heart: Fix the CI build
+# 🍺 :beer: Cheers!
