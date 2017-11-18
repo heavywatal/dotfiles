@@ -11,6 +11,5 @@
 	pushinsteadof = https://github.com/
 [core]
 	quotepath = false
-	editor = vi
 [commit]
 	template = ~/.config/git/commit_template

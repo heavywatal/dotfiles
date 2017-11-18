@@ -31,7 +31,7 @@
 
 (setq markdown-enable-math t)
 (setq markdown-command "hoedown --math --math-explicit")
-(setq markdown-xhtml-header-content "<script type=\"text/javascript\" src=\"http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML\"> </script>")
+(setq markdown-xhtml-header-content "<script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML\"> </script>")
 (setq markdown-open-command "open")
 
 (add-to-list 'auto-mode-alist '("\\.Snw" . poly-noweb+r-mode))
@@ -78,26 +78,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:background "black" :foreground "#ffffff"))))
- '(buffer-menu-buffer ((t (:inherit menu :inverse-video t :weight bold))))
- '(font-lock-builtin-face ((t (:foreground "#99ff33"))))
  '(font-lock-comment-face ((t (:foreground "#666666"))))
- '(font-lock-constant-face ((t (:foreground "#66cc99"))))
- '(font-lock-function-name-face ((t (:foreground "#ffff66"))))
- '(font-lock-keyword-face ((t (:foreground "#33ffff"))))
- '(font-lock-preprocessor-face ((t (:inherit font-lock-comment-face))))
- '(font-lock-string-face ((t (:foreground "#666666"))))
- '(font-lock-type-face ((t (:foreground "#6699ff"))))
- '(font-lock-variable-name-face ((t (:foreground "#cc9999"))))
+ '(font-lock-string-face ((t (:foreground "#888888"))))
  '(hl-line ((t (:background "#151515"))))
- '(menu ((t (:background "#2277cc" :foreground "#000000"))))
- '(minibuffer-prompt ((t (:inherit menu :inverse-video t))))
- '(mode-line ((t (:inherit menu))))
- '(mode-line-buffer-id ((t (:foreground "#ffffff" :weight bold))))
- '(mode-line-inactive ((t (:inherit mode-line :background "#778888"))))
- '(region ((t (:background "#cc6600"))))
- '(rst-level-1 ((t (:background "grey35" :weight bold))))
- '(rst-level-2 ((t (:background "grey28"))))
  '(whitespace-newline ((t (:background "#3a3a3a" :foreground "black"))))
  '(whitespace-space ((t (:foreground "#3a3a3a"))))
  '(whitespace-tab ((t (:inherit whitespace-newline)))))
