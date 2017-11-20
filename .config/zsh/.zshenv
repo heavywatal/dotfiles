@@ -4,9 +4,6 @@ unsetopt GLOBAL_RCS
 # Leave unmatched patterns unchanged
 unsetopt NOMATCH
 
-# Zsh DOTfile DIRectory
-export ZDOTDIR=${HOME}/.zsh
-
 # Shared with bash
 if [ -f ~/.profile ]; then
     . ~/.profile
