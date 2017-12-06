@@ -32,6 +32,7 @@
   'alt-x': 'abort!'
   'alt-y': 'unset!'
   'alt-z': 'unset!'
+  'ctrl-t': 'unset!'
   'cmd-left': 'editor:move-to-beginning-of-line'
   'ctrl-a': 'editor:move-to-beginning-of-line'
   'ctrl-w': 'editor:delete-to-beginning-of-word'
@@ -66,3 +67,6 @@
   'cmd-"':       'markdown-writer:toggle-codeblock-text'
   'shift-cmd-O': 'markdown-writer:toggle-ol'
   'shift-cmd-U': 'markdown-writer:toggle-ul'
+
+'.tree-view':
+  'ctrl-tab': 'tree-view:unfocus'
