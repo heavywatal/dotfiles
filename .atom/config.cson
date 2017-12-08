@@ -1,11 +1,19 @@
 "*":
   Hydrogen:
     startupCode: "{\"Python 3\": \"%matplotlib inline\"}"
-  "atom-typescript": {}
+  "atom-material-ui":
+    colors:
+      abaseColor: "#7e7e7e"
+      predefinedColor: "Grey"
+    tabs:
+      compactTabs: true
+    ui:
+      useAnimations: false
   "autocomplete-plus":
     confirmCompletion: "enter"
     enableAutoActivation: false
     minimumWordLength: 1
+    strictMatching: true
     useCoreMovementCommands: false
   "autocomplete-python":
     useKite: false
@@ -21,11 +29,8 @@
     automaticallyUpdate: false
     destroyEmptyPanes: false
     disabledPackages: [
-      "atom-typescript"
       "minimap"
       "language-gfm"
-      "linter-lintr"
-      "terminal-plus"
       "linter-write-good"
       "welcome"
       "archive-view"
@@ -35,6 +40,7 @@
       "update-package-dependencies"
       "package-generator"
       "spell-check"
+      "language-babel"
     ]
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
@@ -44,7 +50,7 @@
     projectHome: "/Users/watal/git"
     telemetryConsent: "no"
     themes: [
-      "atom-dark-ui"
+      "atom-material-ui"
       "atom-dark-syntax"
     ]
     useProxySettingsWhenCallingApm: false
@@ -59,14 +65,11 @@
     tabType: "soft"
   "exception-reporting":
     userId: "f0d28512-acf7-2fb1-594b-afb76e3c99ba"
-  "file-icons": {}
-  "git-diff": {}
   "language-markdown":
     addListItems: false
     removeEmptyListItems: false
   latex:
     enableExtendedBuildMode: false
-  linter: {}
   "linter-chktex":
     chktexArgs: [
       "-wall"
@@ -88,13 +91,11 @@
     showPanel: true
   "markdown-preview":
     useGitHubStyle: true
-  "markdown-writer": {}
   metrics:
     userId: "d41006fb557ba1ecaf77a96d564817b4f1b41194"
   "pdf-view":
     fitToWidthOnOpen: true
     reverseSyncBehaviour: "Double click"
-  pigments: {}
   "r-exec":
     focusWindow: false
     whichApp: "iTerm2"
@@ -106,18 +107,10 @@
       "text.md"
       "text.tex.latex"
     ]
-  "status-bar": {}
-  tablr: {}
   tabs:
     addNewTabsAtEnd: true
     enableMruTabSwitching: false
     enableVcsColoring: true
-  "terminal-plus":
-    core: {}
-    style:
-      theme: "homebrew"
-    toggles:
-      autoClose: true
   "tree-view":
     hideIgnoredNames: true
     hideVcsIgnoredFiles: true
