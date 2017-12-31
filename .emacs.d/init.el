@@ -11,9 +11,6 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-;; Too slow
-;(package-refresh-contents)
-
 (package-install 'flycheck)
 (package-install 'auto-complete)
 (package-install 'markdown-mode)
