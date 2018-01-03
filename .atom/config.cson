@@ -89,13 +89,8 @@
     useStandard: true
   "linter-ui-default":
     showPanel: true
-  "markdown-preview":
-    useGitHubStyle: true
   metrics:
     userId: "d41006fb557ba1ecaf77a96d564817b4f1b41194"
-  "pdf-view":
-    fitToWidthOnOpen: true
-    reverseSyncBehaviour: "Double click"
   "r-exec":
     focusWindow: false
     whichApp: "iTerm2"
