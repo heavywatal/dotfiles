@@ -19,7 +19,11 @@ fi
 # PATH
 [[ $PATH =~ /usr/local/sbin ]] || PATH=/usr/local/sbin:$PATH
 [[ $PATH =~ /usr/local/bin ]] || PATH=/usr/local/bin:$PATH
-PATH=${HOME}/.linuxbrew/bin:${HOME}/.homebrew/bin:$PATH
+if [ $(uname) = Linux ]; then
+    PATH=${HOME}/.linuxbrew/bin:${HOME}/.linuxbrew/sbin:$PATH
+else
+    PATH=${HOME}/.homebrew/bin:${HOME}/.homebrew/sbin:$PATH
+fi
 brew_prefix=$(brew --prefix 2>/dev/null)
 if [ -n "${brew_prefix}" ]; then
     PATH=${brew_prefix}/opt/coreutils/libexec/gnubin:$PATH
@@ -28,7 +32,7 @@ if [ -n "${brew_prefix}" ]; then
     PATH=${brew_prefix}/opt/qt5/bin:$PATH
 fi
 
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which pyenv >/dev/null; then eval "$(pyenv init -)"; fi
 PATH=$(python -m site --user-base)/bin:$PATH
 
 PATH=/opt/local/bin:/opt/local/sbin:$PATH
