@@ -23,6 +23,7 @@ MANPATH=/opt/local/man:/opt/local/share/man:${MANPATH}
 if [ -n "${brew_prefix}" ]; then
     MANPATH=${brew_prefix}/share/man:${MANPATH}
     MANPATH=${brew_prefix}/opt/coreutils/libexec/gnuman:${MANPATH}
+    export BOOST_ROOT=${brew_prefix}
 fi
 export MANPATH
 
