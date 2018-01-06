@@ -23,16 +23,16 @@
   {
     title: "cxxwtl"
     paths: [
-      "/Users/watal/local/include/wtl"
+      "/Users/watal/git/cxxwtl"
     ]
-    icon: "icon-package"
+    icon: "icon-plus"
   }
   {
     title: "heavywatal.github.io"
     paths: [
       "/Users/watal/git/heavywatal.github.io"
     ]
-    icon: "icon-mark-github"
+    icon: "icon-globe"
   }
   {
     title: "hugobook"
@@ -46,7 +46,14 @@
     paths: [
       "/Users/watal/git/manuscript"
     ]
-    icon: "icon-file-text"
+    icon: "icon-pencil"
+  }
+  {
+    title: "homebrew-tap"
+    paths: [
+      "/usr/local/Homebrew/Library/Taps/heavywatal/homebrew-tap"
+    ]
+    icon: "icon-ruby"
   }
   {
     title: "tumopp"
