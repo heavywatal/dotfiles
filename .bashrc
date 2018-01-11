@@ -77,8 +77,9 @@ alias giff='git diff --no-index'
 alias ta="tmux -2u attach"
 alias zmux='SHELL=$(which zsh) exec tmux'
 alias r='R --quiet --no-save --no-restore-data'
-alias clang++14='clang++ -std=c++14 -Wall -Wextra'
-alias with-homelib='CPATH=${HOME}/local/include LIBRARY_PATH=${HOME}/local/lib LD_LIBRARY_PATH=${HOME}/local/lib'
+alias clang++14='clang++ -std=c++14 -Wall -Wextra -Wpedantic'
+alias with-homelib='CPATH=${HOME}/local/include LIBRARY_PATH=${HOME}/local/lib64:${HOME}/local/lib LD_LIBRARY_PATH=${HOME}/local/lib64:${HOME}/local/lib'
+alias rmcmake='rm -r CMakeCache.txt CMakeFiles CTestTestfile.cmake DartConfiguration.tcl Makefile Testing cmake_install.cmake compile_commands.json install_manifest.txt'
 
 if [ $(uname) = Darwin ]; then
     alias ql="qlmanage -p $@ >/dev/null 2>&1"
@@ -88,5 +89,5 @@ else
     alias apt-upgradable="apt-get -s upgrade | grep Inst | cut -f2 -d' '"
 fi
 
-ILP_HOSTS=($(echo ilp{14,15,16,17,19,20,21,22,23,25,26,27}.local))
+ILP_HOSTS=($(echo ilp{13,14,15,16,17,19,20,21,22,23,25,26,27}.local))
 ILL_HOSTS=($(echo ill{01..04}.local))
