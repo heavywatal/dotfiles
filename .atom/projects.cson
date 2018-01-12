@@ -42,6 +42,13 @@
     icon: "icon-markdown"
   }
   {
+    title: "sketchbook"
+    paths: [
+      "/Users/watal/git/sketchbook"
+    ]
+    icon: "icon-zap"
+  }
+  {
     title: "manuscript"
     paths: [
       "/Users/watal/git/manuscript"
