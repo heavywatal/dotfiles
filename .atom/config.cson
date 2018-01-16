@@ -42,6 +42,16 @@
       "spell-check"
       "language-babel"
     ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "desktop.ini"
+      "docs"
+    ]
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
       "markdown-writer"
@@ -107,7 +117,6 @@
     enableMruTabSwitching: false
     enableVcsColoring: true
   "tree-view":
-    hideIgnoredNames: true
     hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
