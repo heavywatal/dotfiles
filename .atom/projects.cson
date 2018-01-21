@@ -28,6 +28,13 @@
     icon: "icon-plus"
   }
   {
+    title: "sketchbook"
+    paths: [
+      "/Users/watal/git/sketchbook"
+    ]
+    icon: "icon-zap"
+  }
+  {
     title: "heavywatal.github.io"
     paths: [
       "/Users/watal/git/heavywatal.github.io"
@@ -42,11 +49,11 @@
     icon: "icon-markdown"
   }
   {
-    title: "sketchbook"
+    title: "slides-draft"
     paths: [
-      "/Users/watal/git/sketchbook"
+      "/Users/watal/git/slides-draft"
     ]
-    icon: "icon-zap"
+    icon: "icon-markdown"
   }
   {
     title: "manuscript"
