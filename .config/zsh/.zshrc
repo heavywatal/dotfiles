@@ -1,6 +1,4 @@
-if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
-fi
+[ -f ~/.bashrc ] && . ~/.bashrc
 
 autoload -Uz is-at-least
 

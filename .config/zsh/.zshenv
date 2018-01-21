@@ -5,9 +5,4 @@ unsetopt GLOBAL_RCS
 unsetopt NOMATCH
 
 # Shared with bash
-if [ -f ~/.profile ]; then
-    . ~/.profile
-fi
-
-# Permission
-[[ ${UID} > 0 && ${UID} = ${GID} ]] && umask 002 || umask 022
+[ -f ~/.profile ] && . ~/.profile

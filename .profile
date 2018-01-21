@@ -1,6 +1,4 @@
 if [ $(uname) = Darwin ]; then
-    export CC=clang
-    export CXX=clang++
     export MACOSX_DEPLOYMENT_TARGET=$(sw_vers -productVersion | cut -d. -f-2)
     export PYTHON_CONFIGURE_OPTS="--enable-framework"
     # Resource Fork reduction for 'tar'
@@ -17,13 +15,10 @@ elif [ $(uname) = Linux ]; then
 fi
 
 # PATH
-[[ $PATH =~ /usr/local/sbin ]] || PATH=/usr/local/sbin:$PATH
-[[ $PATH =~ /usr/local/bin ]] || PATH=/usr/local/bin:$PATH
-if [ $(uname) = Linux ]; then
-    PATH=${HOME}/.linuxbrew/bin:${HOME}/.linuxbrew/sbin:$PATH
-else
-    PATH=${HOME}/.homebrew/bin:${HOME}/.homebrew/sbin:$PATH
-fi
+[[ $PATH =~ /usr/local/bin ]] || PATH=/usr/local/bin:/usr/local/sbin:$PATH
+[ -d /opt/local/bin ]  && PATH=/opt/local/bin:/opt/local/sbin:$PATH
+[ -d ~/.linuxbrew/bin ] && PATH=${HOME}/.linuxbrew/bin:${HOME}/.linuxbrew/sbin:$PATH
+[ -d ~/.homebrew/bin ] && PATH=${HOME}/.homebrew/bin:${HOME}/.homebrew/sbin:$PATH
 brew_prefix=$(brew --prefix 2>/dev/null)
 if [ -n "${brew_prefix}" ]; then
     PATH=${brew_prefix}/opt/coreutils/libexec/gnubin:$PATH
@@ -32,10 +27,9 @@ if [ -n "${brew_prefix}" ]; then
     PATH=${brew_prefix}/opt/qt5/bin:$PATH
 fi
 
-if which pyenv >/dev/null; then eval "$(pyenv init -)"; fi
+which pyenv >/dev/null && eval "$(pyenv init -)"
 PATH=$(python -m site --user-base)/bin:$PATH
 
-PATH=/opt/local/bin:/opt/local/sbin:$PATH
 PATH=${HOME}/local/bin:${HOME}/local/scripts:$PATH
 export PATH
 

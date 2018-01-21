@@ -1,8 +1,6 @@
-if [[ $0 =~ bash$ ]]; then
+if [ "${0##*/}" = "bash" ]; then
     # Source global definitions
-    if [ -f /etc/bashrc ]; then
-        . /etc/bashrc
-    fi
+    [ -f /etc/bashrc ] && . /etc/bashrc
 
     # PROMPT
     #PS1='[\u@\h \W]\$ '
