@@ -50,6 +50,7 @@
       "._*"
       "Thumbs.db"
       "desktop.ini"
+      "man"
       "docs"
     ]
     openEmptyEditorOnStart: false
