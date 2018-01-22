@@ -15,7 +15,10 @@ elif [ $(uname) = Linux ]; then
 fi
 
 # PATH
-[[ $PATH =~ /usr/local/bin ]] || PATH=/usr/local/bin:/usr/local/sbin:$PATH
+PATH=/usr/local/sbin:$PATH
+PATH=${PATH//:\/usr\/local\/sbin/}
+PATH=/usr/local/bin:$PATH
+PATH=${PATH//:\/usr\/local\/bin/}
 [ -d /opt/local/bin ]  && PATH=/opt/local/bin:/opt/local/sbin:$PATH
 [ -d ~/.linuxbrew/bin ] && PATH=${HOME}/.linuxbrew/bin:${HOME}/.linuxbrew/sbin:$PATH
 [ -d ~/.homebrew/bin ] && PATH=${HOME}/.homebrew/bin:${HOME}/.homebrew/sbin:$PATH
