@@ -19,16 +19,24 @@ PATH=/usr/local/sbin:$PATH
 PATH=${PATH//:\/usr\/local\/sbin/}
 PATH=/usr/local/bin:$PATH
 PATH=${PATH//:\/usr\/local\/bin/}
-[ -d /opt/local/bin ]  && PATH=/opt/local/bin:/opt/local/sbin:$PATH
-[ -d ~/.linuxbrew/bin ] && PATH=${HOME}/.linuxbrew/bin:${HOME}/.linuxbrew/sbin:$PATH
-[ -d ~/.homebrew/bin ] && PATH=${HOME}/.homebrew/bin:${HOME}/.homebrew/sbin:$PATH
+[ -d /opt/local ]  && PATH=/opt/local/bin:/opt/local/sbin:$PATH
+[ -d ~/.linuxbrew ] && PATH=${HOME}/.linuxbrew/bin:${HOME}/.linuxbrew/sbin:$PATH
+[ -d ~/.homebrew ] && PATH=${HOME}/.homebrew/bin:${HOME}/.homebrew/sbin:$PATH
 brew_prefix=$(brew --prefix 2>/dev/null)
 if [ -n "${brew_prefix}" ]; then
     PATH=${brew_prefix}/opt/coreutils/libexec/gnubin:$PATH
     PATH=${brew_prefix}/opt/gnu-sed/libexec/gnubin:$PATH
     PATH=${brew_prefix}/opt/gnu-tar/libexec/gnubin:$PATH
     PATH=${brew_prefix}/opt/qt5/bin:$PATH
+    MANPATH=${brew_prefix}/share/man:${MANPATH}
+    MANPATH=${brew_prefix}/opt/coreutils/libexec/gnuman:${MANPATH}
 fi
+unset brew_prefix
+
+PATH=${HOME}/.nodebrew/current/bin:${PATH}
+
+export GOPATH=${HOME}/.go
+PATH=${GOPATH}/bin:${PATH}
 
 which pyenv >/dev/null && eval "$(pyenv init -)"
 PATH=$(python -m site --user-base)/bin:$PATH

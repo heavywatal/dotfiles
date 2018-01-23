@@ -18,11 +18,6 @@ export EDOTDIR=${HOME}/.emacs.d
 
 MANPATH=/usr/local/man:/usr/local/share/man:${MANPATH}
 MANPATH=/opt/local/man:/opt/local/share/man:${MANPATH}
-if [ -n "${brew_prefix}" ]; then
-    MANPATH=${brew_prefix}/share/man:${MANPATH}
-    MANPATH=${brew_prefix}/opt/coreutils/libexec/gnuman:${MANPATH}
-    export BOOST_ROOT=${brew_prefix}
-fi
 export MANPATH
 
 # C-w, M-b, M-f; default: *?_-.[]~=/&;!#$%^(){}<>
@@ -38,12 +33,8 @@ export LS_COLORS
 # removed mh=00 and ca=38;41 for MEME (depending on csh)
 
 export TEXMFHOME=${HOME}/.texmf
-export GOPATH=${HOME}/.go
 export PYTHONSTARTUP=${HOME}/.config/python/startup.py
 export PIP_CONFIG_FILE=${HOME}/.config/pip/pip.conf
-
-PATH=${GOPATH}/bin:${PATH}
-PATH=${HOME}/.nodebrew/current/bin:${PATH}
 
 tmux has-session >/dev/null 2>&1 && if [ -z "${TMUX}" ]; then
     echo '% tmux list-sessions'
