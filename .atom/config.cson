@@ -89,7 +89,7 @@
       "-n46"
     ]
   "linter-clang":
-    clangDefaultCppFlags: "-Wall -Wextra -Wpedantic -std=c++14"
+    clangDefaultCppFlags: "-std=c++14 -Wall -Wextra -Wpedantic -Weffc++ -Wconversion -Wfloat-equal -Wsign-compare -Wsign-conversion -Wshadow"
     clangIncludePaths: [
       "/Users/watal/local/include"
       "/usr/local/include"
