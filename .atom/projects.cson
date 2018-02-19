@@ -77,13 +77,6 @@
     icon: "icon-plus"
   }
   {
-    title: "tumorr"
-    paths: [
-      "/Users/watal/git/tumorr"
-    ]
-    icon: "icon-package"
-  }
-  {
     title: "likeligrid"
     paths: [
       "/Users/watal/git/likeligrid"
