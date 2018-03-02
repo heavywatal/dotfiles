@@ -1,4 +1,4 @@
-'.text.md':
+'.text.md, .source.gfm':
   '<div>\\[\\begin{split}':
     'prefix': 'equation'
     'body': '<div>\\\\[\\\\begin{split}\n\n\\\\end{split}\\\\]</div>'
