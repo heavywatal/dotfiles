@@ -41,7 +41,7 @@ PATH=${GOPATH}/bin:${PATH}
 which pyenv >/dev/null && eval "$(pyenv init -)"
 PATH=$(python -m site --user-base)/bin:$PATH
 
-PATH=${HOME}/local/bin:${HOME}/local/scripts:$PATH
+PATH=${HOME}/local/bin:${HOME}/.config/bin:${HOME}/local/scripts:$PATH
 export PATH
 
 # Language
