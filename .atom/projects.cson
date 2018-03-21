@@ -42,9 +42,9 @@
     icon: "icon-globe"
   }
   {
-    title: "hugobook"
+    title: "offline"
     paths: [
-      "/Users/watal/git/hugobook"
+      "/Users/watal/git/offline"
     ]
     icon: "icon-markdown"
   }
