@@ -38,7 +38,7 @@ PATH=${HOME}/.nodebrew/current/bin:${PATH}
 export GOPATH=${HOME}/.go
 PATH=${GOPATH}/bin:${PATH}
 
-which pyenv >/dev/null && eval "$(pyenv init -)"
+which pyenv >/dev/null 2>&1 && eval "$(pyenv init -)"
 PATH=$(python -m site --user-base)/bin:$PATH
 
 PATH=${HOME}/local/bin:${HOME}/.config/bin:${HOME}/local/scripts:$PATH
