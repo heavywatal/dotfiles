@@ -28,9 +28,9 @@
     icon: "icon-plus"
   }
   {
-    title: "sketchbook"
+    title: "scribble"
     paths: [
-      "/Users/watal/git/sketchbook"
+      "/Users/watal/git/scribble"
     ]
     icon: "icon-zap"
   }
