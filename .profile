@@ -30,6 +30,7 @@ if [ -n "${brew_prefix}" ]; then
     PATH=${brew_prefix}/opt/qt5/bin:$PATH
     MANPATH=${brew_prefix}/share/man:${MANPATH}
     MANPATH=${brew_prefix}/opt/coreutils/libexec/gnuman:${MANPATH}
+    export HOMEBREW_NO_ANALYTICS=1
 fi
 unset brew_prefix
 
