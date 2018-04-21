@@ -1,0 +1,10 @@
+{
+    "editor.fontFamily": "'Ubuntu Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
+    "editor.fontSize": 14,
+    "editor.rulers": [80],
+    "files.autoSave": "off",
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "workbench.startupEditor": "none",
+    "workbench.statusBar.feedback.visible": false
+}
