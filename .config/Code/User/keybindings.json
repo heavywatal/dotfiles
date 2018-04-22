@@ -9,6 +9,26 @@
         "command": "workbench.action.previousEditor"
     },
     {
+        "key": "ctrl+i",
+        "command": "editor.action.triggerSuggest",
+        "when": "editorTextFocus && !suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "acceptSelectedSuggestion",
+        "when": "suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+m",
+        "command": "acceptSelectedSuggestion",
+        "when": "suggestWidgetVisible"
+    },
+    {
         "key": "ctrl+enter",
         "command": "workbench.action.terminal.runSelectedText"
     },
