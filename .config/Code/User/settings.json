@@ -4,7 +4,9 @@
     "editor.lineHeight": 18,
     "editor.minimap.enabled": false,
     "editor.renderControlCharacters": true,
+    "editor.renderIndentGuides": false,
     "editor.rulers": [80],
+    "editor.useTabStops": false,
     "files.autoSave": "off",
     "files.trimTrailingWhitespace": true,
     "telemetry.enableTelemetry": false,
@@ -16,6 +18,7 @@
     "window.openFoldersInNewWindow": "on",
     "window.title": "${activeEditorMedium}${separator}${rootName}",
     "window.titleBarStyle": "native",
+    "workbench.activityBar.visible": false,
     "workbench.colorCustomizations": {
         "statusBar.background": "#555"
     },
