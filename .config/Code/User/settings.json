@@ -13,7 +13,12 @@
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.lineHeight": 1.2,
+    "window.openFoldersInNewWindow": "on",
     "window.title": "${activeEditorMedium}${separator}${rootName}",
+    "window.titleBarStyle": "native",
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#555"
+    },
     "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "none",
     "workbench.statusBar.feedback.visible": false
