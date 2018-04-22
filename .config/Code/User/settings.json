@@ -1,13 +1,20 @@
 {
     "editor.fontFamily": "'Ubuntu Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
     "editor.fontSize": 14,
+    "editor.lineHeight": 18,
     "editor.minimap.enabled": false,
     "editor.renderControlCharacters": true,
     "editor.rulers": [80],
     "files.autoSave": "off",
+    "files.trimTrailingWhitespace": true,
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.lineHeight": 1.2,
     "window.title": "${activeEditorMedium}${separator}${rootName}",
+    "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "none",
     "workbench.statusBar.feedback.visible": false
 }
