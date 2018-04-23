@@ -1,12 +1,17 @@
 {
+    "editor.autoClosingBrackets": false,
     "editor.fontFamily": "'Ubuntu Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
     "editor.fontSize": 14,
     "editor.lineHeight": 18,
     "editor.minimap.enabled": false,
+    "editor.occurrencesHighlight": false,
     "editor.renderControlCharacters": true,
     "editor.renderIndentGuides": false,
     "editor.rulers": [80],
     "editor.useTabStops": false,
+    "editor.tokenColorCustomizations": {
+        "comments": "#666"
+    },
     "files.autoSave": "off",
     "files.trimTrailingWhitespace": true,
     "telemetry.enableTelemetry": false,
@@ -20,7 +25,8 @@
     "window.titleBarStyle": "native",
     "workbench.activityBar.visible": false,
     "workbench.colorCustomizations": {
-        "statusBar.background": "#555"
+        "statusBar.background": "#555",
+        "terminal.foreground": "#aaa"
     },
     "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "none",
