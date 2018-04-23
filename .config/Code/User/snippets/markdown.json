@@ -1,0 +1,12 @@
+{
+	"<div>\\[\\begin{split}": {
+	    "prefix": "equation",
+		"body": "<div>\\\\[\\\\begin{split}\n\n\\\\end{split}\\\\]</div>"
+	},
+	"{{< relref >}}": {
+		"prefix": "relref",
+		"body": [
+			"[]({{< relref \".md\" >}})"
+		]
+	}
+}
