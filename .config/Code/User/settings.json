@@ -1,5 +1,6 @@
 {
     "editor.autoClosingBrackets": false,
+    "editor.folding": false,
     "editor.fontFamily": "'Ubuntu Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
     "editor.fontSize": 14,
     "editor.lineHeight": 18,
@@ -14,6 +15,9 @@
     },
     "files.autoSave": "off",
     "files.trimTrailingWhitespace": true,
+    "gitProjectManager.baseProjectsFolders": [
+        "~/git"
+    ],
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "terminal.integrated.cursorBlinking": true,
@@ -25,7 +29,8 @@
     "window.titleBarStyle": "native",
     "workbench.activityBar.visible": false,
     "workbench.colorCustomizations": {
-        "statusBar.background": "#555",
+        "editorGutter.background": "#222",
+        "statusBar.background": "#333",
         "terminal.foreground": "#aaa"
     },
     "workbench.iconTheme": "material-icon-theme",
