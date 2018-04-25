@@ -41,6 +41,7 @@
         "terminal.foreground": "#aaa"
     },
     "workbench.iconTheme": "material-icon-theme",
+    "workbench.panel.defaultLocation": "right",
     "workbench.startupEditor": "none",
     "workbench.statusBar.feedback.visible": false
 }
