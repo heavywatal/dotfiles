@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+body {
+  margin: 1rem;
+  color: #444;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Helvetica, "Yu Gothic", sans-serif;
+}
+
+pre,
+code,
+kbd {
+  font-family: "Ubuntu Mono", "DejaVu Sans Mono", Menlo, Consolas, monospace;
+  font-size: inherit;
+}
+
+pre {
+  background-color: #f6f6f6;
+  padding: 0.8rem;
+}
+
+img,
+.plotly,
+.rglWebGL {
+  display: inline-block;
+  vertical-align: top;
+}
+
+body .main-container {
+  max-width: inherit;
+}
