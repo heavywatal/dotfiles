@@ -6,10 +6,16 @@
     "editor.lineHeight": 18,
     "editor.minimap.enabled": false,
     "editor.occurrencesHighlight": false,
+    "editor.quickSuggestions": {
+        "other": false,
+        "comments": false,
+        "strings": false
+    },
     "editor.renderControlCharacters": true,
     "editor.renderIndentGuides": false,
     "editor.rulers": [80],
     "editor.useTabStops": false,
+    "editor.suggestSelection": "first",
     "editor.tabSize": 2,
     "editor.tokenColorCustomizations": {
         "comments": "#666"

@@ -9,6 +9,15 @@
         "command": "workbench.action.previousEditor"
     },
     {
+        "key": "ctrl+g",
+        "command": "-workbench.action.gotoLine"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "hideSuggestWidget",
+        "when": "suggestWidgetVisible"
+    },
+    {
         "key": "ctrl+i",
         "command": "editor.action.triggerSuggest",
         "when": "editorTextFocus && !suggestWidgetVisible"
