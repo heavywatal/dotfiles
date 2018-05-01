@@ -32,6 +32,7 @@ options(
 )
 
 .First = function() {
+  stopifnot(dir.exists(Sys.getenv("R_LIBS_USER")))
   if (interactive()) {
     cran = c("tidyverse", "fs", "devtools")
     github = c("wtl")
