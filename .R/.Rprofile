@@ -32,6 +32,9 @@ options(
     cat(date(), "\n")
     cat(getwd(), "\n")
     cat("Loading:", cran, github, "\n")
+    setHook(packageEvent("grDevices", "onLoad"), function(...) {
+      grDevices::quartz.options(width = 6.5, height = 6.5)
+    })
     setHook(packageEvent("tibble", "attach"), function(...) {
       try({
         assign("print.tbl_df", data.table:::print.data.table, envir = .GlobalEnv)
@@ -39,6 +42,7 @@ options(
       })
     })
     setHook(packageEvent("wtl", "attach"), function(...) {
+      ggplot2::theme_set(wtl::theme_wtl())
       wtl::adjust_print_options()
     })
   }
