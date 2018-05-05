@@ -43,7 +43,7 @@ export PYENV_ROOT=${HOME}/.pyenv
 [ -d $PYENV_ROOT ] && PATH=${PYENV_ROOT}/versions/3.6.5/bin:$PATH
 PATH=$(python -m site --user-base)/bin:$PATH
 
-PATH=${HOME}/local/bin:${HOME}/.config/bin:${HOME}/local/scripts:$PATH
+PATH=${HOME}/local/bin:${HOME}/.config/bin:$PATH
 export PATH
 
 # Language
