@@ -31,6 +31,7 @@ if [ -n "${brew_prefix}" ]; then
     MANPATH=${brew_prefix}/share/man:${MANPATH}
     MANPATH=${brew_prefix}/opt/coreutils/libexec/gnuman:${MANPATH}
     export HOMEBREW_NO_ANALYTICS=1
+    export HOMEBREW_NO_AUTO_UPDATE=1
 fi
 unset brew_prefix
 
