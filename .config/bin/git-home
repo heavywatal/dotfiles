@@ -2,5 +2,5 @@
 for x in ~/git/*/; do
     echo $(tput bold)$x$(tput sgr0)
     git -C $x fetch
-    git -C $x status
+    git -C $x status --short --branch
 done
