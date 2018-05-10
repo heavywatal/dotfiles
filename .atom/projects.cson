@@ -51,7 +51,8 @@
   {
     title: "slides-draft"
     paths: [
-      "/Users/watal/git/slides-draft"
+      "/Users/watal/git/slides-draft",
+      "/Users/watal/git/hugo-theme-reveal"
     ]
     icon: "icon-markdown"
   }
