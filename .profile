@@ -43,7 +43,7 @@ PATH=${GOPATH}/bin:${PATH}
 export PYENV_ROOT=${HOME}/.pyenv
 [ -d $PYENV_ROOT ] && PATH=${PYENV_ROOT}/versions/3.6.5/bin:$PATH
 PATH=$(python -m site --user-base)/bin:$PATH
-
+PATH=${PATH}:$(ruby -r rubygems -e 'puts Gem.user_dir')/bin
 PATH=${HOME}/local/bin:${HOME}/.config/bin:$PATH
 export PATH
 
