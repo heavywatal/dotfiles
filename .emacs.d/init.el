@@ -40,6 +40,8 @@
 (setq ess-toggle-underscore nil)
 (setq inferior-R-args "--quiet --no-save --no-restore-data ")
 
+(setq ruby-insert-encoding-magic-comment nil)
+
 ;;;;;;;;;1;;;;;;;;;2;;;;;;;;;3;;;;;;;;;4;;;;;;;;;5;;;;;;;;;6;;;;;;;;;7;;;;;;;;;
 ;;; customize-face/variable
 
