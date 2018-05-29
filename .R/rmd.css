@@ -1,15 +1,27 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: "Yu Gothic Medium";
+  src: local("Yu Gothic Medium");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Yu Gothic Medium";
+  src: local("Yu Gothic Bold");
+  font-weight: bold;
+}
+
 body {
   margin: 1rem;
   color: #444;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Helvetica, "Yu Gothic", sans-serif;
+  font-family: "Helvetica Neue", "Segoe UI", Helvetica, "Yu Gothic Medium", sans-serif;
 }
 
 pre,
 code,
 kbd {
-  font-family: "Ubuntu Mono", "DejaVu Sans Mono", Menlo, Consolas, monospace;
+  font-family: Menlo, Consolas, "DejaVu Sans Mono", "Yu Gothic Medium", monospace;
   font-size: inherit;
 }
 
