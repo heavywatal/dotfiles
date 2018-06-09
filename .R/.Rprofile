@@ -1,7 +1,7 @@
 options(
-  menu.graphics = FALSE,
   repos = c(CRAN = "https://cloud.r-project.org/"),
   BioC_mirror = "https://bioconductor.org/",
+  menu.graphics = FALSE,
 
   warn = 1,
   warnPartialMatchArgs = FALSE,
@@ -14,9 +14,7 @@ options(
   datatable.print.colnames = "top",
   pillar.subtle = FALSE,
   pillar.neg = FALSE,
-  readr.num_columns = 0L,
-
-  mc.cores = parallel::detectCores(logical = FALSE)
+  readr.num_columns = 0L
 )
 
 .First = function() {
@@ -34,6 +32,9 @@ options(
     cat("Loading:", cran, github, "\n")
     setHook(packageEvent("grDevices", "onLoad"), function(...) {
       grDevices::quartz.options(width = 6.5, height = 6.5)
+    })
+    setHook(packageEvent("parallel", "onLoad"), function(...) {
+      options(mc.cores = parallel::detectCores(logical = FALSE))
     })
     setHook(packageEvent("tibble", "attach"), function(...) {
       try({
