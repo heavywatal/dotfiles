@@ -38,8 +38,8 @@ options(
     })
     setHook(packageEvent("tibble", "attach"), function(...) {
       try({
-        assign("print.tbl_df", data.table:::print.data.table, envir = .GlobalEnv)
-        assign("print.tbl", data.table:::print.data.table, envir = .GlobalEnv)
+        registerS3method("print", "tbl_df", data.table:::print.data.table)
+        registerS3method("print", "tbl", data.table:::print.data.table)
       })
     })
     setHook(packageEvent("wtl", "attach"), function(...) {
