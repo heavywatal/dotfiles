@@ -13,13 +13,15 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-(package-install 'flycheck)
-(package-install 'auto-complete)
-(package-install 'markdown-mode)
-(package-install 'js2-mode)
-(package-install 'tss)
-(package-install 'ess)
-(package-install 'polymode)
+(when (file-accessible-directory-p "~/.emacs.d/elpa")
+  (package-install 'flycheck)
+  (package-install 'auto-complete)
+  (package-install 'markdown-mode)
+  (package-install 'js2-mode)
+  (package-install 'tss)
+  (package-install 'ess)
+  (package-install 'polymode)
+)
 
 ;(add-to-list 'auto-mode-alist '("\\.Rmd$" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md$" . gfm-mode))
