@@ -15,6 +15,7 @@
     "editor.renderIndentGuides": false,
     "editor.rulers": [80],
     "editor.useTabStops": false,
+    "editor.scrollBeyondLastLine": false,
     "editor.suggestSelection": "first",
     "editor.tabSize": 2,
     "editor.tokenColorCustomizations": {
