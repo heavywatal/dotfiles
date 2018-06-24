@@ -21,6 +21,7 @@
     "editor.tokenColorCustomizations": {
         "comments": "#666"
     },
+    "extensions.autoUpdate": false,
     "files.autoSave": "off",
     "files.trimTrailingWhitespace": true,
     "gitProjectManager.baseProjectsFolders": [
