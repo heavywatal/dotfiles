@@ -18,6 +18,16 @@
         "when": "suggestWidgetVisible"
     },
     {
+        "key": "ctrl+k",
+        "command": "editor.action.clipboardCutAction",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+y",
+        "command": "editor.action.clipboardPasteAction",
+        "when": "editorTextFocus"
+    },
+    {
         "key": "ctrl+i",
         "command": "editor.action.triggerSuggest",
         "when": "editorTextFocus && !suggestWidgetVisible"
