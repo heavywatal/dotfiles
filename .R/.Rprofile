@@ -14,13 +14,19 @@ options(
   datatable.print.colnames = "top",
   pillar.subtle = FALSE,
   pillar.neg = FALSE,
-  readr.num_columns = 0L
+  readr.num_columns = 0L,
+
+  usethis.name = "Watal M. Iwasaki",
+  usethis.description = list(
+    License = "MIT + file LICENSE",
+    `Authors@R` = "person('Watal M.', 'Iwasaki', email='heavy.watal@gmail.com', role=c('aut', 'cre'))"
+  )
 )
 
 .First = function() {
   stopifnot(dir.exists(Sys.getenv("R_LIBS_USER")))
   if (interactive()) {
-    cran = c("tidyverse", "fs", "devtools")
+    cran = c("tidyverse", "fs", "devtools", "usethis")
     github = c("wtl")
     options(defaultPackages = c(getOption("defaultPackages"), cran, github))
     if (!(.Platform$GUI %in% c("AQUA", "Rgui")) && Sys.getenv("INSIDE_EMACS") == "") {
