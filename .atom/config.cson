@@ -55,6 +55,7 @@
     ]
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
+      "language-markdown"
       "markdown-writer"
       "r-exec"
     ]
@@ -81,6 +82,10 @@
       grammar: false
   "language-markdown":
     addListItems: false
+    autoIncrementListItems: false
+    emphasisShortcuts: false
+    indentListItems: false
+    linkShortcuts: false
     removeEmptyListItems: false
   latex:
     enableExtendedBuildMode: false
