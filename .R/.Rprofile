@@ -16,8 +16,8 @@ options(
   pillar.neg = FALSE,
   readr.num_columns = 0L,
 
-  usethis.name = "Watal M. Iwasaki",
-  usethis.description = list(
+  devtools.name = "Watal M. Iwasaki",
+  devtools.desc = list(
     License = "MIT + file LICENSE",
     `Authors@R` = "person('Watal M.', 'Iwasaki', email='heavy.watal@gmail.com', role=c('aut', 'cre'))"
   )
