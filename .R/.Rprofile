@@ -33,8 +33,6 @@ options(
       utils::loadhistory(file = Sys.getenv("R_HISTFILE"))
     }
     print(utils::sessionInfo(), locale = FALSE)
-    cat(date(), "\n")
-    cat(getwd(), "\n")
     cat("Loading:", cran, github, "\n")
     setHook(packageEvent("grDevices", "onLoad"), function(...) {
       grDevices::quartz.options(width = 6.5, height = 6.5)
