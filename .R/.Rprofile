@@ -37,9 +37,6 @@ options(
     setHook(packageEvent("grDevices", "onLoad"), function(...) {
       grDevices::quartz.options(width = 6.5, height = 6.5)
     })
-    setHook(packageEvent("parallel", "onLoad"), function(...) {
-      options(mc.cores = parallel::detectCores(logical = FALSE))
-    })
     setHook(packageEvent("tibble", "attach"), function(...) {
       try({
         registerS3method("print", "tbl_df", data.table:::print.data.table)
@@ -49,6 +46,7 @@ options(
     setHook(packageEvent("wtl", "attach"), function(...) {
       ggplot2::theme_set(wtl::theme_wtl())
       wtl::adjust_print_options()
+      options(mc.cores = parallel::detectCores(logical = FALSE))
     })
   }
 }
