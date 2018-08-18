@@ -26,7 +26,7 @@ options(
 .First = function() {
   stopifnot(dir.exists(Sys.getenv("R_LIBS_USER")))
   if (interactive()) {
-    cran = c("tidyverse", "fs", "devtools", "usethis")
+    cran = c("tidyverse", "fs", "devtools")
     github = c("wtl")
     options(defaultPackages = c(getOption("defaultPackages"), cran, github))
     if (!(.Platform$GUI %in% c("AQUA", "Rgui")) && Sys.getenv("INSIDE_EMACS") == "") {
