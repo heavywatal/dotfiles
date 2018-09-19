@@ -28,6 +28,13 @@
     icon: "icon-plus"
   }
   {
+    title: "clippson"
+    paths: [
+      "/Users/watal/git/clippson"
+    ]
+    icon: "icon-plus"
+  }
+  {
     title: "scribble"
     paths: [
       "/Users/watal/git/scribble"
