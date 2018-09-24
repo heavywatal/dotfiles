@@ -16,6 +16,9 @@ options(
   pillar.neg = FALSE,
   readr.num_columns = 0L,
 
+  ggplot2.continuous.colour = "viridis",
+  ggplot2.continuous.fill = "viridis",
+
   devtools.name = "Watal M. Iwasaki",
   devtools.desc = list(
     License = "MIT + file LICENSE",
