@@ -9,8 +9,9 @@
 # 🔧 :wrench: Change configuration
 # 💄 :lipstick: Update the UI and style files
 # ⬆️ :arrow_up: Upgrade dependencies
+# 🔖 :bookmark: Bump version
 # 📝 :memo: Write docs
+# ✅ :white_check_mark: Improve tests
+# 💚 :green_heart: Configure CI build
 # 🚧 :construction: Work in progress
-# ✅ :white_check_mark: Add tests
-# 💚 :green_heart: Fix the CI build
 # 🍺 :beer: Cheers!
