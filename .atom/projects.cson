@@ -35,6 +35,13 @@
     icon: "icon-plus"
   }
   {
+    title: "sfmt-class"
+    paths: [
+      "/Users/watal/git/sfmt-class"
+    ]
+    icon: "icon-plus"
+  }
+  {
     title: "scribble"
     paths: [
       "/Users/watal/git/scribble"
