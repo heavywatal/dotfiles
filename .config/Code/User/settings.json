@@ -28,6 +28,19 @@
         "~/git"
     ],
     "gitProjectManager.maxDepthRecursion": 1,
+    "latex-workshop.chktex.enabled": true,
+    "latex-workshop.message.error.show": false,
+    "latex-workshop.message.update.show": false,
+    "latex-workshop.message.warning.show": false,
+    "latex-workshop.view.pdf.external.command": {
+        "command": "open",
+        "args": ["-a", "Skim", "%PDF%"]
+    },
+    "latex-workshop.view.pdf.external.synctex": {
+        "command": "displayline",
+        "args": ["-r", "%LINE%", "%PDF%", "%TEX%"]
+    },
+    "latex-workshop.view.pdf.viewer": "external",
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "terminal.integrated.cursorBlinking": true,
