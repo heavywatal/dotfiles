@@ -23,6 +23,8 @@
     },
     "editor.wordWrapColumn": 160,
     "extensions.autoUpdate": false,
+    "extensions.ignoreRecommendations": true,
+    "extensions.showRecommendationsOnlyOnDemand": true,
     "files.autoSave": "off",
     "files.trimTrailingWhitespace": true,
     "gitProjectManager.baseProjectsFolders": [
