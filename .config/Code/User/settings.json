@@ -21,6 +21,7 @@
     "editor.tokenColorCustomizations": {
         "comments": "#666"
     },
+    "editor.wordWrapColumn": 160,
     "extensions.autoUpdate": false,
     "files.autoSave": "off",
     "files.trimTrailingWhitespace": true,
@@ -66,5 +67,8 @@
     "workbench.iconTheme": "material-icon-theme",
     "workbench.panel.defaultLocation": "right",
     "workbench.startupEditor": "none",
-    "workbench.statusBar.feedback.visible": false
+    "workbench.statusBar.feedback.visible": false,
+    "[latex]": {
+        "editor.wordWrap": "bounded"
+    }
 }
