@@ -13,9 +13,14 @@
         "command": "-workbench.action.gotoLine"
     },
     {
-        "key": "ctrl+g",
-        "command": "hideSuggestWidget",
-        "when": "suggestWidgetVisible"
+        "key": "ctrl-g",
+        "command": "closeFindWidget",
+        "when": "editorFocus && findWidgetVisible"
+    },
+    {
+        "key": "ctrl-[",
+        "command": "closeFindWidget",
+        "when": "editorFocus && findWidgetVisible"
     },
     {
         "key": "ctrl+k",
@@ -25,6 +30,16 @@
     {
         "key": "ctrl+y",
         "command": "editor.action.clipboardPasteAction",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "editor.action.insertLineAfter",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+m",
+        "command": "editor.action.insertLineAfter",
         "when": "editorTextFocus"
     },
     {

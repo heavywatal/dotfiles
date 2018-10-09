@@ -37,10 +37,15 @@
   'ctrl-a': 'editor:move-to-beginning-of-line'
   'ctrl-w': 'editor:delete-to-beginning-of-word'
   'ctrl-y': 'core:paste'
+  'ctrl-c': 'core:cancel'
+  'ctrl-g': 'core:cancel'
+  'ctrl-[': 'core:cancel'
 
 'atom-text-editor:not([mini])':
-  'ctrl-m': 'editor:newline'
   'ctrl-i': 'autocomplete-plus:activate'
+  'ctrl-j': 'editor:newline'
+  'ctrl-m': 'editor:newline'
+  'ctrl-o': 'editor:newline'
   'cmd-enter': 'r-exec:send-command'
   'ctrl-enter': 'hydrogen:run'
 
