@@ -1,5 +1,5 @@
 {
-    "editor.autoClosingBrackets": false,
+    "editor.autoClosingBrackets": "never",
     "editor.folding": false,
     "editor.fontFamily": "'Ubuntu Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
     "editor.fontSize": 14,
@@ -44,6 +44,16 @@
         "args": ["-r", "%LINE%", "%PDF%", "%TEX%"]
     },
     "latex-workshop.view.pdf.viewer": "external",
+    "spellright.configurationScope": "user",
+    "spellright.documentTypes": [
+        "latex",
+        "markdown",
+        "plaintext"
+    ],
+    "spellright.language": [
+        "en"
+    ],
+    "spellright.notificationClass": "information",
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "terminal.integrated.cursorBlinking": true,
