@@ -1,0 +1,37 @@
+{
+  "\\begin{equation}": {
+    "prefix": "equation",
+    "body": [
+      "\\begin{equation}\\label{eq:$1}",
+      "$2",
+      "\\end{equation}"
+    ],
+    "description": "Equation"
+  },
+  "\\begin{figure}": {
+    "prefix": "figure",
+    "body": [
+      "\\begin{figure}",
+      "\\includegraphics[width=\\textwidth]{$1}",
+      "\\caption{%",
+      "$2",
+      "}\\label{fig:$3}",
+      "\\end{figure}"
+    ],
+    "description": "Figure"
+  },
+  "\\(\\)": {
+    "prefix": "math",
+    "body": [
+      "\\(${1:$TM_SELECTED_TEXT}\\)"
+    ],
+    "description": "Inline math"
+  },
+  "\\[\\]": {
+    "prefix": "math",
+    "body": [
+      "\\[${1:$TM_SELECTED_TEXT}\\]"
+    ],
+    "description": "Display math"
+  }
+}
