@@ -1,15 +1,13 @@
 [user]
 	name = Watal M. Iwasaki
 	email = heavywatal@users.noreply.github.com
-[github]
-	user = heavywatal
 [color]
 	ui = auto
+[core]
+	quotepath = false
 [push]
 	default = simple
 [url "git@github.com:"]
 	pushinsteadof = https://github.com/
-[core]
-	quotepath = false
 [commit]
 	template = ~/.config/git/commit_template
