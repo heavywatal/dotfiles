@@ -109,7 +109,8 @@
   {
     title: "blackthunnus"
     paths: [
-      "/Users/watal/git/blackthunnus"
+      "/Users/watal/git/blackthunnus",
+      "/Users/watal/git/tekkamaki"
     ]
     icon: "icon-plus"
   }
