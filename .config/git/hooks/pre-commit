@@ -1,0 +1,13 @@
+#!/bin/sh
+GIT_REMOTE=$(git remote)
+if [ -z "$GIT_REMOTE" ]; then
+  echo 'Error: $(git remote) is empty'
+  exit 1
+fi
+URL_PUSH="$(git remote get-url --push $GIT_REMOTE)"
+[[ "$URL_PUSH" =~ "github.com" ]] && exit 0
+USER_EMAIL="$(git config user.email)"
+if [[ "$USER_EMAIL" =~ "noreply.github.com" ]]; then
+  echo "Error: $USER_EMAIL cannot be used for $URL_PUSH"
+  exit 1
+fi

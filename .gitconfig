@@ -5,6 +5,7 @@
 	ui = auto
 [core]
 	quotepath = false
+	hookspath = ~/.config/git/hooks
 [push]
 	default = simple
 [url "git@github.com:"]
