@@ -131,6 +131,9 @@
     showOnStartup: false
   whitespace:
     ensureSingleTrailingNewline: false
+".go.source":
+  editor:
+    tabType: "hard"
 ".latex.tex.text":
   editor:
     softWrap: true
