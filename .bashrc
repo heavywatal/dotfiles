@@ -16,10 +16,6 @@ export PAGER=less
 export EDITOR=emacs
 export EDOTDIR=${HOME}/.emacs.d
 
-MANPATH=/usr/local/man:/usr/local/share/man:${MANPATH}
-MANPATH=/opt/local/man:/opt/local/share/man:${MANPATH}
-export MANPATH
-
 # C-w, M-b, M-f; default: *?_-.[]~=/&;!#$%^(){}<>
 WORDCHARS='*?[]~&!#$%^(){}<>'
 

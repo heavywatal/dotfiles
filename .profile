@@ -20,7 +20,11 @@ PATH=/usr/local/sbin:$PATH
 PATH=${PATH//:\/usr\/local\/sbin/}
 PATH=/usr/local/bin:$PATH
 PATH=${PATH//:\/usr\/local\/bin/}
-[ -d /opt/local ]  && PATH=/opt/local/bin:/opt/local/sbin:$PATH
+MANPATH=/usr/local/man:/usr/local/share/man:
+if [ -d /opt/local ]; then
+    PATH=/opt/local/bin:/opt/local/sbin:$PATH
+    MANPATH=/opt/local/man:/opt/local/share/man:${MANPATH}
+fi
 [ -d ~/.linuxbrew ] && PATH=${HOME}/.linuxbrew/bin:${HOME}/.linuxbrew/sbin:$PATH
 [ -d ~/.homebrew ] && PATH=${HOME}/.homebrew/bin:${HOME}/.homebrew/sbin:$PATH
 brew_prefix=$(brew --prefix 2>/dev/null)
@@ -47,9 +51,9 @@ if [ -d $PYENV_ROOT ]; then
     PATH=${PYENV_ROOT}/versions/$(pyenv global)/bin:$PATH
 fi
 PATH=$(python -m site --user-base)/bin:$PATH
-PATH=${PATH}:$(ruby -r rubygems -e 'puts Gem.user_dir')/bin
 PATH=${HOME}/local/bin:${HOME}/.config/bin:$PATH
 export PATH
+export MANPATH
 
 # Language
 export LANG=C

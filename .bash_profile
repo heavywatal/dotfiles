@@ -1,2 +1,2 @@
-[ -f ~/.profile ] && . ~/.profile
+[ -z "$TMUX" -a -f ~/.profile ] && . ~/.profile
 [ -f ~/.bashrc ]  && . ~/.bashrc

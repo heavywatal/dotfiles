@@ -5,4 +5,4 @@ unsetopt GLOBAL_RCS
 unsetopt NOMATCH
 
 # Shared with bash
-[ -f ~/.profile ] && . ~/.profile
+[ -z "$TMUX" -a -f ~/.profile ] && . ~/.profile
