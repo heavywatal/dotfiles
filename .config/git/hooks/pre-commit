@@ -1,11 +1,8 @@
 #!/bin/sh
-GIT_REMOTE=$(git remote)
-if [ -z "$GIT_REMOTE" ]; then
-  echo 'Warning: $(git remote) is empty'
-fi
-URL_PUSH="$(git remote get-url --push $GIT_REMOTE)"
-[[ "$URL_PUSH" =~ "github.com" ]] && exit 0
+GIT_REMOTE_NON_GITHUB=$(git remote -v | grep -v github.com)
+[[ -z "$GIT_REMOTE_NON_GITHUB" ]] && exit 0
 USER_EMAIL="$(git config user.email)"
 if [[ "$USER_EMAIL" =~ "noreply.github.com" ]]; then
-  echo "Warning: $USER_EMAIL may not be valid for $URL_PUSH"
+  echo "Warning: $USER_EMAIL may not be valid:"
+  echo "$GIT_REMOTE_NON_GITHUB"
 fi
