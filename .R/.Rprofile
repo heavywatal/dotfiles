@@ -23,7 +23,8 @@ options(
   devtools.desc = list(
     License = "MIT + file LICENSE",
     `Authors@R` = "person('Watal M.', 'Iwasaki', email='heavy.watal@gmail.com', role=c('aut', 'cre'))"
-  )
+  ),
+  menu.graphics = FALSE
 )
 
 .First = function() {
