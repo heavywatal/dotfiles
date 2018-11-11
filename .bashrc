@@ -13,7 +13,7 @@ fi
 ## Environment variables
 
 export PAGER=less
-export EDITOR=emacs
+export EDITOR=vim
 export EDOTDIR=${HOME}/.emacs.d
 
 # C-w, M-b, M-f; default: *?_-.[]~=/&;!#$%^(){}<>
