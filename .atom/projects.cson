@@ -78,6 +78,13 @@
     icon: "icon-pencil"
   }
   {
+    title: "laboratory"
+    paths: [
+      "/Users/watal/git/laboratory"
+    ]
+    icon: "icon-beaker"
+  }
+  {
     title: "homebrew-tap"
     paths: [
       "/usr/local/Homebrew/Library/Taps/heavywatal/homebrew-tap"
