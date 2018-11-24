@@ -29,7 +29,6 @@
     automaticallyUpdate: false
     destroyEmptyPanes: false
     disabledPackages: [
-      "minimap"
       "language-gfm"
       "linter-write-good"
       "welcome"
