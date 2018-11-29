@@ -96,7 +96,7 @@
       "-n46"
     ]
   "linter-clang":
-    clangDefaultCppFlags: "-std=c++14 -Wall -Wextra -Wpedantic -Weffc++ -Wconversion -Wfloat-equal -Wsign-compare -Wsign-conversion -Wshadow"
+    clangDefaultCppFlags: "-std=c++14 -Wall -Wextra -pedantic --Weffc++ -Wcast-align -Wcast-qual -Wconversion -Wno-sign-conversion -Wdisabled-optimization -Wdouble-promotion -Wfloat-equal -Wformat=2 -Winit-self -Wmissing-include-dirs -Wold-style-cast -Woverloaded-virtual -Wredundant-decls -Wshadow -Wstrict-aliasing=1 -Wstrict-overflow=5 -Wswitch-default"
     clangIncludePaths: [
       "/Users/watal/local/include"
       "/usr/local/include"
