@@ -12,3 +12,6 @@
 	pushinsteadof = https://github.com/
 [commit]
 	template = ~/.config/git/commit_template
+[alias]
+	st = status
+	sta = status
