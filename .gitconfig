@@ -15,3 +15,5 @@
 [alias]
 	st = status
 	sta = status
+	lg = log --pretty='format:%C(auto)%h %ci% D%+B'
+	ln = log --pretty='format:%C(auto)%h %ci% D%+B' --name-status
