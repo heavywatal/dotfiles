@@ -15,6 +15,7 @@ options(
   pillar.subtle = FALSE,
   pillar.neg = FALSE,
   readr.num_columns = 0L,
+  readr.show_progress = FALSE,
 
   ggplot2.continuous.colour = "viridis",
   ggplot2.continuous.fill = "viridis",
