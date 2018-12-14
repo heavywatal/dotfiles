@@ -200,7 +200,8 @@ case $(echo ${SSH_CONNECTION} | awk '{print $3}') in
         ;;
 esac
 
-if is-at-least 4.3.10; then
+# SGE_CLUSTER_NAME is not empty on SHIROKANE
+if is-at-least 4.3.10 && [ -z "$SGE_CLUSTER_NAME" ]; then
   autoload -Uz vcs_info
   autoload -Uz add-zsh-hook
   add-zsh-hook precmd vcs_info
