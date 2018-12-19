@@ -29,8 +29,8 @@ options(
 )
 
 .First = function() {
-  stopifnot(dir.exists(Sys.getenv("R_LIBS_USER")))
   if (interactive()) {
+    stopifnot(dir.exists(Sys.getenv("R_LIBS_USER")))
     cran = c("tidyverse", "fs", "conflicted", "devtools")
     github = c("wtl")
     options(defaultPackages = c(getOption("defaultPackages"), cran, github))
