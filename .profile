@@ -6,6 +6,7 @@ if [ $(uname) = Darwin ]; then
     export COPYFILE_DISABLE=true
     if [ -x /usr/libexec/path_helper ]; then
         PATH=''
+        MANPATH=''
         eval $(/usr/libexec/path_helper -s)
     fi
 elif [ $(uname) = Linux ]; then
@@ -19,10 +20,10 @@ PATH=/usr/local/sbin:$PATH
 PATH=${PATH//:\/usr\/local\/sbin/}
 PATH=/usr/local/bin:$PATH
 PATH=${PATH//:\/usr\/local\/bin/}
-MANPATH=/usr/local/man:/usr/local/share/man:
+MANPATH=/usr/local/share/man:$MANPATH:/usr/local/man:
 if [ -d /opt/local ]; then
     PATH=/opt/local/bin:/opt/local/sbin:$PATH
-    MANPATH=/opt/local/man:/opt/local/share/man:${MANPATH}
+    MANPATH=/opt/local/man:/opt/local/share/man:$MANPATH
 fi
 [ -d ~/.linuxbrew ] && PATH=${HOME}/.linuxbrew/bin:${HOME}/.linuxbrew/sbin:$PATH
 [ -d ~/.homebrew ] && PATH=${HOME}/.homebrew/bin:${HOME}/.homebrew/sbin:$PATH
@@ -31,17 +32,19 @@ if [ -n "${brew_prefix}" ]; then
     PATH=${brew_prefix}/opt/coreutils/libexec/gnubin:$PATH
     PATH=${brew_prefix}/opt/gnu-sed/libexec/gnubin:$PATH
     PATH=${brew_prefix}/opt/gnu-tar/libexec/gnubin:$PATH
-    MANPATH=${brew_prefix}/share/man:${MANPATH}
-    MANPATH=${brew_prefix}/opt/coreutils/libexec/gnuman:${MANPATH}
+    MANPATH=${brew_prefix}/opt/coreutils/libexec/gnuman:$MANPATH
+    MANPATH=${brew_prefix}/opt/gnu-sed/libexec/gnuman:$MANPATH
+    MANPATH=${brew_prefix}/opt/gnu-tar/libexec/gnuman:$MANPATH
+    MANPATH=${brew_prefix}/share/man:$MANPATH
     export HOMEBREW_NO_ANALYTICS=1
     export HOMEBREW_NO_AUTO_UPDATE=1
 fi
 unset brew_prefix
 
-PATH=${HOME}/.nodebrew/current/bin:${PATH}
+PATH=${HOME}/.nodebrew/current/bin:$PATH
 
 export GOPATH=${HOME}/.go
-PATH=${GOPATH}/bin:${PATH}
+PATH=${GOPATH}/bin:$PATH
 
 export PYENV_ROOT=${HOME}/.pyenv
 if [ -d $PYENV_ROOT ]; then
