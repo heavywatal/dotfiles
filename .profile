@@ -16,26 +16,16 @@ elif [ $(uname) = Linux ]; then
 fi
 
 # PATH
-PATH=/usr/local/sbin:$PATH
-PATH=${PATH//:\/usr\/local\/sbin/}
-PATH=/usr/local/bin:$PATH
-PATH=${PATH//:\/usr\/local\/bin/}
-MANPATH=/usr/local/share/man:$MANPATH:/usr/local/man:
-if [ -d /opt/local ]; then
-    PATH=/opt/local/bin:/opt/local/sbin:$PATH
-    MANPATH=/opt/local/man:/opt/local/share/man:$MANPATH
-fi
-[ -d ~/.linuxbrew ] && PATH=${HOME}/.linuxbrew/bin:${HOME}/.linuxbrew/sbin:$PATH
-[ -d ~/.homebrew ] && PATH=${HOME}/.homebrew/bin:${HOME}/.homebrew/sbin:$PATH
+for prefix in /usr/local /opt/local ~/.linuxbrew ~/.homebrew; do
+    if [ -d $prefix ]; then
+        PATH=${prefix}/bin:${prefix}/sbin:$PATH
+        MANPATH=${prefix}/share/man:$MANPATH
+    fi
+done
 brew_prefix=$(brew --prefix 2>/dev/null)
 if [ -n "${brew_prefix}" ]; then
-    PATH=${brew_prefix}/opt/coreutils/libexec/gnubin:$PATH
-    PATH=${brew_prefix}/opt/gnu-sed/libexec/gnubin:$PATH
-    PATH=${brew_prefix}/opt/gnu-tar/libexec/gnubin:$PATH
-    MANPATH=${brew_prefix}/opt/coreutils/libexec/gnuman:$MANPATH
-    MANPATH=${brew_prefix}/opt/gnu-sed/libexec/gnuman:$MANPATH
-    MANPATH=${brew_prefix}/opt/gnu-tar/libexec/gnuman:$MANPATH
-    MANPATH=${brew_prefix}/share/man:$MANPATH
+    PATH=${brew_prefix}/opt/gnu-sed/libexec/gnubin:${brew_prefix}/opt/gnu-tar/libexec/gnubin:${brew_prefix}/opt/coreutils/libexec/gnubin:$PATH
+    MANPATH=${brew_prefix}/opt/gnu-sed/libexec/gnuman:${brew_prefix}/opt/gnu-tar/libexec/gnuman:${brew_prefix}/opt/coreutils/libexec/gnuman:$MANPATH
     export HOMEBREW_NO_ANALYTICS=1
     export HOMEBREW_NO_AUTO_UPDATE=1
 fi
