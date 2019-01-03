@@ -105,8 +105,7 @@
   "linter-stylelint":
     disableWhenNoConfig: false
     useStandard: true
-  "linter-ui-default":
-    showPanel: true
+  "linter-ui-default": {}
   metrics:
     userId: "d41006fb557ba1ecaf77a96d564817b4f1b41194"
   "r-exec":
