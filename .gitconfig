@@ -8,6 +8,8 @@
 	hookspath = ~/.config/git/hooks
 [push]
 	default = simple
+[pull]
+	ff = only
 [url "git@github.com:"]
 	pushinsteadof = https://github.com/
 [commit]
