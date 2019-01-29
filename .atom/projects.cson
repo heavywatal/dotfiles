@@ -114,9 +114,9 @@
     icon: "icon-plus"
   }
   {
-    title: "blackthunnus tekkamaki"
+    title: "tekkamaki"
     paths: [
-      "/Users/watal/git/blackthunnus"
+      "/Users/watal/git/tekka"
       "/Users/watal/git/tekkamaki"
     ]
     icon: "icon-plus"
