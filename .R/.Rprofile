@@ -57,15 +57,11 @@ options(
         )
       }
     })
-    setHook(packageEvent("tibble", "attach"), function(...) {
-      try({
-        registerS3method("print", "tbl_df", data.table:::print.data.table)
-        registerS3method("print", "tbl", data.table:::print.data.table)
-      })
-    })
     setHook(packageEvent("wtl", "attach"), function(...) {
       ggplot2::theme_set(wtl::theme_wtl())
       wtl::adjust_print_options()
+      registerS3method("print", "tbl_df", wtl::printdf)
+      registerS3method("print", "tbl", wtl::printdf)
       options(mc.cores = parallel::detectCores(logical = FALSE))
     })
   }
