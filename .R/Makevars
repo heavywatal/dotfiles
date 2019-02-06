@@ -1,11 +1,12 @@
-# CPPFLAGS = -I${HOME}/local/include -I${HOME}/.linuxbrew/include
-# LDFLAGS = -L${HOME}/local/lib -L${HOME}/.linuxbrew/lib
+# CPPFLAGS=-I${HOME}/local/include -I${HOME}/.linuxbrew/include
+# LDFLAGS=-L${HOME}/local/lib -L${HOME}/.linuxbrew/lib
 
 ## for data.table
-# LLVM_LOC = /usr/local/opt/llvm
+# SDK_PATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk
+# LLVM_LOC=/usr/local/opt/llvm
 # CC=$(LLVM_LOC)/bin/clang -fopenmp
 # CXX=$(LLVM_LOC)/bin/clang++ -fopenmp
 # CFLAGS=-g -O3 -Wall -pedantic -std=gnu99 -mtune=native -pipe
 # CXXFLAGS=-g -O3 -Wall -pedantic -std=c++11 -mtune=native -pipe
 # LDFLAGS=-L/usr/local/opt/gettext/lib -L$(LLVM_LOC)/lib -Wl,-rpath,$(LLVM_LOC)/lib
-# CPPFLAGS=-I/usr/local/opt/gettext/include -I$(LLVM_LOC)/include
+# CPPFLAGS=-I/usr/local/opt/gettext/include -I$(LLVM_LOC)/include -I${SDK_PATH}/usr/include
