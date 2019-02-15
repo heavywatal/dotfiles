@@ -58,6 +58,10 @@
       "markdown-writer"
       "r-exec"
     ]
+    packagesWithSnippetsDisabled: [
+      "atom-language-r"
+      "language-c"
+    ]
     projectHome: "/Users/watal/git"
     telemetryConsent: "no"
     themes: [
