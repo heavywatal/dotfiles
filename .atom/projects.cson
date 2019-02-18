@@ -92,6 +92,13 @@
     icon: "icon-ruby"
   }
   {
+    title: "igraphlite"
+    paths: [
+      "/Users/watal/git/rigraphlite"
+    ]
+    icon: "icon-package"
+  }
+  {
     title: "tumopp"
     paths: [
       "/Users/watal/git/tumopp"
