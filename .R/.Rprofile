@@ -60,7 +60,9 @@ options(
     setHook(packageEvent("wtl", "attach"), function(...) {
       ggplot2::theme_set(wtl::theme_wtl())
       wtl::adjust_print_options()
-      options(mc.cores = parallel::detectCores(logical = FALSE))
+      mc.cores = parallel::detectCores(logical = FALSE)
+      options(mc.cores = mc.cores)
+      Sys.setenv(MAKEFLAGS = paste0("-j", min(mc.cores, 4L)))
     })
   }
 }
