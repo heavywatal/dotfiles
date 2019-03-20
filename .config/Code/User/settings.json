@@ -45,6 +45,12 @@
         "args": ["-r", "%LINE%", "%PDF%", "%TEX%"]
     },
     "latex-workshop.view.pdf.viewer": "external",
+    "macros": {
+        "cutToTheEnd": [
+            "cursorEndSelect",
+            "editor.action.clipboardCutAction"
+        ]
+    },
     "spellright.configurationScope": "user",
     "spellright.documentTypes": [
         "latex",

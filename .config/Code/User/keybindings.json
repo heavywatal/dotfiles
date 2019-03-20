@@ -24,7 +24,7 @@
     },
     {
         "key": "ctrl+k",
-        "command": "editor.action.clipboardCutAction",
+        "command": "macros.cutToTheEnd",
         "when": "editorTextFocus"
     },
     {
