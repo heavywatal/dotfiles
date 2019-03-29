@@ -106,6 +106,8 @@
       "/usr/local/include"
       "/Users/watal/.R/library/Rcpp/include"
     ]
+  "linter-lintr":
+    linters: "with_defaults(assignment_linter = NULL, object_usage_linter = NULL, line_length_linter(120))"
   "linter-stylelint":
     disableWhenNoConfig: false
     useStandard: true
