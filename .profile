@@ -38,7 +38,9 @@ PATH=${GOPATH}/bin:$PATH
 export PYENV_ROOT=${HOME}/.pyenv
 if [ -d $PYENV_ROOT ]; then
     PATH=${PYENV_ROOT}/bin:$PATH
-    PATH=${PYENV_ROOT}/versions/$(pyenv global)/bin:$PATH
+    pyenv_versions=(${PYENV_ROOT}/versions/*)
+    PATH=${pyenv_versions[@]: -1}/bin:$PATH
+    unset pyenv_versions
 fi
 PATH=$(python -m site --user-base)/bin:$PATH
 PATH=${HOME}/local/bin:${HOME}/.config/bin:$PATH
