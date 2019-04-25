@@ -23,8 +23,10 @@ for prefix in /usr/local /opt/local ~/.linuxbrew ~/.homebrew; do
 done
 brew_prefix=$(brew --prefix 2>/dev/null)
 if [ -n "${brew_prefix}" ]; then
-    PATH=${brew_prefix}/opt/gnu-sed/libexec/gnubin:${brew_prefix}/opt/gnu-tar/libexec/gnubin:${brew_prefix}/opt/coreutils/libexec/gnubin:$PATH
-    MANPATH=${brew_prefix}/opt/gnu-sed/libexec/gnuman:${brew_prefix}/opt/gnu-tar/libexec/gnuman:${brew_prefix}/opt/coreutils/libexec/gnuman:$MANPATH
+    for formula in coreutils findutils gnu-sed gnu-tar grep; do
+        PATH=${brew_prefix}/opt/${formula}/libexec/gnubin:$PATH
+        MANPATH=${brew_prefix}/opt/${formula}/libexec/gnuman:$MANPATH
+    done
     export HOMEBREW_NO_ANALYTICS=1
     export HOMEBREW_NO_AUTO_UPDATE=1
 fi
@@ -42,7 +44,7 @@ if [ -d $PYENV_ROOT ]; then
     PATH=${pyenv_versions[@]: -1}/bin:$PATH
     unset pyenv_versions
 fi
-PATH=$(python -m site --user-base)/bin:$PATH
+PATH=$(python3 -m site --user-base)/bin:$PATH
 PATH=${HOME}/local/bin:${HOME}/.config/bin:$PATH
 export PATH
 export MANPATH
