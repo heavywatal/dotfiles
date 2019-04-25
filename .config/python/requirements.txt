@@ -1,5 +1,13 @@
+biopython
 flake8
 ipython
+matplotlib
+numpy
+pandas
+psutil
+pydataset
+requests
+scikit-learn
+scipy
 seaborn
-biopython
 Pillow
