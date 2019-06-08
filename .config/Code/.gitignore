@@ -3,6 +3,7 @@
 /*.sock
 /Backups
 /Cookies*
+/Network*
 /Preferences
 /Workspaces
 /languagepacks.json

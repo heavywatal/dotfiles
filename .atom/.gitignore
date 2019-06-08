@@ -6,4 +6,5 @@
 /recovery/
 /storage/
 /.apm/
+/.atom-socket-*
 /.node-gyp/
