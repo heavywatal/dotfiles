@@ -72,7 +72,7 @@
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.lineHeight": 1.2,
-    "window.newWindowDimensions": "maximized",
+    "window.newWindowDimensions": "inherit",
     "window.openFoldersInNewWindow": "on",
     "window.title": "${activeEditorMedium}${separator}${rootName}",
     "window.titleBarStyle": "native",
