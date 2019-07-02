@@ -51,6 +51,8 @@
             "editor.action.clipboardCutAction"
         ]
     },
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
     "spellright.configurationScope": "user",
     "spellright.documentTypes": [
         "latex",
