@@ -28,6 +28,9 @@
     "extensions.showRecommendationsOnlyOnDemand": true,
     "files.autoSave": "off",
     "files.trimTrailingWhitespace": true,
+    "files.associations": {
+        "*.Rmd": "markdown"
+    },
     "gitProjectManager.baseProjectsFolders": [
         "~/git"
     ],
