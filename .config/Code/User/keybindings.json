@@ -1,6 +1,11 @@
 // Place your key bindings in this file to overwrite the defaults
 [
     {
+        "key": "cmd+v",
+        "command": "editor.action.clipboardPasteAction",
+        "when": "!!editorFocus"
+    },
+    {
         "key": "ctrl+tab",
         "command": "workbench.action.nextEditor"
     },
