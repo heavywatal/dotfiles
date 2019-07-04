@@ -4,9 +4,11 @@
     "editor.folding": false,
     "editor.fontFamily": "'Ubuntu Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
     "editor.fontSize": 14,
+    "editor.hover.sticky": false,
     "editor.lineHeight": 18,
     "editor.minimap.enabled": false,
     "editor.occurrencesHighlight": false,
+    "editor.quickSuggestionsDelay": 500,
     "editor.quickSuggestions": {
         "other": false,
         "comments": false,
@@ -14,24 +16,27 @@
     },
     "editor.renderControlCharacters": true,
     "editor.renderIndentGuides": false,
-    "editor.rulers": [80],
-    "editor.useTabStops": false,
+    "editor.rulers": [80, 160],
     "editor.scrollBeyondLastLine": false,
+    "editor.suggest.filterGraceful": false,
+    "editor.suggestOnTriggerCharacters": false,
     "editor.suggestSelection": "first",
+    "editor.tabCompletion": "on",
     "editor.tabSize": 2,
     "editor.tokenColorCustomizations": {
         "comments": "#666"
     },
+    "editor.useTabStops": false,
     "editor.wordWrapColumn": 160,
     "explorer.openEditors.visible": 0,
     "extensions.autoUpdate": false,
     "extensions.ignoreRecommendations": true,
     "extensions.showRecommendationsOnlyOnDemand": true,
     "files.autoSave": "off",
-    "files.trimTrailingWhitespace": true,
     "files.associations": {
         "*.Rmd": "markdown"
     },
+    "files.trimTrailingWhitespace": true,
     "gitProjectManager.baseProjectsFolders": [
         "~/git"
     ],
