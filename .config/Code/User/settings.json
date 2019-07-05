@@ -33,9 +33,6 @@
     "extensions.ignoreRecommendations": true,
     "extensions.showRecommendationsOnlyOnDemand": true,
     "files.autoSave": "off",
-    "files.associations": {
-        "*.Rmd": "markdown"
-    },
     "files.trimTrailingWhitespace": true,
     "gitProjectManager.baseProjectsFolders": [
         "~/git"
@@ -97,7 +94,6 @@
     "workbench.iconTheme": "material-icon-theme",
     "workbench.panel.defaultLocation": "right",
     "workbench.startupEditor": "none",
-    "workbench.statusBar.feedback.visible": false,
     "[latex]": {
         "editor.wordWrap": "bounded"
     }
