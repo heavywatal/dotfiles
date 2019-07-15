@@ -1,12 +1,9 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-"""
-Symlink dotfiles to home
+"""Symlink dotfiles to home
 """
 import os
 import subprocess
 
-ignore = ['.DS_Store', '.git', '.gitignore', '.hg', '.hgignore']
+ignore = ['.DS_Store', '.git', '.gitignore', '.hg', '.hgignore', '.vscode']
 home = os.path.expanduser('~')
 here = os.path.dirname(__file__)
 
