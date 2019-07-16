@@ -98,6 +98,7 @@
       "-n22"
       "-n30"
       "-n46"
+      "-e16"
     ]
   "linter-clang":
     clangDefaultCppFlags: "-std=c++14 -Wall -Wextra -pedantic --Weffc++ -Wcast-align -Wcast-qual -Wconversion -Wno-sign-conversion -Wdisabled-optimization -Wdouble-promotion -Wfloat-equal -Wformat=2 -Winit-self -Wmissing-include-dirs -Wold-style-cast -Woverloaded-virtual -Wredundant-decls -Wshadow -Wstrict-aliasing=1 -Wstrict-overflow=5 -Wswitch-default"
