@@ -89,5 +89,30 @@
         "key": "ctrl+`",
         "command": "workbench.action.terminal.focus",
         "when": "!terminalFocus"
+    },
+    {
+        "key": "cmd+1",
+        "command": "-r.nrow",
+        "when": "editorTextFocus && editorLangId == 'r'"
+    },
+    {
+        "key": "cmd+2",
+        "command": "-r.length",
+        "when": "editorTextFocus && editorLangId == 'r'"
+    },
+    {
+        "key": "cmd+3",
+        "command": "-r.head",
+        "when": "editorTextFocus && editorLangId == 'r'"
+    },
+    {
+        "key": "cmd+4",
+        "command": "-r.thead",
+        "when": "editorTextFocus && editorLangId == 'r'"
+    },
+    {
+        "key": "cmd+5",
+        "command": "-r.names",
+        "when": "editorTextFocus && editorLangId == 'r'"
     }
 ]
