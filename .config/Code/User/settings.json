@@ -41,6 +41,7 @@
     "gitProjectManager.maxDepthRecursion": 1,
     "latex-workshop.chktex.args.active": ["-wall", "-n22", "-n30", "-n46", "-e16", "-q"],
     "latex-workshop.chktex.enabled": true,
+    "latex-workshop.latex.autoBuild.run": "never",
     "latex-workshop.latex.recipe.default": "first",
     "latex-workshop.message.error.show": false,
     "latex-workshop.message.warning.show": false,
