@@ -2,6 +2,7 @@
     "breadcrumbs.enabled": false,
     "editor.autoClosingBrackets": "never",
     "editor.autoClosingQuotes": "never",
+    "editor.autoIndent": false,
     "editor.folding": false,
     "editor.fontFamily": "'Ubuntu Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
     "editor.fontSize": 14,
