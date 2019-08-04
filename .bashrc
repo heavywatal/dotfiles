@@ -70,8 +70,6 @@ if [ $(uname) = Darwin ]; then
     alias ql="qlmanage -p $@ >/dev/null 2>&1"
     alias ldd="otool -L"
     alias wine=/Applications/Wine.app/Contents/Resources/bin/wine
-else
-    alias apt-upgradable="apt-get -s upgrade | grep Inst | cut -f2 -d' '"
 fi
 
 [ -f ~/.bashrc.site ] && . ~/.bashrc.site
