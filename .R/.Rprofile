@@ -20,8 +20,7 @@ options(
   ggplot2.continuous.colour = "viridis",
   ggplot2.continuous.fill = "viridis",
 
-  testthat.default_check_reporter = "progress",
-  menu.graphics = FALSE
+  testthat.default_check_reporter = "progress"
 )
 
 .First = function() {
