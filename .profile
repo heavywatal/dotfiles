@@ -1,6 +1,5 @@
 #!/bin/sh
 if [ $(uname) = Darwin ]; then
-    export PYTHON_CONFIGURE_OPTS="--enable-framework"
     # Resource Fork reduction for 'tar'
     export COPYFILE_DISABLE=true
     if [ -x /usr/libexec/path_helper ]; then
