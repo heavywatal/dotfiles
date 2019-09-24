@@ -91,6 +91,26 @@
         "when": "!terminalFocus"
     },
     {
+        "key": "shift+ctrl+down",
+        "command": "cursorColumnSelectDown",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+ctrl+left",
+        "command": "cursorColumnSelectLeft",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+ctrl+right",
+        "command": "cursorColumnSelectRight",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+ctrl+up",
+        "command": "cursorColumnSelectUp",
+        "when": "editorTextFocus"
+    },
+    {
         "key": "cmd+1",
         "command": "-r.nrow",
         "when": "editorTextFocus && editorLangId == 'r'"
