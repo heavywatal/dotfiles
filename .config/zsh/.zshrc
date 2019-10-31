@@ -76,7 +76,7 @@ compdef sshmux=ssh
 
 #setopt BAD_PATTERN
 #setopt BARE_GLOB_QUAL
-setopt BRACE_CCL
+#setopt BRACE_CCL
 #setopt CASE_GLOB
 #setopt CASE_MATCH
 #setopt EQUALS
