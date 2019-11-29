@@ -68,6 +68,10 @@
         "when": "suggestWidgetVisible"
     },
     {
+        "key": "ctrl+q",
+        "command": "-workbench.action.quickOpenView"
+    },
+    {
         "key": "ctrl+enter",
         "command": "workbench.action.terminal.runSelectedText"
     },
