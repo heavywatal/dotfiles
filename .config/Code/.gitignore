@@ -5,12 +5,13 @@
 /Cookies*
 /Network*
 /Preferences
-/Workspaces
+/blob_storage
 /languagepacks.json
 /logs
 /machineid
 /rapid_render.json
 /storage.json
+/webrtc_event_logs
 /User/workspace
 /User/gpm-recentItems.json
 /User/vsicons.settings.json
