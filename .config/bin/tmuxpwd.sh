@@ -1,3 +1,3 @@
 #!/bin/sh
-SESSION="${TERM_PROGRAM}-$(basename $(pwd) | tr . _)"
-tmux attach-session -d -t $SESSION || tmux new-session -s $SESSION
+SESSION="${TERM_PROGRAM}-$(basename $PWD | tr . _)"
+tmux new-session -A -s $SESSION -c $PWD
