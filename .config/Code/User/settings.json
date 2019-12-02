@@ -80,6 +80,7 @@
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.lineHeight": 1.2,
+    "terminal.integrated.macOptionClickForcesSelection": true,
     "terminal.integrated.shell.osx": "tmuxpwd.sh",
     "window.newWindowDimensions": "inherit",
     "window.openFoldersInNewWindow": "on",
