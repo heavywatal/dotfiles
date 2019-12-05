@@ -20,6 +20,7 @@ options(
   ggplot2.continuous.colour = "viridis",
   ggplot2.continuous.fill = "viridis",
 
+  devtools.install.args = c("--no-multiarch", "--no-test-load"),
   testthat.default_check_reporter = "progress"
 )
 
