@@ -41,6 +41,7 @@
         "~/git"
     ],
     "gitProjectManager.maxDepthRecursion": 1,
+    "html.mirrorCursorOnMatchingTag": false,
     "latex-workshop.chktex.args.active": ["-wall", "-n22", "-n30", "-n46", "-e16", "-q"],
     "latex-workshop.chktex.enabled": true,
     "latex-workshop.latex.autoBuild.run": "never",
