@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 [ $# -lt 2 ] && exit
 WINDOW=$(date +tile%Y%m%d)
 if tmux has-session >/dev/null 2>&1; then

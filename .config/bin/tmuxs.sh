@@ -1,5 +1,5 @@
-#!/bin/sh
+#!/bin/bash
 JOBS=("${@/#/ ssh }")
 echo "${JOBS[@]}"
 tmuxtile.sh "${JOBS[@]}"
-tmux set-window-option synchronize-panes on
+tmux set-option -w synchronize-panes on
