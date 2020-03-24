@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 GIT_REMOTE_NON_GITHUB=$(git remote -v | grep -v github.com)
-[[ -z "$GIT_REMOTE_NON_GITHUB" ]] && exit 0
+[ -z "$GIT_REMOTE_NON_GITHUB" ] && exit 0
 USER_EMAIL="$(git config user.email)"
 if [[ "$USER_EMAIL" =~ "noreply.github.com" ]]; then
   echo "Warning: $USER_EMAIL may not be valid:"
