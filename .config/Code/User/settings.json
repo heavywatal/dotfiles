@@ -3,7 +3,7 @@
     "editor.autoClosingBrackets": "never",
     "editor.autoClosingQuotes": "never",
     "editor.autoSurround": "never",
-    "editor.autoIndent": false,
+    "editor.autoIndent": "advanced",
     "editor.folding": false,
     "editor.fontFamily": "'Ubuntu Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
     "editor.fontSize": 14,
@@ -35,6 +35,9 @@
     "extensions.autoUpdate": false,
     "extensions.ignoreRecommendations": true,
     "extensions.showRecommendationsOnlyOnDemand": true,
+    "files.associations": {
+        "*.mustache": "html"
+    },
     "files.autoSave": "off",
     "files.trimTrailingWhitespace": true,
     "gitProjectManager.baseProjectsFolders": [
@@ -65,6 +68,12 @@
     },
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
+    "ruby.format": "rubocop",
+    "ruby.intellisense": "rubyLocate",
+    "ruby.lint": {
+      "rubocop": true
+    },
+    "ruby.useLanguageServer": true,
     "spellright.configurationScope": "user",
     "spellright.documentTypes": [
         "latex",
