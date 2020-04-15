@@ -115,6 +115,8 @@
   "linter-ui-default": {}
   metrics:
     userId: "d41006fb557ba1ecaf77a96d564817b4f1b41194"
+  minimap:
+    autoToggle: false
   "r-exec":
     focusWindow: false
     whichApp: "iTerm2"
