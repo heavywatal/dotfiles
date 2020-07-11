@@ -26,6 +26,7 @@ options(
 )
 
 .First = function() {
+  try(suppressWarnings(readRenviron("~/.Renviron.site")))
   if (interactive()) {
     stopifnot(dir.exists(Sys.getenv("R_LIBS_USER")))
     cran = c("tidyverse", "devtools")
