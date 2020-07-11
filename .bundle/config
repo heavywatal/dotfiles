@@ -1,0 +1,4 @@
+---
+BUNDLE_LOCAL__GOLLUM: "/Users/watal/fork/gollum"
+BUNDLE_LOCAL__GOLLUM-LIB: "/Users/watal/fork/gollum-lib"
+BUNDLE_LOCAL__GOLLUM-RUGGED_ADAPTER: "/Users/watal/fork/rugged_adapter"
