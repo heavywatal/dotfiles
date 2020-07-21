@@ -43,6 +43,8 @@
         "~/git"
     ],
     "gitProjectManager.maxDepthRecursion": 1,
+    "julia.enableTelemetry": false,
+    "julia.enableCrashReporter": false,
     "latex-workshop.chktex.args.active": ["-wall", "-n22", "-n30", "-n46", "-e16", "-q"],
     "latex-workshop.chktex.enabled": true,
     "latex-workshop.latex.autoBuild.run": "never",
@@ -66,17 +68,19 @@
     },
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
+    "python.showStartPage": false,
     "ruby.format": "rubocop",
     "ruby.intellisense": "rubyLocate",
     "ruby.lint": {
-      "rubocop": true
+      "rubocop": {
+        "command": "/Users/watal/.rbenv/shims/rubocop"
+      }
     },
     "ruby.useLanguageServer": true,
     "spellright.configurationScope": "user",
     "spellright.documentTypes": [
         "latex",
-        "markdown",
-        "plaintext"
+        "markdown"
     ],
     "spellright.language": [
         "en"
