@@ -20,5 +20,5 @@
 	lasttag = describe --tags --abbrev=0
 	l0 = log --format='%s'
 	l1 = log --pretty='format:%C(auto)%h %ci% s% D'
-	lg = log --pretty='format:%C(auto)%h %ci% D%+B'
-	ln = log --pretty='format:%C(auto)%h %ci% D%+B' --name-status
+	lg = log --pretty='format:%C(auto)%h %ci% D%+B' --color=always
+	ln = log --pretty='format:%C(auto)%h %ci% D%+B' --color=always --name-status
