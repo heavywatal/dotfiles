@@ -27,7 +27,7 @@ options(
 
 .First = function() {
   try(suppressWarnings(readRenviron("~/.Renviron.site")))
-  if (interactive()) {
+  if (interactive() && Sys.getenv("RSTUDIO") == "") {
     stopifnot(dir.exists(Sys.getenv("R_LIBS_USER")))
     cran = c("tidyverse", "devtools")
     github = c("wtl")
