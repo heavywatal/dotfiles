@@ -94,6 +94,7 @@
     "terminal.integrated.lineHeight": 1.2,
     "terminal.integrated.macOptionClickForcesSelection": true,
     "terminal.integrated.shell.osx": "tmuxpwd.sh",
+    "update.mode": "manual",
     "window.newWindowDimensions": "inherit",
     "window.openFoldersInNewWindow": "on",
     "window.title": "${activeEditorMedium}${separator}${rootName}",
