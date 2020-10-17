@@ -3,6 +3,7 @@
 /*.sock
 /Backups
 /Cookies*
+/Crashpad*
 /Network*
 /Preferences
 /TransportSecurity
