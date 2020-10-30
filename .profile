@@ -43,6 +43,10 @@ if [ -n "$NVM_DIR" ]; then
     . "$NVM_DIR/bash_completion"
 fi
 
+PERL5LIBLOCAL="${HOME}/local/lib/perl5"
+export PERL_CPANM_OPT="--local-lib=${PERL5LIBLOCAL}"
+export PERL5LIB="${PERL5LIBLOCAL}/lib/perl5"
+
 export PYENV_ROOT=${HOME}/.pyenv
 if [ -d $PYENV_ROOT ]; then
     PATH=${PYENV_ROOT}/bin:$PATH
