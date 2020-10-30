@@ -4,6 +4,7 @@
     "editor.autoClosingQuotes": "never",
     "editor.autoSurround": "never",
     "editor.autoIndent": "advanced",
+    "editor.find.seedSearchStringFromSelection": false,
     "editor.folding": false,
     "editor.fontFamily": "'Ubuntu Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
     "editor.fontSize": 14,
@@ -50,6 +51,7 @@
     "latex-workshop.latex.autoBuild.run": "never",
     "latex-workshop.latex.recipe.default": "first",
     "latex-workshop.message.error.show": false,
+    "latex-workshop.message.update.show": false,
     "latex-workshop.message.warning.show": false,
     "latex-workshop.view.pdf.external.command": {
         "command": "open",
@@ -113,6 +115,7 @@
     },
     "workbench.iconTheme": "material-icon-theme",
     "workbench.panel.defaultLocation": "right",
+    "workbench.settings.enableNaturalLanguageSearch": false,
     "workbench.startupEditor": "none",
     "[latex]": {
         "editor.wordWrap": "bounded"
