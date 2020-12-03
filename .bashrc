@@ -45,7 +45,11 @@ fi
 if ls --color=auto >/dev/null 2>&1; then
     alias ls="ls -vF --show-control-chars --color=auto"
 else
-    alias ls="ls -FG"
+    if command -v gls >/dev/null; then
+        alias ls="gls -vF --show-control-chars --color=auto"
+    else
+        alias ls="ls -FG"
+    fi
 fi
 
 alias rsync='rsync --exclude-from=${HOME}/.config/rsync-exclude'

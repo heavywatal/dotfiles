@@ -14,23 +14,19 @@ elif [ $(uname) = Linux ]; then
 fi
 
 # PATH
-for prefix in /usr/local /opt/local ~/.linuxbrew ~/.homebrew; do
-    if [ -d $prefix ]; then
-        PATH=${prefix}/bin:${prefix}/sbin:$PATH
-        MANPATH=${prefix}/share/man:$MANPATH
-    fi
+for prefix in /usr/local /opt/homebrew ~/.linuxbrew ~/.homebrew; do
+    [ -e ${prefix}/bin/brew ] && eval $(${prefix}/bin/brew shellenv)
 done
-brew_prefix=$(brew --prefix 2>/dev/null)
-if [ -n "${brew_prefix}" ]; then
-    for formula in coreutils findutils gnu-sed gnu-tar grep; do
-        PATH=${brew_prefix}/opt/${formula}/libexec/gnubin:$PATH
-        MANPATH=${brew_prefix}/opt/${formula}/libexec/gnuman:$MANPATH
+if [ -n "$HOMEBREW_PREFIX" ]; then
+    for formula in gnu-sed gnu-tar grep; do
+        GNUBIN=${HOMEBREW_PREFIX}/opt/${formula}/libexec/gnubin
+        [ -d "$GNUBIN" ] && PATH=$GNUBIN:$PATH
     done
+    unset GNUBIN
     export HOMEBREW_NO_ANALYTICS=1
     export HOMEBREW_NO_AUTO_UPDATE=1
     export HOMEBREW_NO_INSTALL_CLEANUP=1
 fi
-unset brew_prefix
 
 PATH=${HOME}/.nodebrew/current/bin:$PATH
 
