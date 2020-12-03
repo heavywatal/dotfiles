@@ -21,11 +21,9 @@ setopt PUSHD_TO_HOME
 ZFUNCDIR=${ZDOTDIR}/functions
 autoload ${ZFUNCDIR}/*(:t)
 fpath=(${ZFUNCDIR} ${fpath})
-brew_prefix=$(brew --prefix 2>/dev/null)
-if [ -d ${brew_prefix}/share/zsh-completions ]; then
-    fpath=(${brew_prefix}/share/zsh-completions ${fpath})
+if [ -d ${HOMEBREW_PREFIX}/share/zsh-completions ]; then
+    fpath=(${HOMEBREW_PREFIX}/share/zsh-completions ${fpath})
 fi
-unset brew_prefix
 
 autoload -U compinit
 compinit -u
