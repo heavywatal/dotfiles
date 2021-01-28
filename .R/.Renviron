@@ -1,5 +1,5 @@
 R_USER=${HOME}
-R_LIBS_USER=${R_USER}/.R/library
+R_LIBS_USER=${R_USER}/.R/library/%v
 R_ENVIRON_USER=${R_USER}/.R/.Renviron
 R_PROFILE_USER=${R_USER}/.R/.Rprofile
 R_HISTFILE=${R_USER}/.R/.Rhistory
