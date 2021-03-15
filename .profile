@@ -30,6 +30,8 @@ fi
 
 PATH=${HOME}/.nodebrew/current/bin:$PATH
 
+PATH=${HOME}/.cargo/bin:$PATH
+
 export GOPATH=${HOME}/.go
 PATH=${GOPATH}/bin:$PATH
 

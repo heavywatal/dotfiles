@@ -79,6 +79,7 @@
       }
     },
     "ruby.useLanguageServer": true,
+    "rust-client.rustupPath": "/Users/watal/.cargo/bin/rustup",
     "spellright.configurationScope": "user",
     "spellright.documentTypes": [
         "latex",
