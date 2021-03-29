@@ -1,1 +1,3 @@
-configstore/update-notifier-*.json
+/configstore/update-notifier-*.json
+/hub
+/iterm2
