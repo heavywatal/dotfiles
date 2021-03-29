@@ -2,9 +2,9 @@
 if [ $(uname) = Darwin ]; then
     # Resource Fork reduction for 'tar'
     export COPYFILE_DISABLE=true
+    export BASH_SILENCE_DEPRECATION_WARNING=1
     if [ -x /usr/libexec/path_helper ]; then
         PATH=''
-        MANPATH=''
         eval $(/usr/libexec/path_helper -s)
     fi
 elif [ $(uname) = Linux ]; then
@@ -27,8 +27,6 @@ if [ -n "$HOMEBREW_PREFIX" ]; then
     export HOMEBREW_NO_AUTO_UPDATE=1
     export HOMEBREW_NO_INSTALL_CLEANUP=1
 fi
-
-PATH=${HOME}/.nodebrew/current/bin:$PATH
 
 PATH=${HOME}/.cargo/bin:$PATH
 

@@ -1,4 +1,4 @@
-if [ "${0##*/}" = "bash" ]; then
+if [ -n "$BASH" ]; then
     # Source global definitions
     [ -f /etc/bashrc ] && . /etc/bashrc
 
@@ -6,6 +6,7 @@ if [ "${0##*/}" = "bash" ]; then
     #PS1='[\u@\h \W]\$ '
     PS1='\e[1;34m[\D{%m-%d} \A \u@\h:\w]\e[0m\n\$ '
 
+    # Do not exit with ctrl-d
     IGNOREEOF=10
 fi
 
