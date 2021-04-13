@@ -28,16 +28,6 @@
         "when": "editorFocus && findWidgetVisible"
     },
     {
-        "key": "ctrl+k",
-        "command": "macros.cutToTheEnd",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+y",
-        "command": "editor.action.clipboardPasteAction",
-        "when": "editorTextFocus"
-    },
-    {
         "key": "ctrl+j",
         "command": "editor.action.insertLineAfter",
         "when": "editorTextFocus"

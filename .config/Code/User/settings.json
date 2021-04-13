@@ -61,12 +61,6 @@
         "args": ["-r", "%LINE%", "%PDF%", "%TEX%"]
     },
     "latex-workshop.view.pdf.viewer": "external",
-    "macros": {
-        "cutToTheEnd": [
-            "cursorEndSelect",
-            "editor.action.clipboardCutAction"
-        ]
-    },
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
     "python.showStartPage": false,
