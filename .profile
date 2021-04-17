@@ -33,24 +33,18 @@ PATH=${HOME}/.cargo/bin:$PATH
 export GOPATH=${HOME}/.go
 PATH=${GOPATH}/bin:$PATH
 
-if [ -n "$NVM_DIR" ]; then
-    export NVM_DIR
-    . "$NVM_DIR/nvm.sh"
-    . "$NVM_DIR/bash_completion"
-fi
-
 PERL5LIBLOCAL="${HOME}/local/lib/perl5"
 export PERL_CPANM_OPT="--local-lib=${PERL5LIBLOCAL}"
 export PERL5LIB="${PERL5LIBLOCAL}/lib/perl5"
 
 export PYENV_ROOT=${HOME}/.pyenv
 if [ -d $PYENV_ROOT ]; then
-    PATH=${PYENV_ROOT}/bin:$PATH
     pyenv_versions=(${PYENV_ROOT}/versions/*)
     PATH=${pyenv_versions[@]: -1}/bin:$PATH
     unset pyenv_versions
 fi
 PATH=$(python3 -m site --user-base)/bin:$PATH
+
 PATH=${HOME}/local/bin:${HOME}/.config/bin:$PATH
 export PATH
 export MANPATH

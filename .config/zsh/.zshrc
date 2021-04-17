@@ -1,3 +1,17 @@
+autoload ${ZDOTDIR}/functions/*(:t)
+fpath=(${ZDOTDIR}/functions ${fpath})
+if [ -d ${HOMEBREW_PREFIX}/share/zsh-completions ]; then
+    fpath=(${HOMEBREW_PREFIX}/share/zsh-completions ${fpath})
+fi
+
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' use-cache yes
+zstyle ':completion:*:default' menu select=2
+zstyle ':completion:*:descriptions' format '%B%U%d%u%b'
+
+autoload -Uz +X compinit && compinit -C
+
 [ -f ~/.bashrc ] && . ~/.bashrc
 
 autoload -Uz is-at-least
@@ -17,34 +31,6 @@ setopt PUSHD_TO_HOME
 
 #########1#########2#########3#########4#########5#########6#########7#########
 ## Completion
-
-ZFUNCDIR=${ZDOTDIR}/functions
-autoload ${ZFUNCDIR}/*(:t)
-fpath=(${ZFUNCDIR} ${fpath})
-if [ -d ${HOMEBREW_PREFIX}/share/zsh-completions ]; then
-    fpath=(${HOMEBREW_PREFIX}/share/zsh-completions ${fpath})
-fi
-
-autoload -U compinit
-compinit -u
-
-if [ -d ${ZDOTDIR}/.zcompcache ]; then
-    zstyle ':completion:*' use-cache yes
-    zstyle ':completion:*' cache-path ${ZDOTDIR}/.zcompcache
-fi
-
-zstyle ':completion:*:default' menu select=1
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*:descriptions' format '%B%U%d%u%b'
-zstyle ':completion:*' group-name ''
-#
-#zstyle ':completion:*' verbose yes
-#zstyle ':completion:*:messages' format 'messages: %d'
-#zstyle ':completion:*:warnings' format 'No matches for: %d'
-#zstyle ':completion:*:options' description 'yes'
-#zstyle ':completion:*:cd:*' tag-order local-directories path-directories
-
-#fignore=(.o .dvi .aux .log .toc \~)
 
 #setopt ALWAYS_LAST_PROMPT
 #unsetopt ALWAYS_TO_END
@@ -66,8 +52,6 @@ setopt LIST_PACKED
 #setopt LIST_TYPES
 #unsetopt MENU_COMPLETE
 #unsetopt REC_EXACT
-
-compdef sshmux=ssh
 
 #########1#########2#########3#########4#########5#########6#########7#########
 ## Expansion and Globbing
@@ -198,12 +182,11 @@ case $(echo ${SSH_CONNECTION} | awk '{print $3}') in
         ;;
 esac
 
-# SGE_CLUSTER_NAME is not empty on SHIROKANE
-if is-at-least 4.3.10 && [ -z "$SGE_CLUSTER_NAME" ]; then
+if is-at-least 4.3.10; then
   autoload -Uz vcs_info
   autoload -Uz add-zsh-hook
   add-zsh-hook precmd vcs_info
-  zstyle ':vcs_info:*' enable git hg
+  zstyle ':vcs_info:*' enable git
   zstyle ':vcs_info:*' check-for-changes true
   zstyle ':vcs_info:*' unstagedstr "%F{red}*"
   zstyle ':vcs_info:*' stagedstr "%F{green}*"
