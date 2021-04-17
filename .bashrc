@@ -31,7 +31,7 @@ export LS_COLORS
 
 export TEXMFHOME=${HOME}/.texmf
 export PYTHONSTARTUP=${HOME}/.config/python/startup.py
-export PIP_CONFIG_FILE=${HOME}/.config/pip/pip.conf
+export PIP_CONFIG_FILE=${HOME}/.config/python/pip.conf
 
 tmux has-session >/dev/null 2>&1 && if [ -z "${TMUX}" ]; then
     echo '% tmux list-sessions'
