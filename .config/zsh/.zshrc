@@ -87,7 +87,6 @@ setopt NUMERIC_GLOB_SORT
 #########1#########2#########3#########4#########5#########6#########7#########
 ## History
 
-HISTFILE=${ZDOTDIR}/.zhistory.$(uname)
 HISTSIZE=65535
 SAVEHIST=65535
 
