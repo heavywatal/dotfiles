@@ -1,17 +1,20 @@
 #!/bin/sh
-if [ $(uname) = Darwin ]; then
-    # Resource Fork reduction for 'tar'
+case "$(uname)" in
+  Darwin)
     export COPYFILE_DISABLE=true
+    export SHELL_SESSIONS_DISABLE=1
     export BASH_SILENCE_DEPRECATION_WARNING=1
     if [ -x /usr/libexec/path_helper ]; then
         PATH=''
         eval $(/usr/libexec/path_helper -s)
     fi
-elif [ $(uname) = Linux ]; then
+    ;;
+  Linux)
     PATH=/usr/bin:/bin
-    . /etc/environment
-    . /etc/profile
-fi
+    [ -f /etc/environment ] && . /etc/environment
+    [ -f /etc/profile ] && . /etc/profile
+    ;;
+esac
 
 # PATH
 for prefix in /usr/local /opt/homebrew ~/.linuxbrew ~/.homebrew; do
