@@ -3,7 +3,7 @@ if [ -n "$BASH" ]; then
     [ -f /etc/bashrc ] && . /etc/bashrc
 
     # PROMPT
-    #PS1='[\u@\h \W]\$ '
+    [ -z "$PS1" ] && return
     PS1='\e[1;34m[\D{%m-%d} \A \u@\h:\w]\e[0m\n\$ '
 
     # Do not exit with ctrl-d
