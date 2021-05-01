@@ -87,6 +87,7 @@ setopt NUMERIC_GLOB_SORT
 #########1#########2#########3#########4#########5#########6#########7#########
 ## History
 
+HISTFILE=${ZDOTDIR}/.zsh_history
 HISTSIZE=65535
 SAVEHIST=65535
 
@@ -108,7 +109,7 @@ setopt HIST_REDUCE_BLANKS
 #setopt HIST_SAVE_BY_COPY
 setopt HIST_SAVE_NO_DUPS
 setopt HIST_VERIFY
-setopt INC_APPEND_HISTORY
+#unsetopt INC_APPEND_HISTORY
 #unsetopt INC_APPEND_HISTORY_TIME
 setopt SHARE_HISTORY
 
