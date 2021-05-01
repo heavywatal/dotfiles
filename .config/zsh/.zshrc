@@ -217,15 +217,3 @@ bindkey "^U" backward-kill-line
 # history
 bindkey "^P" history-beginning-search-backward
 bindkey "^N" history-beginning-search-forward
-
-#########1#########2#########3#########4#########5#########6#########7#########
-## Window title
-
-precmd(){
-    print -Pn "\e]0;%m:%~\a"
-}
-
-# This breaks lesspipe
-# preexec(){
-#     print -Pn "\e]0;%m%# $1 [%~]\a"
-# }
