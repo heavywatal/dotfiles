@@ -43,8 +43,10 @@ export PERL5LIB="${PERL5LIBLOCAL}/lib/perl5"
 export PYENV_ROOT=${HOME}/.pyenv
 if [ -d $PYENV_ROOT ]; then
     pyenv_versions=(${PYENV_ROOT}/versions/*)
-    PATH=${pyenv_versions[@]: -1}/bin:$PATH
-    unset pyenv_versions
+    pyenv_latest=${pyenv_versions[@]: -1}/bin
+    PATH=${pyenv_latest}:$PATH
+    export PYENV_PYTHONPATH=${pyenv_latest}/python3
+    unset pyenv_versions pyenv_latest
 fi
 PATH=$(python3 -m site --user-base)/bin:$PATH
 
