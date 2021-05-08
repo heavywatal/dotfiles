@@ -128,5 +128,10 @@
         "key": "cmd+5",
         "command": "-r.names",
         "when": "editorTextFocus && editorLangId == 'r'"
+    },
+    {
+        "key": "alt+cmd+p",
+        "command": "-r.runAboveChunks",
+        "when": "editorTextFocus && editorLangId == 'rmd'"
     }
 ]
