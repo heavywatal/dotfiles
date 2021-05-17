@@ -5,7 +5,6 @@
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
@@ -62,23 +61,15 @@
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
  '(make-backup-files nil)
- '(package-selected-packages
-   (quote
-    (polymode ess tss js2-mode markdown-mode auto-complete)))
+ '(package-selected-packages '(polymode ess tss js2-mode markdown-mode auto-complete))
  '(scroll-conservatively 42)
  '(show-trailing-whitespace t)
  '(truncate-lines t)
  '(truncate-partial-width-windows nil)
  '(vc-follow-symlinks t)
- '(whitespace-display-mappings
-   (quote
-    ((newline-mark 10
-                   [36 10])
-     (space-mark 12288
-                 [9632 9632]))))
+ '(whitespace-display-mappings '((newline-mark 10 [36 10]) (space-mark 12288 [9632 9632])))
  '(whitespace-style
-   (quote
-    (face trailing spaces tabs newline space-mark tab-mark newline-mark))))
+   '(face trailing spaces tabs newline space-mark tab-mark newline-mark)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
