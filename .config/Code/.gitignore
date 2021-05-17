@@ -6,8 +6,11 @@
 /Crashpad*
 /Network*
 /Preferences
+/QuotaManager*
+/Service*
 /TransportSecurity
 /blob_storage
+/databases
 /languagepacks.json
 /logs
 /machineid
