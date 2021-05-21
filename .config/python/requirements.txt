@@ -6,9 +6,11 @@ numpy
 pandas
 psutil
 pydataset
+pystan
 requests
 scikit-learn
 scipy
 seaborn
+statsmodels
 tqdm
 Pillow

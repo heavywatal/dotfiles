@@ -1,5 +1,4 @@
 {
-    "breadcrumbs.enabled": false,
     "editor.autoClosingBrackets": "never",
     "editor.autoClosingQuotes": "never",
     "editor.autoSurround": "never",
@@ -45,6 +44,11 @@
     "gitProjectManager.maxDepthRecursion": 1,
     "julia.enableTelemetry": false,
     "julia.enableCrashReporter": false,
+    "jupyter.alwaysTrustNotebooks": true,
+    "jupyter.askForKernelRestart": false,
+    "jupyter.disableJupyterAutoStart": true,
+    "jupyter.enableCellCodeLens": false,
+    "jupyter.searchForJupyter": false,
     "latex-workshop.chktex.args.active": ["-wall", "-n22", "-n30", "-n46", "-e16", "-q"],
     "latex-workshop.chktex.enabled": true,
     "latex-workshop.latex.autoBuild.run": "never",
@@ -61,6 +65,7 @@
         "args": ["-r", "%LINE%", "%PDF%", "%TEX%"]
     },
     "latex-workshop.view.pdf.viewer": "external",
+    "python.defaultInterpreterPath": "${env:PYENV_PYTHONPATH}",
     "python.languageServer": "Pylance",
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
@@ -128,6 +133,12 @@
         "statusBar.background": "#333",
         "terminal.foreground": "#aaa"
     },
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
     "workbench.iconTheme": "vscode-icons",
     "workbench.panel.defaultLocation": "right",
     "workbench.settings.enableNaturalLanguageSearch": false,
