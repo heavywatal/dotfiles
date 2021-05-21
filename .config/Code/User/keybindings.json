@@ -40,7 +40,7 @@
     {
         "key": "ctrl+i",
         "command": "editor.action.triggerSuggest",
-        "when": "editorTextFocus && !suggestWidgetVisible"
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
     },
     {
         "key": "ctrl+i",
@@ -63,7 +63,8 @@
     },
     {
         "key": "ctrl+enter",
-        "command": "workbench.action.terminal.runSelectedText"
+        "command": "workbench.action.terminal.runSelectedText",
+        "when": "resourceExtname != .ipynb"
     },
     {
         "key": "cmd+enter",
