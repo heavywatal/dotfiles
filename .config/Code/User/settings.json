@@ -1,4 +1,5 @@
 {
+    "editor.accessibilitySupport": "off",
     "editor.autoClosingBrackets": "never",
     "editor.autoClosingQuotes": "never",
     "editor.autoSurround": "never",
@@ -54,16 +55,20 @@
     "latex-workshop.latex.autoBuild.run": "never",
     "latex-workshop.latex.recipe.default": "first",
     "latex-workshop.message.error.show": false,
-    "latex-workshop.message.update.show": false,
     "latex-workshop.message.warning.show": false,
-    "latex-workshop.view.pdf.external.command": {
-        "command": "open",
-        "args": ["-a", "Skim", "%PDF%"]
-    },
-    "latex-workshop.view.pdf.external.synctex": {
-        "command": "displayline",
-        "args": ["-r", "%LINE%", "%PDF%", "%TEX%"]
-    },
+    "latex-workshop.view.pdf.external.synctex.args": [
+        "-r",
+        "%LINE%",
+        "%PDF%",
+        "%TEX%"
+    ],
+    "latex-workshop.view.pdf.external.synctex.command": "displayline",
+    "latex-workshop.view.pdf.external.viewer.args": [
+        "-a",
+        "Skim",
+        "%PDF%"
+    ],
+    "latex-workshop.view.pdf.external.viewer.command": "open",
     "latex-workshop.view.pdf.viewer": "external",
     "python.defaultInterpreterPath": "${env:PYENV_PYTHONPATH}",
     "python.languageServer": "Pylance",
