@@ -38,17 +38,12 @@ options(
     cat("Loading:", cran, github, "\n")
     setHook(packageEvent("grDevices", "onLoad"), function(...) {
       grDevices::pdfFonts(
-        serif = grDevices::pdfFonts()$Palatino,
         mincho = grDevices::pdfFonts()$Japan1,
         gothic = grDevices::pdfFonts()$Japan1GothicBBB
       )
       if (capabilities("aqua")) {
-        grDevices::quartz.options(width = 6.5, height = 6.5)
-        styles = c("", " Bold", " Italic", " Bold Italic")
+        grDevices::quartz.options(width = 6, height = 6)
         grDevices::quartzFonts(
-          serif = grDevices::quartzFont(paste0("Palatino", styles)),
-          sans = grDevices::quartzFont(paste0("Helvetica Neue", styles)),
-          mono = grDevices::quartzFont(paste0("Menlo", styles)),
           mincho = grDevices::quartzFont(paste0("Hiragino Mincho ProN W", c(3, 6, 3, 6))),
           gothic = grDevices::quartzFont(paste0("Hiragino Kaku Gothic ProN W", c(3, 6, 3, 6)))
         )
