@@ -1,6 +1,5 @@
 options(
   repos = c(CRAN = "https://cloud.r-project.org/"),
-  BioC_mirror = "https://bioconductor.org/",
   menu.graphics = FALSE,
 
   warn = 1,
