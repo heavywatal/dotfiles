@@ -134,5 +134,15 @@
         "key": "alt+cmd+p",
         "command": "-r.runAboveChunks",
         "when": "editorTextFocus && editorLangId == 'rmd'"
+    },
+    {
+        "key": "alt+[",
+        "command": "-editor.action.inlineSuggest.showPrevious",
+        "when": "!editorReadonly"
+    },
+    {
+        "key": "alt+]",
+        "command": "-editor.action.inlineSuggest.showNext",
+        "when": "!editorReadonly"
     }
 ]
