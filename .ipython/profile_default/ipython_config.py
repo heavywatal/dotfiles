@@ -7,4 +7,6 @@ c.InteractiveShellApp.exec_lines = [
 
 c.InteractiveShellApp.matplotlib = 'auto'
 
+c.InteractiveShell.autoindent = False
+
 c.InteractiveShell.automagic = False

@@ -1,6 +1,9 @@
+arviz
 biopython
 flake8
 ipython
+jupyterlab
+jupytext
 matplotlib
 numpy
 pandas
