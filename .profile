@@ -36,6 +36,11 @@ PATH=${HOME}/.cargo/bin:$PATH
 export GOPATH=${HOME}/.go
 PATH=${GOPATH}/bin:$PATH
 
+export HUGO_MODULE_REPLACEMENTS="\
+github.com/heavywatal/hugo-theme-nonblog -> ${HOME}/git/hugo-theme-nonblog,
+github.com/heavywatal/hugo-theme-reveal -> ${HOME}/git/hugo-theme-reveal,
+github.com/heavywatal/hugo-mod-common -> ${HOME}/git/hugo-mod-common"
+
 PERL5LIBLOCAL="${HOME}/local/lib/perl5"
 export PERL_CPANM_OPT="--local-lib=${PERL5LIBLOCAL}"
 export PERL5LIB="${PERL5LIBLOCAL}/lib/perl5"
