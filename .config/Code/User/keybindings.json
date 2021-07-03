@@ -64,11 +64,12 @@
     {
         "key": "ctrl+enter",
         "command": "workbench.action.terminal.runSelectedText",
-        "when": "resourceExtname != .ipynb"
+        "when": "editorTextFocus && resourceExtname != .ipynb"
     },
     {
         "key": "cmd+enter",
-        "command": "workbench.action.terminal.runSelectedText"
+        "command": "workbench.action.terminal.runSelectedText",
+        "when": "editorTextFocus"
     },
     {
         "key": "ctrl+t o",
