@@ -15,6 +15,7 @@ options(
   pillar.neg = FALSE,
   readr.num_columns = 0L,
   readr.show_progress = FALSE,
+  readr.show_types = FALSE,
   dplyr.summarise.inform = FALSE,
 
   ggplot2.continuous.colour = "viridis",
@@ -74,19 +75,3 @@ options(
     }
   })
 }
-
-setHook(packageEvent("languageserver", "onLoad"), function(...) {
-  options(languageserver.default_linters = lintr::with_defaults(
-    absolute_path_linter = NULL,
-    assignment_linter = NULL,
-    closed_curly_linter = NULL,
-    commented_code_linter = NULL,
-    object_length_linter = NULL,
-    object_name_linter = NULL,
-    object_usage_linter = NULL,
-    open_curly_linter = NULL,
-    pipe_continuation_linter = NULL,
-    spaces_left_parentheses_linter = NULL,
-    line_length_linter = lintr::line_length_linter(120)
-  ))
-})
