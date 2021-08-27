@@ -4,12 +4,14 @@
 /Backups
 /Cookies*
 /Crashpad*
+/IndexedDB
 /Network*
 /Preferences
 /QuotaManager*
 /Service*
 /TransportSecurity
 /blob_storage
+/code.lock
 /databases
 /languagepacks.json
 /logs

@@ -1,0 +1,11 @@
+{
+    "shortcuts": [
+        {
+            "command": "docmanager:reload",
+            "keys": [
+                "Ctrl Alt R"
+            ],
+            "selector": "body"
+        }
+    ]
+}

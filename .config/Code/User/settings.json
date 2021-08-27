@@ -45,6 +45,7 @@
     "gitProjectManager.maxDepthRecursion": 1,
     "julia.enableTelemetry": false,
     "julia.enableCrashReporter": false,
+    "julia.symbolCacheDownload": false,
     "jupyter.alwaysTrustNotebooks": true,
     "jupyter.askForKernelRestart": false,
     "jupyter.disableJupyterAutoStart": true,
@@ -138,12 +139,6 @@
         "statusBar.background": "#333",
         "terminal.foreground": "#aaa"
     },
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
     "workbench.iconTheme": "vscode-icons",
     "workbench.panel.defaultLocation": "right",
     "workbench.settings.enableNaturalLanguageSearch": false,
