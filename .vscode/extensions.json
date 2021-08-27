@@ -1,0 +1,21 @@
+{
+  "recommendations": [
+    "bungcip.better-toml",
+    "christian-kohler.path-intellisense",
+    "felipecaputo.git-project-manager",
+    "golang.go",
+    "ikuyadeu.r",
+    "ivan-bocharov.stan-vscode",
+    "james-yu.latex-workshop",
+    "julialang.language-julia",
+    "ms-python.python",
+    "ms-vscode.cpptools",
+    "npxms.hide-gitignored",
+    "rebornix.ruby",
+    "rust-lang.rust",
+    "twxs.cmake",
+    "vscode-icons-team.vscode-icons",
+    "wdawson.better-kill-ring",
+    "wingrunr21.vscode-ruby"
+  ]
+}
