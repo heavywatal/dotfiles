@@ -18,6 +18,7 @@ esac
 
 # PATH
 for prefix in /usr/local /opt/homebrew /home/linuxbrew/.linuxbrew ~/.linuxbrew ~/.homebrew; do
+    unset HOMEBREW_SHELLENV_PREFIX
     [ -e ${prefix}/bin/brew ] && eval $(${prefix}/bin/brew shellenv)
 done
 if [ -n "$HOMEBREW_PREFIX" ]; then
