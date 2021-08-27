@@ -17,7 +17,7 @@ case "$(uname)" in
 esac
 
 # PATH
-for prefix in /usr/local /opt/homebrew ~/.linuxbrew ~/.homebrew; do
+for prefix in /usr/local /opt/homebrew /home/linuxbrew/.linuxbrew ~/.linuxbrew ~/.homebrew; do
     [ -e ${prefix}/bin/brew ] && eval $(${prefix}/bin/brew shellenv)
 done
 if [ -n "$HOMEBREW_PREFIX" ]; then
@@ -44,6 +44,9 @@ github.com/heavywatal/hugo-mod-common -> ${HOME}/git/hugo-mod-common"
 PERL5LIBLOCAL="${HOME}/local/lib/perl5"
 export PERL_CPANM_OPT="--local-lib=${PERL5LIBLOCAL}"
 export PERL5LIB="${PERL5LIBLOCAL}/lib/perl5"
+
+export WORKON_HOME="${HOME}/.virtualenvs"
+# /usr/bin/python3 -m venv ${WORKON_HOME}/reticulate
 
 export PYENV_ROOT=${HOME}/.pyenv
 if [ -d $PYENV_ROOT ]; then
