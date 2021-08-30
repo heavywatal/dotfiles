@@ -4,15 +4,15 @@ if [ -d ${HOMEBREW_PREFIX}/share/zsh-completions ]; then
     fpath=(${HOMEBREW_PREFIX}/share/zsh-completions ${fpath})
 fi
 
+autoload -Uz +X compinit && compinit -C
+
+[ -f ~/.bashrc ] && . ~/.bashrc
+
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' use-cache yes
 zstyle ':completion:*:default' menu select=2
 zstyle ':completion:*:descriptions' format '%B%U%d%u%b'
-
-autoload -Uz +X compinit && compinit -C
-
-[ -f ~/.bashrc ] && . ~/.bashrc
 
 autoload -Uz is-at-least
 
