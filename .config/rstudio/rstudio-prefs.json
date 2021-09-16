@@ -1,34 +1,14 @@
 {
-    "panes": {
-        "quadrants": [
-            "Source",
-            "Console",
-            "TabSet1",
-            "TabSet2"
-        ],
-        "tabSet1": [
-            "Environment",
-            "History",
-            "Connections",
-            "Build",
-            "VCS",
-            "Tutorial",
-            "Presentation"
-        ],
-        "tabSet2": [
-            "Files",
-            "Plots",
-            "Packages",
-            "Help",
-            "Viewer"
-        ],
-        "console_left_on_top": false,
-        "console_right_on_top": true
-    },
+    "restore_source_documents": false,
+    "check_for_updates": false,
     "save_workspace": "never",
     "load_workspace": false,
-    "pdf_previewer": "none",
-    "posix_terminal_shell": "bash",
-    "check_for_updates": false,
-    "restore_last_project": false
+    "initial_working_directory": "~",
+    "remove_history_duplicates": true,
+    "restore_last_project": false,
+    "insert_matching": false,
+    "reindent_on_paste": false,
+    "restore_source_document_cursor_position": false,
+    "auto_save_on_idle": "none",
+    "posix_terminal_shell": "bash"
 }
