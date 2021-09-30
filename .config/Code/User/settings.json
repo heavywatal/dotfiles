@@ -4,6 +4,7 @@
     "editor.autoClosingQuotes": "never",
     "editor.autoSurround": "never",
     "editor.autoIndent": "advanced",
+    "editor.find.autoFindInSelection": "multiline",
     "editor.find.seedSearchStringFromSelection": "never",
     "editor.folding": false,
     "editor.fontFamily": "'Ubuntu Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
