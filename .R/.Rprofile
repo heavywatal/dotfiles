@@ -15,7 +15,7 @@ options(
   pillar.neg = FALSE,
   readr.num_columns = 0L,
   readr.show_progress = FALSE,
-  readr.show_types = FALSE,
+  readr.show_col_types = FALSE,
   dplyr.summarise.inform = FALSE,
 
   ggplot2.continuous.colour = "viridis",
