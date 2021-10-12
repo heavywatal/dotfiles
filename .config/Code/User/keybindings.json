@@ -1,9 +1,32 @@
 // Place your key bindings in this file to overwrite the defaults
 [
     {
-        "key": "cmd+v",
-        "command": "editor.action.clipboardPasteAction",
-        "when": "!!editorFocus"
+        "key": "ctrl+g",
+        "command": "-workbench.action.gotoLine"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "-workbench.action.quickOpenView"
+    },
+    {
+        "key": "ctrl+space",
+        "command": "-editor.action.triggerSuggest",
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+space",
+        "command": "-toggleSuggestionDetails",
+        "when": "suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "ctrl+alt+space",
+        "command": "-toggleSuggestionFocus",
+        "when": "suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "alt+cmd+p",
+        "command": "-r.runAboveChunks",
+        "when": "editorTextFocus && editorLangId == 'rmd'"
     },
     {
         "key": "ctrl+tab",
@@ -12,10 +35,6 @@
     {
         "key": "ctrl+shift+tab",
         "command": "workbench.action.previousEditor"
-    },
-    {
-        "key": "ctrl+g",
-        "command": "-workbench.action.gotoLine"
     },
     {
         "key": "ctrl-g",
@@ -56,10 +75,6 @@
         "key": "ctrl+m",
         "command": "acceptSelectedSuggestion",
         "when": "suggestWidgetVisible"
-    },
-    {
-        "key": "ctrl+q",
-        "command": "-workbench.action.quickOpenView"
     },
     {
         "key": "ctrl+enter",
@@ -105,45 +120,5 @@
         "key": "shift+ctrl+up",
         "command": "cursorColumnSelectUp",
         "when": "editorTextFocus"
-    },
-    {
-        "key": "cmd+1",
-        "command": "-r.nrow",
-        "when": "editorTextFocus && editorLangId == 'r'"
-    },
-    {
-        "key": "cmd+2",
-        "command": "-r.length",
-        "when": "editorTextFocus && editorLangId == 'r'"
-    },
-    {
-        "key": "cmd+3",
-        "command": "-r.head",
-        "when": "editorTextFocus && editorLangId == 'r'"
-    },
-    {
-        "key": "cmd+4",
-        "command": "-r.thead",
-        "when": "editorTextFocus && editorLangId == 'r'"
-    },
-    {
-        "key": "cmd+5",
-        "command": "-r.names",
-        "when": "editorTextFocus && editorLangId == 'r'"
-    },
-    {
-        "key": "alt+cmd+p",
-        "command": "-r.runAboveChunks",
-        "when": "editorTextFocus && editorLangId == 'rmd'"
-    },
-    {
-        "key": "alt+[",
-        "command": "-editor.action.inlineSuggest.showPrevious",
-        "when": "!editorReadonly"
-    },
-    {
-        "key": "alt+]",
-        "command": "-editor.action.inlineSuggest.showNext",
-        "when": "!editorReadonly"
     }
 ]
