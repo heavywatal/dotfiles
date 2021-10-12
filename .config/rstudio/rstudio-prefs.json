@@ -10,5 +10,8 @@
     "reindent_on_paste": false,
     "restore_source_document_cursor_position": false,
     "auto_save_on_idle": "none",
-    "posix_terminal_shell": "bash"
+    "warn_if_no_such_variable_in_scope": true,
+    "warn_variable_defined_but_not_used": true,
+    "style_diagnostics": true,
+    "posix_terminal_shell": "zsh"
 }
