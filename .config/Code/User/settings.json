@@ -9,7 +9,6 @@
     "editor.folding": false,
     "editor.fontFamily": "'Ubuntu Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
     "editor.fontSize": 13,
-    "editor.hover.sticky": false,
     "editor.lineHeight": 16,
     "editor.minimap.enabled": false,
     "editor.occurrencesHighlight": false,
@@ -51,7 +50,6 @@
     "jupyter.askForKernelRestart": false,
     "jupyter.disableJupyterAutoStart": true,
     "jupyter.enableCellCodeLens": false,
-    "jupyter.searchForJupyter": false,
     "latex-workshop.chktex.args.active": ["-wall", "-n22", "-n30", "-n46", "-e16", "-q"],
     "latex-workshop.chktex.enabled": true,
     "latex-workshop.latex.autoBuild.run": "never",
@@ -97,8 +95,7 @@
         "en"
     ],
     "spellright.notificationClass": "information",
-    "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false,
+    "telemetry.telemetryLevel": "off",
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.cwd": "${workspaceFolder}",
     "terminal.integrated.defaultProfile.osx": "tmux",
@@ -144,6 +141,11 @@
     "workbench.panel.defaultLocation": "right",
     "workbench.settings.enableNaturalLanguageSearch": false,
     "workbench.startupEditor": "none",
+    "C_Cpp.default.includePath": [
+        "/Library/Frameworks/R.framework/Headers",
+        "~/.R/library/latest/Rcpp/include",
+        "~/local/include"
+    ],
     "[latex]": {
         "editor.wordWrap": "bounded"
     }
