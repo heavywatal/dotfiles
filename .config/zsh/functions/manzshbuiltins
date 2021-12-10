@@ -1,0 +1,6 @@
+#!/bin/zsh
+if [ -z "$1" ]; then
+  man zshbuiltins
+else
+  man zshbuiltins | less -p "^       $1 "
+fi
