@@ -75,7 +75,6 @@ alias zmux='SHELL=$(which zsh) exec tmux'
 alias r='R --quiet --no-save --no-restore-data'
 alias clang++14='clang++ -std=c++14 -Wall -Wextra -pedantic'
 alias with-homelib='CPATH=${HOME}/local/include LIBRARY_PATH=${HOME}/local/lib64:${HOME}/local/lib LD_LIBRARY_PATH=${HOME}/local/lib64:${HOME}/local/lib'
-alias rmcmake='rm -r CMakeCache.txt CMakeFiles CTestTestfile.cmake DartConfiguration.tcl Makefile Testing cmake_install.cmake compile_commands.json install_manifest.txt'
 alias luatexmk='latexmk -lualatex'
 
 if [ $(uname) = Darwin ]; then
