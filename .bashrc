@@ -48,14 +48,13 @@ fi
 #########1#########2#########3#########4#########5#########6#########7#########
 ## Alias
 
-if ls --color=auto >/dev/null 2>&1; then
-    alias ls="ls -vF --show-control-chars --color=auto"
+if command -v gls >/dev/null; then
+    alias ls='gls -vF --color=auto'
+elif ls --version >/dev/null 2>&1; then
+    alias ls='ls -vF --color=auto'
 else
-    if command -v gls >/dev/null; then
-        alias ls="gls -vF --show-control-chars --color=auto"
-    else
-        alias ls="ls -FG"
-    fi
+    export LSCOLORS='ExGxcxdxBxegedabagacad'
+    alias ls='ls -FG'
 fi
 
 alias rsync='rsync --exclude-from=${HOME}/.config/rsync-exclude'
