@@ -6,6 +6,8 @@
 [core]
 	quotepath = false
 	hookspath = ~/.config/git/hooks
+[init]
+	defaultBranch = main
 [push]
 	default = simple
 [pull]
