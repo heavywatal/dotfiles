@@ -201,6 +201,7 @@ unset PCOL
 #########1#########2#########3#########4#########5#########6#########7#########
 # Alias
 
+alias -g B='| bat'
 alias -g L='| less'
 alias -g H='| head'
 alias -g T='| tail'
