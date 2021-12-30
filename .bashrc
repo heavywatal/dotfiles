@@ -48,7 +48,9 @@ fi
 #########1#########2#########3#########4#########5#########6#########7#########
 ## Alias
 
-if command -v gls >/dev/null; then
+if command -v lsd >/dev/null; then
+    alias ls='lsd'
+elif command -v gls >/dev/null; then
     alias ls='gls -vF --color=auto'
 elif ls --version >/dev/null 2>&1; then
     alias ls='ls -vF --color=auto'
@@ -64,7 +66,7 @@ alias mvi='mv -i'
 alias cpi='cp -i'
 alias ll="ls -l"
 alias lal="ls -al"
-alias tree="exa --tree"
+alias tree="lsd --tree"
 alias gd='dirs -v; read newdir; cd +"${newdir}"'  # interactive popd
 alias cgrep='grep --color=always'
 alias diffu='diff --color=always -u'
