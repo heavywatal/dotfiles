@@ -1,4 +1,5 @@
 arviz
+autopep8
 biopython
 flake8
 ipython

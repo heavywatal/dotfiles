@@ -72,6 +72,9 @@
     "latex-workshop.view.pdf.viewer": "external",
     "python.defaultInterpreterPath": "${env:PYENV_PYTHONPATH}",
     "python.languageServer": "Pylance",
+    "python.linting.flake8Args": [
+        "--ignore=E501"
+    ],
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
     "python.pythonPath": "${env:PYENV_PYTHONPATH}",
