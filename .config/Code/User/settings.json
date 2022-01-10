@@ -1,4 +1,5 @@
 {
+    "breadcrumbs.showStrings": false,
     "editor.accessibilitySupport": "off",
     "editor.autoClosingBrackets": "never",
     "editor.autoClosingQuotes": "never",
@@ -7,7 +8,7 @@
     "editor.find.autoFindInSelection": "multiline",
     "editor.find.seedSearchStringFromSelection": "never",
     "editor.folding": false,
-    "editor.fontFamily": "'Ubuntu Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
+    "editor.fontFamily": "'Ubuntu Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace, 'UbuntuMono Nerd Font'",
     "editor.fontSize": 13,
     "editor.lineHeight": 16,
     "editor.minimap.enabled": false,
@@ -43,6 +44,7 @@
         "~/git"
     ],
     "gitProjectManager.maxDepthRecursion": 1,
+    "go.formatTool": "gofmt",
     "julia.enableTelemetry": false,
     "julia.enableCrashReporter": false,
     "julia.symbolCacheDownload": false,
@@ -70,6 +72,7 @@
     ],
     "latex-workshop.view.pdf.external.viewer.command": "open",
     "latex-workshop.view.pdf.viewer": "external",
+    "outline.showStrings": false,
     "python.defaultInterpreterPath": "${env:PYENV_PYTHONPATH}",
     "python.languageServer": "Pylance",
     "python.linting.flake8Args": [
@@ -87,8 +90,8 @@
         "command": "/Users/watal/.rbenv/shims/rubocop"
       }
     },
-    "ruby.useLanguageServer": true,
-    "rust-client.rustupPath": "/Users/watal/.cargo/bin/rustup",
+    "rust-analyzer.inlayHints.enable": false,
+    "rust-analyzer.lens.enable": false,
     "spellright.configurationScope": "user",
     "spellright.documentTypes": [
         "latex",
@@ -149,7 +152,16 @@
         "~/.R/library/latest/Rcpp/include",
         "~/local/include"
     ],
+    "[go]": {
+        "editor.renderWhitespace": "boundary",
+        "editor.codeActionsOnSave": {
+             "source.organizeImports": false
+        }
+    },
     "[latex]": {
         "editor.wordWrap": "bounded"
+    },
+    "[rust]": {
+        "editor.tabSize": 4,
     }
 }
