@@ -3,7 +3,7 @@ fpath=(${ZDOTDIR}/functions ${fpath})
 if [ -d ${HOMEBREW_PREFIX}/share/zsh-completions ]; then
     fpath=(${HOMEBREW_PREFIX}/share/zsh-completions ${fpath})
 fi
-
+fpath=(${ZDOTDIR}/completions ${fpath})
 autoload -Uz +X compinit && compinit -C
 
 [ -f ~/.bashrc ] && . ~/.bashrc
