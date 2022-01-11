@@ -32,16 +32,6 @@ if [ -n "$HOMEBREW_PREFIX" ]; then
     export HOMEBREW_NO_INSTALL_CLEANUP=1
 fi
 
-PATH=${HOME}/.cargo/bin:$PATH
-
-export GOPATH=${HOME}/.go
-PATH=${GOPATH}/bin:$PATH
-
-export HUGO_MODULE_REPLACEMENTS="\
-github.com/heavywatal/hugo-theme-nonblog -> ${HOME}/git/hugo-theme-nonblog,
-github.com/heavywatal/hugo-theme-reveal -> ${HOME}/git/hugo-theme-reveal,
-github.com/heavywatal/hugo-mod-common -> ${HOME}/git/hugo-mod-common"
-
 PERL5LIBLOCAL="${HOME}/local/lib/perl5"
 export PERL_CPANM_OPT="--local-lib=${PERL5LIBLOCAL}"
 export PERL5LIB="${PERL5LIBLOCAL}/lib/perl5"
@@ -58,6 +48,11 @@ if [ -d $PYENV_ROOT ]; then
     unset pyenv_versions pyenv_latest
 fi
 PATH=$(python3 -m site --user-base)/bin:$PATH
+
+export GOPATH=${HOME}/.go
+PATH=${GOPATH}/bin:$PATH
+
+PATH=${HOME}/.cargo/bin:$PATH
 
 PATH=${HOME}/local/bin:${HOME}/.config/bin:$PATH
 export PATH

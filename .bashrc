@@ -32,6 +32,11 @@ export TEXMFHOME=${HOME}/.texmf
 export PYTHONSTARTUP=${HOME}/.config/python/startup.py
 export PIP_CONFIG_FILE=${HOME}/.config/python/pip.conf
 
+export HUGO_MODULE_REPLACEMENTS="\
+github.com/heavywatal/hugo-theme-nonblog -> ${HOME}/git/hugo-theme-nonblog,
+github.com/heavywatal/hugo-theme-reveal -> ${HOME}/git/hugo-theme-reveal,
+github.com/heavywatal/hugo-mod-common -> ${HOME}/git/hugo-mod-common"
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
