@@ -182,7 +182,8 @@ case $(echo ${SSH_CONNECTION} | awk '{print $3}') in
         ;;
 esac
 
-if is-at-least 4.3.10; then
+PWD_FS=$(stat -f -c %T $PWD 2>/dev/null)
+if is-at-least 4.3.10 && [ "$PWD_FS" != "nfs" ]; then
   autoload -Uz vcs_info
   autoload -Uz add-zsh-hook
   add-zsh-hook precmd vcs_info
@@ -193,6 +194,7 @@ if is-at-least 4.3.10; then
   zstyle ':vcs_info:*' formats '%u%c[%b]'
   zstyle ':vcs_info:*' actionformats '%u%c[%b|%a]'
 fi
+unset PWD_FS
 
 PROMPT="%B%F{${PCOL}}%D{%m-%d} %T %n@%m:%~%b \${vcs_info_msg_0_}%f
 %# "
