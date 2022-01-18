@@ -40,7 +40,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-eval "$(rbenv init - 2>/dev/null)"
+rbenv() {
+  unfunction "$0"
+  eval "$(rbenv init -)"
+  $0 "$@"
+}
 
 tmux has-session >/dev/null 2>&1 && if [ -z "${TMUX}" ]; then
     echo '% tmux list-sessions'
