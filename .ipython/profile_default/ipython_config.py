@@ -1,12 +1,5 @@
-c.InteractiveShellApp.exec_lines = [
-    'import numpy as np',
-    'import pandas as pd',
-    'import matplotlib.pyplot as plt',
-    'import seaborn as sns',
-]
+c.TerminalInteractiveShell.autoindent = False
 
-c.InteractiveShellApp.matplotlib = 'auto'
+c.TerminalInteractiveShell.automagic = False
 
-c.InteractiveShell.autoindent = False
-
-c.InteractiveShell.automagic = False
+c.TerminalInteractiveShell.separate_in = ""
