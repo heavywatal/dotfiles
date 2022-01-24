@@ -5,6 +5,7 @@
     "editor.autoClosingQuotes": "never",
     "editor.autoSurround": "never",
     "editor.autoIndent": "advanced",
+    "editor.detectIndentation": false,
     "editor.find.autoFindInSelection": "multiline",
     "editor.find.seedSearchStringFromSelection": "never",
     "editor.folding": false,
@@ -73,14 +74,15 @@
     "latex-workshop.view.pdf.external.viewer.command": "open",
     "latex-workshop.view.pdf.viewer": "external",
     "outline.showStrings": false,
-    "python.defaultInterpreterPath": "${env:PYENV_PYTHONPATH}",
+    "python.defaultInterpreterPath": "${env:PYENV_LATEST}/bin/python3",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.formatting.provider": "black",
     "python.languageServer": "Pylance",
     "python.linting.flake8Args": [
-        "--ignore=E501"
+        "--max-line-length=88"
     ],
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
-    "python.pythonPath": "${env:PYENV_PYTHONPATH}",
     "python.showStartPage": false,
     "r.rmarkdown.enableCodeLens": false,
     "ruby.format": "rubocop",
@@ -160,6 +162,9 @@
     },
     "[latex]": {
         "editor.wordWrap": "bounded"
+    },
+    "[python]": {
+        "editor.tabSize": 4,
     },
     "[rust]": {
         "editor.tabSize": 4,
