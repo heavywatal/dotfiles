@@ -46,6 +46,8 @@
     ],
     "gitProjectManager.maxDepthRecursion": 1,
     "go.formatTool": "gofmt",
+    "html.autoClosingTags": false,
+    "html.autoCreateQuotes": false,
     "julia.enableTelemetry": false,
     "julia.enableCrashReporter": false,
     "julia.symbolCacheDownload": false,
