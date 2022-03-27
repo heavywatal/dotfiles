@@ -1,3 +1,5 @@
 /configstore/update-notifier-*.json
 /hub
 /iterm2
+/karabiner/assets
+/karabiner/automatic_backups
