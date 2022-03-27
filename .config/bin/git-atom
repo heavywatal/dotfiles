@@ -1,6 +1,0 @@
-#!/bin/sh
-project_root=$(git rev-parse --show-toplevel)
-if [ -n "$project_root" ]; then
-  echo "atom $project_root"
-  atom $project_root
-fi

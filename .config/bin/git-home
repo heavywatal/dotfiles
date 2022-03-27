@@ -1,6 +1,17 @@
 #!/bin/sh
+while (( $# > 0 ))
+do
+  case $1 in
+    -p | --pull)
+      PULL_FF=1
+  esac
+  shift
+done
+
 for x in ~/git/*/; do
-    echo $(tput bold)$x$(tput sgr0)
-    git -C $x pull --ff-only
+    printf "%-60s\n" $x | tr ' ' '-'
+    if [ -n "$PULL_FF" ]; then
+        git -C $x pull --ff-only
+    fi
     git -C $x status --short --branch
 done
