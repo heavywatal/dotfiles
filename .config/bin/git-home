@@ -1,17 +1,23 @@
-#!/bin/sh
-while (( $# > 0 ))
-do
-  case $1 in
-    -p | --pull)
-      PULL_FF=1
-  esac
-  shift
-done
+#!/usr/bin/env python3
+import argparse
+import subprocess
+from pathlib import Path
 
-for x in ~/git/*/; do
-    printf "%-60s\n" $x | tr ' ' '-'
-    if [ -n "$PULL_FF" ]; then
-        git -C $x pull --ff-only
-    fi
-    git -C $x status --short --branch
-done
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-p", "--pull", action="store_true")
+    parser.add_argument("root", nargs="?", default=Path.home() / "git", type=Path)
+    args = parser.parse_args()
+    for path in sorted(args.root.iterdir()):
+        if not (path / ".git").is_dir():
+            continue
+        print(f"## {str(path) + ' ':#<60}")
+        git = ["git", "-C", path]
+        subprocess.run(git + ["status", "--short", "--branch"])
+        if args.pull:
+            subprocess.run(git + ["pull", "--ff-only"])
+
+
+if __name__ == "__main__":
+    main()
