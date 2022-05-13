@@ -30,6 +30,7 @@ if [ -n "$HOMEBREW_PREFIX" ]; then
     export HOMEBREW_NO_ANALYTICS=1
     export HOMEBREW_NO_AUTO_UPDATE=1
     export HOMEBREW_NO_INSTALL_CLEANUP=1
+    export HOMEBREW_CASK_OPTS="--no-quarantine"
 fi
 
 PERL5LIBLOCAL="${HOME}/local/lib/perl5"
