@@ -1,13 +1,16 @@
 arviz
 autopep8
 biopython
+black
 flake8
+flit
 ipython
 jupyterlab
 jupytext
 matplotlib
 numpy
 pandas
+Pillow
 psutil
 pydataset
 pystan
@@ -17,4 +20,3 @@ scipy
 seaborn
 statsmodels
 tqdm
-Pillow
