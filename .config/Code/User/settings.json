@@ -11,6 +11,7 @@
     "editor.folding": false,
     "editor.fontFamily": "'Ubuntu Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace, 'UbuntuMono Nerd Font'",
     "editor.fontSize": 13,
+    "editor.guides.indentation": false,
     "editor.lineHeight": 16,
     "editor.minimap.enabled": false,
     "editor.occurrencesHighlight": false,
@@ -21,7 +22,6 @@
         "strings": false
     },
     "editor.renderControlCharacters": true,
-    "editor.renderIndentGuides": false,
     "editor.rulers": [80, 160],
     "editor.scrollBeyondLastLine": false,
     "editor.suggest.filterGraceful": false,
@@ -152,9 +152,10 @@
     "workbench.settings.enableNaturalLanguageSearch": false,
     "workbench.startupEditor": "none",
     "C_Cpp.default.includePath": [
-        "/Library/Frameworks/R.framework/Headers",
+        "~/local/include",
         "~/.R/library/latest/Rcpp/include",
-        "~/local/include"
+        "/Library/Frameworks/R.framework/Headers",
+        "/usr/local/include"
     ],
     "[go]": {
         "editor.renderWhitespace": "boundary",
