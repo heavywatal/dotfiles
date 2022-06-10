@@ -55,7 +55,7 @@
     "jupyter.askForKernelRestart": false,
     "jupyter.disableJupyterAutoStart": true,
     "jupyter.enableCellCodeLens": false,
-    "latex-workshop.chktex.args.active": ["-wall", "-n22", "-n30", "-n46", "-e16", "-q"],
+    "latex-workshop.chktex.exec.args": ["-wall", "-n22", "-n30", "-n46", "-e16", "-q"],
     "latex-workshop.chktex.enabled": true,
     "latex-workshop.latex.autoBuild.run": "never",
     "latex-workshop.latex.recipe.default": "first",
@@ -86,7 +86,9 @@
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
     "python.showStartPage": false,
+    "r.plot.useHttpgd": false,
     "r.rmarkdown.enableCodeLens": false,
+    "r.sessionWatcher": true,
     "ruby.format": "rubocop",
     "ruby.intellisense": "rubyLocate",
     "ruby.lint": {
@@ -111,6 +113,9 @@
     "terminal.integrated.defaultProfile.osx": "tmux",
     "terminal.integrated.enableFileLinks": false,
     "terminal.integrated.enablePersistentSessions": false,
+    "terminal.integrated.env.osx": {
+      "VSCODE_INTEGRATED": "1",
+    },
     "terminal.integrated.fontSize": 13,
     "terminal.integrated.lineHeight": 1.1,
     "terminal.integrated.macOptionClickForcesSelection": true,
@@ -125,10 +130,12 @@
         "tmux": {
             "path": "tmux",
             "icon": "terminal-tmux",
-            "args": ["new-session", "-A", "-s", "${workspaceFolderBasename}", "-c", "${workspaceFolder}"]
+            "args": ["new-session", "-A",
+              "-s", "${workspaceFolderBasename}",
+              "-c", "${workspaceFolder}",
+              "-e", "VSCODE_INTEGRATED=1"]
         }
     },
-    "terminal.integrated.tabs.enabled": false,
     "update.mode": "manual",
     "vsicons.dontShowNewVersionMessage": true,
     "window.newWindowDimensions": "inherit",

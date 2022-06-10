@@ -1,0 +1,8 @@
+options(
+  radian.prompt = "\033[0;34m>\033[0m ",
+  radian.indent_lines = FALSE,
+  radian.auto_match = FALSE,
+  radian.auto_indentation = FALSE,
+  radian.insert_new_line = FALSE,
+  radian.global_history_file = "~/.R/.radian_history"
+)

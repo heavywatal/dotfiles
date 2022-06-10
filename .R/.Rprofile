@@ -57,6 +57,13 @@ options(
       ggplot2::theme_set(wtl::theme_wtl())
       wtl::adjust_print_options()
     })
+    if (dir.exists(Sys.getenv("VSCODE_WATCHER_DIR"))) {
+      Sys.setenv(TERM_PROGRAM = "vscode")  # for non-native "R terminal"
+      options(vsc.plot = FALSE)  # disable png viewer
+      options(vsc.view = "Active")
+      options(vsc.helpPanel = "Active")
+      source(file.path(Sys.getenv("VSCODE_WATCHER_DIR"), "init.R"))
+    }
   }
 }
 

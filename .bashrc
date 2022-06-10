@@ -53,6 +53,10 @@ tmux has-session >/dev/null 2>&1 && if [ -z "${TMUX}" ]; then
     tmux list-windows -a
 fi
 
+if [ -n "$VSCODE_INTEGRATED" ] && [ -e "${HOME}/.vscode-R" ]; then
+  export VSCODE_WATCHER_DIR="${HOME}/.vscode-R"
+fi
+
 #########1#########2#########3#########4#########5#########6#########7#########
 ## Alias
 
