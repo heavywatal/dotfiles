@@ -91,6 +91,7 @@ alias with-homelib='CPATH=${HOME}/local/include LIBRARY_PATH=${HOME}/local/lib64
 alias luatexmk='latexmk -lualatex'
 alias samview='samtools view -h --no-PG'
 alias samheader='samtools view -H --no-PG'
+alias tv='tidy-viewer'
 
 if [ $(uname) = Darwin ]; then
     alias ql="qlmanage -p $@ >/dev/null 2>&1"
