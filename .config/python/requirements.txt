@@ -1,6 +1,7 @@
 arviz
 autopep8
 biopython
+cmdstanpy
 black
 flake8
 flit
@@ -12,8 +13,6 @@ numpy
 pandas
 Pillow
 psutil
-pydataset
-pystan
 requests
 scikit-learn
 scipy
