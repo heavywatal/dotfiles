@@ -1,6 +1,5 @@
 {
   "recommendations": [
-    "bungcip.better-toml",
     "christian-kohler.path-intellisense",
     "felipecaputo.git-project-manager",
     "golang.go",
@@ -10,9 +9,10 @@
     "ms-python.python",
     "ms-vscode.cpptools",
     "npxms.hide-gitignored",
-    "REditorSupport.r",
     "rebornix.ruby",
+    "reditorsupport.r",
     "rust-lang.rust-analyzer",
+    "tamasfe.even-better-toml",
     "twxs.cmake",
     "vscode-icons-team.vscode-icons",
     "wdawson.better-kill-ring",
