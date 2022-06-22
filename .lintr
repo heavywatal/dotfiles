@@ -1,13 +1,15 @@
-linters: with_defaults(
-    absolute_path_linter = NULL,
-    assignment_linter = NULL,
-    closed_curly_linter = NULL,
-    commented_code_linter = NULL,
-    object_length_linter = NULL,
-    object_name_linter = NULL,
-    object_usage_linter = NULL,
-    open_curly_linter = NULL,
-    pipe_continuation_linter = NULL,
-    spaces_left_parentheses_linter = NULL,
-    line_length_linter = lintr::line_length_linter(120)
- )
+linters: linters_with_tags(
+  NULL,
+  absolute_path_linter = NULL,
+  assignment_linter = NULL,
+  brace_linter = NULL,
+  commented_code_linter = NULL,
+  extraction_operator_linter = NULL,
+  implicit_integer_linter = NULL,
+  line_length_linter(120)
+  nonportable_path_linter = NULL,
+  object_length_linter = NULL,
+  object_name_linter = NULL,
+  object_usage_linter = NULL,
+  pipe_continuation_linter = NULL,
+)
