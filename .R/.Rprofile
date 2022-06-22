@@ -23,6 +23,12 @@ options(
   testthat.default_check_reporter = "progress"
 )
 
+options(languageserver.formatting_style = function(options) {
+  style = styler::tidyverse_style(indent_by = options$tabSize)
+  style$token$force_assignment_op = NULL
+  style
+})
+
 .First = function() {
   try(suppressWarnings(readRenviron("~/.Renviron.site")))
   if (interactive() && Sys.getenv("RSTUDIO") == "") {
