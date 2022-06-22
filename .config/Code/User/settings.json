@@ -12,7 +12,9 @@
     "editor.fontFamily": "'Ubuntu Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace, 'UbuntuMono Nerd Font'",
     "editor.fontSize": 13,
     "editor.guides.indentation": false,
+    "editor.inlayHints.enabled": "offUnlessPressed",
     "editor.lineHeight": 16,
+    "editor.lightbulb.enabled": false,
     "editor.minimap.enabled": false,
     "editor.occurrencesHighlight": false,
     "editor.quickSuggestionsDelay": 500,
@@ -32,8 +34,14 @@
     "editor.tokenColorCustomizations": {
         "comments": "#666"
     },
+    "editor.semanticTokenColorCustomizations": {
+        "rules": {
+            "*.mutable": {"underline": false}
+        }
+    },
     "editor.useTabStops": false,
     "editor.wordWrapColumn": 160,
+    "explorer.confirmDragAndDrop": false,
     "extensions.autoUpdate": false,
     "extensions.ignoreRecommendations": true,
     "files.associations": {
@@ -77,12 +85,14 @@
     "latex-workshop.view.pdf.viewer": "external",
     "outline.showStrings": false,
     "python.defaultInterpreterPath": "${env:PYENV_LATEST}/bin/python3",
-    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.typeCheckingMode": "strict",
     "python.formatting.provider": "black",
     "python.languageServer": "Pylance",
     "python.linting.flake8Args": [
         "--max-line-length=88"
     ],
+    "python.linting.flake8CategorySeverity.E": "Warning",
+    "python.linting.flake8CategorySeverity.F": "Warning",
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
     "python.showStartPage": false,
@@ -96,7 +106,6 @@
         "command": "/Users/watal/.rbenv/shims/rubocop"
       }
     },
-    "rust-analyzer.inlayHints.enable": false,
     "rust-analyzer.lens.enable": false,
     "spellright.configurationScope": "user",
     "spellright.documentTypes": [
@@ -112,6 +121,7 @@
     "terminal.integrated.cwd": "${workspaceFolder}",
     "terminal.integrated.defaultProfile.osx": "tmux",
     "terminal.integrated.enableFileLinks": false,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
     "terminal.integrated.enablePersistentSessions": false,
     "terminal.integrated.env.osx": {
       "VSCODE_INTEGRATED": "1",
@@ -145,14 +155,13 @@
     "workbench.activityBar.visible": false,
     "workbench.colorCustomizations": {
         "editorGutter.background": "#222",
-        "editorGutter.modifiedBackground": "#c29954",
         "editorOverviewRuler.addedForeground": "#587c0c",
         "editorOverviewRuler.deletedForeground": "#94151b",
         "editorOverviewRuler.findMatchForeground": "#999",
-        "editorOverviewRuler.modifiedForeground": "#c29954",
         "editorOverviewRuler.selectionHighlightForeground": "#444",
+        "gitDecoration.modifiedResourceForeground": "#1B81A8",
         "statusBar.background": "#333",
-        "terminal.foreground": "#aaa"
+        "terminal.foreground": "#bbb"
     },
     "workbench.iconTheme": "vscode-icons",
     "workbench.panel.defaultLocation": "right",
