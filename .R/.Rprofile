@@ -34,7 +34,7 @@ options(languageserver.formatting_style = function(options) {
   if (interactive() && Sys.getenv("RSTUDIO") == "") {
     stopifnot(dir.exists(Sys.getenv("R_LIBS_USER")))
     cran = c("tidyverse", "devtools")
-    github = c("wtl")
+    github = "wtl"
     options(
       defaultPackages = c(getOption("defaultPackages"), cran, github),
       ggplot2.continuous.colour = "viridis",
@@ -75,7 +75,9 @@ options(languageserver.formatting_style = function(options) {
 
 .Last = function() {
   if (interactive()) {
-    try(utils::savehistory(Sys.getenv("R_HISTFILE")))
+    if (!nzchar(Sys.getenv("RADIAN_VERSION"))) {
+      try(utils::savehistory(Sys.getenv("R_HISTFILE")))
+    }
     print(ls(envir = .GlobalEnv, all.names = TRUE))
     print(utils::sessionInfo(), locale = FALSE)
   }
