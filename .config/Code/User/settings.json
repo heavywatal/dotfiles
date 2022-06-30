@@ -158,6 +158,7 @@
         "editorOverviewRuler.addedForeground": "#587c0c",
         "editorOverviewRuler.deletedForeground": "#94151b",
         "editorOverviewRuler.findMatchForeground": "#999",
+        "editorOverviewRuler.infoForeground": "#114477",
         "editorOverviewRuler.selectionHighlightForeground": "#444",
         "gitDecoration.modifiedResourceForeground": "#1B81A8",
         "statusBar.background": "#333",
