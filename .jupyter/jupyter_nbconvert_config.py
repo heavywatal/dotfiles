@@ -1,1 +1,1 @@
-c.NbConvertBase.display_data_priority = ['text/plain']
+c.NbConvertBase.display_data_priority = ["text/plain"]

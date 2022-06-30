@@ -3,12 +3,12 @@
 import os
 import subprocess
 
-ignore = ['.DS_Store', '.git', '.gitignore', '.hg', '.hgignore', '.vscode']
-home = os.path.expanduser('~')
+ignore = [".DS_Store", ".git", ".gitignore", ".hg", ".hgignore", ".vscode"]
+home = os.path.expanduser("~")
 here = os.path.dirname(__file__)
 
 for x in os.listdir(here):
-    if x in ignore or not x.startswith('.'):
+    if x in ignore or not x.startswith("."):
         print(x + ": Ignored")
         continue
     destination = os.path.join(home, x)
@@ -18,5 +18,5 @@ for x in os.listdir(here):
         print(x + ": Broken link")
     else:
         cmd = ["ln", "-s", os.path.join(here, x), destination]
-        print(' '.join(cmd))
+        print(" ".join(cmd))
         subprocess.call(cmd)
