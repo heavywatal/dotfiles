@@ -96,6 +96,7 @@
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
     "python.showStartPage": false,
+    "python.testing.pytestEnabled": true,
     "r.plot.useHttpgd": false,
     "r.rmarkdown.enableCodeLens": false,
     "r.sessionWatcher": true,

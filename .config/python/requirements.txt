@@ -1,8 +1,7 @@
 arviz
-autopep8
 biopython
-cmdstanpy
 black
+cmdstanpy
 flake8
 flit
 ipython
@@ -13,9 +12,11 @@ numpy
 pandas
 Pillow
 psutil
+pytest
 requests
 scikit-learn
 scipy
 seaborn
 statsmodels
+tomli
 tqdm

@@ -102,6 +102,10 @@
         "when": "!terminalFocus"
     },
     {
+        "key": "shift+cmd+t",
+        "command": "workbench.view.testing.resetViewLocation"
+    },
+    {
         "key": "shift+ctrl+down",
         "command": "cursorColumnSelectDown",
         "when": "editorTextFocus"
