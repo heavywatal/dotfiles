@@ -20,6 +20,7 @@ options(
   dplyr.summarise.inform = FALSE,
 
   devtools.install.args = c("--no-multiarch", "--no-test-load"),
+  styler.cache = "styler-perm",
   testthat.default_check_reporter = "progress"
 )
 
@@ -61,7 +62,7 @@ options(languageserver.formatting_style = function(options) {
     })
     setHook(packageEvent("wtl", "attach"), function(...) {
       ggplot2::theme_set(wtl::theme_wtl())
-      wtl::adjust_print_options()
+      options(wtl::generate_print_options())
     })
     if (dir.exists(Sys.getenv("VSCODE_WATCHER_DIR"))) {
       Sys.setenv(TERM_PROGRAM = "vscode")  # for non-native "R terminal"
