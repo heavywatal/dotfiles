@@ -20,7 +20,7 @@ options(
   dplyr.summarise.inform = FALSE,
 
   devtools.install.args = c("--no-multiarch", "--no-test-load"),
-  styler.cache = "styler-perm",
+  styler.cache_root = "styler-perm",
   testthat.default_check_reporter = "progress"
 )
 
