@@ -98,6 +98,7 @@
     "python.linting.flake8CategorySeverity.E": "Warning",
     "python.linting.flake8CategorySeverity.F": "Warning",
     "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": "pflake8",
     "python.linting.pylintEnabled": false,
     "python.showStartPage": false,
     "python.testing.pytestEnabled": true,
