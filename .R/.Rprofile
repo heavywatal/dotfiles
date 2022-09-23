@@ -1,5 +1,5 @@
 options(
-  repos = c(CRAN = "https://cloud.r-project.org/"),
+  repos = getOption("repos", c(CRAN = "https://cloud.r-project.org")),
   menu.graphics = FALSE,
   mc.cores = parallel::detectCores(logical = FALSE),
 
@@ -32,14 +32,6 @@ options(languageserver.formatting_style = function(options) {
 
 .First = function() {
   try(suppressWarnings(readRenviron("~/.Renviron.site")))
-  if (endsWith(.Platform$pkgType, "binary")) {
-    Sys.setenv(PKG_PLATFORMS = R.version$platform)
-    options(
-      pkgType = .Platform$pkgType,
-      install.packages.check.source = "no",
-      install.packages.compile.from.source = "no"
-    )
-  }
   if (interactive() && Sys.getenv("RSTUDIO") == "") {
     stopifnot(dir.exists(Sys.getenv("R_LIBS_USER")))
     cran = c("tidyverse", "devtools")
