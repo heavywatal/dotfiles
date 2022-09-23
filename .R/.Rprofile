@@ -32,6 +32,9 @@ options(languageserver.formatting_style = function(options) {
 
 .First = function() {
   try(suppressWarnings(readRenviron("~/.Renviron.site")))
+  if (endsWith(.Platform$pkgType, "binary")) {
+    Sys.setenv(PKG_PLATFORMS = R.version$platform)
+  }
   if (interactive() && Sys.getenv("RSTUDIO") == "") {
     stopifnot(dir.exists(Sys.getenv("R_LIBS_USER")))
     cran = c("tidyverse", "devtools")
