@@ -97,6 +97,8 @@ if [ $(uname) = Darwin ]; then
     alias ql="qlmanage -p $@ >/dev/null 2>&1"
     alias ldd="otool -L"
     alias wine=/Applications/Wine.app/Contents/Resources/bin/wine
+    alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+    alias chrome-screenshot="chrome --headless --disable-gpu --screenshot --window-size=480,360"
 fi
 
 [ -f ~/.bashrc.site ] && . ~/.bashrc.site
