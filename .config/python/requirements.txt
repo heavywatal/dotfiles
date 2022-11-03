@@ -18,5 +18,5 @@ scikit-learn
 scipy
 seaborn
 statsmodels
-tomli
+tomli-w
 tqdm
