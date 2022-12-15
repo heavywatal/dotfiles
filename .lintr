@@ -4,6 +4,7 @@ linters: linters_with_tags(
     assignment_linter = NULL,
     brace_linter = NULL,
     commented_code_linter = NULL,
+    consecutive_stopifnot_linter = NULL,
     extraction_operator_linter = NULL,
     implicit_integer_linter = NULL,
     line_length_linter(120),
