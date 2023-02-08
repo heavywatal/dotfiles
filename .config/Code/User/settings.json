@@ -104,6 +104,9 @@
     "python.testing.pytestEnabled": true,
     "r.plot.useHttpgd": false,
     "r.rmarkdown.enableCodeLens": false,
+    "r.session.viewers.viewColumn": {
+      "plot": "Disable"
+    },
     "r.sessionWatcher": true,
     "ruby.format": "rubocop",
     "ruby.intellisense": "rubyLocate",
@@ -129,9 +132,6 @@
     "terminal.integrated.enableFileLinks": false,
     "terminal.integrated.enableMultiLinePasteWarning": false,
     "terminal.integrated.enablePersistentSessions": false,
-    "terminal.integrated.env.osx": {
-      "VSCODE_INTEGRATED": "1",
-    },
     "terminal.integrated.fontSize": 13,
     "terminal.integrated.lineHeight": 1.1,
     "terminal.integrated.macOptionClickForcesSelection": true,
@@ -148,8 +148,7 @@
             "icon": "terminal-tmux",
             "args": ["new-session", "-A",
               "-s", "${workspaceFolderBasename}",
-              "-c", "${workspaceFolder}",
-              "-e", "VSCODE_INTEGRATED=1"]
+              "-c", "${workspaceFolder}"]
         }
     },
     "update.mode": "manual",
@@ -170,6 +169,7 @@
         "statusBar.background": "#333",
         "terminal.foreground": "#bbb"
     },
+    "workbench.editor.openSideBySideDirection": "down",
     "workbench.iconTheme": "vscode-icons",
     "workbench.panel.defaultLocation": "right",
     "workbench.settings.enableNaturalLanguageSearch": false,

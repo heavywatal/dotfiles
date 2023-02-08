@@ -67,12 +67,8 @@ options(languageserver.formatting_style = function(options) {
       ggplot2::theme_set(wtl::theme_wtl())
       options(wtl::generate_print_options())
     })
-    if (dir.exists(Sys.getenv("VSCODE_WATCHER_DIR"))) {
-      Sys.setenv(TERM_PROGRAM = "vscode")  # for non-native "R terminal"
-      options(vsc.plot = FALSE)  # disable png viewer
-      options(vsc.view = "Active")
-      options(vsc.helpPanel = "Active")
-      source(file.path(Sys.getenv("VSCODE_WATCHER_DIR"), "init.R"))
+    if (Sys.getenv("TERM_PROGRAM") == "vscode") {
+      source("~/.vscode-R/init.R")
     }
   }
 }

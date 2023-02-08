@@ -46,15 +46,10 @@ rbenv() {
   $0 "$@"
 }
 
-tmux has-session >/dev/null 2>&1 && if [ -z "${TMUX}" ]; then
-    echo '% tmux list-sessions'
-    tmux list-sessions
-    echo '% tmux list-windows -a'
-    tmux list-windows -a
-fi
-
-if [ -n "$VSCODE_INTEGRATED" ] && [ -e "${HOME}/.vscode-R" ]; then
-  export VSCODE_WATCHER_DIR="${HOME}/.vscode-R"
+if [ -n "$TMUX" ]; then
+  eval $(tmux showenv TERM_PROGRAM)
+else
+  tmux has-session >/dev/null 2>&1 && tmux list-sessions
 fi
 
 #########1#########2#########3#########4#########5#########6#########7#########
