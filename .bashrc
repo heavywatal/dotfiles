@@ -47,7 +47,7 @@ rbenv() {
 }
 
 if [ -n "$TMUX" ]; then
-  eval $(tmux showenv TERM_PROGRAM)
+  [ -z "$SSH_CONNECTION" ] && eval $(tmux showenv TERM_PROGRAM)
 else
   tmux has-session >/dev/null 2>&1 && tmux list-sessions
 fi
