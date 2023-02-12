@@ -78,12 +78,25 @@
     },
     {
         "key": "ctrl+enter",
-        "command": "workbench.action.terminal.runSelectedText",
+        "command": "extension.multiCommand.execute",
+        "args": {
+          "sequence": [
+            "workbench.action.terminal.runSelectedText",
+            "workbench.action.focusActiveEditorGroup"
+          ]
+        },
         "when": "editorTextFocus && resourceExtname != .ipynb"
     },
     {
         "key": "cmd+enter",
-        "command": "workbench.action.terminal.runSelectedText",
+        "command": "extension.multiCommand.execute",
+        "args": {
+          "sequence": [
+            "workbench.action.terminal.runSelectedText",
+            "workbench.action.focusActiveEditorGroup",
+            "cursorDown"
+          ]
+        },
         "when": "editorTextFocus"
     },
     {
