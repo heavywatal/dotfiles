@@ -101,6 +101,7 @@
     "python.linting.flake8Path": "pflake8",
     "python.linting.pylintEnabled": false,
     "python.showStartPage": false,
+    "python.terminal.activateEnvironment": false,
     "python.testing.pytestEnabled": true,
     "r.plot.useHttpgd": false,
     "r.rmarkdown.enableCodeLens": false,
