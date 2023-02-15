@@ -46,7 +46,8 @@
     "extensions.autoUpdate": false,
     "extensions.ignoreRecommendations": true,
     "files.associations": {
-        "*.mustache": "html"
+        "*.mustache": "html",
+        "*.qmd": "rmd"
     },
     "files.autoSave": "off",
     "files.trimTrailingWhitespace": true,
