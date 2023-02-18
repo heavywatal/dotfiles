@@ -41,6 +41,7 @@
     },
     "editor.useTabStops": false,
     "editor.wordWrapColumn": 160,
+    "evenBetterToml.schema.enabled": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.excludeGitIgnore": true,
     "extensions.autoUpdate": false,
