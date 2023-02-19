@@ -27,9 +27,7 @@ if [ -n "$HOMEBREW_PREFIX" ]; then
         [ -d "$GNUBIN" ] && PATH=$GNUBIN:$PATH
     done
     unset GNUBIN
-    export HOMEBREW_NO_ANALYTICS=1
-    export HOMEBREW_NO_AUTO_UPDATE=1
-    export HOMEBREW_NO_INSTALL_CLEANUP=1
+    export HOMEBREW_NO_GOOGLE_ANALYTICS=1
     export HOMEBREW_CASK_OPTS="--no-quarantine"
 fi
 
