@@ -165,15 +165,14 @@
     "window.titleBarStyle": "native",
     "workbench.activityBar.visible": false,
     "workbench.colorCustomizations": {
-        "editorGutter.background": "#222",
+        "editorGutter.background": "#cccccc18",
         "editorOverviewRuler.addedForeground": "#587c0c",
         "editorOverviewRuler.deletedForeground": "#94151b",
-        "editorOverviewRuler.findMatchForeground": "#999",
+        "editorOverviewRuler.findMatchForeground": "#ff666666",
         "editorOverviewRuler.infoForeground": "#114477",
-        "editorOverviewRuler.selectionHighlightForeground": "#444",
+        "editorOverviewRuler.selectionHighlightBackground": "#9999ff99",
         "gitDecoration.modifiedResourceForeground": "#1B81A8",
-        "statusBar.background": "#333",
-        "terminal.foreground": "#bbb"
+        "statusBar.background": "#33333399"
     },
     "workbench.editor.openSideBySideDirection": "down",
     "workbench.iconTheme": "vscode-icons",
