@@ -37,7 +37,7 @@ options(languageserver.formatting_style = function(options) {
   }
   if (interactive() && Sys.getenv("RSTUDIO") == "") {
     stopifnot(dir.exists(Sys.getenv("R_LIBS_USER")))
-    cran = c("tidyverse", "devtools")
+    cran = c("conflicted", "tidyverse", "devtools")
     github = "wtl"
     options(
       defaultPackages = c(getOption("defaultPackages"), cran, github),
