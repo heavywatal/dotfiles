@@ -19,6 +19,9 @@ options(
   readr.show_col_types = FALSE,
   dplyr.summarise.inform = FALSE,
 
+  gargle_oauth_email = TRUE,
+  gargle_oauth_cache = TRUE,
+
   devtools.install.args = c("--no-multiarch", "--no-test-load"),
   styler.cache_root = "styler-perm",
   testthat.default_check_reporter = "progress"
