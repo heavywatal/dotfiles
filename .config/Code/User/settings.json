@@ -65,7 +65,7 @@
     "jupyter.alwaysTrustNotebooks": true,
     "jupyter.askForKernelRestart": false,
     "jupyter.disableJupyterAutoStart": true,
-    "jupyter.enableCellCodeLens": false,
+    "jupyter.interactiveWindow.codeLens.enable": false,
     "latex-workshop.latex.autoBuild.run": "never",
     "latex-workshop.latex.recipe.default": "first",
     "latex-workshop.linting.chktex.enabled": true,
@@ -105,6 +105,10 @@
     "python.showStartPage": false,
     "python.terminal.activateEnvironment": false,
     "python.testing.pytestEnabled": true,
+    "r.helpPanel.clickCodeExamples": {
+      "Click": "Ignore",
+      "Shift+Click": "Copy"
+    },
     "r.plot.useHttpgd": false,
     "r.rmarkdown.enableCodeLens": false,
     "r.session.viewers.viewColumn": {
