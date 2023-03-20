@@ -17,10 +17,14 @@ case "$(uname)" in
 esac
 
 # PATH
-for prefix in /usr/local /opt/homebrew /home/linuxbrew/.linuxbrew ~/.linuxbrew ~/.homebrew; do
-    unset HOMEBREW_SHELLENV_PREFIX
-    [ -e ${prefix}/bin/brew ] && eval $(${prefix}/bin/brew shellenv)
-done
+if [ -z "$HOMEBREW_PREFIX" ]; then
+  for prefix in /usr/local /opt/homebrew /home/linuxbrew/.linuxbrew ~/.homebrew; do
+    if [ -e ${prefix}/bin/brew ]; then
+      PATH=${PATH#${prefix}/bin:}
+      eval $(${prefix}/bin/brew shellenv)
+    fi
+  done
+fi
 if [ -n "$HOMEBREW_PREFIX" ]; then
     for formula in gnu-sed gnu-tar grep; do
         GNUBIN=${HOMEBREW_PREFIX}/opt/${formula}/libexec/gnubin
