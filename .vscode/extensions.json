@@ -2,19 +2,22 @@
   "recommendations": [
     "christian-kohler.path-intellisense",
     "felipecaputo.git-project-manager",
+    "github.vscode-github-actions",
     "golang.go",
     "ivan-bocharov.stan-vscode",
     "james-yu.latex-workshop",
     "julialang.language-julia",
+    "mechatroner.rainbow-csv",
     "ms-python.python",
     "ms-vscode.cpptools",
+    "quarto.quarto",
     "rebornix.ruby",
     "reditorsupport.r",
     "rust-lang.rust-analyzer",
+    "ryuta46.multi-command",
     "tamasfe.even-better-toml",
     "twxs.cmake",
     "vscode-icons-team.vscode-icons",
     "wdawson.better-kill-ring",
-    "wingrunr21.vscode-ruby"
   ]
 }
