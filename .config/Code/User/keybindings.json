@@ -77,15 +77,21 @@
         "when": "suggestWidgetVisible"
     },
     {
+        "key": "alt+enter",
+        "command": "workbench.action.terminal.runSelectedText",
+        "when": "editorTextFocus && resourceExtname != .ipynb"
+    },
+    {
         "key": "ctrl+enter",
         "command": "extension.multiCommand.execute",
         "args": {
           "sequence": [
             "workbench.action.terminal.runSelectedText",
-            "workbench.action.focusActiveEditorGroup"
+            "cursorDown",
+            "cursorLineStart",
           ]
         },
-        "when": "editorTextFocus && resourceExtname != .ipynb"
+        "when": "editorTextFocus"
     },
     {
         "key": "cmd+enter",
@@ -93,8 +99,8 @@
         "args": {
           "sequence": [
             "workbench.action.terminal.runSelectedText",
-            "workbench.action.focusActiveEditorGroup",
-            "cursorDown"
+            "cursorDown",
+            "cursorLineStart",
           ]
         },
         "when": "editorTextFocus"
