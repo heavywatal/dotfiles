@@ -42,17 +42,15 @@ options(languageserver.formatting_style = function(options) {
     stopifnot(dir.exists(Sys.getenv("R_LIBS_USER")))
     cran = c("conflicted", "tidyverse", "devtools")
     github = "wtl"
-    options(
-      defaultPackages = c(getOption("defaultPackages"), cran, github),
-      ggplot2.continuous.colour = "viridis",
-      ggplot2.continuous.fill = "viridis"
-    )
+    options(defaultPackages = c(getOption("defaultPackages"), cran, github))
     Sys.setenv(MAKEFLAGS = paste0("-j", min(getOption("mc.cores"), 4L)))
-    print(utils::sessionInfo(), locale = FALSE)
     setHook(packageEvent("grDevices", "onLoad"), function(...) {
-      grDevices::pdfFonts(
-        mincho = grDevices::pdfFonts()$Japan1,
-        gothic = grDevices::pdfFonts()$Japan1GothicBBB
+      grDevices::palette("Okabe-Ito")
+      options(
+        ggplot2.continuous.colour = "viridis",
+        ggplot2.continuous.fill = "viridis",
+        ggplot2.discrete.colour = grDevices::palette()[-1],
+        ggplot2.discrete.fill = grDevices::palette()[-1]
       )
       if (capabilities("aqua")) {
         grDevices::quartz.options(width = 6, height = 6)
@@ -70,6 +68,7 @@ options(languageserver.formatting_style = function(options) {
       ggplot2::theme_set(wtl::theme_wtl())
       options(wtl::generate_print_options())
     })
+    print(utils::sessionInfo(), locale = FALSE)
     if (Sys.getenv("TERM_PROGRAM") == "vscode") {
       source("~/.vscode-R/init.R")
     }
