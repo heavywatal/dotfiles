@@ -45,7 +45,6 @@
     "explorer.confirmDragAndDrop": false,
     "explorer.excludeGitIgnore": true,
     "extensions.autoUpdate": false,
-    "extensions.ignoreRecommendations": true,
     "files.associations": {
         "*.mustache": "html",
         "*.qmd": "rmd"
@@ -200,6 +199,10 @@
     },
     "[python]": {
         "editor.tabSize": 4,
+    },
+    "[quarto]": {
+        "editor.codeLens": false,
+        "editor.wordWrap": "wordWrapColumn",
     },
     "[rust]": {
         "editor.tabSize": 4,
