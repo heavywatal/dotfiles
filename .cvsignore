@@ -1,0 +1,6 @@
+._*
+.DS_Store
+.localized
+.ipynb_checkpoints/
+.pytest_cache/
+__pycache__/

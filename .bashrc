@@ -61,8 +61,6 @@ else
     alias ls='ls -FG'
 fi
 
-alias rsync='rsync --exclude-from=${HOME}/.config/rsync-exclude'
-
 alias rmi='rm -i'
 alias mvi='mv -i'
 alias cpi='cp -i'
