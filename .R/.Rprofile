@@ -40,9 +40,8 @@ options(languageserver.formatting_style = function(options) {
   }
   if (interactive() && Sys.getenv("RSTUDIO") == "") {
     stopifnot(dir.exists(Sys.getenv("R_LIBS_USER")))
-    cran = c("conflicted", "tidyverse", "devtools")
-    github = "wtl"
-    options(defaultPackages = c(getOption("defaultPackages"), cran, github))
+    cran = c("conflicted", "devtools")
+    options(defaultPackages = c(getOption("defaultPackages"), cran, "wtl"))
     Sys.setenv(MAKEFLAGS = paste0("-j", min(getOption("mc.cores"), 4L)))
     setHook(packageEvent("grDevices", "onLoad"), function(...) {
       grDevices::palette("Okabe-Ito")
@@ -68,6 +67,7 @@ options(languageserver.formatting_style = function(options) {
       ggplot2::theme_set(wtl::theme_wtl())
       options(wtl::generate_print_options())
     })
+    setHook(packageEvent("conflicted", "attach"), \(...) library(tidyverse))
     print(utils::sessionInfo(), locale = FALSE)
     if (Sys.getenv("TERM_PROGRAM") == "vscode") {
       source("~/.vscode-R/init.R")
