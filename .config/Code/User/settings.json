@@ -188,6 +188,9 @@
         "/Library/Frameworks/R.framework/Headers",
         "/usr/local/include"
     ],
+    "[csv][tsv]": {
+        "editor.stickyScroll.enabled": true
+    },
     "[go]": {
         "editor.renderWhitespace": "boundary",
         "editor.codeActionsOnSave": {
