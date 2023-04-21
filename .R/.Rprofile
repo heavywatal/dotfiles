@@ -24,14 +24,13 @@ options(
 
   devtools.install.args = c("--no-multiarch", "--no-test-load"),
   styler.cache_root = "styler-perm",
-  testthat.default_check_reporter = "progress"
+  testthat.default_check_reporter = "progress",
+  languageserver.formatting_style = function(.options) {
+    style = styler::tidyverse_style(indent_by = .options$tabSize)
+    style$token$force_assignment_op = NULL
+    style
+  }
 )
-
-options(languageserver.formatting_style = function(options) {
-  style = styler::tidyverse_style(indent_by = options$tabSize)
-  style$token$force_assignment_op = NULL
-  style
-})
 
 .First = function() {
   try(suppressWarnings(readRenviron("~/.Renviron.site")))
@@ -59,13 +58,11 @@ options(languageserver.formatting_style = function(options) {
         )
       }
     })
-    setHook(packageEvent("tibble", "attach"), function(...) {
-      registerS3method("print", "tbl_df", wtl::printdf)
-      registerS3method("print", "tbl", wtl::printdf)
-    })
     setHook(packageEvent("wtl", "attach"), function(...) {
       ggplot2::theme_set(wtl::theme_wtl())
       options(wtl::generate_print_options())
+      registerS3method("print", "tbl_df", wtl::printdf)
+      registerS3method("print", "tbl", wtl::printdf)
     })
     setHook(packageEvent("conflicted", "attach"), \(...) library(tidyverse))
     print(utils::sessionInfo(), locale = FALSE)
