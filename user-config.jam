@@ -1,3 +1,0 @@
-using clang : 14 : clang++ : <compileflags>-fPIC <cxxflags>-std=c++14 -stdlib=libc++ <linkflags>-stdlib=libc++ ;
-using darwin : 14 : g++-8 : <compileflags>-fPIC <cxxflags>-std=c++14 ;
-using gcc : 14 : g++-8 : <compileflags>-fPIC <cxxflags>-std=c++14 ;
