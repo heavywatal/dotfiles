@@ -34,7 +34,7 @@ options(
 
 .First = function() {
   try(suppressWarnings(readRenviron("~/.Renviron.site")))
-  if (endsWith(.Platform$pkgType, "binary")) {
+  if (grepl("binary", .Platform$pkgType, fixed = TRUE)) {
     Sys.setenv(PKG_PLATFORMS = R.version$platform)
   }
   if (interactive() && Sys.getenv("RSTUDIO") == "") {
