@@ -8,6 +8,22 @@ autoload -Uz +X compinit && compinit -C
 
 [ -f ~/.bashrc ] && . ~/.bashrc
 
+if [ -d ~/.fzf ]; then
+  PATH="${PATH}:${HOME}/.fzf/bin"
+  . ~/.fzf/shell/completion.zsh
+  . ~/.fzf/shell/key-bindings.zsh
+  if command -v fd >/dev/null; then
+    export FZF_CTRL_T_COMMAND='fd --hidden --follow'
+    export FZF_ALT_C_COMMAND='fd --hidden --follow --type d'
+    _fzf_compgen_path() {
+      fd --hidden --follow . "$1"
+    }
+    _fzf_compgen_dir() {
+      fd --hidden --follow --type d . "$1"
+    }
+  fi
+fi
+
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' use-cache yes
