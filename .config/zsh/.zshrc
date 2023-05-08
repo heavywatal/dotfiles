@@ -29,8 +29,6 @@ zstyle ':completion:*' use-cache yes
 zstyle ':completion:*:default' menu select=2
 zstyle ':completion:*:descriptions' format '%B%U%d%u%b'
 
-autoload -Uz is-at-least
-
 #########1#########2#########3#########4#########5#########6#########7#########
 ## Changing Directories
 
@@ -80,9 +78,7 @@ setopt LIST_PACKED
 setopt EXTENDED_GLOB
 #unsetopt GLOB_ASSIGN
 setopt GLOB_DOTS
-if is-at-least 5.2; then
-  setopt GLOB_STAR_SHORT
-fi
+setopt GLOB_STAR_SHORT 2>/dev/null
 #unsetopt GLOB_SUBST
 #unsetopt HIST_SUBST_PATTERN
 #unsetopt IGNORE_BRACES
@@ -198,7 +194,7 @@ case $(echo ${SSH_CONNECTION} | awk '{print $3}') in
 esac
 
 PWD_FS=$(stat -f -c %T $PWD 2>/dev/null)
-if is-at-least 4.3.10 && [ "$PWD_FS" != "nfs" ]; then
+if [ "$PWD_FS" != "nfs" ]; then
   autoload -Uz vcs_info
   autoload -Uz add-zsh-hook
   add-zsh-hook precmd vcs_info
