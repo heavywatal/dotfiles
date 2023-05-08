@@ -1,17 +1,16 @@
 autoload ${ZDOTDIR}/functions/*(:t)
 fpath=(${ZDOTDIR}/functions ${fpath})
 if [ -d ${HOMEBREW_PREFIX}/share/zsh-completions ]; then
-    fpath=(${HOMEBREW_PREFIX}/share/zsh-completions ${fpath})
+  fpath=(${HOMEBREW_PREFIX}/share/zsh-completions ${fpath})
 fi
 fpath=(${ZDOTDIR}/completions ${fpath})
 autoload -Uz +X compinit && compinit -C
 
 [ -f ~/.bashrc ] && . ~/.bashrc
 
-if [ -d ~/.fzf ]; then
-  PATH="${PATH}:${HOME}/.fzf/bin"
-  . ~/.fzf/shell/completion.zsh
-  . ~/.fzf/shell/key-bindings.zsh
+if [ -d ${HOMEBREW_PREFIX}/opt/fzf ]; then
+  . ${HOMEBREW_PREFIX}/opt/fzf/shell/completion.zsh
+  . ${HOMEBREW_PREFIX}/opt/fzf/shell/key-bindings.zsh
   if command -v fd >/dev/null; then
     export FZF_CTRL_T_COMMAND='fd --hidden --follow'
     export FZF_ALT_C_COMMAND='fd --hidden --follow --type d'
