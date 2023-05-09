@@ -14,7 +14,7 @@
     "editor.fontSize": 13,
     "editor.guides.indentation": false,
     "editor.inlayHints.enabled": "offUnlessPressed",
-    "editor.lineHeight": 1.1,
+    "editor.lineHeight": 1.15,
     "editor.lightbulb.enabled": false,
     "editor.minimap.enabled": false,
     "editor.occurrencesHighlight": false,
