@@ -1,0 +1,4 @@
+
+/* custom.css */
+.monaco-editor .detected-link{text-decoration:none}
+.monaco-editor .detected-link:hover{text-decoration:underline}
