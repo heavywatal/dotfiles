@@ -23,10 +23,10 @@ if [ -d ${HOMEBREW_PREFIX}/opt/fzf ]; then
   fi
 fi
 
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*' group-name ''
-zstyle ':completion:*' use-cache yes
 zstyle ':completion:*:default' menu select=2
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' use-cache yes
+zstyle ':completion:*' group-name ''
 zstyle ':completion:*:descriptions' format '%B%U%d%u%b'
 
 #########1#########2#########3#########4#########5#########6#########7#########
@@ -227,6 +227,8 @@ alias -g G='| grep'
 bindkey -e
 # fn-delete
 bindkey "^[[3~" delete-char
+# override expand-or-complete
+bindkey '^I' complete-word
 # override kill-whole-line
 bindkey "^U" backward-kill-line
 # history
