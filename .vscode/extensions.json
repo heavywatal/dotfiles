@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "charliermarsh.ruff",
     "christian-kohler.path-intellisense",
     "felipecaputo.git-project-manager",
     "github.vscode-github-actions",
