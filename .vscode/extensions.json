@@ -11,6 +11,7 @@
     "mechatroner.rainbow-csv",
     "ms-python.python",
     "ms-vscode.cpptools",
+    "pkief.material-icon-theme",
     "quarto.quarto",
     "rebornix.ruby",
     "reditorsupport.r",
@@ -18,7 +19,6 @@
     "ryuta46.multi-command",
     "tamasfe.even-better-toml",
     "twxs.cmake",
-    "vscode-icons-team.vscode-icons",
     "wdawson.better-kill-ring",
   ]
 }

@@ -175,7 +175,7 @@
         "statusBar.background": "#33333399"
     },
     "workbench.editor.openSideBySideDirection": "down",
-    "workbench.iconTheme": "vscode-icons",
+    "workbench.iconTheme": "material-icon-theme",
     "workbench.panel.defaultLocation": "right",
     "workbench.settings.enableNaturalLanguageSearch": false,
     "workbench.startupEditor": "none",
