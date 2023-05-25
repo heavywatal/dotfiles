@@ -86,6 +86,7 @@
     "latex-workshop.view.pdf.external.viewer.command": "open",
     "latex-workshop.view.pdf.viewer": "external",
     "makefile.configureOnOpen": false,
+    "material-icon-theme.hidesExplorerArrows": true,
     "outline.showArrays": false,
     "outline.showFields": false,
     "outline.showNumbers": false,
