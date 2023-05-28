@@ -1,22 +1,32 @@
-"""Symlink dotfiles to home
-"""
-import os
-import subprocess
+"""Symlink dotfiles to home."""
+from pathlib import Path
 
-ignore = [".DS_Store", ".git", ".gitignore", ".hg", ".hgignore", ".vscode"]
-home = os.path.expanduser("~")
-here = os.path.dirname(__file__)
+ignore = [".DS_Store", ".git", ".gitignore", ".vscode"]
 
-for x in os.listdir(here):
-    if x in ignore or not x.startswith("."):
-        print(x + ": Ignored")
-        continue
-    destination = os.path.join(home, x)
-    if os.path.exists(destination):
-        print(x + ": File exists")
-    elif os.path.lexists(destination):
-        print(x + ": Broken link")
+
+def _ln_s(target: Path, link: Path):
+    if link.exists():
+        print(f"{link}: File exists")
+    elif link.is_symlink():
+        print(f"Warning: {link}: Broken link")
     else:
-        cmd = ["ln", "-s", os.path.join(here, x), destination]
-        print(" ".join(cmd))
-        subprocess.call(cmd)
+        print(f"ln -s {target} {link}")
+        link.symlink_to(target)
+
+
+for x in Path(__file__).parent.iterdir():
+    if x.name in ignore or not x.name.startswith("."):
+        print(f"{x.name}: Ignored")
+    else:
+        target = x.relative_to(Path.home())
+        link = Path.home() / x.name
+        _ln_s(target, link)
+
+
+app_support = Path("~/Library/Application Support").expanduser()
+if app_support.exists():
+    xdg_config_home = Path("../../.config")
+    for x in ["Code", "ruff"]:
+        target = xdg_config_home / x
+        link = app_support / x
+        _ln_s(target, link)
