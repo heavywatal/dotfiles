@@ -159,7 +159,7 @@
     },
     "terminal.integrated.shellIntegration.history": 0,
     "update.mode": "manual",
-    "vsicons.dontShowNewVersionMessage": true,
+    "window.autoDetectColorScheme": true,
     "window.newWindowDimensions": "inherit",
     "window.openFoldersInNewWindow": "on",
     "window.title": "${activeEditorMedium}${separator}${rootName}",
@@ -207,5 +207,5 @@
     },
     "[rust]": {
         "editor.tabSize": 4,
-    }
+    },
 }
