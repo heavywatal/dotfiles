@@ -1,0 +1,2 @@
+#compdef zbat
+_files -g "*gz"
