@@ -180,16 +180,13 @@ setopt TRANSIENT_RPROMPT
 
 case $(echo ${SSH_CONNECTION} | awk '{print $3}') in
     '')
-        PCOL=white
+        PCOL=blue
         ;;
-    130.34.106.*)
-        PCOL=magenta
-        ;;
-    10.*)
-        PCOL=yellow
+    ::1 | 192.168.* | 10.*)
+        PCOL=cyan
         ;;
     *)
-        PCOL=cyan
+        PCOL=magenta
         ;;
 esac
 
