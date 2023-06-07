@@ -143,5 +143,10 @@
         "key": "shift+ctrl+up",
         "command": "cursorColumnSelectUp",
         "when": "editorTextFocus"
-    }
+    },
+    {
+      "key": "cmd+f",
+      "command": "-list.find",
+      "when": "listFocus && listSupportsFind"
+    },
 ]
