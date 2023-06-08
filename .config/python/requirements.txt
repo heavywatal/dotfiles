@@ -10,10 +10,11 @@ matplotlib
 numpy
 pandas
 Pillow
+polars
 psutil
-pyproject-flake8
 pytest
 requests
+ruff
 scikit-learn
 scipy
 seaborn
