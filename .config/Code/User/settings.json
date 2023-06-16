@@ -94,10 +94,6 @@
     "python.defaultInterpreterPath": "${env:PYENV_LATEST}/bin/python3",
     "python.analysis.typeCheckingMode": "strict",
     "python.formatting.provider": "black",
-    "python.linting.flake8Args": [
-        "--max-line-length=88"
-    ],
-    "python.linting.flake8Path": "${env:PYENV_LATEST}/bin/pflake8",
     "python.linting.pylintEnabled": false,
     "python.showStartPage": false,
     "python.terminal.activateEnvironment": false,
