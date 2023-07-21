@@ -4,13 +4,17 @@ linters: linters_with_tags(
     assignment_linter = NULL,
     brace_linter = NULL,
     commented_code_linter = NULL,
-    consecutive_stopifnot_linter = NULL,
+    consecutive_assertion_linter = NULL,
     extraction_operator_linter = NULL,
+    fixed_regex_linter = NULL,
     implicit_integer_linter = NULL,
     line_length_linter(120),
+    literal_coercion_linter = NULL,
     nonportable_path_linter = NULL,
     object_length_linter = NULL,
     object_name_linter = NULL,
     object_usage_linter = NULL,
-    pipe_continuation_linter = NULL
+    pipe_continuation_linter = NULL,
+    undesirable_function_linter = NULL,
+    unnecessary_nested_if_linter = NULL
   )
