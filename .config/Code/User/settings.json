@@ -93,8 +93,6 @@
     "outline.showVariables": false,
     "python.defaultInterpreterPath": "${env:PYENV_LATEST}/bin/python3",
     "python.analysis.typeCheckingMode": "strict",
-    "python.formatting.provider": "black",
-    "python.linting.pylintEnabled": false,
     "python.showStartPage": false,
     "python.terminal.activateEnvironment": false,
     "python.testing.pytestEnabled": true,
@@ -196,6 +194,7 @@
     },
     "[python]": {
         "editor.tabSize": 4,
+        "editor.defaultFormatter": "ms-python.black-formatter",
     },
     "[quarto]": {
         "editor.codeLens": false,
