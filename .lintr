@@ -15,6 +15,7 @@ linters: linters_with_tags(
     object_name_linter = NULL,
     object_usage_linter = NULL,
     pipe_continuation_linter = NULL,
+    sort_linter = NULL,
     undesirable_function_linter = NULL,
     unnecessary_nested_if_linter = NULL
   )
