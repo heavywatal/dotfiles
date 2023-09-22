@@ -78,7 +78,6 @@ alias clang++14='clang++ -std=c++14 -Wall -Wextra -pedantic'
 alias with-homelib='CPATH=${HOME}/local/include LIBRARY_PATH=${HOME}/local/lib64:${HOME}/local/lib LD_LIBRARY_PATH=${HOME}/local/lib64:${HOME}/local/lib'
 alias luatexmk='latexmk -lualatex'
 alias samview='samtools view -h --no-PG'
-alias samheader='samtools view -H --no-PG'
 alias tv='tidy-viewer'
 
 if [ $(uname) = Darwin ]; then
