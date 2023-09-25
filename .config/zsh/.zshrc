@@ -8,21 +8,6 @@ autoload -Uz +X compinit && compinit -C
 
 [ -f ~/.bashrc ] && . ~/.bashrc
 
-if [ -d ${HOMEBREW_PREFIX}/opt/fzf ]; then
-  . ${HOMEBREW_PREFIX}/opt/fzf/shell/completion.zsh
-  . ${HOMEBREW_PREFIX}/opt/fzf/shell/key-bindings.zsh
-  if command -v fd >/dev/null; then
-    export FZF_CTRL_T_COMMAND='fd --hidden --follow'
-    export FZF_ALT_C_COMMAND='fd --hidden --follow --type d'
-    _fzf_compgen_path() {
-      fd --hidden --follow . "$1"
-    }
-    _fzf_compgen_dir() {
-      fd --hidden --follow --type d . "$1"
-    }
-  fi
-fi
-
 zstyle ':completion:*:default' menu select=2
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' use-cache yes
@@ -231,3 +216,29 @@ bindkey "^U" backward-kill-line
 # history
 bindkey "^P" history-beginning-search-backward
 bindkey "^N" history-beginning-search-forward
+
+
+if [ -d ${HOMEBREW_PREFIX}/opt/fzf ]; then
+  if command -v fd >/dev/null; then
+    FZF_DEFAULT_COMMAND='fd --hidden --follow'
+    FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+    FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND --type d"
+    FZF_CTRL_T_OPTS="$FZF_CTRL_T_OPTS --bind 'ctrl-/:reload(eval $FZF_DEFAULT_COMMAND --type d)'"
+    FZF_CTRL_T_OPTS="$FZF_CTRL_T_OPTS --bind 'ctrl-t:reload(eval $FZF_DEFAULT_COMMAND --type f)'"
+    FZF_DEFAULT_OPTS="--preview '[ -d {} ] && lsd -al --color=always {} || bat --color=always {}'"
+    _fzf_compgen_path() {
+      eval $FZF_DEFAULT_COMMAND . "$1"
+    }
+    _fzf_compgen_dir() {
+      eval $FZF_ALT_C_COMMAND . "$1"
+    }
+  fi
+  FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --preview-window hidden,down,border-horizontal"
+  FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --bind 'ctrl-o:toggle-preview'"
+  FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window wrap"
+  . ${HOMEBREW_PREFIX}/opt/fzf/shell/completion.zsh
+  . ${HOMEBREW_PREFIX}/opt/fzf/shell/key-bindings.zsh
+  FZF_COMPLETION_TRIGGER=''
+  bindkey '^[^I' fzf-completion
+  bindkey '^I' $fzf_default_completion
+fi
