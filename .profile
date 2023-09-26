@@ -31,7 +31,6 @@ if [ -n "$HOMEBREW_PREFIX" ]; then
         [ -d "$GNUBIN" ] && PATH=$GNUBIN:$PATH
     done
     unset GNUBIN
-    export HOMEBREW_CASK_OPTS="--no-quarantine"
 fi
 
 PERL5LIBLOCAL="${HOME}/local/lib/perl5"
