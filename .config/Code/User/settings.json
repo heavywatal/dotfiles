@@ -1,6 +1,7 @@
 {
     "breadcrumbs.showStrings": false,
     "cmake.configureOnOpen": false,
+    "css.format.spaceAroundSelectorSeparator": true,
     "editor.accessibilitySupport": "off",
     "editor.autoClosingBrackets": "never",
     "editor.autoClosingQuotes": "never",
@@ -114,6 +115,7 @@
       }
     },
     "rust-analyzer.lens.enable": false,
+    "scss.format.spaceAroundSelectorSeparator": true,
     "spellright.configurationScope": "user",
     "spellright.documentTypes": [
         "latex",
