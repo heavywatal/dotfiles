@@ -114,6 +114,7 @@
         "command": "/Users/watal/.rbenv/shims/rubocop"
       }
     },
+    "ruff.lint.run": "onSave",
     "rust-analyzer.lens.enable": false,
     "scss.format.spaceAroundSelectorSeparator": true,
     "spellright.configurationScope": "user",
@@ -197,8 +198,13 @@
       "editor.insertSpaces": true
     },
     "[python]": {
-        "editor.tabSize": 4,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": false,
+            "source.organizeImports.ruff": true,
+        },
         "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 4,
     },
     "[quarto]": {
         "editor.codeLens": false,
