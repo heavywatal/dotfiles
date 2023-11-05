@@ -1,6 +1,5 @@
 arviz
 biopython
-black
 cmdstanpy
 flit
 ipython
