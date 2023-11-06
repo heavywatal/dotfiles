@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import argparse
-import subprocess
 from pathlib import Path
+from subprocess import run
 
 
 def main():
@@ -14,9 +14,9 @@ def main():
             continue
         print(f"## {str(path) + ' ':#<60}")
         git = ["git", "-C", path]
-        subprocess.run(git + ["status", "--short", "--branch"])
+        run([*git, "status", "--short", "--branch"], check=True)  # noqa: S603
         if args.pull:
-            subprocess.run(git + ["pull", "--ff-only"])
+            run([*git, "pull", "--ff-only"], check=True)  # noqa: S603
 
 
 if __name__ == "__main__":
