@@ -177,15 +177,17 @@ esac
 
 PWD_FS=$(stat -f -c %T $PWD 2>/dev/null)
 if [ "$PWD_FS" != "nfs" ]; then
-  autoload -Uz vcs_info
-  autoload -Uz add-zsh-hook
-  add-zsh-hook precmd vcs_info
-  zstyle ':vcs_info:*' enable git
-  zstyle ':vcs_info:*' check-for-changes true
-  zstyle ':vcs_info:*' unstagedstr "%F{red}*"
-  zstyle ':vcs_info:*' stagedstr "%F{green}*"
-  zstyle ':vcs_info:*' formats '%u%c[%b]'
-  zstyle ':vcs_info:*' actionformats '%u%c[%b|%a]'
+  precmd () {
+    local BRANCH STAGED UNSTAGED
+    BRANCH="$(git branch --show-current 2>/dev/null)"
+    if [ -n "$BRANCH" ]; then
+      git diff --quiet && UNSTAGED="" || UNSTAGED="%F{red}*"
+      git diff --cached --quiet && STAGED="" || STAGED="%F{green}*"
+      vcs_info_msg_0_="${UNSTAGED}${STAGED}[$BRANCH]"
+    else
+      vcs_info_msg_0_=""
+    fi
+  }
 fi
 unset PWD_FS
 
