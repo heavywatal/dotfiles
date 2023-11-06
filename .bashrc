@@ -52,6 +52,7 @@ fi
 
 if command -v lsd >/dev/null; then
     alias ls='lsd'
+    alias tree="lsd --tree --color=always"
 elif command -v gls >/dev/null; then
     alias ls='gls -vF --color=auto'
 elif ls --version >/dev/null 2>&1; then
@@ -61,12 +62,11 @@ else
     alias ls='ls -FG'
 fi
 
+alias ll="ls -l"
+alias lal="ls -al"
 alias rmi='rm -i'
 alias mvi='mv -i'
 alias cpi='cp -i'
-alias ll="ls -l"
-alias lal="ls -al"
-alias tree="lsd --tree"
 alias gd='dirs -v; read newdir; cd +"${newdir}"'  # interactive popd
 alias cgrep='grep --color=always'
 alias diffu='diff --color=always -u'
@@ -74,8 +74,6 @@ alias giff='git diff --no-index'
 alias ta="tmux -2u attach"
 alias zmux='SHELL=$(which zsh) exec tmux'
 alias r='R --quiet --no-save --no-restore-data'
-alias clang++14='clang++ -std=c++14 -Wall -Wextra -pedantic'
-alias with-homelib='CPATH=${HOME}/local/include LIBRARY_PATH=${HOME}/local/lib64:${HOME}/local/lib LD_LIBRARY_PATH=${HOME}/local/lib64:${HOME}/local/lib'
 alias luatexmk='latexmk -lualatex'
 alias samview='samtools view -h --no-PG'
 alias tv='tidy-viewer'
@@ -83,7 +81,6 @@ alias tv='tidy-viewer'
 if [ $(uname) = Darwin ]; then
     alias ql="qlmanage -p $@ >/dev/null 2>&1"
     alias ldd="otool -L"
-    alias wine=/Applications/Wine.app/Contents/Resources/bin/wine
 fi
 
 [ -f ~/.bashrc.site ] && . ~/.bashrc.site
