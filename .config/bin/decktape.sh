@@ -1,5 +1,7 @@
 #!/bin/sh
 set -eux
-HTML=${1##*/}
-PDF=${HTML%.*}.pdf
-npm run decktape $1 $PDF
+URL=$1
+PDF=${URL%%/}
+PDF=${PDF##*/}
+PDF=${PDF%.*}.pdf
+echo npm run decktape $URL $PDF
