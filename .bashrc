@@ -43,6 +43,8 @@ rbenv() {
 
 if [ -n "$TMUX" ]; then
   [ -z "$SSH_CONNECTION" ] && eval $(tmux showenv TERM_PROGRAM)
+  echo -ne "\e[1 q"
+  # workaround for tmux on vscode terminal
 else
   tmux has-session >/dev/null 2>&1 && tmux list-sessions
 fi
