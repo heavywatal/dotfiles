@@ -131,10 +131,11 @@
     "terminal.integrated.cwd": "${workspaceFolder}",
     "terminal.integrated.defaultProfile.osx": "tmux",
     "terminal.integrated.enableFileLinks": "notRemote",
-    "terminal.integrated.inheritEnv": false,
+    "terminal.integrated.enableImages": true,
     "terminal.integrated.enableMultiLinePasteWarning": false,
     "terminal.integrated.enablePersistentSessions": false,
     "terminal.integrated.fontSize": 13,
+    "terminal.integrated.inheritEnv": false,
     "terminal.integrated.lineHeight": 1.1,
     "terminal.integrated.localEchoEnabled": "off",
     "terminal.integrated.macOptionClickForcesSelection": true,
@@ -154,6 +155,8 @@
               "-c", "${workspaceFolder}"]
         }
     },
+    "terminal.integrated.scrollback": 65535,
+    "terminal.integrated.shellIntegration.decorationsEnabled": "overviewRuler",
     "terminal.integrated.shellIntegration.history": 0,
     "update.mode": "manual",
     "window.autoDetectColorScheme": true,
