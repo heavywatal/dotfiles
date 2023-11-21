@@ -1,6 +1,8 @@
 {
     "breadcrumbs.showStrings": false,
     "cmake.configureOnOpen": false,
+    "cmake.ignoreCMakeListsMissing": true,
+    "cmake.showOptionsMovedNotification": false,
     "css.format.spaceAroundSelectorSeparator": true,
     "editor.accessibilitySupport": "off",
     "editor.autoClosingBrackets": "never",
