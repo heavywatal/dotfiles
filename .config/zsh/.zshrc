@@ -178,12 +178,13 @@ esac
 PWD_FS=$(stat -f -c %T $PWD 2>/dev/null)
 if [ "$PWD_FS" != "nfs" ]; then
   precmd () {
-    local BRANCH STAGED UNSTAGED
-    BRANCH="$(git branch --show-current 2>/dev/null)"
-    if [ -n "$BRANCH" ]; then
+    local HEAD STAGED UNSTAGED
+    if HEAD="$(git branch --show-current 2>/dev/null)"; then
+      : ${HEAD:="$(git describe --tags --exact-match 2>/dev/null)"}
+      : ${HEAD:="$(git rev-parse --short HEAD)"}
       git diff --quiet && UNSTAGED="" || UNSTAGED="%F{red}*"
       git diff --cached --quiet && STAGED="" || STAGED="%F{green}*"
-      vcs_info_msg_0_="${UNSTAGED}${STAGED}[$BRANCH]"
+      vcs_info_msg_0_="${UNSTAGED}${STAGED}[$HEAD]"
     else
       vcs_info_msg_0_=""
     fi
