@@ -4,6 +4,7 @@ linters: linters_with_tags(
     assignment_linter = NULL,
     brace_linter = NULL,
     commented_code_linter = NULL,
+    conjunct_test_linter(allow_filter = "always"),
     consecutive_assertion_linter = NULL,
     extraction_operator_linter = NULL,
     fixed_regex_linter = NULL,
@@ -16,6 +17,7 @@ linters: linters_with_tags(
     object_usage_linter = NULL,
     pipe_continuation_linter = NULL,
     sort_linter = NULL,
+    string_boundary_linter = NULL,
     undesirable_function_linter = NULL,
     unnecessary_nested_if_linter = NULL
   )
