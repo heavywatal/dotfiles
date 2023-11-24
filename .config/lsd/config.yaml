@@ -1,5 +1,3 @@
 date: +%F %H:%M
-icons:
-  when: never
 indicators: true
 size: bytes
