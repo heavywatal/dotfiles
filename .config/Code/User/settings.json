@@ -30,10 +30,6 @@
     "editor.renderControlCharacters": true,
     "editor.rulers": [80, 160],
     "editor.scrollBeyondLastLine": false,
-    "editor.suggest.filterGraceful": false,
-    "editor.suggestOnTriggerCharacters": false,
-    "editor.suggestSelection": "first",
-    "editor.tabCompletion": "on",
     "editor.tabSize": 2,
     "editor.tokenColorCustomizations": {
         "comments": "#666"
