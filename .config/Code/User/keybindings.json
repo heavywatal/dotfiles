@@ -26,7 +26,10 @@
     {
         "key": "alt+cmd+p",
         "command": "-r.runAboveChunks",
-        "when": "editorTextFocus && editorLangId == 'rmd'"
+    },
+    {
+        "key": "alt+cmd+p",
+        "command": "-quarto.runPreviousCell",
     },
     {
         "key": "ctrl+tab",
