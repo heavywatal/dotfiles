@@ -20,7 +20,7 @@
     "editor.lineHeight": 1.15,
     "editor.lightbulb.enabled": false,
     "editor.minimap.enabled": false,
-    "editor.occurrencesHighlight": false,
+    "editor.occurrencesHighlight": "off",
     "editor.quickSuggestionsDelay": 500,
     "editor.quickSuggestions": {
         "other": false,
@@ -189,7 +189,7 @@
     "[go]": {
         "editor.renderWhitespace": "boundary",
         "editor.codeActionsOnSave": {
-             "source.organizeImports": false
+          "source.organizeImports": "never"
         }
     },
     "[latex]": {
@@ -200,8 +200,8 @@
     },
     "[python]": {
         "editor.codeActionsOnSave": {
-            "source.fixAll.ruff": false,
-            "source.organizeImports.ruff": true,
+          "source.fixAll.ruff": "never",
+          "source.organizeImports.ruff": "explicit"
         },
         "editor.defaultFormatter": "charliermarsh.ruff",
         "editor.formatOnSave": true,
