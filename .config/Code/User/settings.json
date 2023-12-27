@@ -13,7 +13,6 @@
     ],
     "cSpell.enableFiletypes": [
         "quarto",
-        "!r",
         "rmd",
     ],
     "css.format.spaceAroundSelectorSeparator": true,

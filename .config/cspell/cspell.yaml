@@ -30,3 +30,7 @@ ignoreRegExpList:
   - src="[^"]+
   - </u>\w+
   - \`\`\`\{.+\}
+languageSettings:
+  - languageId: r
+  - includeRegExpList:
+    - ^#' .+
