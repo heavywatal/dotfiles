@@ -128,15 +128,6 @@
     "ruff.lint.run": "onSave",
     "rust-analyzer.lens.enable": false,
     "scss.format.spaceAroundSelectorSeparator": true,
-    "spellright.configurationScope": "user",
-    "spellright.documentTypes": [
-        "latex",
-        "markdown"
-    ],
-    "spellright.language": [
-        "en"
-    ],
-    "spellright.notificationClass": "information",
     "telemetry.telemetryLevel": "off",
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.cwd": "${workspaceFolder}",
