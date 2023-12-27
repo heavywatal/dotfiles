@@ -1,0 +1,32 @@
+dictionaries:
+  - cpp
+  - css
+  - html
+  - latex
+  - python
+  - r
+  - _dev
+  - _python
+  - _rstats
+  - _science
+  - _site
+dictionaryDefinitions:
+  - name: _dev
+    path: dev.txt
+    addWords: true
+  - name: _python
+    path: python.txt
+    addWords: true
+  - name: _rstats
+    path: rstats.txt
+    addWords: true
+  - name: _science
+    path: science.txt
+    addWords: true
+  - name: _site
+    path: site.txt
+    addWords: true
+ignoreRegExpList:
+  - src="[^"]+
+  - </u>\w+
+  - \`\`\`\{.+\}
