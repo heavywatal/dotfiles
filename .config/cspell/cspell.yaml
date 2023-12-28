@@ -29,8 +29,10 @@ dictionaryDefinitions:
 ignoreRegExpList:
   - src="[^"]+
   - </u>\w+
-  - \`\`\`\{.+\}
 languageSettings:
   - languageId: r
-  - includeRegExpList:
-    - ^#' .+
+    includeRegExpList:
+      - ^#' .+
+  - languageId: rmd,quarto
+    ignoreRegExpList:
+      - \`\`\`\{.+\}
