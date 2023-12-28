@@ -30,11 +30,3 @@ if app_support.exists():
         target = xdg_config_home / x
         link = app_support / x
         _ln_s(target, link)
-
-cspell_json = Path("~/.cspell.json").expanduser()
-if cspell_json.exists():
-    print(f"{cspell_json}: File exists")
-else:
-    print(f"{cspell_json}")
-    with cspell_json.open("w") as fout:
-        fout.write('{ "import": [ "~/.config/cspell/cspell.yaml" ] }\n')
