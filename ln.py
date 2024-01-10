@@ -18,7 +18,7 @@ for x in Path(__file__).parent.iterdir():
     if x.name in ignore or not x.name.startswith("."):
         print(f"{x.name}: Ignored")
     else:
-        target = x.relative_to(Path.home())
+        target = x.relative_to(Path.home().resolve())
         link = Path.home() / x.name
         _ln_s(target, link)
 
