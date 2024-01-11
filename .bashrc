@@ -49,12 +49,13 @@ else
   tmux has-session >/dev/null 2>&1 && tmux list-sessions
 fi
 
+export LC_TERMINAL=${LC_TERMINAL:-$TERM_PROGRAM}
+
 uistyle() {
-  local UISTYLE=$(defaults read -g AppleInterfaceStyle 2>/dev/null || echo Light)
+  local UISTYLE=${1:-$(defaults read -g AppleInterfaceStyle 2>/dev/null || echo Light)}
   export DELTA_FEATURES=$UISTYLE
-  [ "$TERM_PROGRAM" = "iTerm.app" ] && echo -e "\033]50;SetProfile=${UISTYLE}\a"
+  [ "$LC_TERMINAL" = "iTerm2" ] && echo -e "\033]50;SetProfile=${UISTYLE}\a"
 }
-uistyle
 
 #########1#########2#########3#########4#########5#########6#########7#########
 ## Alias
@@ -90,6 +91,7 @@ alias tv='tidy-viewer'
 if [ $(uname) = Darwin ]; then
     alias ql="qlmanage -p $@ >/dev/null 2>&1"
     alias ldd="otool -L"
+    uistyle
 fi
 
 [ -f ~/.bashrc.site ] && . ~/.bashrc.site
