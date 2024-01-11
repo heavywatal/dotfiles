@@ -49,6 +49,12 @@ else
   tmux has-session >/dev/null 2>&1 && tmux list-sessions
 fi
 
+uistyle() {
+  local UISTYLE=$(defaults read -g AppleInterfaceStyle 2>/dev/null || echo Light)
+  [ "$TERM_PROGRAM" = "iTerm.app" ] && echo -e "\033]50;SetProfile=${UISTYLE}\a"
+}
+uistyle
+
 #########1#########2#########3#########4#########5#########6#########7#########
 ## Alias
 
