@@ -1,0 +1,10 @@
+[core]
+  pager = [ -z "$SSH_CONNECTION" ] && delta || $PAGER
+[interactive]
+  diffFilter = [ -z "$SSH_CONNECTION" ] && delta --color-only || cat -
+[delta]
+  file-decoration-style = "blue ol"
+[delta "Dark"]
+  dark = true
+[delta "Light"]
+  light = true

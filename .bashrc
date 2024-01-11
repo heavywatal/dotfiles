@@ -51,6 +51,7 @@ fi
 
 uistyle() {
   local UISTYLE=$(defaults read -g AppleInterfaceStyle 2>/dev/null || echo Light)
+  export DELTA_FEATURES=$UISTYLE
   [ "$TERM_PROGRAM" = "iTerm.app" ] && echo -e "\033]50;SetProfile=${UISTYLE}\a"
 }
 uistyle
