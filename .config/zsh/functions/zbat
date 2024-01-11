@@ -1,9 +1,5 @@
 if [ -p /dev/stdin ]; then
-  gunzip -c | bat $@
+  zstdcat - | bat $@
 else
-  if gunzip -qt -- "$1"; then
-    gunzip -c -- "$1" | bat --file-name "${1%.*gz}" ${@[@]:2}
-  else
-    bat $@
-  fi
+  zstdcat "$1" | bat --file-name "${1%.*}" ${@[@]:2}
 fi
