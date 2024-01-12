@@ -4,19 +4,22 @@ from pathlib import Path
 ignore = [".DS_Store", ".git", ".gitignore", ".vscode"]
 
 
-def _ln_s(target: Path, link: Path):
+def _ln_s(target: Path, link: Path) -> None:
     if link.exists():
-        print(f"{link}: File exists")
+        if link.is_symlink():
+            print("OK:", link.relative_to(Path.home().resolve()))
+        else:
+            print("WARNING: Not symlink:", link)
     elif link.is_symlink():
-        print(f"Warning: {link}: Broken link")
+        print("WARNING: Broken link:", link)
     else:
-        print(f"ln -s {target} {link}")
+        print("ln -s", target, link)
         link.symlink_to(target)
 
 
-for x in Path(__file__).parent.iterdir():
+for x in sorted(Path(__file__).parent.iterdir()):
     if x.name in ignore or not x.name.startswith("."):
-        print(f"{x.name}: Ignored")
+        print("# :", x.name)
     else:
         target = x.relative_to(Path.home().resolve())
         link = Path.home() / x.name
