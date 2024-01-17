@@ -1,8 +1,7 @@
 --style=header,rule,snip
 --wrap=never
 --map-syntax='*.bed:Comma Separated Values'
---map-syntax='*.gff3:Comma Separated Values'
---map-syntax='*.gff:Comma Separated Values'
+--map-syntax='*.gff*:Comma Separated Values'
 --map-syntax='*.gtf:Comma Separated Values'
 --map-syntax='*.vcf:Comma Separated Values'
 --map-syntax='*.jbrowse:JSON'
