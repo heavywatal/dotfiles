@@ -5,5 +5,6 @@
 --map-syntax='*.gff:Comma Separated Values'
 --map-syntax='*.gtf:Comma Separated Values'
 --map-syntax='*.vcf:Comma Separated Values'
+--map-syntax='*.jbrowse:JSON'
 --map-syntax='*.Rmd:Markdown'
 --map-syntax='*.qmd:Markdown'
