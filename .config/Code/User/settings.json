@@ -183,6 +183,7 @@
     "C_Cpp.default.includePath": [
         "~/local/include",
         "~/.R/library/latest/Rcpp/include",
+        "~/.R/library/latest/cpp11/include",
         "/Library/Frameworks/R.framework/Headers",
         "/usr/local/include"
     ],
