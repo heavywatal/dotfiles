@@ -7,3 +7,6 @@
 --map-syntax='*.jbrowse:JSON'
 --map-syntax='*.Rmd:Markdown'
 --map-syntax='*.qmd:Markdown'
+--map-syntax='*Renviron:Bourne Again Shell (bash)'
+--map-syntax='*Rprofile:R'
+--map-syntax='Makeconf:Makefile'
