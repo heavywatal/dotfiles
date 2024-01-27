@@ -94,4 +94,4 @@ if [ $(uname) = Darwin ]; then
     uistyle
 fi
 
-[ -f ~/.bashrc.site ] && . ~/.bashrc.site
+[ -f ~/.site.bashrc ] && . ~/.site.bashrc

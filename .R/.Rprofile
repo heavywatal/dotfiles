@@ -33,7 +33,7 @@ options(
 )
 
 .First = function() {
-  try(suppressWarnings(readRenviron("~/.Renviron.site")))
+  suppressWarnings(readRenviron("~/.site.Renviron"))
   if (grepl("binary", .Platform$pkgType, fixed = TRUE)) {
     Sys.setenv(PKG_PLATFORMS = R.version$platform)
   }
