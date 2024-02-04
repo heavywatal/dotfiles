@@ -58,6 +58,13 @@ options(
         )
       }
     })
+    setHook(packageEvent("pkgbuild", "onLoad"), function(...) {
+      compiler_flags = function(debug = FALSE) {  # r-lib/pkgload#224
+        x = "-UNDEBUG -Wall -pedantic -g -O2 -fdiagnostics-color=always"
+        c(CFLAGS = x, CXXFLAGS = x, CXX17FLAGS = x, CXX20FLAGS = x)
+      }
+      assignInNamespace("compiler_flags", compiler_flags, "pkgbuild")
+    })
     setHook(packageEvent("wtl", "attach"), function(...) {
       ggplot2::theme_set(wtl::theme_wtl())
       options(wtl::generate_print_options())
