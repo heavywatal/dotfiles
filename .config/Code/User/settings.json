@@ -58,6 +58,8 @@
     "explorer.excludeGitIgnore": true,
     "extensions.autoUpdate": false,
     "files.associations": {
+        "*.bed": "tsv",
+        "*.jbrowse": "json",
         "*.mustache": "html",
     },
     "files.autoSave": "off",
