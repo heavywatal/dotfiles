@@ -54,6 +54,9 @@ PATH=${GOPATH}/bin:$PATH
 
 PATH=${HOME}/.cargo/bin:$PATH
 
+PATH=${UCSC_KENT_BIN:=${HOME}/.ucsc-kent/bin}:$PATH
+export UCSC_KENT_BIN
+
 PATH=${HOME}/local/bin:${HOME}/.config/bin:$PATH
 export PATH
 export MANPATH
