@@ -18,7 +18,7 @@ export EDITOR=vim
 export EDOTDIR=${HOME}/.emacs.d
 
 # C-w, M-b, M-f; default: *?_-.[]~=/&;!#$%^(){}<>
-WORDCHARS='*?[]~&!#$%^(){}<>'
+WORDCHARS='*_-[]~!#$%^(){}<>'
 
 export LESS='-RSj3'
 export LESSHISTFILE=-
