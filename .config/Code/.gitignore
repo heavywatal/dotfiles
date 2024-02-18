@@ -6,6 +6,7 @@
 /code.lock
 /Cookies*
 /Crashpad*
+/DevToolsActivePort
 /databases
 /IndexedDB
 /languagepacks.json
@@ -19,6 +20,7 @@
 /shared_proto_db
 /storage.json
 /TransportSecurity
+/Trust*
 /User/gpm-recentItems.json
 /User/History
 /User/vsicons.settings.json
