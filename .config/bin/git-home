@@ -4,7 +4,7 @@ from pathlib import Path
 from subprocess import run
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("-p", "--pull", action="store_true")
     parser.add_argument("root", nargs="?", default=Path.home() / "git", type=Path)
@@ -16,7 +16,7 @@ def main():
         git = ["git", "-C", path]
         run([*git, "status", "--short", "--branch"], check=True)  # noqa: S603
         if args.pull:
-            run([*git, "pull", "--ff-only"], check=True)  # noqa: S603
+            run([*git, "pull", "--ff-only"], check=False)  # noqa: S603
 
 
 if __name__ == "__main__":
