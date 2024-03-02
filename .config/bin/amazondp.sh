@@ -1,2 +1,2 @@
 #!/bin/sh
-sed -E "s@(amazon\.[^/]+).*?/(dp|gp/product)/([^/?]+).*@\1/dp/\3@"
+sd '(amazon\.[^/]+).*?/(dp|gp/product)/([^/?]+).*' '$1/dp/$3'
