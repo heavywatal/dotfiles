@@ -137,6 +137,9 @@
     "terminal.integrated.enableImages": true,
     "terminal.integrated.enableMultiLinePasteWarning": "never",
     "terminal.integrated.enablePersistentSessions": false,
+    "terminal.integrated.env.osx": {
+        "VSCODE_WORKSPACE_FOLDER": "${workspaceFolder}",
+    },
     "terminal.integrated.fontSize": 13,
     "terminal.integrated.inheritEnv": false,
     "terminal.integrated.lineHeight": 1.1,

@@ -92,7 +92,6 @@ alias gd='dirs -v; read newdir; cd +"${newdir}"'  # interactive popd
 alias cgrep='grep --color=always'
 alias diffu='diff --color=always -u'
 alias giff='git diff --no-index'
-alias ta="tmux -2u attach"
 alias zmux='SHELL=$(which zsh) exec tmux'
 alias r='R --quiet --no-save --no-restore-data'
 alias luatexmk='latexmk -lualatex'
