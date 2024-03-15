@@ -1,0 +1,2 @@
+local WD=${VSCODE_WORKSPACE_FOLDER:-$PWD}
+tmux new-session -A -c "$WD" -s "${WD##*/}"
