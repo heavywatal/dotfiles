@@ -4,7 +4,3 @@
   diffFilter = [ -z \"$SSH_CONNECTION\" ] && delta --color-only 2>/dev/null || cat -
 [delta]
   file-decoration-style = "blue ol"
-[delta "Dark"]
-  dark = true
-[delta "Light"]
-  light = true

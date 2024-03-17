@@ -64,7 +64,6 @@ export LC_TERMINAL=${LC_TERMINAL:-$TERM_PROGRAM}
 
 uistyle() {
   local UISTYLE=${1:-$(defaults read -g AppleInterfaceStyle 2>/dev/null || echo Light)}
-  export DELTA_FEATURES=$UISTYLE
   [ "$LC_TERMINAL" = "iTerm2" ] && echo -e "\033]50;SetProfile=${UISTYLE}\a"
 }
 
