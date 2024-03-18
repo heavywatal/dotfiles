@@ -220,4 +220,4 @@ bindkey "^U" backward-kill-line
 bindkey "^P" history-beginning-search-backward
 bindkey "^N" history-beginning-search-forward
 
-command -v fzf >/dev/null && eval "$(fzf --zsh)"
+command -v fzf >/dev/null && FZF_ALT_C_COMMAND= eval "$(fzf --zsh)"

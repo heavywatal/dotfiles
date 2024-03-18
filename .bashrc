@@ -9,7 +9,7 @@ if [ -n "$BASH" ]; then
     # Do not exit with ctrl-d
     IGNOREEOF=10
 
-    command -v fzf >/dev/null && eval "$(fzf --bash)"
+    command -v fzf >/dev/null && FZF_ALT_C_COMMAND= eval "$(fzf --bash)"
 fi
 
 #########1#########2#########3#########4#########5#########6#########7#########
