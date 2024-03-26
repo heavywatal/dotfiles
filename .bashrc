@@ -57,7 +57,7 @@ if [ -n "$TMUX" ]; then
   echo -ne "\e[1 q"
   # workaround for tmux on vscode terminal
 else
-  tmux has-session >/dev/null 2>&1 && tmux list-sessions
+  tmux list-sessions 2>/dev/null
 fi
 
 export LC_TERMINAL=${LC_TERMINAL:-$TERM_PROGRAM}
