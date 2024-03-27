@@ -25,13 +25,6 @@ if [ -z "$HOMEBREW_PREFIX" ]; then
     fi
   done
 fi
-if [ -n "$HOMEBREW_PREFIX" ]; then
-    for formula in gnu-sed gnu-tar grep; do
-        GNUBIN=${HOMEBREW_PREFIX}/opt/${formula}/libexec/gnubin
-        [ -d "$GNUBIN" ] && PATH=$GNUBIN:$PATH
-    done
-    unset GNUBIN
-fi
 
 PERL5LIBLOCAL="${HOME}/local/lib/perl5"
 export PERL_CPANM_OPT="--local-lib=${PERL5LIBLOCAL}"
