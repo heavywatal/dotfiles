@@ -98,6 +98,7 @@ alias samview='samtools view -h --no-PG'
 alias tv='tidy-viewer'
 
 if [ $(uname) = Darwin ]; then
+    alias code="env -i '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code'"
     alias ql="qlmanage -p $@ >/dev/null 2>&1"
     alias ldd="otool -L"
     uistyle
