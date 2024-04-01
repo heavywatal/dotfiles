@@ -3,6 +3,7 @@ local config = {}
 
 config.check_for_updates = false
 config.window_close_confirmation = 'NeverPrompt'
+config.bypass_mouse_reporting_modifiers = 'CMD'
 
 config.font_size = 12.0
 config.font = wezterm.font_with_fallback {
