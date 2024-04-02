@@ -20,10 +20,14 @@ esac
 if [ -z "$HOMEBREW_PREFIX" ]; then
   for prefix in /usr/local /opt/homebrew /home/linuxbrew/.linuxbrew ~/.homebrew; do
     if [ -e ${prefix}/bin/brew ]; then
-      PATH=${PATH#${prefix}/bin:}
-      eval $(${prefix}/bin/brew shellenv)
+      HOMEBREW_PREFIX=$prefix
+      break
     fi
   done
+fi
+if [ -n "$HOMEBREW_PREFIX" ]; then
+  PATH=${PATH#${HOMEBREW_PREFIX}/bin:}
+  eval $(${HOMEBREW_PREFIX}/bin/brew shellenv)
 fi
 
 PERL5LIBLOCAL="${HOME}/local/lib/perl5"
