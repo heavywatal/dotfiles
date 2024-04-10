@@ -152,7 +152,7 @@
     "window.newWindowDimensions": "inherit",
     "window.openFoldersInNewWindow": "on",
     "window.title": "${activeEditorMedium}${separator}${rootName}",
-    "workbench.activityBar.location": "top",
+    "workbench.activityBar.location": "bottom",
     "workbench.colorCustomizations": {
         "editorGutter.background": "#cccccc18",
         "editorOverviewRuler.addedForeground": "#587c0c",
