@@ -1,4 +1,5 @@
 """Symlink dotfiles to home."""
+
 from pathlib import Path
 
 ignore = [".DS_Store", ".git", ".gitignore", ".vscode"]
