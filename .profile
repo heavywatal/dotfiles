@@ -27,6 +27,7 @@ if [ -z "$HOMEBREW_PREFIX" ]; then
 fi
 if [ -n "$HOMEBREW_PREFIX" ]; then
   PATH=${PATH#${HOMEBREW_PREFIX}/bin:}
+  fpath+=${HOMEBREW_PREFIX}/share/zsh/site-functions
   fpath+=${HOMEBREW_PREFIX}/share/zsh-completions
   eval $(${HOMEBREW_PREFIX}/bin/brew shellenv)
 fi
