@@ -5,7 +5,8 @@ case "$(uname)" in
     export SHELL_SESSIONS_DISABLE=1
     export BASH_SILENCE_DEPRECATION_WARNING=1
     if [ -x /usr/libexec/path_helper ]; then
-        PATH=''
+        export PATH=''
+        export MANPATH=''
         eval $(/usr/libexec/path_helper -s)
     fi
     ;;
@@ -24,8 +25,9 @@ if [ -z "$HOMEBREW_PREFIX" ]; then
       break
     fi
   done
+  unset prefix
 fi
-if [ -n "$HOMEBREW_PREFIX" ]; then
+if [ -n "$HOMEBREW_PREFIX" ] && [ -z "$HOMEBREW_NO" ]; then
   PATH=${PATH#${HOMEBREW_PREFIX}/bin:}
   fpath+=${HOMEBREW_PREFIX}/share/zsh/site-functions
   fpath+=${HOMEBREW_PREFIX}/share/zsh-completions
@@ -57,8 +59,6 @@ PATH=${UCSC_KENT_BIN:=${HOME}/.ucsc-kent/bin}:$PATH
 export UCSC_KENT_BIN
 
 PATH=${HOME}/local/bin:${HOME}/.config/bin:$PATH
-export PATH
-export MANPATH
 
 # Language
 export LANG=C
