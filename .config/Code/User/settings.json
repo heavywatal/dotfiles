@@ -146,6 +146,7 @@
     "terminal.integrated.macOptionClickForcesSelection": true,
     "terminal.integrated.scrollback": 65535,
     "terminal.integrated.shellIntegration.decorationsEnabled": "overviewRuler",
+    "terminal.integrated.shellIntegration.enabled": false,
     "terminal.integrated.shellIntegration.history": 0,
     "update.mode": "manual",
     "window.autoDetectColorScheme": true,
@@ -161,7 +162,6 @@
         "editorOverviewRuler.infoForeground": "#114477",
         "editorOverviewRuler.selectionHighlightBackground": "#9999ff99",
         "gitDecoration.modifiedResourceForeground": "#1B81A8",
-        "statusBar.background": "#33333399"
     },
     "workbench.editor.openSideBySideDirection": "down",
     "workbench.iconTheme": "material-icon-theme",
