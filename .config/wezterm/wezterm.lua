@@ -86,5 +86,14 @@ config.colors = {
     },
   },
 }
+config.keys = {
+  {
+    key = 't',
+    mods = 'CMD',
+    action = wezterm.action.SpawnCommandInNewTab {
+      cwd = wezterm.home_dir,
+    },
+  },
+}
 
 return config
