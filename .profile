@@ -28,6 +28,7 @@ if [ -z "$HOMEBREW_PREFIX" ]; then
   unset prefix
 fi
 if [ -n "$HOMEBREW_PREFIX" ] && [ -z "$HOMEBREW_NO" ]; then
+  export HOMEBREW_NO_AUTO_UPDATE=1
   PATH=${PATH#${HOMEBREW_PREFIX}/bin:}
   fpath+=${HOMEBREW_PREFIX}/share/zsh/site-functions
   fpath+=${HOMEBREW_PREFIX}/share/zsh-completions
