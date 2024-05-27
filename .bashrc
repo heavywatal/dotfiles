@@ -62,11 +62,6 @@ fi
 
 export LC_TERMINAL=${LC_TERMINAL:-$TERM_PROGRAM}
 
-uistyle() {
-  local UISTYLE=${1:-$(defaults read -g AppleInterfaceStyle 2>/dev/null || echo Light)}
-  [ "$LC_TERMINAL" = "iTerm2" ] && echo -e "\033]50;SetProfile=${UISTYLE}\a"
-}
-
 #########1#########2#########3#########4#########5#########6#########7#########
 ## Alias
 
@@ -101,7 +96,6 @@ if [ $(uname) = Darwin ]; then
     alias code="env -i '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code'"
     alias ql="qlmanage -p $@ >/dev/null 2>&1"
     alias ldd="otool -L"
-    uistyle
 fi
 
 [ -f ~/.site.bashrc ] && . ~/.site.bashrc
