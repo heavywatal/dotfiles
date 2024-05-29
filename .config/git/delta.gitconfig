@@ -1,6 +1,6 @@
 [core]
-  pager = [ -z \"$SSH_CONNECTION\" ] && delta 2>/dev/null || $PAGER
+	pager = [ -z \"$SSH_CONNECTION\" ] && delta 2>/dev/null || $PAGER
 [interactive]
-  diffFilter = [ -z \"$SSH_CONNECTION\" ] && delta --color-only 2>/dev/null || cat -
+	diffFilter = [ -z \"$SSH_CONNECTION\" ] && delta --color-only 2>/dev/null || cat -
 [delta]
-  file-decoration-style = "blue ol"
+	file-decoration-style = "blue ol"
