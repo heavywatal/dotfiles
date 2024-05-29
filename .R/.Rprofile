@@ -25,7 +25,7 @@ options(
   devtools.install.args = c("--no-multiarch", "--no-test-load"),
   styler.cache_root = "styler-perm",
   testthat.default_check_reporter = "progress",
-  languageserver.formatting_style = function(.options) {
+  languageserver.formatting_style = \(.options) {
     style = styler::tidyverse_style(indent_by = .options$tabSize)
     style$token$force_assignment_op = NULL
     style
@@ -34,15 +34,12 @@ options(
 
 .First = function() {
   suppressWarnings(readRenviron("~/.site.Renviron"))
-  if (grepl("binary", .Platform$pkgType, fixed = TRUE)) {
-    Sys.setenv(PKG_PLATFORMS = R.version$platform)
-  }
   if (interactive() && Sys.getenv("RSTUDIO") == "") {
     stopifnot(dir.exists(Sys.getenv("R_LIBS_USER")))
     cran = c("conflicted", "devtools")
     options(defaultPackages = c(getOption("defaultPackages"), cran, "wtl"))
     Sys.setenv(MAKEFLAGS = paste0("-j", min(getOption("mc.cores"), 4L)))
-    setHook(packageEvent("grDevices", "onLoad"), function(...) {
+    setHook(packageEvent("grDevices", "onLoad"), \(...) {
       grDevices::palette("Okabe-Ito")
       options(
         ggplot2.continuous.colour = "viridis",
@@ -58,14 +55,14 @@ options(
         )
       }
     })
-    setHook(packageEvent("pkgbuild", "onLoad"), function(...) {
-      compiler_flags = function(debug = FALSE) {  # r-lib/pkgload#224
+    setHook(packageEvent("pkgbuild", "onLoad"), \(...) {
+      compiler_flags = \(debug = FALSE) {  # r-lib/pkgload#224
         x = "-UNDEBUG -Wall -pedantic -g -O2 -fdiagnostics-color=always"
         c(CFLAGS = x, CXXFLAGS = x, CXX17FLAGS = x, CXX20FLAGS = x)
       }
       assignInNamespace("compiler_flags", compiler_flags, "pkgbuild")
     })
-    setHook(packageEvent("wtl", "attach"), function(...) {
+    setHook(packageEvent("wtl", "attach"), \(...) {
       ggplot2::theme_set(wtl::theme_wtl())
       options(wtl::generate_print_options())
       registerS3method("print", "tbl_df", wtl::printdf)
