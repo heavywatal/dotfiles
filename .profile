@@ -44,10 +44,10 @@ export WORKON_HOME="${HOME}/.virtualenvs"
 
 export PYENV_ROOT=${HOME}/.pyenv
 if [ -d $PYENV_ROOT ]; then
-    pyenv_versions=($(ls ${PYENV_ROOT}/versions | sort -V))
-    export PYENV_LATEST=${PYENV_ROOT}/versions/${pyenv_versions[@]: -1}
-    PATH=${PYENV_LATEST}/bin:$PATH
-    unset pyenv_versions
+    py_versions=($(ls ${PYENV_ROOT}/versions | sort -V))
+    export PY_PREFIX=${PYENV_ROOT}/versions/${py_versions[@]: -1}
+    PATH=${PY_PREFIX}/bin:$PATH
+    unset py_versions
 fi
 PATH=$(python3 -m site --user-base)/bin:$PATH
 

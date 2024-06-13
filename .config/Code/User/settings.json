@@ -104,7 +104,7 @@
     "outline.showFields": false,
     "outline.showNumbers": false,
     "outline.showVariables": false,
-    "python.defaultInterpreterPath": "${env:PYENV_LATEST}/bin/python3",
+    "python.defaultInterpreterPath": "${env:PY_PREFIX}/bin/python3",
     "python.analysis.typeCheckingMode": "strict",
     "python.showStartPage": false,
     "python.terminal.activateEnvironment": false,
