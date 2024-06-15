@@ -42,12 +42,11 @@ export PERL5LIB="${PERL5LIBLOCAL}/lib/perl5"
 export WORKON_HOME="${HOME}/.virtualenvs"
 # /usr/bin/python3 -m venv ${WORKON_HOME}/reticulate
 
-export PYENV_ROOT=${HOME}/.pyenv
-if [ -d $PYENV_ROOT ]; then
-    py_versions=($(ls ${PYENV_ROOT}/versions | sort -V))
-    export PY_PREFIX=${PYENV_ROOT}/versions/${py_versions[@]: -1}
-    PATH=${PY_PREFIX}/bin:$PATH
-    unset py_versions
+if [ -d "${RYE_HOME:=${HOME}/.rye}" ]; then
+  py_versions=($(ls "${RYE_HOME}/py" | sort -V))
+  export PY_PREFIX=${RYE_HOME}/py/${py_versions[@]: -1}
+  PATH=${PY_PREFIX}/bin:${PATH}:${RYE_HOME}/shims
+  unset py_versions
 fi
 PATH=$(python3 -m site --user-base)/bin:$PATH
 
