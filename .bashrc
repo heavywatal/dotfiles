@@ -92,6 +92,12 @@ alias luatexmk='latexmk -lualatex'
 alias samview='samtools view -h --no-PG'
 alias tv='tidy-viewer'
 
+if command -v zstd >/dev/null; then
+  alias zcat='zstdcat'
+  alias zless='zstdless'
+  alias zgrep='zstdgrep'
+fi
+
 if [ $(uname) = Darwin ]; then
     alias code="env -i '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code'"
     alias ql="qlmanage -p $@ >/dev/null 2>&1"
