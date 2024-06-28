@@ -30,7 +30,7 @@ for x in sorted(Path(__file__).resolve().parent.iterdir()):
 app_support = Path("~/Library/Application Support").expanduser()
 if app_support.exists():
     xdg_config_home = Path("../../.config")
-    for x in ["Code", "ruff"]:
+    for x in ["Code"]:
         source = xdg_config_home / x
         link = app_support / x
         _ln_s(source, link)
