@@ -34,11 +34,11 @@ options(
 
 .First = function() {
   suppressWarnings(readRenviron("~/.site.Renviron"))
+  Sys.setenv(MAKEFLAGS = paste0("-j", min(getOption("mc.cores"), 4L)))
   if (interactive() && Sys.getenv("RSTUDIO") == "") {
     stopifnot(dir.exists(Sys.getenv("R_LIBS_USER")))
     cran = c("conflicted", "devtools")
     options(defaultPackages = c(getOption("defaultPackages"), cran, "wtl"))
-    Sys.setenv(MAKEFLAGS = paste0("-j", min(getOption("mc.cores"), 4L)))
     setHook(packageEvent("grDevices", "onLoad"), \(...) {
       grDevices::palette("Okabe-Ito")
       options(
@@ -58,18 +58,19 @@ options(
     setHook(packageEvent("pkgbuild", "onLoad"), \(...) {
       compiler_flags = \(debug = FALSE) {  # r-lib/pkgload#224
         x = "-UNDEBUG -Wall -pedantic -g -O2 -fdiagnostics-color=always"
-        c(CFLAGS = x, CXXFLAGS = x, CXX17FLAGS = x, CXX20FLAGS = x)
+        f = "-g -O2"
+        c(CFLAGS = x, CXXFLAGS = x, CXX17FLAGS = x, CXX20FLAGS = x, FFLAGS = f, FCFLAGS = f)
       }
       assignInNamespace("compiler_flags", compiler_flags, "pkgbuild")
     })
+    setHook(packageEvent("conflicted", "attach"), \(...) library(tidyverse))
     setHook(packageEvent("wtl", "attach"), \(...) {
       ggplot2::theme_set(wtl::theme_wtl())
       options(wtl::generate_print_options())
       registerS3method("print", "tbl_df", wtl::printdf)
       registerS3method("print", "tbl", wtl::printdf)
+      print(utils::sessionInfo(), locale = FALSE)
     })
-    setHook(packageEvent("conflicted", "attach"), \(...) library(tidyverse))
-    print(utils::sessionInfo(), locale = FALSE)
     if (Sys.getenv("TERM_PROGRAM") == "vscode") {
       source("~/.vscode-R/init.R")
     }
