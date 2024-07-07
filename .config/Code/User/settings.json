@@ -1,5 +1,6 @@
 {
     "breadcrumbs.showStrings": false,
+    "cmake.configureOnEdit": false,
     "cmake.configureOnOpen": false,
     "cmake.ignoreCMakeListsMissing": true,
     "cmake.showOptionsMovedNotification": false,
