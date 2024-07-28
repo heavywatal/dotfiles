@@ -3,6 +3,7 @@ fpath+=${ZDOTDIR}/functions
 fpath+=${ZDOTDIR}/completions
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 autoload -Uz +X compinit && compinit -C
+compdef -d delta
 
 [ -f ~/.bashrc ] && . ~/.bashrc
 
