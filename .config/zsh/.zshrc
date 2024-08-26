@@ -5,6 +5,18 @@ source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 autoload -Uz +X compinit && compinit -C
 compdef -d delta
 
+rye() {
+  unfunction "$0"
+  eval "$(rye self completion -s zsh 2>/dev/null)"
+  $0 "$@"
+}
+
+rbenv() {
+  unfunction "$0"
+  eval "$(rbenv init -)"
+  $0 "$@"
+}
+
 [ -f ~/.bashrc ] && . ~/.bashrc
 
 zstyle ':completion:*:default' menu select=2

@@ -46,12 +46,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-rbenv() {
-  unfunction "$0"
-  eval "$(rbenv init -)"
-  $0 "$@"
-}
-
 if [ -n "$TMUX" ]; then
   [ -z "$SSH_CONNECTION" ] && eval $(tmux showenv TERM_PROGRAM)
   echo -ne "\e[1 q"
