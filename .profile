@@ -40,9 +40,8 @@ export PERL_CPANM_OPT="--local-lib=${PERL5LIBLOCAL}"
 export PERL5LIB="${PERL5LIBLOCAL}/lib/perl5"
 
 export WORKON_HOME="${HOME}/.virtualenvs"
-# /usr/bin/python3 -m venv ${WORKON_HOME}/reticulate
 
-if [ -d "${RYE_HOME:=${HOME}/.rye}" ]; then
+if [ -d "${RYE_HOME:=${HOME}/.rye}/py" ]; then
   py_versions=($(ls "${RYE_HOME}/py" | sort -V))
   export PY_PREFIX=${RYE_HOME}/py/${py_versions[@]: -1}
   PATH=${PY_PREFIX}/bin:${PATH}:${RYE_HOME}/shims
