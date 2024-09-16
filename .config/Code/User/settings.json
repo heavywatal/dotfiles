@@ -26,7 +26,7 @@
     "editor.find.autoFindInSelection": "multiline",
     "editor.find.seedSearchStringFromSelection": "never",
     "editor.folding": false,
-    "editor.fontFamily": "'Ubuntu Mono', monospace, 'Apple Color Emoji', 'UbuntuMono Nerd Font'",
+    "editor.fontFamily": "'Ubuntu Mono', 'Apple Color Emoji', 'UbuntuMono Nerd Font', monospace",
     "editor.fontSize": 13,
     "editor.guides.indentation": false,
     "editor.inlayHints.enabled": "offUnlessPressed",
