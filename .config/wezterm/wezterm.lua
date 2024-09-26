@@ -35,19 +35,17 @@ function modify_alpha(color, alpha)
   return string.format("rgba(%d %d %d %f)", r, g, b, alpha)
 end
 
-local ui_bg
-local bg
+config.color_scheme = 'Selenized White (Gogh)'
+local scheme_toml = 'selenized-white.toml'
+local ui_bg = '#f2f2f2'
 if get_appearance():find 'Dark' then
-  config.color_scheme = 'Catppuccin Mocha'
+  config.color_scheme = 'Selenized Black (Gogh)'
+  scheme_toml = 'selenized-black.toml'
   ui_bg = '#3a3a3a'
-  bg = '#1f1f1f'
-else
-  config.color_scheme = 'Catppuccin Latte'
-  ui_bg = '#f2f2f2'
-  bg = '#ffffff'
 end
-local palette = wezterm.color.get_builtin_schemes()[config.color_scheme]
-local fg = palette.foreground
+local colors, metadata = wezterm.color.load_scheme(wezterm.config_dir .. '/colors/' .. scheme_toml)
+local fg = colors.foreground
+local bg = colors.background
 
 config.window_background_opacity = 0.95
 config.window_frame = {
@@ -57,11 +55,10 @@ config.window_frame = {
     'Ubuntu',
   },
   font_size = 13,
-  active_titlebar_bg = modify_alpha(ui_bg, 0.95),
+  active_titlebar_bg = modify_alpha(ui_bg, config.window_background_opacity),
   inactive_titlebar_bg = modify_alpha(ui_bg, 0.90),
 }
 config.colors = {
-  background = bg,
   tab_bar = {
     inactive_tab_edge = 'none',
     active_tab = {
@@ -81,7 +78,7 @@ config.colors = {
       fg_color = fg,
     },
     new_tab_hover = {
-      bg_color = modify_alpha(bg, 0.4),
+      bg_color = modify_alpha(bg, 0.6),
       fg_color = fg,
     },
   },
