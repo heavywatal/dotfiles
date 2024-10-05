@@ -17,6 +17,7 @@
         "rmd",
     ],
     "css.format.spaceAroundSelectorSeparator": true,
+    "diffEditor.ignoreTrimWhitespace": false,
     "editor.accessibilitySupport": "off",
     "editor.autoClosingBrackets": "never",
     "editor.autoClosingQuotes": "never",
@@ -43,6 +44,7 @@
     "editor.renderControlCharacters": true,
     "editor.rulers": [80, 160],
     "editor.scrollBeyondLastLine": false,
+    "editor.stickyScroll.enabled": false,
     "editor.tabSize": 2,
     "editor.tokenColorCustomizations": {
         "comments": "#666"
