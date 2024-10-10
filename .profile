@@ -40,14 +40,12 @@ export PERL_CPANM_OPT="--local-lib=${PERL5LIBLOCAL}"
 export PERL5LIB="${PERL5LIBLOCAL}/lib/perl5"
 
 export WORKON_HOME="${HOME}/.virtualenvs"
-
-if [ -d "${RYE_HOME:=${HOME}/.rye}/py" ]; then
-  py_versions=($(ls "${RYE_HOME}/py" | sort -V))
-  export PY_PREFIX=${RYE_HOME}/py/${py_versions[@]: -1}
-  PATH=${PY_PREFIX}/bin:${PATH}:${RYE_HOME}/shims
-  unset py_versions
+export UV_PYTHON=3.12
+export UV_PYTHON_PREFERENCE=only-managed
+if [ -d "${PY_PREFIX:=${WORKON_HOME}/${UV_PYTHON}}" ]; then
+  export PY_PREFIX
+  PATH=${PY_PREFIX}/bin:$PATH
 fi
-PATH=$(python3 -m site --user-base)/bin:$PATH
 
 export GOPATH=${HOME}/.go
 PATH=${GOPATH}/bin:$PATH
