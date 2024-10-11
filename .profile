@@ -42,9 +42,9 @@ export PERL5LIB="${PERL5LIBLOCAL}/lib/perl5"
 export WORKON_HOME="${HOME}/.virtualenvs"
 export UV_PYTHON=3.12
 export UV_PYTHON_PREFERENCE=only-managed
-if [ -d "${PY_PREFIX:=${WORKON_HOME}/${UV_PYTHON}}" ]; then
-  export PY_PREFIX
-  PATH=${PY_PREFIX}/bin:$PATH
+if [ -d "${VIRTUAL_ENV:=${WORKON_HOME}/${UV_PYTHON}}" ]; then
+  export VIRTUAL_ENV
+  PATH=${VIRTUAL_ENV}/bin:$PATH
 fi
 
 export GOPATH=${HOME}/.go
