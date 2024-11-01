@@ -120,6 +120,7 @@
     },
     "r.plot.useHttpgd": false,
     "r.rmarkdown.enableCodeLens": false,
+    "r.session.emulateRStudioAPI": false,
     "r.session.viewers.viewColumn": {
       "plot": "Disable"
     },
