@@ -1,2 +1,4 @@
 ZDOTDIR=$HOME/.config/zsh
-. $ZDOTDIR/.zshenv
+
+# Leave unmatched patterns unchanged
+unsetopt NOMATCH
