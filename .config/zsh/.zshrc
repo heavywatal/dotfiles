@@ -1,6 +1,11 @@
 autoload ${ZDOTDIR}/functions/*(:t)
 fpath+=${ZDOTDIR}/functions
 fpath+=${ZDOTDIR}/completions
+if [ -n "$HOMEBREW_PREFIX" ] && [ -z "$HOMEBREW_NO" ]; then
+  fpath+=${HOMEBREW_PREFIX}/share/zsh/site-functions
+  fpath+=${HOMEBREW_PREFIX}/share/zsh-completions
+fi
+
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 autoload -Uz +X compinit && compinit -C
 compdef -d delta
@@ -64,6 +69,9 @@ setopt LIST_PACKED
 
 #########1#########2#########3#########4#########5#########6#########7#########
 ## Expansion and Globbing
+
+# C-w, M-b, M-f; default: *?_-.[]~=/&;!#$%^(){}<>
+WORDCHARS='*_-[]~!#$%^(){}<>'
 
 #setopt BAD_PATTERN
 #setopt BARE_GLOB_QUAL

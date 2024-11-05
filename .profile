@@ -7,7 +7,7 @@ case "$(uname)" in
     if [ -x /usr/libexec/path_helper ]; then
         export PATH=''
         export MANPATH=''
-        eval $(/usr/libexec/path_helper -s)
+        eval "$(/usr/libexec/path_helper -s)"
     fi
     ;;
   Linux)
@@ -29,10 +29,8 @@ if [ -z "$HOMEBREW_PREFIX" ]; then
 fi
 if [ -n "$HOMEBREW_PREFIX" ] && [ -z "$HOMEBREW_NO" ]; then
   export HOMEBREW_NO_AUTO_UPDATE=1
-  PATH=${PATH#${HOMEBREW_PREFIX}/bin:}
-  fpath+=${HOMEBREW_PREFIX}/share/zsh/site-functions
-  fpath+=${HOMEBREW_PREFIX}/share/zsh-completions
-  eval $(${HOMEBREW_PREFIX}/bin/brew shellenv)
+  PATH=${PATH#"${HOMEBREW_PREFIX}"/bin:}
+  eval "$("${HOMEBREW_PREFIX}"/bin/brew shellenv)"
 fi
 
 PERL5LIBLOCAL="${HOME}/local/lib/perl5"
@@ -47,7 +45,7 @@ if [ -d "${VIRTUAL_ENV:=${WORKON_HOME}/${UV_PYTHON}}" ]; then
   PATH=${VIRTUAL_ENV}/bin:$PATH
 fi
 
-export GOPATH=${HOME}/.go
+export GOPATH="${HOME}/.go"
 PATH=${GOPATH}/bin:$PATH
 
 PATH=${HOME}/.cargo/bin:$PATH

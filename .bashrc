@@ -1,15 +1,18 @@
-if [ -n "$BASH" ]; then
+#!/bin/bash
+
+[ "${-%%*i*}" ] && return 0
+
+if [ "${BASH-}" ]; then
     # Source global definitions
     [ -f /etc/bashrc ] && . /etc/bashrc
 
     # PROMPT
-    [ -z "$PS1" ] && return
-    PS1='\e[1;34m[\D{%m-%d} \A \u@\h:\w]\e[0m\n\$ '
+    PS1='\[\e[1;34m\]\D{%m-%d} \A \u@\h:\w\[\e[0m\]\n\$ '
 
     # Do not exit with ctrl-d
     IGNOREEOF=10
 
-    command -v fzf >/dev/null && FZF_ALT_C_COMMAND= eval "$(fzf --bash)"
+    command -v fzf >/dev/null && FZF_ALT_C_COMMAND='' eval "$(fzf --bash)"
 fi
 
 #########1#########2#########3#########4#########5#########6#########7#########
@@ -18,9 +21,6 @@ fi
 export PAGER=less
 export EDITOR=vim
 export EDOTDIR=${HOME}/.emacs.d
-
-# C-w, M-b, M-f; default: *?_-.[]~=/&;!#$%^(){}<>
-WORDCHARS='*_-[]~!#$%^(){}<>'
 
 export LESS='-RSj3'
 export LESSHISTFILE=-
@@ -31,12 +31,13 @@ LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:c
 export LS_COLORS
 
 FD_WALKER='fd --hidden --follow'
+export FZF_DEFAULT_OPTS
 FZF_DEFAULT_OPTS="--preview='bat --color=always {} 2>/dev/null || lsd -al --color=always {}'"
 FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --preview-window=hidden,down,border-horizontal"
 FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --bind='ctrl-l:toggle-preview'"
 FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --bind='ctrl-/:reload($FD_WALKER --type d)'"
 FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --bind='ctrl-t:reload($FD_WALKER --type f)'"
-FZF_CTRL_R_OPTS="--preview='echo {}' --preview-window=wrap"
+export FZF_CTRL_R_OPTS="--preview='echo {}' --preview-window=wrap"
 unset FD_WALKER
 
 export TEXMFHOME=${HOME}/.texmf
@@ -47,7 +48,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 if [ -n "$TMUX" ]; then
-  [ -z "$SSH_CONNECTION" ] && eval $(tmux showenv TERM_PROGRAM)
+  [ -z "$SSH_CONNECTION" ] && eval "$(tmux showenv TERM_PROGRAM)"
   echo -ne "\e[1 q"
   # workaround for tmux on vscode terminal
 else
@@ -60,6 +61,7 @@ export LC_TERMINAL=${LC_TERMINAL:-$TERM_PROGRAM}
 ## Alias
 
 if command -v lsd >/dev/null; then
+    # shellcheck disable=SC2262
     alias ls='lsd'
     alias tree="lsd --tree --color=always"
 elif command -v gls >/dev/null; then
@@ -76,7 +78,6 @@ alias lal="ls -al"
 alias rmi='rm -i'
 alias mvi='mv -i'
 alias cpi='cp -i'
-alias gd='dirs -v; read newdir; cd +"${newdir}"'  # interactive popd
 alias cgrep='grep --color=always'
 alias diffu='diff --color=always -u'
 alias giff='git diff --no-index'
@@ -92,9 +93,9 @@ if command -v zstd >/dev/null; then
   alias zgrep='zstdgrep'
 fi
 
-if [ $(uname) = Darwin ]; then
+if [ "$(uname)" = Darwin ]; then
     alias code="env -i '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code'"
-    alias ql="qlmanage -p $@ >/dev/null 2>&1"
+    alias ql="qlmanage -p"
     alias ldd="otool -L"
 fi
 
