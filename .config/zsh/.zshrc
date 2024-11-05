@@ -46,6 +46,8 @@ setopt PUSHD_TO_HOME
 #########1#########2#########3#########4#########5#########6#########7#########
 ## Completion
 
+ZLE_REMOVE_SUFFIX_CHARS=
+
 #setopt ALWAYS_LAST_PROMPT
 #unsetopt ALWAYS_TO_END
 #setopt AUTO_LIST
