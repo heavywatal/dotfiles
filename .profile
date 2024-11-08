@@ -53,6 +53,8 @@ PATH=${HOME}/.cargo/bin:$PATH
 PATH=${UCSC_KENT_BIN:=${HOME}/.ucsc-kent/bin}:$PATH
 export UCSC_KENT_BIN
 
+PATH=${XDG_BIN_HOME:-${HOME}/.local/bin}:$PATH
+
 PATH=${HOME}/local/bin:${HOME}/.config/bin:$PATH
 
 # Language
