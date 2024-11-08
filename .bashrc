@@ -41,7 +41,6 @@ export FZF_CTRL_R_OPTS="--preview='echo {}' --preview-window=wrap"
 unset FD_WALKER
 
 export TEXMFHOME=${HOME}/.texmf
-export PIP_CONFIG_FILE=${HOME}/.config/python/pip.conf
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
