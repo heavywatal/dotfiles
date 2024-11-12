@@ -56,6 +56,8 @@ fi
 
 export LC_TERMINAL=${LC_TERMINAL:-$TERM_PROGRAM}
 
+export CMAKE_EXPORT_COMPILE_COMMANDS=1
+
 #########1#########2#########3#########4#########5#########6#########7#########
 ## Alias
 

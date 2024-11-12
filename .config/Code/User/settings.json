@@ -181,6 +181,7 @@
         "/Library/Frameworks/R.framework/Headers",
         "/usr/local/include"
     ],
+    "C_Cpp.intelliSenseEngine": "disabled",
     "[csv][tsv]": {
         "editor.stickyScroll.enabled": true
     },
