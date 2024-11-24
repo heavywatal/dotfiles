@@ -4,18 +4,6 @@
     "cmake.configureOnOpen": false,
     "cmake.ignoreCMakeListsMissing": true,
     "cmake.showOptionsMovedNotification": false,
-    "cSpell.enabledLanguageIds": [
-        "jupyter",
-        "latex",
-        "markdown",
-        "plaintext",
-        "restructuredtext",
-        "text",
-    ],
-    "cSpell.enableFiletypes": [
-        "quarto",
-        "rmd",
-    ],
     "css.format.spaceAroundSelectorSeparator": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.accessibilitySupport": "off",
