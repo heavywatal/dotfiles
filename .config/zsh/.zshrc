@@ -184,18 +184,6 @@ unsetopt PROMPT_CR
 setopt PROMPT_SUBST
 setopt TRANSIENT_RPROMPT
 
-case $(echo ${SSH_CONNECTION} | awk '{print $3}') in
-    '')
-        PCOL=blue
-        ;;
-    ::1 | 192.168.* | 10.*)
-        PCOL=cyan
-        ;;
-    *)
-        PCOL=magenta
-        ;;
-esac
-
 PWD_FS=$(stat -f -c %T $PWD 2>/dev/null)
 if [ "$PWD_FS" != "nfs" ]; then
   precmd () {
@@ -213,9 +201,16 @@ if [ "$PWD_FS" != "nfs" ]; then
 fi
 unset PWD_FS
 
-PROMPT="%B%F{${PCOL}}%D{%m-%d} %T %n@%m:%~%b \${vcs_info_msg_0_}%f
+case $(echo ${SSH_CONNECTION} | awk '{print $3}') in
+    ::1 | 192.168.* | 10.* | 169.254.* | fe80:*)
+        P_COLOR=cyan ;;
+    '') P_COLOR=blue ;;
+    *)  P_COLOR=magenta ;;
+esac
+
+PROMPT="%B%F{${P_COLOR}}%D{%m-%d} %T %n@%m:%~%b \${vcs_info_msg_0_}%f
 %# "
-unset PCOL
+unset P_COLOR
 
 #########1#########2#########3#########4#########5#########6#########7#########
 # Alias
