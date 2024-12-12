@@ -4,6 +4,7 @@
     "cmake.configureOnOpen": false,
     "cmake.ignoreCMakeListsMissing": true,
     "cmake.showOptionsMovedNotification": false,
+    "codecov.coverage.enabled": false,
     "css.format.spaceAroundSelectorSeparator": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.accessibilitySupport": "off",
