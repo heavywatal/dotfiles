@@ -201,12 +201,14 @@ if [ "$PWD_FS" != "nfs" ]; then
 fi
 unset PWD_FS
 
-case $(echo ${SSH_CONNECTION} | awk '{print $3}') in
+ssh_conn=(${=SSH_CONNECTION})
+case ${ssh_conn[3]} in
     ::1 | 192.168.* | 10.* | 169.254.* | fe80:*)
         P_COLOR=cyan ;;
     '') P_COLOR=blue ;;
     *)  P_COLOR=magenta ;;
 esac
+unset ssh_conn
 
 PROMPT="%B%F{${P_COLOR}}%D{%m-%d} %T %n@%m:%~%b \${vcs_info_msg_0_}%f
 %# "
