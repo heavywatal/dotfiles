@@ -1,0 +1,12 @@
+auto-update = "off"
+background-opacity = 0.95
+font-family = "UbuntuMono Nerd Font"
+font-family = "Ubuntu Mono"
+font-family = "Hiragino Sans"
+font-size = 12
+theme = dark:catppuccin-mocha,light:catppuccin-latte
+window-height = 67
+window-width = 120
+
+keybind = ctrl+i=text:\x09
+keybind = ctrl+m=text:\x0d
