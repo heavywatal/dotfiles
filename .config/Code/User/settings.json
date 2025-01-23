@@ -139,6 +139,7 @@
     "terminal.integrated.lineHeight": 1.1,
     "terminal.integrated.localEchoEnabled": "off",
     "terminal.integrated.macOptionClickForcesSelection": true,
+    "terminal.integrated.minimumContrastRatio": 1,
     "terminal.integrated.scrollback": 65535,
     "terminal.integrated.shellIntegration.decorationsEnabled": "overviewRuler",
     "terminal.integrated.shellIntegration.enabled": false,
