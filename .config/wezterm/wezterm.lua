@@ -12,7 +12,7 @@ config.font = wezterm.font_with_fallback {
   'Hiragino Sans',
 }
 config.initial_cols = 120
-config.initial_rows = 66
+config.initial_rows = 85
 config.show_tab_index_in_tab_bar = false
 config.tab_bar_at_bottom = false
 config.tab_max_width = 32
@@ -78,7 +78,7 @@ config.colors = {
       fg_color = fg,
     },
     new_tab_hover = {
-      bg_color = modify_alpha(bg, 0.6),
+      bg_color = modify_alpha(bg, 0.8),
       fg_color = fg,
     },
   },

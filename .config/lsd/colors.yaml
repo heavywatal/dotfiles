@@ -1,6 +1,6 @@
-user: yellow
-group: dark_yellow
+user: dark_yellow
+group: grey
 size:
-  small: yellow
-  medium: yellow
-  large: dark_yellow
+  small: dark_yellow
+  medium: dark_yellow
+  large: yellow
