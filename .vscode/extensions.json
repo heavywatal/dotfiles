@@ -20,6 +20,5 @@
     "shopify.ruby-lsp",
     "tamasfe.even-better-toml",
     "twxs.cmake",
-    "wdawson.better-kill-ring",
   ]
 }

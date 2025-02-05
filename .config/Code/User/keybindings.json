@@ -1,6 +1,16 @@
 // Place your key bindings in this file to overwrite the defaults
 [
     {
+      "key": "ctrl+t",
+      "command": "-editor.action.transposeLetters",
+      "when": "textInputFocus && !editorReadonly"
+    },
+    {
+      "key": "ctrl+k",
+      "command": "-deleteAllRight",
+      "when": "textInputFocus && !editorReadonly"
+    },
+    {
         "key": "ctrl+g",
         "command": "-workbench.action.gotoLine"
     },
@@ -80,6 +90,22 @@
         "when": "suggestWidgetVisible"
     },
     {
+        "key": "ctrl+y",
+        "command": "editor.action.clipboardPasteAction",
+        "when": "inputFocus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "extension.multiCommand.execute",
+        "args": {
+          "sequence": [
+            "cursorEndSelect",
+            "editor.action.clipboardCutAction",
+          ]
+        },
+        "when": "!terminalFocus"
+    },
+    {
         "key": "alt+enter",
         "command": "workbench.action.terminal.runSelectedText",
         "when": "editorTextFocus && resourceExtname != .ipynb"
@@ -109,11 +135,6 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+t o",
-        "command": "workbench.action.terminal.focus",
-        "when": "!terminalFocus"
-    },
-    {
         "key": "ctrl+`",
         "command": "workbench.action.focusActiveEditorGroup",
         "when": "terminalFocus"
@@ -133,33 +154,8 @@
         "command": "workbench.view.testing.resetViewLocation"
     },
     {
-        "key": "shift+ctrl+down",
-        "command": "cursorColumnSelectDown",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "shift+ctrl+left",
-        "command": "cursorColumnSelectLeft",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "shift+ctrl+right",
-        "command": "cursorColumnSelectRight",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "shift+ctrl+up",
-        "command": "cursorColumnSelectUp",
-        "when": "editorTextFocus"
-    },
-    {
-      "key": "cmd+f",
-      "command": "-list.find",
-      "when": "listFocus && listSupportsFind"
-    },
-    {
       "key": "shift+enter",
       "command": "-python.execSelectionInTerminal",
-      "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+      "when": "editorTextFocus && !findInputFocussed && !isCompositeNotebook && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
     },
 ]
