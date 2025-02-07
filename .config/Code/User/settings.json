@@ -121,7 +121,6 @@
         "command": "/Users/watal/.rbenv/shims/rubocop"
       }
     },
-    "ruff.lint.run": "onSave",
     "rust-analyzer.lens.enable": false,
     "scss.format.spaceAroundSelectorSeparator": true,
     "telemetry.telemetryLevel": "off",
