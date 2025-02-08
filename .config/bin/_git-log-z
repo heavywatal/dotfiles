@@ -1,0 +1,5 @@
+#!/bin/sh
+git log -z --color=always --pretty='format:%C(auto)%h %cs% s% D%+b%x00' "$@"\
+ | sd '\n*\x00\n*([ACDMTUXB])\x00([^\x00\n]+)' '\n  $1\t$2'\
+ | sd '\n*\x00\n*(R\d+)\x00([^\x00\n]+)\x00([^\x00\n]+)' '\n  $1\t$2\t$3'\
+ | sd '\n*\x00+' '\x00'

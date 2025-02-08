@@ -1,0 +1,13 @@
+#!/bin/sh
+export GIT_PAGER="delta --paging=always"
+grep_hash="grep -z -m1 -o '[a-f0-9]\{7,\}' <<< {}"
+git_show="git show --stdin --color=always --pretty='format:%C(auto)%h %ci% an <%ae>%+D%n%B'"
+_git-log-z "$@"\
+ | fzf --read0 --ansi --layout=reverse --preview-window=75%\
+ --preview "${grep_hash} | ${git_show} | delta"\
+ --bind "return:execute(${grep_hash} | tr -d '\n' | pbcopy)+accept"\
+ --bind "ctrl-q:execute(${grep_hash} | ${git_show})"\
+ --bind "ctrl-i:reload(_git-log-z)"\
+ --bind "ctrl-l:reload(_git-log-z --name-status)"\
+ --bind "ctrl-o:reload(_git-log-z --all --graph)"\
+ --bind "ctrl-s:toggle-sort"
