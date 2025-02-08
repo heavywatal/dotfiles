@@ -4,20 +4,21 @@
 
 export FZF_DEFAULT_COMMAND='fd --strip-cwd-prefix --hidden --follow --exclude ".git"'
 export FZF_DEFAULT_OPTS="--preview-window=hidden,down,border-horizontal"
-FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --bind='ctrl-l:toggle-preview'"
-FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-FZF_CTRL_T_OPTS="--preview='bat --color=always {} 2>/dev/null || lsd -al --color=always {}'"
+FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --bind=ctrl-j:accept,ctrl-k:kill-line,?:toggle-preview"
+FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND --color=always"
+FZF_CTRL_T_OPTS="--ansi --preview='bat --color=always {} 2>/dev/null || lsd -al --color=always {}'"
 FZF_CTRL_T_OPTS="$FZF_CTRL_T_OPTS --bind='ctrl-/:reload($FZF_CTRL_T_COMMAND --type d)'"
 FZF_CTRL_T_OPTS="$FZF_CTRL_T_OPTS --bind='ctrl-t:reload($FZF_CTRL_T_COMMAND --type f)'"
 FZF_CTRL_R_OPTS="--preview='echo {}' --preview-window=wrap"
 FZF_ALT_C_COMMAND=
+FZF_COMPLETION_OPTS="--ansi"
 
 _fzf_compgen_path() {
-  fd --hidden --follow --exclude ".git" . "$1"
+  fd --color=always --hidden --follow --exclude ".git" . "$1"
 }
 
 _fzf_compgen_dir() {
-  fd --type d --hidden --follow --exclude ".git" . "$1"
+  fd --color=always --type d --hidden --follow --exclude ".git" . "$1"
 }
 
 if [ "${BASH-}" ]; then
