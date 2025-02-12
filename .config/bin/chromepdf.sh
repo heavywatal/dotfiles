@@ -1,10 +1,10 @@
 #!/bin/sh
 set -eux
 chrome="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-options=(--headless --run-all-compositor-stages-before-draw --no-pdf-header-footer)
-if [ $# -lt 2 ]; then
-  "$chrome" ${options[@]} --print-to-pdf "$1"
-else
-  "$chrome" ${options[@]} --print-to-pdf="$2" "$1"
-fi
+"$chrome" --headless\
+ --timeout=800\
+ --virtual-time-budget=800\
+ --no-pdf-header-footer\
+ --print-to-pdf="${2:-output.pdf}"\
+ "$1"
 echo "WARNING: paper size is not A4 but US letter"
