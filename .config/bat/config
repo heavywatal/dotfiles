@@ -1,5 +1,6 @@
 --style=header,rule,snip
---theme='Solarized (dark)'
+--theme-light='Solarized (light)'
+--theme-dark='Solarized (dark)'
 --wrap=never
 --map-syntax='*.bed:Comma Separated Values'
 --map-syntax='*.gff*:Comma Separated Values'
