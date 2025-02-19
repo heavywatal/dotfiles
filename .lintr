@@ -19,5 +19,5 @@ linters: linters_with_tags(
     sort_linter = NULL,
     string_boundary_linter = NULL,
     undesirable_function_linter = NULL,
-    unnecessary_nested_if_linter = NULL
+    unnecessary_nesting_linter = NULL
   )
