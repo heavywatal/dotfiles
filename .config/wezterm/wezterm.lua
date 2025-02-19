@@ -9,7 +9,9 @@ config.font_size = 12.0
 config.font = wezterm.font_with_fallback {
   'UbuntuMono Nerd Font',
   'Ubuntu Mono',
+  { family = 'Menlo', scale = 0.84 },
   'Hiragino Sans',
+  'Apple Color Emoji',
 }
 config.initial_cols = 120
 config.initial_rows = 85
