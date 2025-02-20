@@ -2,5 +2,5 @@
 if [ -z "$1" ]; then
   man bash
 else
-  man bash | less -p "^       $1 "
+  man bash | less -p "^       $1"
 fi
