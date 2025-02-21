@@ -1,6 +1,6 @@
 #!/bin/sh
 set -eux
-cd $1
+cd "$1"
 rm -r \
   CMakeCache.txt\
   CMakeFiles\
@@ -10,3 +10,4 @@ rm -r \
   Testing\
   cmake_install.cmake\
   install_manifest.txt\
+

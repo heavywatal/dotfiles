@@ -19,4 +19,4 @@ rsync -auvC\
  --include="twoBitInfo"\
  --include="wigToBigWig"\
  --exclude="*" \
- $SRC "$DST"
+ "$SRC" "$DST"

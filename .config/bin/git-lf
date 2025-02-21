@@ -2,7 +2,7 @@
 export GIT_PAGER="delta --paging=always"
 grep_hash="grep -z -m1 -o '[a-f0-9]\{7,\}' <<< {}"
 git_show="git show --stdin --color=never --pretty='format:%C(auto)%h %ci% an <%ae>%+D%n%B'"
-_git-log-z "$@"\
+_git-log-z "$@" \
  | fzf --read0 --ansi --layout=reverse --scheme=history --preview-window=bottom,75%,hidden\
  --preview "${grep_hash} | ${git_show} | delta"\
  --bind "return:execute(${grep_hash} | tr -d '\n' | pbcopy)+accept"\
