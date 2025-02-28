@@ -59,6 +59,8 @@ if [ -n "$TMUX" ]; then
   [ -z "$SSH_CONNECTION" ] && eval "$(tmux showenv TERM_PROGRAM)"
   echo -ne "\e[1 q"
   # workaround for tmux on vscode terminal
+  eval "$(tmux showenv TERM)"
+  # vim cannot understand screen-256color
 else
   tmux list-sessions 2>/dev/null
 fi
