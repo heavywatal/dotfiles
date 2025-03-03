@@ -3,6 +3,7 @@ set -x
 ls -l ~/Library/Launch* /Library/Launch*
 
 rm -f ~/Library/LaunchAgents/com.google.*
+rm -f ~/Library/LaunchAgents/mega.mac.megaupdater.plist
 rm -f /Library/Launch*/com.google.*
 rm -f /Library/Launch*/com.microsoft.*
 rm -f /Library/Launch*/us.zoom*
