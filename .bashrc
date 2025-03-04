@@ -87,17 +87,13 @@ fi
 
 alias ll="ls -l"
 alias lal="ls -al"
-alias rmi='rm -i'
-alias mvi='mv -i'
-alias cpi='cp -i'
-alias cgrep='grep --color=always'
 alias diffu='diff --color=always -u'
 alias giff='git diff --no-index'
 alias zmux='SHELL=$(which zsh) exec tmux'
 alias r='R --quiet --no-save --no-restore-data'
 alias luatexmk='latexmk -lualatex'
 alias samview='samtools view -h --no-PG'
-alias tv='tidy-viewer'
+alias eza="eza -gBF --time-style long-iso --icons=auto --color-scale=all"
 
 if command -v zstd >/dev/null; then
   alias zcat='zstdcat'
@@ -106,9 +102,8 @@ if command -v zstd >/dev/null; then
 fi
 
 if [ "$(uname)" = Darwin ]; then
-    alias code="env -i '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code'"
-    alias ql="qlmanage -p"
-    alias ldd="otool -L"
+  alias ql="qlmanage -p"
+  alias ldd="otool -L"
 fi
 
 [ -f ~/.site.bashrc ] && . ~/.site.bashrc

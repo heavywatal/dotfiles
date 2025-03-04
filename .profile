@@ -9,6 +9,7 @@ case "$(uname)" in
         export MANPATH=''
         eval "$(/usr/libexec/path_helper -s)"
     fi
+    PATH="${PATH}:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
     ;;
   Linux)
     PATH=/usr/bin:/bin
