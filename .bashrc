@@ -5,12 +5,13 @@
 export FZF_DEFAULT_COMMAND='fd --strip-cwd-prefix --hidden --follow --exclude ".git"'
 export FZF_DEFAULT_OPTS="--preview-window=hidden,down,border-horizontal"
 FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --bind=ctrl-j:accept,ctrl-k:kill-line,?:toggle-preview"
-FZF_COMPLETION_OPTS="--ansi --preview='bat --color=always {} 2>/dev/null || lsd -al --color=always {}'"
+FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --color=16"
+FZF_COMPLETION_OPTS="--ansi --preview='bat --color=always --theme=${BAT_THEME_FZF-ansi} {} 2>/dev/null || lsd -al --color=always {}'"
 FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND --color=always"
 FZF_CTRL_T_OPTS="$FZF_COMPLETION_OPTS"
 FZF_CTRL_T_OPTS="$FZF_CTRL_T_OPTS --bind='ctrl-/:reload($FZF_CTRL_T_COMMAND --type d)'"
 FZF_CTRL_T_OPTS="$FZF_CTRL_T_OPTS --bind='ctrl-t:reload($FZF_CTRL_T_COMMAND --type f)'"
-FZF_CTRL_R_OPTS="--preview='bat --color=always -pl sh <<< {2..}' --preview-window=bottom,3,wrap"
+FZF_CTRL_R_OPTS="--preview='bat --color=always --theme=${BAT_THEME_FZF-ansi} -pl sh <<< {2..}' --preview-window=bottom,3,wrap"
 FZF_ALT_C_COMMAND=
 
 _fzf_compgen_path() {

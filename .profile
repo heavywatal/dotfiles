@@ -10,6 +10,7 @@ case "$(uname)" in
         eval "$(/usr/libexec/path_helper -s)"
     fi
     PATH="${PATH}:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+    export BAT_THEME_FZF=auto:system
     ;;
   Linux)
     PATH=/usr/bin:/bin
