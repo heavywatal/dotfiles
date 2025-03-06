@@ -40,7 +40,6 @@ fi
 
 export PAGER=less
 export EDITOR=vim
-export EDOTDIR=${HOME}/.emacs.d
 
 export LESS='-RSj3'
 export LESSHISTFILE=-
