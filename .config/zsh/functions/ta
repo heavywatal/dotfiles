@@ -1,4 +1,4 @@
-if [ -n "$VSCODE_WORKSPACE_FOLDER" ]; then
+if [ "${VSCODE_WORKSPACE_FOLDER-}" ]; then
   tmux attach-session -t "${VSCODE_WORKSPACE_FOLDER##*/}"
 else
   tmux attach-session -t "${PWD##*/}" 2>/dev/null || tmux attach-session

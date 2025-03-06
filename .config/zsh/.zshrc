@@ -1,12 +1,12 @@
 autoload ${ZDOTDIR}/functions/*(:t)
 fpath+=${ZDOTDIR}/functions
 fpath+=${ZDOTDIR}/completions
-if [ -n "$HOMEBREW_PREFIX" ] && [ -z "$HOMEBREW_NO" ]; then
+if [ "${HOMEBREW_PREFIX-}" ] && [ -z "${HOMEBREW_NO-}" ]; then
   fpath+=${HOMEBREW_PREFIX}/share/zsh/site-functions
   fpath+=${HOMEBREW_PREFIX}/share/zsh-completions
 fi
+fpath+=/Applications/OrbStack.app/Contents/Resources/completions/zsh
 
-source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 autoload -Uz +X compinit && compinit -C
 compdef -d delta
 
