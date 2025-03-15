@@ -13,7 +13,7 @@ else
 fi
 export LC_TERMINAL=${LC_TERMINAL:-$TERM_PROGRAM}
 
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="${XDG_CONFIG_HOME:-${HOME}/.config}/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
