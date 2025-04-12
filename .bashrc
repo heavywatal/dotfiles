@@ -21,6 +21,7 @@ export FZF_DEFAULT_COMMAND='fd --strip-cwd-prefix --hidden --follow --exclude ".
 export FZF_DEFAULT_OPTS="--preview-window=hidden,down,border-horizontal"
 FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --bind=ctrl-j:accept,ctrl-k:kill-line,?:toggle-preview"
 FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --color=16"
+FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --tmux=top,100%,95%"
 FZF_COMPLETION_OPTS="--ansi --preview='bat --color=always --theme=${BAT_THEME_FZF-ansi} {} 2>/dev/null || lsd -al --color=always {}'"
 FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND --color=always"
 FZF_CTRL_T_OPTS="$FZF_COMPLETION_OPTS"
