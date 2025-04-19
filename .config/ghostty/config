@@ -1,12 +1,16 @@
-auto-update = "off"
 background-opacity = 0.95
 font-family = "UbuntuMono Nerd Font"
 font-family = "Ubuntu Mono"
 font-family = "Hiragino Sans"
 font-size = 12
-theme = dark:catppuccin-mocha,light:catppuccin-latte
-window-height = 67
+theme = dark:selenized-black,light:selenized-white
+adjust-cursor-thickness = 3
+working-directory = home
+window-inherit-working-directory = false
+window-height = 85
 window-width = 120
+macos-titlebar-style = tabs
+auto-update = off
 
 keybind = ctrl+i=text:\x09
 keybind = ctrl+m=text:\x0d
