@@ -1,5 +1,14 @@
 {
     "breadcrumbs.showStrings": false,
+    "clangd.fallbackFlags": [
+      "-Wall",
+      "-Wextra",
+      "-pedantic",
+      "-I${env:HOME}/local/include",
+      "-I${env:HOME}/.R/library/latest/cpp11/include",
+      "-I/Library/Frameworks/R.framework/Headers",
+      "-I/opt/homebrew/include",
+    ],
     "cmake.configureOnEdit": false,
     "cmake.configureOnOpen": false,
     "cmake.ignoreCMakeListsMissing": true,
