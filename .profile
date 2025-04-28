@@ -40,7 +40,6 @@ export PERL5LIB="${PERL5LIBLOCAL}/lib/perl5"
 
 export WORKON_HOME="${HOME}/.virtualenvs"
 export UV_PYTHON=3.13
-export UV_PYTHON_PREFERENCE=only-managed
 if [ -d "${VIRTUAL_ENV:=${WORKON_HOME}/${UV_PYTHON}}" ]; then
   export VIRTUAL_ENV
   PATH=${VIRTUAL_ENV}/bin:$PATH
