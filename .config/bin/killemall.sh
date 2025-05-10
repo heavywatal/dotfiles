@@ -18,3 +18,5 @@ if [ -e "/Applications/Amazon Music.app" ]; then
   launchctl kill SIGKILL gui/501/com.amazon.music
   launchctl bootout gui/501/com.amazon.music
 fi
+
+chmod 0000 /Applications/Dropbox.app/Contents/Resources/DropboxHelperInstaller.tgz
