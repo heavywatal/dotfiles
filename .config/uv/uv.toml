@@ -1,1 +1,2 @@
 python-preference = "only-managed"
+python-downloads = "manual"
