@@ -150,8 +150,9 @@
         "when": "!terminalFocus"
     },
     {
-        "key": "shift+cmd+t",
-        "command": "workbench.view.testing.resetViewLocation"
+      "key": "shift+cmd+s",
+      "command": "-r.runSource",
+      "when": "editorTextFocus && editorLangId == 'r'"
     },
     {
       "key": "shift+enter",
