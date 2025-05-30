@@ -85,21 +85,12 @@
     "latex-workshop.latex.autoBuild.run": "never",
     "latex-workshop.latex.recipe.default": "first",
     "latex-workshop.linting.chktex.enabled": true,
-    "latex-workshop.linting.chktex.exec.args": ["-wall", "-n22", "-n30", "-n46", "-e16", "-q"],
+    "latex-workshop.linting.chktex.exec.args": ["-wall", "-n19", "-n22", "-n30", "-n46", "-e16", "-q"],
     "latex-workshop.message.error.show": false,
     "latex-workshop.message.warning.show": false,
-    "latex-workshop.view.pdf.external.synctex.args": [
-        "-r",
-        "%LINE%",
-        "%PDF%",
-        "%TEX%"
-    ],
+    "latex-workshop.view.pdf.external.synctex.args": ["-r", "%LINE%", "%PDF%", "%TEX%"],
     "latex-workshop.view.pdf.external.synctex.command": "displayline",
-    "latex-workshop.view.pdf.external.viewer.args": [
-        "-a",
-        "Skim",
-        "%PDF%"
-    ],
+    "latex-workshop.view.pdf.external.viewer.args": ["-a", "Skim", "%PDF%"],
     "latex-workshop.view.pdf.external.viewer.command": "open",
     "latex-workshop.view.pdf.viewer": "external",
     "makefile.configureOnOpen": false,
