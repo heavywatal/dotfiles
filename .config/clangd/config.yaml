@@ -2,6 +2,6 @@ If:
   PathMatch: .*
 CompileFlags:
   Add:
-  - -std=c++17
-  - --include-directory=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/
-  - --include-directory=/Library/Frameworks/R.framework/Headers/
+    - -std=c++17
+    - --include-directory=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/
+    - --include-directory=/Library/Frameworks/R.framework/Headers/
