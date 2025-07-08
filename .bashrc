@@ -27,7 +27,9 @@ FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND --color=always"
 FZF_CTRL_T_OPTS="$FZF_COMPLETION_OPTS"
 FZF_CTRL_T_OPTS="$FZF_CTRL_T_OPTS --bind='ctrl-/:reload($FZF_CTRL_T_COMMAND --type d)'"
 FZF_CTRL_T_OPTS="$FZF_CTRL_T_OPTS --bind='ctrl-t:reload($FZF_CTRL_T_COMMAND --type f)'"
+# shellcheck disable=SC2034
 FZF_CTRL_R_OPTS="--preview='bat --color=always --theme=${BAT_THEME_FZF-ansi} -pl sh <<< {2..}' --preview-window=bottom,3,wrap"
+# shellcheck disable=SC2034
 FZF_ALT_C_COMMAND=
 
 _fzf_compgen_path() {
@@ -39,8 +41,8 @@ _fzf_compgen_dir() {
 }
 
 
+# shellcheck disable=SC2262
 if command -v lsd >/dev/null; then
-    # shellcheck disable=SC2262
     alias ls='lsd'
     alias tree="lsd --tree --color=always"
 elif command -v gls >/dev/null; then
