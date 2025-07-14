@@ -38,8 +38,8 @@ PERL5LIBLOCAL="${HOME}/local/lib/perl5"
 export PERL_CPANM_OPT="--local-lib=${PERL5LIBLOCAL}"
 export PERL5LIB="${PERL5LIBLOCAL}/lib/perl5"
 
+UV_PYTHON=3.13
 export WORKON_HOME="${HOME}/.virtualenvs"
-export UV_PYTHON=3.13
 if [ -d "${VIRTUAL_ENV:=${WORKON_HOME}/${UV_PYTHON}}" ]; then
   export VIRTUAL_ENV
   PATH=${VIRTUAL_ENV}/bin:$PATH
