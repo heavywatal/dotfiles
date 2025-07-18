@@ -44,6 +44,7 @@ if [ -d "${VIRTUAL_ENV:=${WORKON_HOME}/${UV_PYTHON}}" ]; then
   export VIRTUAL_ENV
   PATH=${VIRTUAL_ENV}/bin:$PATH
 fi
+export UV_PYTHON_INSTALL_BIN=0
 
 export GOPATH="${HOME}/.go"
 PATH=${GOPATH}/bin:$PATH
