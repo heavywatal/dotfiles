@@ -59,6 +59,7 @@
     "explorer.confirmDragAndDrop": false,
     "explorer.excludeGitIgnore": true,
     "extensions.autoUpdate": false,
+    "extensions.ignoreRecommendations": true,
     "files.associations": {
         "*.bed": "tsv",
         "*.jbrowse": "json",
@@ -75,6 +76,7 @@
     "go.formatTool": "gofmt",
     "html.autoClosingTags": false,
     "html.autoCreateQuotes": false,
+    "json.format.keepLines": true,
     "julia.enableTelemetry": false,
     "julia.enableCrashReporter": false,
     "julia.symbolCacheDownload": false,
@@ -209,6 +211,7 @@
     "workbench.panel.defaultLocation": "right",
     "workbench.settings.enableNaturalLanguageSearch": false,
     "workbench.startupEditor": "none",
+    "C_Cpp.autoAddFileAssociations": false,
     "C_Cpp.default.includePath": [
         "~/local/include",
         "~/.R/library/latest/Rcpp/include",
