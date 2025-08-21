@@ -1,14 +1,17 @@
 
-# 🎨 :art: Improve structure/format of the code
-# ⚡️ :zap: Improve performance
-# ✨ :sparkles: Introduce new features
-# 💥 :boom: Introduce breaking changes
-# 🔥 :fire: Remove code or files
-# 🐛 :bug: Fix a bug
-# 🚧 :construction: Work in progress
-# 🔧 :wrench: Change configuration
-# 💄 :lipstick: Update styles
-# ✅ :white_check_mark: Configure tests and CI build
-# 📝 :memo: Write docs
-# ⬆️ :arrow_up: Update dependencies
-# 🔖 :bookmark: Bump version [ci skip]
+# fix: Bug fixes → PATCH version
+# feat: New features → MINOR version
+# feat!: Breaking changes → MAJOR version
+# perf: Performance improvements
+# refactor: Potential improvements suggested by linters
+# style: Cosmetic changes suggested by formatters
+# docs: Documentation
+# test: Tests
+# build: Build configurations and external dependencies
+# ci: Continuous integration
+# chore: Miscellaneous changes
+
+# <type>(<scope>)!: <subject> [ci skip]
+#
+# BREAKING CHANGE: <description>
+# Closes/Fixes/Resolves #0
