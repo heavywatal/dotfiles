@@ -13,9 +13,11 @@ case "$(uname)" in
     export BAT_THEME_FZF=auto:system
     ;;
   Linux)
-    PATH=/usr/bin:/bin
-    [ -f /etc/environment ] && . /etc/environment
-    [ -f /etc/profile ] && . /etc/profile
+    if [ -z "${BASH-}" ]; then
+      PATH=/usr/bin:/bin
+      [ -f /etc/environment ] && . /etc/environment
+      [ -f /etc/profile ] && . /etc/profile
+    fi
     ;;
 esac
 
