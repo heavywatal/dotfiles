@@ -1,16 +1,18 @@
 background-opacity = 0.95
-font-family = "UbuntuMono Nerd Font"
 font-family = "Ubuntu Mono"
-font-family = "Hiragino Sans"
 font-size = 12
 theme = dark:selenized-black,light:selenized-white
 adjust-cursor-thickness = 3
 working-directory = home
 window-inherit-working-directory = false
 window-height = 85
-window-width = 120
+window-width = 145
+quick-terminal-size = 50%
+quick-terminal-position = left
+quick-terminal-animation-duration = 0.1
 macos-titlebar-style = tabs
 auto-update = off
 
 keybind = ctrl+i=text:\x09
 keybind = ctrl+m=text:\x0d
+keybind = global:command+escape=toggle_quick_terminal
