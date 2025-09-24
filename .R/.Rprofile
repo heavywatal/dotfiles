@@ -40,13 +40,6 @@ options(
     cran = c("conflicted", "devtools")
     options(defaultPackages = c(getOption("defaultPackages"), cran, "wtl"))
     setHook(packageEvent("grDevices", "onLoad"), \(...) {
-      grDevices::palette("Okabe-Ito")
-      options(
-        ggplot2.continuous.colour = "viridis",
-        ggplot2.continuous.fill = "viridis",
-        ggplot2.discrete.colour = grDevices::palette()[-1],
-        ggplot2.discrete.fill = grDevices::palette()[-1]
-      )
       if (capabilities("aqua")) {
         grDevices::quartz.options(width = 6, height = 6)
         grDevices::quartzFonts(
