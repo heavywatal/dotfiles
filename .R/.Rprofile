@@ -49,10 +49,10 @@ options(
       }
     })
     setHook(packageEvent("pkgbuild", "onLoad"), \(...) {
-      compiler_flags = \(debug = FALSE) {  # r-lib/pkgload#224
-        x = "-UNDEBUG -Wall -pedantic -g -O2 -fdiagnostics-color=always"
-        f = "-g -O2"
-        c(CFLAGS = x, CXXFLAGS = x, CXX17FLAGS = x, CXX20FLAGS = x, FFLAGS = f, FCFLAGS = f)
+      compiler_flags = \(debug) { # r-lib/pkgload#224
+        x = "-Wall -pedantic -fdiagnostics-color=always"
+        if (debug) x = paste("-UNDEBUG -g", x)
+        c(CFLAGS = x, CXXFLAGS = x, CXX17FLAGS = x, CXX20FLAGS = x)
       }
       assignInNamespace("compiler_flags", compiler_flags, "pkgbuild")
     })
