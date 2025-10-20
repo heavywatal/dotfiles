@@ -69,7 +69,6 @@ export EDITOR=vim
 export PAGER=less
 export LESS='-RSj3'
 export LESSHISTFILE=-
-export BAT_PAGER="less $LESS"
 
 . ~/.config/dircolors/ls_colors.sh 2>/dev/null || :
 export LSCOLORS='ExGxcxdxCxegedabagacadah'
