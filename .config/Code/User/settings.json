@@ -108,7 +108,7 @@
     "python.testing.pytestEnabled": true,
     "r.helpPanel.clickCodeExamples": {
       "Click": "Ignore",
-      "Shift+Click": "Copy"
+      "Ctrl+Click": "Ignore"
     },
     "r.plot.useHttpgd": false,
     "r.rmarkdown.enableCodeLens": false,
