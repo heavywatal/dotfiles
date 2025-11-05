@@ -67,6 +67,11 @@
     },
     "files.autoSave": "off",
     "files.trimTrailingWhitespace": true,
+    "files.trimTrailingWhitespaceInRegexAndStrings": false,
+    "github.copilot.enable": {
+      "*": true
+    },
+    "github.copilot.nextEditSuggestions.enabled": true,
     "gitProjectManager.baseProjectsFolders": [
         "~/git"
     ],
