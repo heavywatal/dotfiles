@@ -16,12 +16,6 @@ uv() {
   $0 "$@"
 }
 
-mise() {
-  unfunction "$0"
-  eval "$($0 activate zsh)"
-  $0 "$@"
-}
-
 rbenv() {
   unfunction "$0"
   eval "$(rbenv init -)"
