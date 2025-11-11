@@ -125,13 +125,8 @@
     "remote.autoForwardPorts": false,
     "remote.restoreForwardedPorts": false,
     "remote.forwardOnOpen": false,
-    "ruby.format": "rubocop",
-    "ruby.intellisense": "rubyLocate",
-    "ruby.lint": {
-      "rubocop": {
-        "command": "/Users/watal/.rbenv/shims/rubocop"
-      }
-    },
+    "rubyLsp.formatter": "standard",
+    "rubyLsp.linters": ["standard"],
     "rust-analyzer.lens.enable": false,
     "scss.format.spaceAroundSelectorSeparator": true,
     "telemetry.telemetryLevel": "off",
@@ -252,6 +247,9 @@
     "[quarto]": {
         "editor.codeLens": false,
         "editor.wordWrap": "wordWrapColumn",
+    },
+    "[ruby]": {
+      "editor.defaultFormatter": "Shopify.ruby-lsp",
     },
     "[rust]": {
         "editor.tabSize": 4,

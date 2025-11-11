@@ -16,12 +16,6 @@ uv() {
   $0 "$@"
 }
 
-rbenv() {
-  unfunction "$0"
-  eval "$(rbenv init -)"
-  $0 "$@"
-}
-
 [ -f ~/.bashrc ] && . ~/.bashrc
 
 zstyle ':completion:*:default' menu select=2
