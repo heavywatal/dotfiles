@@ -13,10 +13,6 @@ else
 fi
 export LC_TERMINAL=${LC_TERMINAL:-$TERM_PROGRAM}
 
-export NVM_DIR="${XDG_CONFIG_HOME:-${HOME}/.config}/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
 export FZF_DEFAULT_COMMAND='fd --strip-cwd-prefix --hidden --follow --exclude ".git"'
 export FZF_DEFAULT_OPTS="--preview-window=hidden,down,border-horizontal"
 FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --bind=ctrl-j:accept,ctrl-k:kill-line,?:toggle-preview"
