@@ -149,6 +149,7 @@
     "terminal.integrated.shellIntegration.decorationsEnabled": "overviewRuler",
     "terminal.integrated.shellIntegration.enabled": false,
     "terminal.integrated.shellIntegration.history": 0,
+    "terminal.integrated.tabs.enabled": false,
     "update.mode": "manual",
     "window.autoDetectColorScheme": true,
     "window.newWindowDimensions": "inherit",
