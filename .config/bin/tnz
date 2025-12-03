@@ -1,0 +1,3 @@
+#!/bin/dash
+WD=${VSCODE_WORKSPACE_FOLDER:-$PWD}
+SHELL=$(which zsh) tmux new-session -A -c "$WD" -s "${WD##*/}"
