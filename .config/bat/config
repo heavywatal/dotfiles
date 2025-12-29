@@ -1,4 +1,3 @@
---pager=builtin
 --style=header,rule,snip
 --theme-light='Solarized (light)'
 --theme-dark='Solarized (dark)'
