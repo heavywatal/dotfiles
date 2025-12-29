@@ -68,6 +68,7 @@
     "files.autoSave": "off",
     "files.trimTrailingWhitespace": true,
     "files.trimTrailingWhitespaceInRegexAndStrings": false,
+    "github.copilot.chat.githubMcpServer.enabled": true,
     "github.copilot.enable": {
       "*": true
     },
