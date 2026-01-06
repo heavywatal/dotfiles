@@ -68,6 +68,9 @@ fi
 if [ "$(uname)" = Darwin ]; then
   alias ql="qlmanage -p"
   alias ldd="otool -L"
+else
+  alias sinfon='sinfo -No "%10N %.13C %.6O %.7z %.8e %.8m %.6w %9P %.9T %E"'
+  alias saccta='sacct -ao JobID,JobName,User,State,ExitCode%6,Start,Elapsed,ReqCPUs%4,NCPUs%4,TotalCPU,ReqMem%6,MaxRSS%6'
 fi
 
 if [ "${BASH-}" ]; then
