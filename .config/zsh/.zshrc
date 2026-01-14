@@ -27,41 +27,43 @@ zstyle ':completion:*:descriptions' format '%B%U%d%u%b'
 #########1#########2#########3#########4#########5#########6#########7#########
 ## Changing Directories
 
-#unsetopt AUTO_CD
+#setopt AUTO_CD
 setopt AUTO_PUSHD
-#unsetopt CDABLE_VARS
+#setopt CDABLE_VARS
+#setopt CD_SILENT
+#setopt CHASE_DOTS
 setopt CHASE_LINKS
 setopt POSIX_CD
 setopt PUSHD_IGNORE_DUPS
-#unsetopt PUSHD_MINUS
-#unsetopt PUSHD_SILENT
-setopt PUSHD_TO_HOME
+#setopt PUSHD_MINUS
+#setopt PUSHD_SILENT
+#setopt PUSHD_TO_HOME
 
 #########1#########2#########3#########4#########5#########6#########7#########
 ## Completion
 
 ZLE_REMOVE_SUFFIX_CHARS=
 
-#setopt ALWAYS_LAST_PROMPT
-#unsetopt ALWAYS_TO_END
-#setopt AUTO_LIST
-#setopt AUTO_MENU
-#unsetopt AUTO_NAME_DIRS
-unsetopt AUTO_PARAM_KEYS
-unsetopt AUTO_PARAM_SLASH
-unsetopt AUTO_REMOVE_SLASH
-#unsetopt BASH_AUTO_LIST
-#unsetopt COMPLETE_ALIASES
+#setopt NO_ALWAYS_LAST_PROMPT
+#setopt ALWAYS_TO_END
+#setopt NO_AUTO_LIST
+#setopt NO_AUTO_MENU
+#setopt AUTO_NAME_DIRS
+#setopt NO_AUTO_PARAM_KEYS
+#setopt NO_AUTO_PARAM_SLASH
+#setopt NO_AUTO_REMOVE_SLASH
+#setopt BASH_AUTO_LIST
+#setopt COMPLETE_ALIASES
 setopt COMPLETE_IN_WORD
 setopt GLOB_COMPLETE
-#unsetopt HASH_LIST_ALL
-#setopt LIST_AMBIGUOUS
-unsetopt LIST_BEEP
+#setopt NO_HASH_LIST_ALL
+#setopt NO_LIST_AMBIGUOUS
+setopt NO_LIST_BEEP
 setopt LIST_PACKED
-#unsetopt LIST_ROWS_FIRST
-#setopt LIST_TYPES
-#unsetopt MENU_COMPLETE
-#unsetopt REC_EXACT
+#setopt LIST_ROWS_FIRST
+#setopt NO_LIST_TYPES
+#setopt MENU_COMPLETE
+#setopt REC_EXACT
 
 #########1#########2#########3#########4#########5#########6#########7#########
 ## Expansion and Globbing
@@ -72,28 +74,34 @@ WORDCHARS='*_-[]~!#$%^(){}<>'
 #setopt BAD_PATTERN
 #setopt BARE_GLOB_QUAL
 #setopt BRACE_CCL
-#setopt CASE_GLOB
-#setopt CASE_MATCH
+#setopt NO_CASE_GLOB
+#setopt NO_CASE_MATCH
+#setopt CASE_PATHS
+#setopt CSH_NULL_GLOB
 #setopt EQUALS
 setopt EXTENDED_GLOB
-#unsetopt GLOB_ASSIGN
+#setopt FORCE_FLOAT
+#setopt NO_GLOB
+#setopt GLOB_ASSIGN
 setopt GLOB_DOTS
 setopt GLOB_STAR_SHORT 2>/dev/null
-#unsetopt GLOB_SUBST
-#unsetopt HIST_SUBST_PATTERN
-#unsetopt IGNORE_BRACES
-#unsetopt IGNORE_CLOSE_BRACES
-#unsetopt MAGIC_EQUAL_SUBST
-#unsetopt MARK_DIRS
-#setopt MULTIBYTE
+#setopt GLOB_SUBST
+#setopt HIST_SUBST_PATTERN
+#setopt IGNORE_BRACES
+#setopt IGNORE_CLOSE_BRACES
+#setopt KSH_GLOB
+#setopt MAGIC_EQUAL_SUBST
+#setopt MARK_DIRS
+#setopt NO_MULTIBYTE
 #setopt NOMATCH
-#unsetopt NULL_GLOB
+#setopt NULL_GLOB
 setopt NUMERIC_GLOB_SORT
-#unsetopt RC_EXPAND_PARAM
+#setopt RC_EXPAND_PARAM
 #setopt REMATCH_PCRE
-#unsetopt SH_GLOB
+#setopt SH_GLOB
 #setopt UNSET
-#unsetopt WARN_CREATE_GLOBAL
+#setopt WARN_CREATE_GLOBAL
+#setopt WARN_NESTED_VAR
 
 #########1#########2#########3#########4#########5#########6#########7#########
 ## History
@@ -102,78 +110,81 @@ HISTFILE=${ZDOTDIR}/.zsh_history
 HISTSIZE=65535
 SAVEHIST=65535
 
-#setopt APPEND_HISTORY
+#setopt NO_APPEND_HISTORY
 #setopt BANG_HIST
-#unsetopt EXTENDED_HISTORY
-#unsetopt HIST_ALLOW_CLOBBER
-#setopt HIST_BEEP
+#setopt EXTENDED_HISTORY
+#setopt HIST_ALLOW_CLOBBER
+#setopt NO_HIST_BEEP
 setopt HIST_EXPIRE_DUPS_FIRST
-#unsetopt HIST_FCNTL_LOCK
-#unsetopt HIST_FIND_NO_DUPS
+#setopt HIST_FCNTL_LOCK
+#setopt HIST_FIND_NO_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_SPACE
-#unsetopt HIST_LEX_WORDS
-#unsetopt HIST_NO_FUNCTIONS
-#unsetopt HIST_NO_STORE
+#setopt HIST_LEX_WORDS
+#setopt HIST_NO_FUNCTIONS
+#setopt HIST_NO_STORE
 setopt HIST_REDUCE_BLANKS
-#setopt HIST_SAVE_BY_COPY
+#setopt NO_HIST_SAVE_BY_COPY
 setopt HIST_SAVE_NO_DUPS
 setopt HIST_VERIFY
-#unsetopt INC_APPEND_HISTORY
-#unsetopt INC_APPEND_HISTORY_TIME
+#setopt INC_APPEND_HISTORY
+#setopt INC_APPEND_HISTORY_TIME
 setopt SHARE_HISTORY
 
 #########1#########2#########3#########4#########5#########6#########7#########
 ## Initialisation
 
-#unsetopt ALL_EXPORT
-#unsetopt GLOBAL_EXPORT
-#setopt GLOBAL_RCS
-#setopt RCS
+#setopt ALL_EXPORT
+#setopt GLOBAL_EXPORT
+#setopt NO_GLOBAL_RCS
+#setopt NO_RCS
 
 #########1#########2#########3#########4#########5#########6#########7#########
 ## Input/Output
 
-#setopt ALIASES
-unsetopt CLOBBER
+#setopt NO_ALIASES
+setopt NO_CLOBBER
 setopt CORRECT
-#unsetopt CORRECT_ALL
-#unsetopt DVORAK
-unsetopt FLOW_CONTROL
+#setopt CORRECT_ALL
+#setopt DVORAK
+setopt NO_FLOW_CONTROL
 setopt IGNORE_EOF
-#unsetopt INTERACTIVE_COMMENTS
-#setopt HASH_CMDS
-#setopt HASH_DIRS
-#unsetopt HASH_EXECUTABLES_ONLY
-#unsetopt MAIL_WARNING
-#unsetopt PATH_DIRS
-#unsetopt PATH_SCRIPT
+#setopt INTERACTIVE_COMMENTS
+#setopt NO_HASH_CMDS
+#setopt NO_HASH_DIRS
+#setopt HASH_EXECUTABLES_ONLY
+#setopt MAIL_WARNING
+#setopt PATH_DIRS
+#setopt PATH_SCRIPT
 setopt PRINT_EIGHT_BIT
-#unsetopt PRINT_EXIT_VALUE
-#unsetopt RC_QUOTES
-#unsetopt RM_STAR_SILENT
-#unsetopt RM_STAR_WAIT
+#setopt PRINT_EXIT_VALUE
+#setopt RC_QUOTES
+#setopt RM_STAR_SILENT
+#setopt RM_STAR_WAIT
 #setopt SHORT_LOOPS
+#setopt SHORT_REPEAT
 
 #########1#########2#########3#########4#########5#########6#########7#########
 ## Job Control
 
-#unsetopt AUTO_CONTINUE
-#unsetopt AUTO_RESUME
+#setopt AUTO_CONTINUE
+#setopt AUTO_RESUME
 #setopt BG_NICE
 #setopt CHECK_JOBS
+#setopt CHECK_RUNNING_JOBS
 #setopt HUP
 setopt LONG_LIST_JOBS
 #setopt MONITOR
 #setopt NOTIFY
+#setopt POSIX_JOBS
 
 #########1#########2#########3#########4#########5#########6#########7#########
 ## Prompting
 
-#unsetopt PROMPT_BANG
-unsetopt PROMPT_CR
-#setopt PROMPT_SP
+#setopt PROMPT_BANG
+setopt NO_PROMPT_CR
+#setopt NO_PROMPT_SP
 #setopt PROMPT_PERCENT
 setopt PROMPT_SUBST
 setopt TRANSIENT_RPROMPT
