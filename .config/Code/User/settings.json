@@ -158,14 +158,12 @@
     "window.title": "${activeEditorMedium}${separator}${rootName}",
     "workbench.activityBar.location": "bottom",
     "workbench.colorCustomizations": {
-        "editorGutter.background": "#cccccc18",
-        "editorOverviewRuler.addedForeground": "#587c0c",
-        "editorOverviewRuler.deletedForeground": "#94151b",
+        "editorGutter.background": "#90909010",
         "editorOverviewRuler.findMatchForeground": "#ff666666",
-        "editorOverviewRuler.infoForeground": "#114477",
+        "editorOverviewRuler.infoForeground": "#368aeba0",
         "editorOverviewRuler.selectionHighlightBackground": "#9999ff99",
         "gitDecoration.modifiedResourceForeground": "#1B81A8",
-        "[Default Dark Modern]": {// Selenized Black
+        "[*Dark*]": {// Selenized Black
           "terminal.ansiBlack": "#252525",
           "terminal.ansiRed": "#ed4a46",
           "terminal.ansiGreen": "#70b433",
@@ -186,7 +184,7 @@
           "terminal.foreground": "#b9b9b9",
           "terminalCursor.foreground": "#dedede",
         },
-        "[Default Light Modern]": {// Selenized White
+        "[*Light*]": {// Selenized White
           "terminal.ansiBlack": "#ebebeb",
           "terminal.ansiRed": "#d6000c",
           "terminal.ansiGreen": "#1d9700",
