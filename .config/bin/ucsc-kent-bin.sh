@@ -9,6 +9,7 @@ rsync -auvC\
  --include="README*"\
  --include="axt*"\
  --include="bedGraphToBigWig"\
+ --include="bedToBigBed"\
  --include="bigWig*"\
  --include="chain*"\
  --include="fa*"\
