@@ -1,6 +1,6 @@
 [core]
-	pager = delta 2>/dev/null || $PAGER
+	pager = delta || $PAGER
 [interactive]
-	diffFilter = delta --color-only 2>/dev/null || cat -
+	diffFilter = delta --color-only || cat -
 [delta]
 	file-decoration-style = "blue ol"
