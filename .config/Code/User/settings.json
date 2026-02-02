@@ -70,7 +70,7 @@
     "files.trimTrailingWhitespaceInRegexAndStrings": false,
     "github.copilot.chat.githubMcpServer.enabled": true,
     "github.copilot.enable": {
-      "*": true
+      "markdown": true,
     },
     "github.copilot.nextEditSuggestions.enabled": true,
     "gitProjectManager.baseProjectsFolders": [
