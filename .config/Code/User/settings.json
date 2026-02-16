@@ -74,6 +74,14 @@
     "html.autoClosingTags": false,
     "html.autoCreateQuotes": false,
     "json.format.keepLines": true,
+    "json.schemaDownload.trustedDomains": {
+      "https://schemastore.azurewebsites.net/": true,
+      "https://raw.githubusercontent.com/": true,
+      "https://www.schemastore.org/": true,
+      "https://json.schemastore.org/": true,
+      "https://json-schema.org/": true,
+      "https://biomejs.dev/": true,
+    },
     "julia.enableTelemetry": false,
     "julia.enableCrashReporter": false,
     "julia.symbolCacheDownload": false,
@@ -219,6 +227,10 @@
         "editor.codeActionsOnSave": {
           "source.organizeImports": "never"
         }
+    },
+    "[javascript][typescript][json][jsonc]": {
+        "editor.defaultFormatter": "biomejs.biome",
+        "editor.formatOnSave": true,
     },
     "[latex]": {
         "editor.wordWrap": "bounded"

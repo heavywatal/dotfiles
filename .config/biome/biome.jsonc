@@ -1,0 +1,21 @@
+{
+  "$schema": "https://biomejs.dev/schemas/latest/schema.json",
+  "formatter": {
+    "indentStyle": "space",
+    "lineWidth": 88,
+  },
+  "overrides": [
+    {
+      "includes": ["**/*.jsonc"],
+      "json": {
+        "formatter": {
+          "trailingCommas": "all",
+        },
+        "parser": {
+          "allowComments": true,
+          "allowTrailingCommas": true,
+        },
+      },
+    },
+  ],
+}
