@@ -1,7 +1,10 @@
-cache-dir = "~/.cache/ruff"
-target-version = "py313"
+[project]
+requires-python = ">=3.14"
 
-[lint]
+[tool.ruff]
+cache-dir = "~/.cache/ruff"
+
+[tool.ruff.lint]
 select = [
   "F",
   "E",
