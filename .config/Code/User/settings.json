@@ -249,7 +249,17 @@
     },
     "[quarto]": {
         "editor.codeLens": false,
+        "editor.defaultFormatter": "quarto.quarto",
+        "editor.formatOnSave": true,
         "editor.wordWrap": "wordWrapColumn",
+    },
+    "[r]": {
+        "editor.defaultFormatter": "Posit.air-vscode",
+        "editor.formatOnSave": true,
+    },
+    "[rmd]": {
+      "editor.defaultFormatter": "REditorSupport.r",
+      "editor.formatOnSave": false,
     },
     "[ruby]": {
       "editor.defaultFormatter": "Shopify.ruby-lsp",
