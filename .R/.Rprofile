@@ -37,9 +37,9 @@ options(
   Sys.setenv(MAKEFLAGS = paste0("-j", min(getOption("mc.cores"), 4L)))
   if (interactive() && Sys.getenv("RSTUDIO") == "") {
     stopifnot(dir.exists(Sys.getenv("R_LIBS_USER")))
-    cran = c("conflicted", "devtools")
+    cran = c("conflicted", "tidyverse", "devtools")
     options(defaultPackages = c(getOption("defaultPackages"), cran, "wtl"))
-    setHook(packageEvent("grDevices", "onLoad"), \(...) {
+    setHook(packageEvent("ggplot2", "onLoad"), \(...) {
       if (capabilities("aqua")) {
         grDevices::quartz.options(width = 6, height = 6)
         grDevices::quartzFonts(
@@ -56,7 +56,6 @@ options(
       }
       assignInNamespace("compiler_flags", compiler_flags, "pkgbuild")
     })
-    setHook(packageEvent("conflicted", "attach"), \(...) library(tidyverse))
     setHook(packageEvent("wtl", "attach"), \(...) {
       ggplot2::theme_set(wtl::theme_wtl())
       options(wtl::generate_print_options())
