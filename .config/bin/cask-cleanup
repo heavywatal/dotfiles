@@ -1,0 +1,81 @@
+#!/usr/bin/env python3
+
+import argparse
+import logging
+import re
+from datetime import UTC, datetime
+from pathlib import Path
+from subprocess import run
+from typing import TYPE_CHECKING
+
+_log = logging.getLogger(__name__)
+
+if TYPE_CHECKING:
+    from collections.abc import Iterable, Iterator
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-d", "--delete", action="store_true")
+    parser.add_argument("-v", "--verbose", action="store_true")
+    parser.add_argument("-t", "--threshold", type=int, default=64 * 1024 * 1024)
+    args = parser.parse_args()
+    if args.verbose:
+        logging.basicConfig(level=logging.INFO)
+    groups = group_by_app(iter_large_downloads(threshold=args.threshold))
+    freed = 0
+    for app, downloads in groups.items():
+        _log.info(f"{app}")
+        freed += sort_downloads(downloads, delete=args.delete)
+    if args.delete:
+        print(f"{freed:>4.0f}MB freed")
+    else:
+        print(f"{freed:>4.0f}MB will be freed. Use -d to actually delete files.")
+
+
+def sort_downloads(downloads: list[Path], *, delete: bool) -> float:
+    downloads.sort(key=lambda p: p.stat().st_mtime, reverse=True)
+    latest = downloads[0]
+    freed = 0
+    for path in downloads:
+        name = get_core_name(path)
+        mtime = datetime.fromtimestamp(path.stat().st_mtime, UTC)
+        size_mb = path.stat().st_size / (1024 * 1024)
+        line = f"{size_mb:>4.0f}MB {mtime:%Y-%m-%d %H:%M} {name}"
+        if path != latest:
+            line += " 🧹"
+            freed += size_mb
+            if delete:
+                path.unlink()
+        print(line)
+    return freed
+
+
+def group_by_app(downloads: Iterable[Path]) -> dict[str, list[Path]]:
+    groups: dict[str, list[Path]] = {}
+    for path in downloads:
+        name = get_core_name(path)
+        mobj = re.match(r"^\D+", name)
+        if mobj is None:
+            msg = f"Failed to extract app name from {path}"
+            raise ValueError(msg)
+        key = mobj.group(0).rstrip("-_.")
+        groups.setdefault(key, []).append(path)
+    return groups
+
+
+def iter_large_downloads(threshold: int) -> Iterator[Path]:
+    brew_cache = run(["brew", "--cache"], check=True, capture_output=True)  # noqa: S607
+    cache_dir = Path(brew_cache.stdout.decode().strip()) / "downloads"
+    for path in cache_dir.iterdir():
+        if path.stat().st_size > threshold:
+            yield path
+
+
+def get_core_name(path: Path) -> str:
+    (_hash, name) = path.name.split("--", maxsplit=1)
+    return name
+
+
+if __name__ == "__main__":
+    main()
