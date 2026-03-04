@@ -48,19 +48,12 @@ options(
         )
       }
     })
-    setHook(packageEvent("pkgbuild", "onLoad"), \(...) {
-      compiler_flags = \(debug) { # r-lib/pkgload#224
-        x = "-Wall -pedantic -fdiagnostics-color=always"
-        if (debug) x = paste("-UNDEBUG -g", x)
-        c(CFLAGS = x, CXXFLAGS = x, CXX17FLAGS = x, CXX20FLAGS = x)
-      }
-      assignInNamespace("compiler_flags", compiler_flags, "pkgbuild")
-    })
     setHook(packageEvent("wtl", "attach"), \(...) {
       ggplot2::theme_set(wtl::theme_wtl())
       options(wtl::generate_print_options())
       registerS3method("print", "tbl_df", wtl::printdf)
       registerS3method("print", "tbl", wtl::printdf)
+      assign("load_all", wtl::lall, envir = attach(NULL, name = "alias"))
       print(utils::sessionInfo(), locale = FALSE)
     })
     if (Sys.getenv("TERM_PROGRAM") == "vscode") {
