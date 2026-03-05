@@ -22,14 +22,7 @@ options(
   gargle_oauth_email = TRUE,
   gargle_oauth_cache = TRUE,
 
-  devtools.install.args = c("--no-multiarch", "--no-test-load"),
-  styler.cache_root = "styler-perm",
-  testthat.default_check_reporter = "progress",
-  languageserver.formatting_style = \(.options) {
-    style = styler::tidyverse_style(indent_by = .options$tabSize)
-    style$token$force_assignment_op = NULL
-    style
-  }
+  devtools.install.args = c("--no-multiarch", "--no-test-load")
 )
 
 .First = function() {
@@ -45,7 +38,6 @@ options(
       registerS3method("print", "tbl_df", wtl::printdf)
       registerS3method("print", "tbl", wtl::printdf)
       assign("load_all", wtl::lall, envir = attach(NULL, name = "alias"))
-      print(utils::sessionInfo(), locale = FALSE)
     })
     if (Sys.getenv("TERM_PROGRAM") == "vscode") {
       source("~/.vscode-R/init.R")
@@ -55,10 +47,6 @@ options(
 
 .Last = function() {
   if (interactive()) {
-    if (!nzchar(Sys.getenv("RADIAN_VERSION"))) {
-      try(utils::savehistory(Sys.getenv("R_HISTFILE")))
-    }
-    print(ls(envir = .GlobalEnv, all.names = TRUE))
-    print(utils::sessionInfo(), locale = FALSE)
+    try(utils::savehistory(Sys.getenv("R_HISTFILE", "~/.Rhistory")))
   }
 }
