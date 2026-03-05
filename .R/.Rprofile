@@ -37,17 +37,8 @@ options(
   Sys.setenv(MAKEFLAGS = paste0("-j", min(getOption("mc.cores"), 4L)))
   if (interactive() && Sys.getenv("RSTUDIO") == "") {
     stopifnot(dir.exists(Sys.getenv("R_LIBS_USER")))
-    cran = c("conflicted", "tidyverse", "devtools")
-    options(defaultPackages = c(getOption("defaultPackages"), cran, "wtl"))
-    setHook(packageEvent("ggplot2", "onLoad"), \(...) {
-      if (capabilities("aqua")) {
-        grDevices::quartz.options(width = 6, height = 6)
-        grDevices::quartzFonts(
-          mincho = grDevices::quartzFont(paste0("Hiragino Mincho ProN W", c(3, 6, 3, 6))),
-          gothic = grDevices::quartzFont(paste0("Hiragino Sans W", c(3, 6, 3, 6)))
-        )
-      }
-    })
+    pkgs = c("conflicted", "tidyverse", "devtools")
+    options(defaultPackages = c(getOption("defaultPackages"), pkgs, "wtl"))
     setHook(packageEvent("wtl", "attach"), \(...) {
       ggplot2::theme_set(wtl::theme_wtl())
       options(wtl::generate_print_options())
