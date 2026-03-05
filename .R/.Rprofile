@@ -30,8 +30,10 @@ options(
   Sys.setenv(MAKEFLAGS = paste0("-j", min(getOption("mc.cores"), 4L)))
   if (interactive() && Sys.getenv("RSTUDIO") == "") {
     stopifnot(dir.exists(Sys.getenv("R_LIBS_USER")))
-    pkgs = c("conflicted", "tidyverse", "devtools")
+    pkgs = c("conflicted", "devtools")
     options(defaultPackages = c(getOption("defaultPackages"), pkgs, "wtl"))
+    # r-lib/conflicted#88, r-lib/conflicted#91
+    setHook(packageEvent("conflicted", "attach"), \(...) library(tidyverse))
     setHook(packageEvent("wtl", "attach"), \(...) {
       ggplot2::theme_set(wtl::theme_wtl())
       options(wtl::generate_print_options())
