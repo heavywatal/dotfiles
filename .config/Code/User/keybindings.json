@@ -1,162 +1,159 @@
 // Place your key bindings in this file to overwrite the defaults
 [
-    {
-      "key": "ctrl+t",
-      "command": "-editor.action.transposeLetters",
-      "when": "textInputFocus && !editorReadonly"
+  {
+    "key": "ctrl+t",
+    "command": "-editor.action.transposeLetters",
+    "when": "textInputFocus && !editorReadonly",
+  },
+  {
+    "key": "ctrl+k",
+    "command": "-deleteAllRight",
+    "when": "textInputFocus && !editorReadonly",
+  },
+  {
+    "key": "ctrl+g",
+    "command": "-workbench.action.gotoLine",
+  },
+  {
+    "key": "ctrl+q",
+    "command": "-workbench.action.quickOpenView",
+  },
+  {
+    "key": "ctrl+space",
+    "command": "-editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly",
+  },
+  {
+    "key": "ctrl+space",
+    "command": "-toggleSuggestionDetails",
+    "when": "suggestWidgetVisible && textInputFocus",
+  },
+  {
+    "key": "ctrl+alt+space",
+    "command": "-toggleSuggestionFocus",
+    "when": "suggestWidgetVisible && textInputFocus",
+  },
+  {
+    "key": "alt+cmd+p",
+    "command": "-r.runAboveChunks",
+  },
+  {
+    "key": "alt+cmd+p",
+    "command": "-quarto.runPreviousCell",
+  },
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditor",
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditor",
+  },
+  {
+    "key": "ctrl-g",
+    "command": "closeFindWidget",
+    "when": "editorFocus && findWidgetVisible",
+  },
+  {
+    "key": "ctrl-[",
+    "command": "closeFindWidget",
+    "when": "editorFocus && findWidgetVisible",
+  },
+  {
+    "key": "ctrl+j",
+    "command": "editor.action.insertLineAfter",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "ctrl+m",
+    "command": "editor.action.insertLineAfter",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "ctrl+i",
+    "command": "editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly",
+  },
+  {
+    "key": "ctrl+i",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions",
+  },
+  {
+    "key": "ctrl+j",
+    "command": "acceptSelectedSuggestion",
+    "when": "suggestWidgetVisible",
+  },
+  {
+    "key": "ctrl+m",
+    "command": "acceptSelectedSuggestion",
+    "when": "suggestWidgetVisible",
+  },
+  {
+    "key": "ctrl+y",
+    "command": "editor.action.clipboardPasteAction",
+    "when": "inputFocus",
+  },
+  {
+    "key": "ctrl+k",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": ["cursorEndSelect", "editor.action.clipboardCutAction"],
     },
-    {
-      "key": "ctrl+k",
-      "command": "-deleteAllRight",
-      "when": "textInputFocus && !editorReadonly"
+    "when": "!terminalFocus",
+  },
+  {
+    "key": "alt+enter",
+    "command": "workbench.action.terminal.runSelectedText",
+    "when": "editorTextFocus && resourceExtname != .ipynb",
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.terminal.runSelectedText",
+        "cursorDown",
+        "cursorLineStart",
+      ],
     },
-    {
-        "key": "ctrl+g",
-        "command": "-workbench.action.gotoLine"
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "cmd+enter",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.terminal.runSelectedText",
+        "cursorDown",
+        "cursorLineStart",
+      ],
     },
-    {
-        "key": "ctrl+q",
-        "command": "-workbench.action.quickOpenView"
-    },
-    {
-        "key": "ctrl+space",
-        "command": "-editor.action.triggerSuggest",
-        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+space",
-        "command": "-toggleSuggestionDetails",
-        "when": "suggestWidgetVisible && textInputFocus"
-    },
-    {
-        "key": "ctrl+alt+space",
-        "command": "-toggleSuggestionFocus",
-        "when": "suggestWidgetVisible && textInputFocus"
-    },
-    {
-        "key": "alt+cmd+p",
-        "command": "-r.runAboveChunks",
-    },
-    {
-        "key": "alt+cmd+p",
-        "command": "-quarto.runPreviousCell",
-    },
-    {
-        "key": "ctrl+tab",
-        "command": "workbench.action.nextEditor"
-    },
-    {
-        "key": "ctrl+shift+tab",
-        "command": "workbench.action.previousEditor"
-    },
-    {
-        "key": "ctrl-g",
-        "command": "closeFindWidget",
-        "when": "editorFocus && findWidgetVisible"
-    },
-    {
-        "key": "ctrl-[",
-        "command": "closeFindWidget",
-        "when": "editorFocus && findWidgetVisible"
-    },
-    {
-        "key": "ctrl+j",
-        "command": "editor.action.insertLineAfter",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+m",
-        "command": "editor.action.insertLineAfter",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+i",
-        "command": "editor.action.triggerSuggest",
-        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+i",
-        "command": "selectNextSuggestion",
-        "when": "suggestWidgetMultipleSuggestions"
-    },
-    {
-        "key": "ctrl+j",
-        "command": "acceptSelectedSuggestion",
-        "when": "suggestWidgetVisible"
-    },
-    {
-        "key": "ctrl+m",
-        "command": "acceptSelectedSuggestion",
-        "when": "suggestWidgetVisible"
-    },
-    {
-        "key": "ctrl+y",
-        "command": "editor.action.clipboardPasteAction",
-        "when": "inputFocus"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "extension.multiCommand.execute",
-        "args": {
-          "sequence": [
-            "cursorEndSelect",
-            "editor.action.clipboardCutAction",
-          ]
-        },
-        "when": "!terminalFocus"
-    },
-    {
-        "key": "alt+enter",
-        "command": "workbench.action.terminal.runSelectedText",
-        "when": "editorTextFocus && resourceExtname != .ipynb"
-    },
-    {
-        "key": "ctrl+enter",
-        "command": "extension.multiCommand.execute",
-        "args": {
-          "sequence": [
-            "workbench.action.terminal.runSelectedText",
-            "cursorDown",
-            "cursorLineStart",
-          ]
-        },
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "cmd+enter",
-        "command": "extension.multiCommand.execute",
-        "args": {
-          "sequence": [
-            "workbench.action.terminal.runSelectedText",
-            "cursorDown",
-            "cursorLineStart",
-          ]
-        },
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+`",
-        "command": "workbench.action.focusActiveEditorGroup",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+`",
-        "command": "workbench.action.terminal.focus",
-        "when": "!terminalFocus"
-    },
-    {
-        "key": "shift+cmd+c",
-        "command": "-workbench.action.terminal.openNativeConsole",
-        "when": "!terminalFocus"
-    },
-    {
-      "key": "shift+cmd+s",
-      "command": "-r.runSource",
-      "when": "editorTextFocus && editorLangId == 'r'"
-    },
-    {
-      "key": "shift+enter",
-      "command": "-python.execSelectionInTerminal",
-      "when": "editorTextFocus && !findInputFocussed && !isCompositeNotebook && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
-    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus",
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.focus",
+    "when": "!terminalFocus",
+  },
+  {
+    "key": "shift+cmd+c",
+    "command": "-workbench.action.terminal.openNativeConsole",
+    "when": "!terminalFocus",
+  },
+  {
+    "key": "shift+cmd+s",
+    "command": "-r.runSource",
+    "when": "editorTextFocus && editorLangId == 'r'",
+  },
+  {
+    "key": "shift+enter",
+    "command": "-python.execSelectionInTerminal",
+    "when": "editorTextFocus && !findInputFocussed && !isCompositeNotebook && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'",
+  },
 ]

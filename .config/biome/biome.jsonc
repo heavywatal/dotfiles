@@ -6,7 +6,7 @@
   },
   "overrides": [
     {
-      "includes": ["**/*.jsonc"],
+      "includes": ["**/*.jsonc", "**/Code/User/*.json"],
       "json": {
         "formatter": {
           "trailingCommas": "all",
