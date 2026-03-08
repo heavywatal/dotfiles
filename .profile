@@ -62,6 +62,9 @@ export XDG_CONFIG_HOME
 PATH=${XDG_BIN_HOME:-${HOME}/.local/bin}:$PATH
 PATH=${XDG_DATA_HOME:-${HOME}/.local/share}/mise/shims:$PATH
 
+export PNPM_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/pnpm"
+PATH="$PNPM_HOME:$PATH"
+
 PATH=${HOME}/local/bin:${HOME}/.config/bin:$PATH
 
 export LANG=C
