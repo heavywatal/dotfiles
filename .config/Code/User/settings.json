@@ -68,7 +68,6 @@
   "gitProjectManager.maxDepthRecursion": 1,
   "gitProjectManager.openInNewWindow": true,
   "gitProjectManager.searchInsideProjects": false,
-  "go.formatTool": "gofmt",
   "html.autoClosingTags": false,
   "html.autoCreateQuotes": false,
   "json.format.keepLines": true,
