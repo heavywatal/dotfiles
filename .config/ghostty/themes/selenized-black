@@ -17,4 +17,6 @@ palette = 15=#dedede
 background = #181818
 foreground = #b9b9b9
 cursor-color = #dedede
-cursor-text = #181818
+cursor-text = #3b3b3b
+selection-background = #3b3b3b
+selection-foreground = #dedede
