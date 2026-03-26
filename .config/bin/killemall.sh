@@ -11,7 +11,8 @@ rm -rf "/Applications/Google Docs.app"
 rm -rf "/Applications/Google Sheets.app"
 rm -rf "/Applications/Google Slides.app"
 rm -rf "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework"/Versions/*/Helpers/GoogleUpdater.app
-rm -rf ~/Library/"Application Support"/Google/GoogleUpdater/
+rm -rf "/Applications/Google Chrome.app/Contents/Library/"Launch*
+rm -rf "/Library/Application Support/Google/GoogleUpdater/"
 rm -rf "/Library/Google/GoogleSoftwareUpdate/"
 
 if [ -e "/Applications/Amazon Music.app" ]; then
