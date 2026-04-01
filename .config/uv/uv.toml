@@ -1,2 +1,3 @@
+exclude-newer = "3 days"
 python-preference = "only-managed"
 python-downloads = "manual"
