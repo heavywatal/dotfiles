@@ -1,6 +1,6 @@
 {
   "breadcrumbs.showStrings": false,
-  "chat.editMode.hidden": false,
+  "chat.tips.enabled": false,
   "chat.viewSessions.orientation": "auto",
   "cmake.configureOnEdit": false,
   "cmake.configureOnOpen": false,
