@@ -1,6 +1,11 @@
 ._*
 .DS_Store
+.Rproj.user/
+.cache/
 .localized
 .ipynb_checkpoints/
 .pytest_cache/
+.ruff_cache/
+.venv/
 __pycache__/
+node_modules/
