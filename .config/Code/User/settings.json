@@ -2,6 +2,11 @@
   "breadcrumbs.showStrings": false,
   "chat.tips.enabled": false,
   "chat.viewSessions.orientation": "auto",
+  "clangd.fallbackFlags": [
+    "-I${env:HOME}/.R/library/latest/cpp11/include",
+    "-I${env:HOME}/.R/library/latest/Rcpp/include",
+    "-I/Library/Frameworks/R.framework/Headers",
+  ],
   "cmake.configureOnEdit": false,
   "cmake.configureOnOpen": false,
   "cmake.ignoreCMakeListsMissing": true,
@@ -223,13 +228,6 @@
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.startupEditor": "none",
   "C_Cpp.autoAddFileAssociations": false,
-  "C_Cpp.default.includePath": [
-    "~/local/include",
-    "~/.R/library/latest/Rcpp/include",
-    "~/.R/library/latest/cpp11/include",
-    "/Library/Frameworks/R.framework/Headers",
-    "/usr/local/include",
-  ],
   "C_Cpp.intelliSenseEngine": "disabled",
   "[csv][tsv]": {
     "editor.stickyScroll.enabled": true,
