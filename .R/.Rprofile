@@ -19,6 +19,9 @@ options(
   readr.show_col_types = FALSE,
   dplyr.summarise.inform = FALSE,
 
+  rgl.useNULL = TRUE,
+  rgl.printRglwidget = TRUE,
+
   gargle_oauth_email = TRUE,
   gargle_oauth_cache = TRUE,
 
