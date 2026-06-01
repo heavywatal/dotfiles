@@ -43,18 +43,17 @@ brew "zstd"
 brew "heavywatal/tap/dart-sass"
 brew "heavywatal/tap/igraph32"
 if OS.mac?
-  cask "aldente"
-  cask "azookey"
   cask "basictex"
   cask "betterdisplay"
   cask "bibdesk"
-  cask "container"
   cask "discord"
   cask "drawio"
   cask "dropbox"
   cask "equinox"
   cask "firefox"
+  cask "font-noto-sans"
   cask "font-noto-sans-cjk"
+  cask "font-noto-serif"
   cask "font-noto-serif-cjk"
   cask "font-sf-mono"
   cask "font-sf-pro"
@@ -67,11 +66,11 @@ if OS.mac?
   cask "ghostty"
   cask "google-chrome"
   cask "google-drive"
-  cask "joplin"
   cask "megasync"
   cask "menumeters"
   cask "monitorcontrol"
   cask "nextcloud-vfs"
+  cask "obsidian"
   cask "orbstack"
   cask "proxy-audio-device"
   cask "quarto"
@@ -88,11 +87,9 @@ if OS.mac?
   mas "AdGuard for Safari", id: 1440147259
   mas "Amphetamine", id: 937984704
   mas "Bitwarden", id: 1352778147
-  mas "GarageBand", id: 682658836
-  mas "Keynote", id: 409183694
+  mas "Kindle", id: 302584613
   mas "LINE", id: 539883307
-  mas "Numbers", id: 409203825
-  mas "Pages", id: 409201541
   mas "Sim Daltonism", id: 693112260
+  mas "uBlock Origin Lite", id: 6745342698
   mas "Xcode", id: 497799835
 end
