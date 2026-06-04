@@ -12,6 +12,7 @@ rm -rf "/Applications/Google Sheets.app"
 rm -rf "/Applications/Google Slides.app"
 rm -rf "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework"/Versions/*/Helpers/GoogleUpdater.app
 rm -rf "/Applications/Google Chrome.app/Contents/Library/"Launch*
+rm -rf "${HOME}/Library/Application Support/Google/GoogleUpdater/"
 rm -rf "/Library/Application Support/Google/GoogleUpdater/"
 rm -rf "/Library/Google/GoogleSoftwareUpdate/"
 
