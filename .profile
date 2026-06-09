@@ -31,7 +31,7 @@ if [ -z "${HOMEBREW_PREFIX-}" ]; then
 fi
 if [ "${HOMEBREW_PREFIX-}" ] && [ -z "${HOMEBREW_NO-}" ]; then
   export HOMEBREW_NO_AUTO_UPDATE=1
-  export HOMEBREW_REQUIRE_TAP_TRUST=1
+  export HOMEBREW_NO_UPGRADE_AUTO_UPDATES_CASKS=1
   PATH=${PATH#"${HOMEBREW_PREFIX}"/bin:}
   eval "$("${HOMEBREW_PREFIX}"/bin/brew shellenv)"
 fi
