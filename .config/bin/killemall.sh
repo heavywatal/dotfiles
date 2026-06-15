@@ -7,6 +7,7 @@ rm -f ~/Library/LaunchAgents/mega.mac.megaupdater.plist
 rm -f /Library/Launch*/com.google.*
 rm -f /Library/Launch*/com.microsoft.*
 rm -f /Library/Launch*/us.zoom*
+rm -rf "/Applications/Microsoft Teams.app/Contents/Library/"Launch*
 rm -rf "/Applications/Google Docs.app"
 rm -rf "/Applications/Google Sheets.app"
 rm -rf "/Applications/Google Slides.app"
