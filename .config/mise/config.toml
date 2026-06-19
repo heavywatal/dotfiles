@@ -1,7 +1,7 @@
 [tools]
-node = "lts"
 ruby = "latest"
 usage = "latest"
 
 [settings]
 experimental = true
+ruby.compile = false
