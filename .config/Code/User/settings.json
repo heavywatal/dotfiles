@@ -56,7 +56,7 @@
   "evenBetterToml.schema.enabled": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.excludeGitIgnore": true,
-  "extensions.autoUpdate": false,
+  "extensions.autoUpdate": "off",
   "extensions.ignoreRecommendations": true,
   "files.associations": {
     "*.bed": "tsv",
