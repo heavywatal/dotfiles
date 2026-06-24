@@ -1,2 +1,5 @@
 [format]
+assignment-style = "equal"
 line-width = 88
+
+
