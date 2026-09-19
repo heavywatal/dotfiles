@@ -10,9 +10,9 @@ fpath+=/Applications/OrbStack.app/Contents/Resources/completions/zsh
 autoload -Uz +X compinit && compinit -C
 compdef -d delta
 
-uv() {
+rv() {
   unfunction "$0"
-  eval "$(uv generate-shell-completion zsh 2>/dev/null)"
+  eval "$(rv shell env zsh 2>/dev/null)"
   $0 "$@"
 }
 

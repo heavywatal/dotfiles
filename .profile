@@ -49,6 +49,12 @@ fi
 export UV_PYTHON_INSTALL_BIN=0
 export STATSMODELS_DATA="${HOME}/.cache/statsmodels"
 
+rv_ruby=$(rv ruby find 2>/dev/null)
+if [ -n "$rv_ruby" ]; then
+  PATH="${rv_ruby%/ruby}:$PATH"
+fi
+unset rv_ruby
+
 export GOPATH="${HOME}/.go"
 PATH=${GOPATH}/bin:$PATH
 
@@ -60,7 +66,6 @@ export UCSC_KENT_BIN
 : "${XDG_CONFIG_HOME:=${HOME}/.config}"
 export XDG_CONFIG_HOME
 PATH=${XDG_BIN_HOME:-${HOME}/.local/bin}:$PATH
-PATH=${XDG_DATA_HOME:-${HOME}/.local/share}/mise/shims:$PATH
 
 export PNPM_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/pnpm"
 PATH="$PNPM_HOME/bin:$PATH"
