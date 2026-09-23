@@ -1,11 +1,14 @@
 tap "brewsci/bio"
 tap "heavywatal/tap"
+brew "air"
 brew "as-tree"
 brew "bat"
 brew "bedtools"
+brew "biome"
 brew "boost"
 brew "checkbashisms"
 brew "cmake"
+brew "dart-sass"
 brew "diskus"
 brew "doxygen"
 brew "dust"
@@ -32,6 +35,7 @@ brew "qpdf"
 brew "qsv"
 brew "ripgrep"
 brew "rsync"
+brew "rv"
 brew "samtools"
 brew "sd"
 brew "shellcheck"
@@ -40,7 +44,6 @@ brew "uutils-coreutils"
 brew "webp"
 brew "wget"
 brew "zstd"
-brew "heavywatal/tap/dart-sass"
 brew "heavywatal/tap/igraph32"
 if OS.mac?
   cask "basictex"
@@ -84,7 +87,7 @@ if OS.mac?
   cask "xquartz"
   cask "zoom"
   brew "mas"
-  mas "AdGuard for Safari", id: 1440147259
+  mas "AdGuard Mini", id: 1440147259
   mas "Amphetamine", id: 937984704
   mas "Bitwarden", id: 1352778147
   mas "Kindle", id: 302584613
