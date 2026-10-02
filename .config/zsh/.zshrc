@@ -10,12 +10,6 @@ fpath+=/Applications/OrbStack.app/Contents/Resources/completions/zsh
 autoload -Uz +X compinit && compinit -C
 compdef -d delta
 
-rv() {
-  unfunction "$0"
-  eval "$(rv shell env zsh 2>/dev/null)"
-  $0 "$@"
-}
-
 [ -f ~/.bashrc ] && . ~/.bashrc
 
 zstyle ':completion:*:default' menu select=2

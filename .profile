@@ -49,11 +49,7 @@ fi
 export UV_PYTHON_INSTALL_BIN=0
 export STATSMODELS_DATA="${HOME}/.cache/statsmodels"
 
-rv_ruby=$(rv ruby find 2>/dev/null)
-if [ -n "$rv_ruby" ]; then
-  PATH="${rv_ruby%/ruby}:$PATH"
-fi
-unset rv_ruby
+eval "$(rv shell env zsh 2>/dev/null)"
 
 export GOPATH="${HOME}/.go"
 PATH=${GOPATH}/bin:$PATH
