@@ -1,0 +1,292 @@
+#compdef procs
+
+autoload -U is-at-least
+
+_procs() {
+    typeset -A opt_args
+    typeset -a _arguments_options
+    local ret=1
+
+    if is-at-least 5.2; then
+        _arguments_options=(-s -S -C)
+    else
+        _arguments_options=(-s -C)
+    fi
+
+    local context curcontext="$curcontext" state line
+    _arguments "${_arguments_options[@]}" : \
+'-W+[Watch mode with custom interval]:second:_default' \
+'--watch-interval=[Watch mode with custom interval]:second:_default' \
+'-c+[Color mode]:COLOR:(auto always disable)' \
+'--color=[Color mode]:COLOR:(auto always disable)' \
+'--theme=[Theme mode]:THEME:(auto dark light)' \
+'-p+[Pager mode]:PAGER:(auto always disable)' \
+'--pager=[Pager mode]:PAGER:(auto always disable)' \
+'--interval=[Interval to calculate throughput]:millisec:_default' \
+'--use-config=[Use built-in configuration]:name:(default large)' \
+'--load-config=[Load configuration from file]:path:_files' \
+'--gen-completion=[Generate shell completion file]:shell:(bash elvish fish powershell zsh)' \
+'--gen-completion-out=[Generate shell completion file and write to stdout]:shell:(bash elvish fish powershell zsh)' \
+'--procfs=[Path to procfs]:PROCFS:_files' \
+'(--sortd -t --tree)--sorta=[Sort column by ascending]:kind:((command\:"Command with all arguments"
+contextsw\:"Context switch count"
+cputime\:"Cumulative CPU time"
+docker\:"Docker container name"
+elapsedtime\:"Elapsed time"
+empty\:"Empty"
+gid\:"Group ID"
+gidreal\:"Real group ID"
+gidsaved\:"Saved group ID"
+group\:"Group name"
+groupreal\:"Real group name"
+groupsaved\:"Saved group name"
+majflt\:"Major page fault count"
+minflt\:"Minor page fault count"
+multislot\:"Slot for \`--insert\` option"
+nice\:"Nice value"
+pgid\:"Process group ID"
+pid\:"Process ID"
+policy\:"Scheduling policy"
+ppid\:"Parent process ID"
+priority\:"Priority"
+readbytes\:"Read bytes from storage"
+separator\:"Show | for column separation"
+session\:"Process Session ID"
+slot\:"Slot for \`--insert\` option"
+starttime\:"Starting time"
+state\:"Process state"
+tcpport\:"Bound TCP ports"
+threads\:"Thread count"
+treeslot\:"Slot for tree column"
+tty\:"Controlling TTY"
+udpport\:"Bound UDP ports"
+uid\:"User ID"
+uidreal\:"Real user ID"
+uidsaved\:"Saved user ID"
+usagecpu\:"CPU utilization"
+usagemem\:"Memory utilization"
+user\:"User name"
+userreal\:"Real user name"
+usersaved\:"Saved user name"
+vmrss\:"Resident set size"
+vmsize\:"Physical page size"
+vmtotal\:"Total footprint size"
+writebytes\:"Write bytes to storage"))' \
+'(--sorta -t --tree)--sortd=[Sort column by descending]:kind:((command\:"Command with all arguments"
+contextsw\:"Context switch count"
+cputime\:"Cumulative CPU time"
+docker\:"Docker container name"
+elapsedtime\:"Elapsed time"
+empty\:"Empty"
+gid\:"Group ID"
+gidreal\:"Real group ID"
+gidsaved\:"Saved group ID"
+group\:"Group name"
+groupreal\:"Real group name"
+groupsaved\:"Saved group name"
+majflt\:"Major page fault count"
+minflt\:"Minor page fault count"
+multislot\:"Slot for \`--insert\` option"
+nice\:"Nice value"
+pgid\:"Process group ID"
+pid\:"Process ID"
+policy\:"Scheduling policy"
+ppid\:"Parent process ID"
+priority\:"Priority"
+readbytes\:"Read bytes from storage"
+separator\:"Show | for column separation"
+session\:"Process Session ID"
+slot\:"Slot for \`--insert\` option"
+starttime\:"Starting time"
+state\:"Process state"
+tcpport\:"Bound TCP ports"
+threads\:"Thread count"
+treeslot\:"Slot for tree column"
+tty\:"Controlling TTY"
+udpport\:"Bound UDP ports"
+uid\:"User ID"
+uidreal\:"Real user ID"
+uidsaved\:"Saved user ID"
+usagecpu\:"CPU utilization"
+usagemem\:"Memory utilization"
+user\:"User name"
+userreal\:"Real user name"
+usersaved\:"Saved user name"
+vmrss\:"Resident set size"
+vmsize\:"Physical page size"
+vmtotal\:"Total footprint size"
+writebytes\:"Write bytes to storage"))' \
+'*-i+[Insert column to slot]:kind:((command\:"Command with all arguments"
+contextsw\:"Context switch count"
+cputime\:"Cumulative CPU time"
+docker\:"Docker container name"
+elapsedtime\:"Elapsed time"
+empty\:"Empty"
+gid\:"Group ID"
+gidreal\:"Real group ID"
+gidsaved\:"Saved group ID"
+group\:"Group name"
+groupreal\:"Real group name"
+groupsaved\:"Saved group name"
+majflt\:"Major page fault count"
+minflt\:"Minor page fault count"
+multislot\:"Slot for \`--insert\` option"
+nice\:"Nice value"
+pgid\:"Process group ID"
+pid\:"Process ID"
+policy\:"Scheduling policy"
+ppid\:"Parent process ID"
+priority\:"Priority"
+readbytes\:"Read bytes from storage"
+separator\:"Show | for column separation"
+session\:"Process Session ID"
+slot\:"Slot for \`--insert\` option"
+starttime\:"Starting time"
+state\:"Process state"
+tcpport\:"Bound TCP ports"
+threads\:"Thread count"
+treeslot\:"Slot for tree column"
+tty\:"Controlling TTY"
+udpport\:"Bound UDP ports"
+uid\:"User ID"
+uidreal\:"Real user ID"
+uidsaved\:"Saved user ID"
+usagecpu\:"CPU utilization"
+usagemem\:"Memory utilization"
+user\:"User name"
+userreal\:"Real user name"
+usersaved\:"Saved user name"
+vmrss\:"Resident set size"
+vmsize\:"Physical page size"
+vmtotal\:"Total footprint size"
+writebytes\:"Write bytes to storage"))' \
+'*--insert=[Insert column to slot]:kind:((command\:"Command with all arguments"
+contextsw\:"Context switch count"
+cputime\:"Cumulative CPU time"
+docker\:"Docker container name"
+elapsedtime\:"Elapsed time"
+empty\:"Empty"
+gid\:"Group ID"
+gidreal\:"Real group ID"
+gidsaved\:"Saved group ID"
+group\:"Group name"
+groupreal\:"Real group name"
+groupsaved\:"Saved group name"
+majflt\:"Major page fault count"
+minflt\:"Minor page fault count"
+multislot\:"Slot for \`--insert\` option"
+nice\:"Nice value"
+pgid\:"Process group ID"
+pid\:"Process ID"
+policy\:"Scheduling policy"
+ppid\:"Parent process ID"
+priority\:"Priority"
+readbytes\:"Read bytes from storage"
+separator\:"Show | for column separation"
+session\:"Process Session ID"
+slot\:"Slot for \`--insert\` option"
+starttime\:"Starting time"
+state\:"Process state"
+tcpport\:"Bound TCP ports"
+threads\:"Thread count"
+treeslot\:"Slot for tree column"
+tty\:"Controlling TTY"
+udpport\:"Bound UDP ports"
+uid\:"User ID"
+uidreal\:"Real user ID"
+uidsaved\:"Saved user ID"
+usagecpu\:"CPU utilization"
+usagemem\:"Memory utilization"
+user\:"User name"
+userreal\:"Real user name"
+usersaved\:"Saved user name"
+vmrss\:"Resident set size"
+vmsize\:"Physical page size"
+vmtotal\:"Total footprint size"
+writebytes\:"Write bytes to storage"))' \
+'--only=[Specified column only]:kind:((command\:"Command with all arguments"
+contextsw\:"Context switch count"
+cputime\:"Cumulative CPU time"
+docker\:"Docker container name"
+elapsedtime\:"Elapsed time"
+empty\:"Empty"
+gid\:"Group ID"
+gidreal\:"Real group ID"
+gidsaved\:"Saved group ID"
+group\:"Group name"
+groupreal\:"Real group name"
+groupsaved\:"Saved group name"
+majflt\:"Major page fault count"
+minflt\:"Minor page fault count"
+multislot\:"Slot for \`--insert\` option"
+nice\:"Nice value"
+pgid\:"Process group ID"
+pid\:"Process ID"
+policy\:"Scheduling policy"
+ppid\:"Parent process ID"
+priority\:"Priority"
+readbytes\:"Read bytes from storage"
+separator\:"Show | for column separation"
+session\:"Process Session ID"
+slot\:"Slot for \`--insert\` option"
+starttime\:"Starting time"
+state\:"Process state"
+tcpport\:"Bound TCP ports"
+threads\:"Thread count"
+treeslot\:"Slot for tree column"
+tty\:"Controlling TTY"
+udpport\:"Bound UDP ports"
+uid\:"User ID"
+uidreal\:"Real user ID"
+uidsaved\:"Saved user ID"
+usagecpu\:"CPU utilization"
+usagemem\:"Memory utilization"
+user\:"User name"
+userreal\:"Real user name"
+usersaved\:"Saved user name"
+vmrss\:"Resident set size"
+vmsize\:"Physical page size"
+vmtotal\:"Total footprint size"
+writebytes\:"Write bytes to storage"))' \
+'(--regex --smart)--text[Use plain text search mode (default)]' \
+'(--text --smart)--regex[Use regex search mode (single PATTERN)]' \
+'(--text --regex)--smart[Use smart mode (auto-detect regex syntax)]' \
+'(-o --or -d --nand -r --nor)-a[AND  logic for multi-keyword]' \
+'(-o --or -d --nand -r --nor)--and[AND  logic for multi-keyword]' \
+'(-a --and -d --nand -r --nor)-o[OR   logic for multi-keyword]' \
+'(-a --and -d --nand -r --nor)--or[OR   logic for multi-keyword]' \
+'(-a --and -o --or -r --nor)-d[NAND logic for multi-keyword]' \
+'(-a --and -o --or -r --nor)--nand[NAND logic for multi-keyword]' \
+'(-a --and -o --or -d --nand)-r[NOR  logic for multi-keyword]' \
+'(-a --and -o --or -d --nand)--nor[NOR  logic for multi-keyword]' \
+'-l[Show list of kind]' \
+'--list[Show list of kind]' \
+'--thread[Show thread]' \
+'-t[Tree view]' \
+'--tree[Tree view]' \
+'-w[Watch mode with default interval (1s)]' \
+'--watch[Watch mode with default interval (1s)]' \
+'--json[JSON output]' \
+'--gen-config[Generate configuration sample file]' \
+'--gen-man-page[Generate man page and write to stdout]' \
+'--no-header[Suppress header]' \
+'--debug[Show debug message]' \
+'-h[Print help (see more with '\''--help'\'')]' \
+'--help[Print help (see more with '\''--help'\'')]' \
+'-V[Print version]' \
+'--version[Print version]' \
+'*::KEYWORD -- Keywords for search:_default' \
+&& ret=0
+}
+
+(( $+functions[_procs_commands] )) ||
+_procs_commands() {
+    local commands; commands=()
+    _describe -t commands 'procs commands' commands "$@"
+}
+
+if [ "$funcstack[1]" = "_procs" ]; then
+    _procs "$@"
+else
+    compdef _procs procs
+fi
