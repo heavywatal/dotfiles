@@ -1,5 +1,5 @@
 [core]
-	pager = delta || $PAGER
+	pager = delta --paging always || $PAGER
 [interactive]
 	diffFilter = delta --color-only || cat -
 [delta]
