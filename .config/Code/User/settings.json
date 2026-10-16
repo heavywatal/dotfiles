@@ -128,7 +128,7 @@
     "Click": "Ignore",
     "Ctrl+Click": "Ignore",
   },
-  "r.plot.useHttpgd": false,
+  "r.plot.backend": "native",
   "r.rmarkdown.enableCodeLens": false,
   "r.session.emulateRStudioAPI": false,
   "r.session.viewers.viewColumn": {
@@ -264,6 +264,7 @@
     "editor.wordWrap": "wordWrapColumn",
   },
   "[r]": {
+    "editor.codeLens": false,
     "editor.defaultFormatter": "Posit.air-vscode",
     "editor.formatOnSave": true,
   },

@@ -152,6 +152,11 @@
     "when": "editorTextFocus && editorLangId == 'r'",
   },
   {
+    "key": "ctrl+cmd+r",
+    "command": "r.connectToSession",
+    "when": "terminalFocus ",
+  },
+  {
     "key": "shift+enter",
     "command": "-python.execSelectionInTerminal",
     "when": "editorTextFocus && !findInputFocussed && !isCompositeNotebook && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'",

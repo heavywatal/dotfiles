@@ -44,9 +44,6 @@ options(
       registerS3method("print", "tbl", wtl::printdf)
       assign("load_all", wtl::lall, envir = attach(NULL, name = "alias"))
     })
-    if (nzchar(Sys.getenv("VSCODE_WORKSPACE_FOLDER"))) {
-      source("~/.vscode-R/init.R")
-    }
   }
 }
 
