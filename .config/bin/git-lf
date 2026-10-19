@@ -1,8 +1,16 @@
 #!/bin/sh
 if [ "$(uname)" = Darwin ]; then
   BAT_THEME=$(defaults read -g AppleInterfaceStyle >/dev/null 2>&1 && echo dark || echo light)
-  export BAT_THEME
+else
+  now=$(date +%H:%M)
+  if expr "$now" \< "06:00" >/dev/null || expr "18:00" \< "$now" >/dev/null; then
+    BAT_THEME=dark
+  else
+    BAT_THEME=light
+  fi
 fi
+BAT_THEME="gruvbox-${BAT_THEME}"
+export BAT_THEME
 grep_hash="grep -z -m1 -o '^[a-f0-9]\{7,\}' <<< {}"
 git_show="git show --stdin --color=never --pretty='format:%C(auto)%h %ci% an <%ae>%+D%n%B'"
 _git-log-z "$@" \
