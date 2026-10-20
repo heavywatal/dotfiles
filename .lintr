@@ -18,7 +18,9 @@ linters: all_linters(
     one_call_pipe_linter = NULL,
     pipe_continuation_linter = NULL,
     string_boundary_linter = NULL,
+    trailing_blank_lines_linter = NULL,
     undesirable_function_linter = NULL,
     unnecessary_lambda_linter = NULL,
-    unnecessary_nesting_linter = NULL
+    unnecessary_nesting_linter = NULL,
+    unused_import_linter = unused_import_linter(except_packages = c("conflicted", "tidyverse"))
   )
