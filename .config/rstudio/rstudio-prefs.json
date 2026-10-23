@@ -10,7 +10,5 @@
     "insert_matching": false,
     "reindent_on_paste": false,
     "restore_source_document_cursor_position": false,
-    "auto_save_on_idle": "none",
-    "posix_terminal_shell": "zsh",
-    "terminal_track_environment": false
+    "posix_terminal_shell": "zsh"
 }
