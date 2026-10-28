@@ -69,6 +69,10 @@ else
   alias saccto='sacct -o JobID,JobName,User,State,ExitCode%6,Start,Elapsed,ReqCPUs%4,NCPUs%4,TotalCPU,ReqMem%6,MaxRSS%6'
 fi
 
+if [ "${TERM_PROGRAM-}" = ghostty ]; then
+  alias ssh='ghostty +ssh --'
+fi
+
 if [ "${BASH-}" ]; then
   PS1='\[\e[1;34m\]\D{%m-%d} \A \u@\h:\w\[\e[0m\]\n\$ '
 
